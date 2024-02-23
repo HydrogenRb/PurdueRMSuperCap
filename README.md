@@ -9,7 +9,7 @@
 2.Introduce of Super Capacitor  
 3.Test Bench  
 
-## Part 1- Workflow base on STM32CubeMX and HAL
+## Part 1 - Workflow base on STM32CubeMX and HAL
 1.1  
 In Purdue Robomaster, we use 
 **SWD** -> **MDKARM** -> **ST link** or **CMSIS-DAP** 
@@ -37,7 +37,7 @@ How to debug and check debuger
 1.5  
 串口监视器相关 
 
-## Part 2- Intro to Super Cap
+## Part 2 - Intro to Super Cap
 2.1 Diagram of Super Cap 
 This two diagrams are the sketch for the Super Cap system, you should remember this two sketch! 
 
@@ -53,5 +53,17 @@ At the end, the robot stop moving, we want to inverse power from motor could be 
 In the DCDC system, we can control the voltage by control the open time of four MOSFET. 
 
 2.3 Estimation trasfer function diagram 
+We need to design the control system for the super cap. (AKA, the parameters in the blocks) 
+We basically follow some rules like: 
+If I1 too high, we reduce the I3 to negative value. 
+If I2 too high, we ruduce the I3. 
+... 
+## Part 3 - Test bench
+### Part A. Function of the circuit 
+A.1 Power on testing: Check if there are something wrong under 24V. Check the 
+### Part B. Function of charging
+### Part C. Function of discharging
+### Part D. Whole testing
+### Part E. Communication testing
 
-## Part 3- 
+## Part 4 - Timeline
