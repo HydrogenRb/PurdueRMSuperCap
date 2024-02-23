@@ -24,19 +24,34 @@ The type of STM32, STM32F103C8T6 as example
 The clock source and clock tree 
 1.2.3 
 The platform of coding 
-**Do not for get set this part**
+**Do not for get set this part** 
 1.2.4 
-The GPIO
+How to set the GPIO, find what GPIO we need from PCB board and schematic 
  
 1.3  
 How to code in Keil5. 
  
 1.4  
-How to debug and common mistake.
+How to debug and check debuger 
  
 1.5  
+串口监视器相关 
 
-2.362学生可以跳过：我们控制芯片输出高低电压，然后板子上面的电路和接口配合着输出各式各样的东西（比如配合蜂鸣器+MOS管可以输出声音，配合LED可以闪光）
-3.CubeMX创建教程，我们主要要使用的有ADC、GPIO、TIM、UART
-4.keil5编程、上传教程（小魔法棒）
-5.给362学生：如果想要使用串口监视器，可以单独下载后使用
+## Part 2- Intro to Super Cap
+2.1 Diagram of Super Cap 
+This two diagrams are the sketch for the Super Cap system, you should remember this two sketch! 
+
+2.2 Working Conditions of Super Cap 
+First, we turn on the robot, the battery charging the capacitor. 
+
+Then, the robot moving, the battery power the chassis. At this moment, there is no power in or out the capacitor. 
+
+Later, the robot moving fast, the battery and the capacitor power the chassis together. 
+
+At the end, the robot stop moving, we want to inverse power from motor could be charged to capacitors.
+
+In the DCDC system, we can control the voltage by control the open time of four MOSFET. 
+
+2.3 Estimation trasfer function diagram 
+
+## Part 3- 
