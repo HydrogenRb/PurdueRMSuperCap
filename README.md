@@ -11,13 +11,29 @@
 
 ## Part 1- Workflow base on STM32CubeMX and HAL
 1.1  
-In Purdue Robomaster, we use **SWD** -> **MDKARM** -> **ST link** or **CMSIS-DAP** to coding the STM32
+In Purdue Robomaster, we use 
+**SWD** -> **MDKARM** -> **ST link** or **CMSIS-DAP** 
+to coding the STM32 
+The basic of STM32 is GPIO give high or low 
+ 
 1.2  
-The basic of STM32CubeMX
+The basic of STM32CubeMX 
+1.2.1 
+The type of STM32, STM32F103C8T6 as example 
+1.2.2 
+The clock source and clock tree 
+1.2.3 
+The platform of coding 
+**Do not for get set this part**
+1.2.4 
+The GPIO
+ 
 1.3  
-How the STM32 works? How to code in Keil5.
+How to code in Keil5. 
+ 
 1.4  
-How 
+How to debug and common mistake.
+ 
 1.5  
 
 2.362学生可以跳过：我们控制芯片输出高低电压，然后板子上面的电路和接口配合着输出各式各样的东西（比如配合蜂鸣器+MOS管可以输出声音，配合LED可以闪光）
