@@ -39,19 +39,34 @@ How to debug and check the debugger
 串口监视器相关 
 
 ## Part 2 - Intro to Super Cap
-2.1 Diagram of Super Cap 
+**2.1** Diagram of Super Cap 
 These two diagrams are the sketches for the Super Cap system, you should remember these two sketches!  
-[Images/1 Overall.png](https://github.com/HydrogenRb/PurdueRMSuperCap/blob/main/Images/1%20Overall.png)) 
+ 
+![Overall.png](https://github.com/HydrogenRb/PurdueRMSuperCap/blob/main/Images/1%20Overall.png) 
 
-2.2 Working Conditions of Super Cap 
+This is the overall diagram, which is complex but helpful. 
+ 
+![Simple.png](https://github.com/HydrogenRb/PurdueRMSuperCap/blob/main/Images/2%20Simple.png) 
+
+This is a simple diagram.
+
+**2.2** Working Conditions of Super Cap 
 First, we turn on the robot, the battery charging the capacitor. 
-
+ 
+![WorkingConditionCharge.png](https://github.com/HydrogenRb/PurdueRMSuperCap/blob/main/Images/3%20WorkingCondition_Charge.png) 
+ 
 Then, the robot moves, and the battery powers the chassis. At this moment, there is no power in or out of the capacitor. 
 
+![WorkingConditionIdle.png](https://github.com/HydrogenRb/PurdueRMSuperCap/blob/main/Images/4%20WorkingCondition_Idle.png) 
+ 
 Later, the robot moves fast, and the battery and the capacitor power the chassis together. 
+ 
+![WorkingConditionDischarge.png](https://github.com/HydrogenRb/PurdueRMSuperCap/blob/main/Images/5%20WorkingCondition_Discharge.png)
+ 
+In the end, the robot stops moving, we want to inverse power from the motor that could be charged to capacitors. 
 
-In the end, the robot stops moving, we want to inverse power from the motor that could be charged to capacitors.
-
+![WorkingConditionInverseCharge.png](https://github.com/HydrogenRb/PurdueRMSuperCap/blob/main/Images/6%20WorkingCondition_InverseCharge.png) 
+ 
 In the DCDC system, we can control the voltage by controlling the open time of four MOSFETs. 
 
 2.3 Estimation transfer function diagram 
