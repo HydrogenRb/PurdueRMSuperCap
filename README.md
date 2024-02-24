@@ -11,14 +11,14 @@ B: 0/4
 ## Long term target  
 1. Change to Altium Designer or KiCAD
 2. Reduce the area of PCB
-3. Make the STM32 or other micro controller in the boards  
+3. Make the STM32 or other microcontroller in the boards  
 
 ## Table of contents
 1. Workflow based on STM32CubeMX and HAL  
 2. Introduce the Super Capacitor  
 3. Test Bench  
 
-## Part 1 - Workflow based on STM32CubeMX and HAL
+## Part 1 - Workflow based on STM32CubeMX and HAL[Waiting for finish]
 1.1  
 In Purdue Robomaster, we use 
 **SWD** -> **MDKARM** -> **ST link** or **CMSIS-DAP** 
@@ -74,32 +74,34 @@ If I1 is too high, we reduce the I3 to a negative value.
 If I2 is too high, we reduce the I3.  
 ...  
 
-2.4 Power tree 
+2.4 Power tree [waiting for finish]
 There are several ICs in this system, we need different voltages to make them work. The power tree is shown below. 
 ## Part 3 - Test bench
 ### Part A. Function of the circuit  
 A.1 **Power on** testing: Check if something is wrong under 24V. Check all auxiliary voltages are correct.  
 A.2 **Diode** testing: Check if the MOSFET diode (OR-ing Controller based on LM5050) works well under 3V, 10V, and 24V.  
-A.3 **Voltage sampling** testing: Test the ADC for voltage divider (ADC3 and ADC4).  
-A.4 **Current sampling resistor** testing: Check the voltage cross the current sampling resistor (5mΩ resistor).  
+A.3 **Voltage sampling** testing: Test the ADC for the voltage divider (ADC3 and ADC4).  
+A.4 **Current sampling resistor** testing: Check the voltage across the current sampling resistor (5mΩ resistor).  
 A.5 **Current sampling circuit** testing: Check the current sampling circuit work (ADC0, ADC1, and ADC2) (INA181).  
-A.6 **MOSFET control** testing: Verify that we can control the open or close of MOSFET by STM32.  
+A.6 **MOSFET control** testing: Verify that we can control the opening or close of MOSFET by STM32.  
 ### Part B. Function of charging  
-B.1 **Basic BUCK** testing: Test that the buck circuit can make 5V to 2V. Monitor the efficiency by load. Monitor the ripple by oscilloscope. (Note: Remember to set the maximum output current of the adjustable power supply to prevent damage to the MOSFET)  
-B.2 **Overall BUCK** testing: Reduce the 24V to 2V, 10V, and 15V. Monitor the efficiency by load. Monitor the ripple by oscilloscope. Try to reduce the ripple.  
-B.3 **BUCK limit the current** testing: Design the BUCK circuit to limit the current in 1A under different load.  
+B.1 **Basic BUCK** testing: Test that the buck circuit can make 5V to 2V. Monitor the efficiency of the load. Monitor the ripple by oscilloscope. (Note: Remember to set the maximum output current of the adjustable power supply to prevent damage to the MOSFET)  
+B.2 **Overall BUCK** testing: Reduce the 24V to 2V, 10V, and 15V. Monitor the efficiency of the load. Monitor the ripple by oscilloscope. Try to reduce the ripple.  
+B.3 **BUCK limit the current** testing: Design the BUCK circuit to limit the current in 1A under different loads.  
 B.4 **1A charging** testing: Test the charge of real capacitors.  
 ### Part C. Function of discharging  
-C.1 **Basic BOOST** testing: Test that the buck circuit, rise 5V to 10V. Monitor the efficiency by load. Monitor the ripple by oscilloscope.  
+C.1 **Basic BOOST** testing: Test that the buck circuit rises from 5V to 10V. Monitor the efficiency by load. Monitor the ripple by oscilloscope.  
 C.2 **Overall BOOST** testing: Rising the 20V, 15V, 5V, and 3V to 24V (5V and 3V test is not necessary).  
 C.3 **High Current BOOST** testing: Same testing with C.2, but the output current will be 2A.  (Note: I need to review the current limit of the MOSFETs)  
 ### Part D. Whole testing
 D.1 **Charging** testing: test the working condition-charge  
 D.2 **Idle** testing: test the working condition-Idle  
 D.3 **Discharge** testing: test the working condition-discharge  
-D.4 **InverseCharge** testing: test the working condition-InverseCharge (need to to more research on this).  
+D.4 **InverseCharge** testing: test the working condition-InverseCharge (need to do more research on this).  
 ### Part E. Communication testing  
-E.1 **Communication** testing: This system can read data from referee system and store power limitation in one variable. (Note: you can just copy from Leo)  
-E.2 **Changeing power** testing: This system can change the output power depend on the variable from E.1.  
+E.1 **Communication** testing: This system can read data from the referee system and store power limitations in one variable. (Note: you can just copy from Leo)  
+E.2 **Changeing power** testing: This system can change the output power depending on the variable from E.1.  
 
-## Part 4 - Timeline
+## Part 4 - Timeline [waiting]
+Week of Feb 25: Finish A1 and A2,
+Week of Feb 25: Finish the abstract.
