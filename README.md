@@ -8,7 +8,10 @@ IMG2
 A: 0/6  
 B: 0/4  
 
-## 
+## Long term target  
+1. Change to Altium Designer or KiCAD
+2. Reduce the area of PCB
+3. Make the STM32 or other micro controller in the boards  
 
 ## Table of contents
 1. Workflow based on STM32CubeMX and HAL  
