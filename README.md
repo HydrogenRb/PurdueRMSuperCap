@@ -1,11 +1,13 @@
 # PurdueRMSuperCap (Current: 1.0 testing) 
 This document created for Super Capacitor testing in Purdue Robomaster. This document include 
-这个文件是为了SuperCap的测试所准备的，其中包含了superCap的测试表以及必要的知识
 ![schematic 1](https://github.com/HydrogenRb/PurdueRMSuperCap/blob/main/Images/PNG_SuperCapTestBoard_2024-02-25.zip_/Schematic1/SCH_Schematic1_1-P1_2024-02-25.png)  
 ![schematic 2](https://github.com/HydrogenRb/PurdueRMSuperCap/blob/main/Images/PNG_SuperCapTestBoard_2024-02-25.zip_/Schematic1/SCH_Schematic1_2-P2_2024-02-25.png)  
 ![schematic 3](https://github.com/HydrogenRb/PurdueRMSuperCap/blob/main/Images/PNG_SuperCapTestBoard_2024-02-25.zip_/Schematic1/SCH_Schematic1_3-P3_2024-02-25.png)  
 ![PCB top](https://github.com/HydrogenRb/PurdueRMSuperCap/blob/main/Images/PNG_SuperCapTestBoard_2024-02-25.zip_/Schematic1/PCB%20top%202%2025.png)  
 ![PCB bottom](https://github.com/HydrogenRb/PurdueRMSuperCap/blob/main/Images/PNG_SuperCapTestBoard_2024-02-25.zip_/Schematic1/PCB%20bottom%202%2025.png)  
+
+## Super Cap  
+supercapacitor system with 4 MOSFET DC-DC circuits and LM5050 work as a diode. This circuit can charge a capacitor bank with constant power and discharge a capacitor bank with constant voltage. This circuit works with a battery to limit the battery output power.  
   
 ## Current status
 A: 0/6  
