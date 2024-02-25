@@ -1,3 +1,5 @@
+### You don't need this! This is Hydrogen's note!
+
 这个文件是为了SuperCap的测试所准备的，其中包含了superCap的测试表以及必要的知识
 
 1.安装HAL和keil5的URL链接和方法
