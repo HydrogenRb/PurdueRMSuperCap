@@ -6,7 +6,7 @@ supercapcodeg4\stm32g4xx_hal_dma.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4x
 supercapcodeg4\stm32g4xx_hal_dma.o: ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h
 supercapcodeg4\stm32g4xx_hal_dma.o: ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h
 supercapcodeg4\stm32g4xx_hal_dma.o: ../Drivers/CMSIS/Include/core_cm4.h
-supercapcodeg4\stm32g4xx_hal_dma.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+supercapcodeg4\stm32g4xx_hal_dma.o: C:\Users\HRb\HydrogenRb\Software\Program\STM32\MDK\ARM\ARMCC\Bin\..\include\stdint.h
 supercapcodeg4\stm32g4xx_hal_dma.o: ../Drivers/CMSIS/Include/cmsis_version.h
 supercapcodeg4\stm32g4xx_hal_dma.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 supercapcodeg4\stm32g4xx_hal_dma.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -14,7 +14,7 @@ supercapcodeg4\stm32g4xx_hal_dma.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 supercapcodeg4\stm32g4xx_hal_dma.o: ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h
 supercapcodeg4\stm32g4xx_hal_dma.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h
 supercapcodeg4\stm32g4xx_hal_dma.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-supercapcodeg4\stm32g4xx_hal_dma.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+supercapcodeg4\stm32g4xx_hal_dma.o: C:\Users\HRb\HydrogenRb\Software\Program\STM32\MDK\ARM\ARMCC\Bin\..\include\stddef.h
 supercapcodeg4\stm32g4xx_hal_dma.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h
 supercapcodeg4\stm32g4xx_hal_dma.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h
 supercapcodeg4\stm32g4xx_hal_dma.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h

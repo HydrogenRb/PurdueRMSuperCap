@@ -51,6 +51,14 @@
   uint16_t supercap_ADC1[2];
   uint16_t supercap_ADC2[3];
   uint16_t supercap_ADC3[3];
+  uint16_t C_left;
+  uint16_t C_sys;
+  uint16_t C_right;
+  uint16_t V_sys_op;
+  uint16_t V_cap_op;
+  uint16_t V_cap; //V_right
+  uint16_t V_bat;
+  uint16_t V_sys;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -123,14 +131,22 @@ int main(void)
 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
 
-//	CAN_Instance_t* aaaCan;
-//	CAN_Device_Register(uint8_t _can_bus, uint16_t _tx_id, uint16_t _rx_id, void (*can_module_callback)(CAN_Instance_t *can_instance));
-//	aaaCan->tx_buffer
-//	CAN_Transmit(aaaCan);
-	
-	
-	
+	//__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 1);
+  //__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, 1);
+  HAL_FDCAN_Start(&hfdcan1);
+  FDCAN_TxHeaderTypeDef hfdcan1_pHeader;
+  uint8_t hfdcan1_pTxData[2] = {0x00, 0x01};
 
+  hfdcan1_pHeader.Identifier  = 0x114;
+  hfdcan1_pHeader.IdType  = FDCAN_DATA_FRAME;
+  hfdcan1_pHeader.DataLength  = FDCAN_DLC_BYTES_2;
+  hfdcan1_pHeader.FDFormat = FDCAN_CLASSIC_CAN;
+  //to do list: 这个地方为什么CAN不行
+	
+  
+
+  HAL_UART_Transmit(&huart1, (uint8_t*)"Hello World\n", 12, 1000);
+  //to do list: 弄弄这个配合VOFA
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -138,8 +154,22 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
     /* USER CODE BEGIN 3 */
+    
+    HAL_Delay(100);
+    HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &hfdcan1_pHeader, &hfdcan1_pTxData);
+
+
+    //运算
+    if(xxx_count == 0){
+      xxx_average = xxx[];
+      xxx_history_sum = xxx_average * n;
+      xxx_coun == 1;
+    }
+    xxx_history_sum = xxx_history_sum - xxx_average + xxx[];
+    xxx_average = xxx_history_sum / n;
+    
+    
   }
   /* USER CODE END 3 */
 }
@@ -160,9 +190,16 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
-  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
+  RCC_OscInitStruct.PLL.PLLN = 75;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+  RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
+  RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -172,12 +209,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSE;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
   {
     Error_Handler();
   }
