@@ -1,0 +1,214 @@
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cch7xmIc.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"dma.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/dma.c"
+  20              		.section	.text.MX_DMA_Init,"ax",%progbits
+  21              		.align	1
+  22              		.global	MX_DMA_Init
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	MX_DMA_Init:
+  28              	.LFB329:
+   1:Core/Src/dma.c **** /* USER CODE BEGIN Header */
+   2:Core/Src/dma.c **** /**
+   3:Core/Src/dma.c ****   ******************************************************************************
+   4:Core/Src/dma.c ****   * @file    dma.c
+   5:Core/Src/dma.c ****   * @brief   This file provides code for the configuration
+   6:Core/Src/dma.c ****   *          of all the requested memory to memory DMA transfers.
+   7:Core/Src/dma.c ****   ******************************************************************************
+   8:Core/Src/dma.c ****   * @attention
+   9:Core/Src/dma.c ****   *
+  10:Core/Src/dma.c ****   * Copyright (c) 2024 STMicroelectronics.
+  11:Core/Src/dma.c ****   * All rights reserved.
+  12:Core/Src/dma.c ****   *
+  13:Core/Src/dma.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  14:Core/Src/dma.c ****   * in the root directory of this software component.
+  15:Core/Src/dma.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  16:Core/Src/dma.c ****   *
+  17:Core/Src/dma.c ****   ******************************************************************************
+  18:Core/Src/dma.c ****   */
+  19:Core/Src/dma.c **** /* USER CODE END Header */
+  20:Core/Src/dma.c **** 
+  21:Core/Src/dma.c **** /* Includes ------------------------------------------------------------------*/
+  22:Core/Src/dma.c **** #include "dma.h"
+  23:Core/Src/dma.c **** 
+  24:Core/Src/dma.c **** /* USER CODE BEGIN 0 */
+  25:Core/Src/dma.c **** 
+  26:Core/Src/dma.c **** /* USER CODE END 0 */
+  27:Core/Src/dma.c **** 
+  28:Core/Src/dma.c **** /*----------------------------------------------------------------------------*/
+  29:Core/Src/dma.c **** /* Configure DMA                                                              */
+  30:Core/Src/dma.c **** /*----------------------------------------------------------------------------*/
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cch7xmIc.s 			page 2
+
+
+  31:Core/Src/dma.c **** 
+  32:Core/Src/dma.c **** /* USER CODE BEGIN 1 */
+  33:Core/Src/dma.c **** 
+  34:Core/Src/dma.c **** /* USER CODE END 1 */
+  35:Core/Src/dma.c **** 
+  36:Core/Src/dma.c **** /**
+  37:Core/Src/dma.c ****   * Enable DMA controller clock
+  38:Core/Src/dma.c ****   */
+  39:Core/Src/dma.c **** void MX_DMA_Init(void)
+  40:Core/Src/dma.c **** {
+  29              		.loc 1 40 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 16
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 00B5     		push	{lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 4
+  36              		.cfi_offset 14, -4
+  37 0002 85B0     		sub	sp, sp, #20
+  38              	.LCFI1:
+  39              		.cfi_def_cfa_offset 24
+  41:Core/Src/dma.c **** 
+  42:Core/Src/dma.c ****   /* DMA controller clock enable */
+  43:Core/Src/dma.c ****   __HAL_RCC_DMAMUX1_CLK_ENABLE();
+  40              		.loc 1 43 3 view .LVU1
+  41              	.LBB2:
+  42              		.loc 1 43 3 view .LVU2
+  43              		.loc 1 43 3 view .LVU3
+  44 0004 1B4B     		ldr	r3, .L3
+  45 0006 9A6C     		ldr	r2, [r3, #72]
+  46 0008 42F00402 		orr	r2, r2, #4
+  47 000c 9A64     		str	r2, [r3, #72]
+  48              		.loc 1 43 3 view .LVU4
+  49 000e 9A6C     		ldr	r2, [r3, #72]
+  50 0010 02F00402 		and	r2, r2, #4
+  51 0014 0192     		str	r2, [sp, #4]
+  52              		.loc 1 43 3 view .LVU5
+  53 0016 019A     		ldr	r2, [sp, #4]
+  54              	.LBE2:
+  55              		.loc 1 43 3 view .LVU6
+  44:Core/Src/dma.c ****   __HAL_RCC_DMA1_CLK_ENABLE();
+  56              		.loc 1 44 3 view .LVU7
+  57              	.LBB3:
+  58              		.loc 1 44 3 view .LVU8
+  59              		.loc 1 44 3 view .LVU9
+  60 0018 9A6C     		ldr	r2, [r3, #72]
+  61 001a 42F00102 		orr	r2, r2, #1
+  62 001e 9A64     		str	r2, [r3, #72]
+  63              		.loc 1 44 3 view .LVU10
+  64 0020 9A6C     		ldr	r2, [r3, #72]
+  65 0022 02F00102 		and	r2, r2, #1
+  66 0026 0292     		str	r2, [sp, #8]
+  67              		.loc 1 44 3 view .LVU11
+  68 0028 029A     		ldr	r2, [sp, #8]
+  69              	.LBE3:
+  70              		.loc 1 44 3 view .LVU12
+  45:Core/Src/dma.c ****   __HAL_RCC_DMA2_CLK_ENABLE();
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cch7xmIc.s 			page 3
+
+
+  71              		.loc 1 45 3 view .LVU13
+  72              	.LBB4:
+  73              		.loc 1 45 3 view .LVU14
+  74              		.loc 1 45 3 view .LVU15
+  75 002a 9A6C     		ldr	r2, [r3, #72]
+  76 002c 42F00202 		orr	r2, r2, #2
+  77 0030 9A64     		str	r2, [r3, #72]
+  78              		.loc 1 45 3 view .LVU16
+  79 0032 9B6C     		ldr	r3, [r3, #72]
+  80 0034 03F00203 		and	r3, r3, #2
+  81 0038 0393     		str	r3, [sp, #12]
+  82              		.loc 1 45 3 view .LVU17
+  83 003a 039B     		ldr	r3, [sp, #12]
+  84              	.LBE4:
+  85              		.loc 1 45 3 view .LVU18
+  46:Core/Src/dma.c **** 
+  47:Core/Src/dma.c ****   /* DMA interrupt init */
+  48:Core/Src/dma.c ****   /* DMA1_Channel1_IRQn interrupt configuration */
+  49:Core/Src/dma.c ****   HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
+  86              		.loc 1 49 3 view .LVU19
+  87 003c 0022     		movs	r2, #0
+  88 003e 1146     		mov	r1, r2
+  89 0040 0B20     		movs	r0, #11
+  90 0042 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+  91              	.LVL0:
+  50:Core/Src/dma.c ****   HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
+  92              		.loc 1 50 3 view .LVU20
+  93 0046 0B20     		movs	r0, #11
+  94 0048 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+  95              	.LVL1:
+  51:Core/Src/dma.c ****   /* DMA1_Channel2_IRQn interrupt configuration */
+  52:Core/Src/dma.c ****   HAL_NVIC_SetPriority(DMA1_Channel2_IRQn, 0, 0);
+  96              		.loc 1 52 3 view .LVU21
+  97 004c 0022     		movs	r2, #0
+  98 004e 1146     		mov	r1, r2
+  99 0050 0C20     		movs	r0, #12
+ 100 0052 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 101              	.LVL2:
+  53:Core/Src/dma.c ****   HAL_NVIC_EnableIRQ(DMA1_Channel2_IRQn);
+ 102              		.loc 1 53 3 view .LVU22
+ 103 0056 0C20     		movs	r0, #12
+ 104 0058 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 105              	.LVL3:
+  54:Core/Src/dma.c ****   /* DMA2_Channel1_IRQn interrupt configuration */
+  55:Core/Src/dma.c ****   HAL_NVIC_SetPriority(DMA2_Channel1_IRQn, 0, 0);
+ 106              		.loc 1 55 3 view .LVU23
+ 107 005c 0022     		movs	r2, #0
+ 108 005e 1146     		mov	r1, r2
+ 109 0060 3820     		movs	r0, #56
+ 110 0062 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 111              	.LVL4:
+  56:Core/Src/dma.c ****   HAL_NVIC_EnableIRQ(DMA2_Channel1_IRQn);
+ 112              		.loc 1 56 3 view .LVU24
+ 113 0066 3820     		movs	r0, #56
+ 114 0068 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 115              	.LVL5:
+  57:Core/Src/dma.c **** 
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cch7xmIc.s 			page 4
+
+
+  58:Core/Src/dma.c **** }
+ 116              		.loc 1 58 1 is_stmt 0 view .LVU25
+ 117 006c 05B0     		add	sp, sp, #20
+ 118              	.LCFI2:
+ 119              		.cfi_def_cfa_offset 4
+ 120              		@ sp needed
+ 121 006e 5DF804FB 		ldr	pc, [sp], #4
+ 122              	.L4:
+ 123 0072 00BF     		.align	2
+ 124              	.L3:
+ 125 0074 00100240 		.word	1073876992
+ 126              		.cfi_endproc
+ 127              	.LFE329:
+ 129              		.text
+ 130              	.Letext0:
+ 131              		.file 2 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
+ 132              		.file 3 "c:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 133              		.file 4 "c:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 134              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h"
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cch7xmIc.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 dma.c
+C:\Users\purdu\AppData\Local\Temp\cch7xmIc.s:21     .text.MX_DMA_Init:0000000000000000 $t
+C:\Users\purdu\AppData\Local\Temp\cch7xmIc.s:27     .text.MX_DMA_Init:0000000000000000 MX_DMA_Init
+C:\Users\purdu\AppData\Local\Temp\cch7xmIc.s:125    .text.MX_DMA_Init:0000000000000074 $d
+
+UNDEFINED SYMBOLS
+HAL_NVIC_SetPriority
+HAL_NVIC_EnableIRQ
