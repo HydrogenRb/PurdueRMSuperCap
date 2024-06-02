@@ -3,7 +3,7 @@
     "configurations": [
         {
             "cwd": "${workspaceRoot}",
-            "executable": "./build/G4test.elf",
+            "executable": "./build/SuperCapCodeG4.elf",
             "name": "Debug with OpenOCD",
             "request": "launch",
             "type": "cortex-debug",

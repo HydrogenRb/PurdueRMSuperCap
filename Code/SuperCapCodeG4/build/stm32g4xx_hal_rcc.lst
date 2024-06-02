@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
   29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       (+) Configure the clock source to be used to drive the System clock
   30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           (if the application needs higher frequency/performance)
   31:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       (+) Configure the System clock frequency and Flash settings
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 2
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 2
 
 
   32:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       (+) Configure the AHB and APB buses prescalers
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
   86:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** #define RCC_GET_MCO_GPIO_AF(__RCC_MCOx__)    (((__RCC_MCOx__) & RCC_MCO_GPIOAF_MASK) >> RCC_MCO_GPI
   87:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
   88:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** #define RCC_GET_MCO_GPIO_INDEX(__RCC_MCOx__) (((__RCC_MCOx__) & RCC_MCO_GPIOPORT_MASK) >> RCC_MCO_G
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 3
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 3
 
 
   89:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  143:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****            (++) The third output is used to generate a clock for ADC
  144:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  145:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****          (+) CSS (Clock security system): once enabled, if a HSE clock failure occurs
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 4
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 4
 
 
  146:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****             (HSE used directly or through PLL as System clock source), the System clock
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  200:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****            +----------------------------------------------------------------------------+
  201:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  202:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   * @{
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 5
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 5
 
 
  203:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  257:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   SystemCoreClock = HSI_VALUE;
  258:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  259:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   /* Adapt Systick interrupt period */
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 6
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 6
 
 
  260:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   if (HAL_InitTick(uwTickPrio) != HAL_OK)
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  314:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   uint32_t tickstart;
  315:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   uint32_t temp_sysclksrc;
  316:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   uint32_t temp_pllckcfg;
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 7
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 7
 
 
  317:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  371:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
  372:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           if ((HAL_GetTick() - tickstart) > HSE_TIMEOUT_VALUE)
  373:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 8
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 8
 
 
  374:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****             return HAL_TIMEOUT;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  428:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         }
  429:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  430:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         /* Adjusts the Internal High Speed oscillator (HSI) calibration value.*/
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 9
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 9
 
 
  431:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         __HAL_RCC_HSI_CALIBRATIONVALUE_ADJUST(RCC_OscInitStruct->HSICalibrationValue);
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  485:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       while(READ_BIT(RCC->CSR, RCC_CSR_LSIRDY) != 0U)
  486:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       {
  487:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         if((HAL_GetTick() - tickstart) > LSI_TIMEOUT_VALUE)
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 10
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 10
 
 
  488:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  542:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         }
  543:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       }
  544:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     }
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 11
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 11
 
 
  545:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     else
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  599:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       /* Wait till HSI48 is disabled */
  600:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       while(READ_BIT(RCC->CRRCR, RCC_CRRCR_HSI48RDY) != 0U)
  601:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 12
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 12
 
 
  602:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         if((HAL_GetTick() - tickstart) > HSI48_TIMEOUT_VALUE)
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  656:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****          __HAL_RCC_PLLCLKOUT_ENABLE(RCC_PLL_SYSCLK);
  657:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  658:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         /* Get Start Tick*/
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 13
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 13
 
 
  659:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         tickstart = HAL_GetTick();
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  713:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   }
  714:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  715:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   return HAL_OK;
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 14
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 14
 
 
  716:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** }
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  770:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   uint32_t hpre = RCC_SYSCLK_DIV1;
  771:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  772:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   /* Check Null pointer */
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 15
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 15
 
 
  773:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   if (RCC_ClkInitStruct == NULL)
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  827:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       }
  828:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     }
  829:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     else
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 16
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 16
 
 
  830:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     {
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  884:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     if (((RCC_ClkInitStruct->ClockType) & RCC_CLOCKTYPE_PCLK2) == RCC_CLOCKTYPE_PCLK2)
  885:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     {
  886:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       MODIFY_REG(RCC->CFGR, RCC_CFGR_PPRE2, RCC_HCLK_DIV16);
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 17
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 17
 
 
  887:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     }
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  941:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  942:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** /**
  943:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   * @}
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 18
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 18
 
 
  944:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   */
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  998:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   uint32_t mco_gpio_index;
  999:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   GPIO_TypeDef * mco_gpio_port;
 1000:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 19
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 19
 
 
 1001:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   /* Check the parameters */
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
 1055:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   *         baudrate for the communication peripherals or configure other parameters.
 1056:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   *
 1057:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   * @note   Each time SYSCLK changes, this function must be called to update the
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 20
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 20
 
 
 1058:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   *         right SYSCLK value. Otherwise, any configuration based on this function will be incorre
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
 1112:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   * @note   Each time HCLK changes, this function must be called to update the
 1113:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   *         right HCLK value. Otherwise, any configuration based on this function will be incorrect
 1114:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   *
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 21
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 21
 
 
 1115:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   * @note   The SystemCoreClock CMSIS variable is used to store System Clock Frequency.
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
 1169:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   {
 1170:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     RCC_OscInitStruct->HSEState = RCC_HSE_ON;
 1171:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   }
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 22
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 22
 
 
 1172:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   else
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
 1226:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     RCC_OscInitStruct->PLL.PLLState = RCC_PLL_ON;
 1227:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   }
 1228:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   else
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 23
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 23
 
 
 1229:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   {
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
 1283:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** void HAL_RCC_EnableCSS(void)
 1284:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** {
 1285:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   SET_BIT(RCC->CR, RCC_CR_CSSON) ;
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 24
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 24
 
 
 1286:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** }
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
 1340:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** }
 1341:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
 1342:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** /**
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 25
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 25
 
 
 1343:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   * @}
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
 1372:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   case RCC_PLLSOURCE_HSE:  /* HSE used as PLL clock source */
 1373:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     pllvco = (HSE_VALUE / pllm) * (READ_BIT(RCC->PLLCFGR, RCC_PLLCFGR_PLLN) >> RCC_PLLCFGR_PLLN_Pos
 1374:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     break;
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 26
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 26
 
 
 1375:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
 1373:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     break;
   93              		.loc 1 1373 36 view .LVU29
   94 003e 034B     		ldr	r3, .L5
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 27
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 27
 
 
   95              	.LVL7:
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  142 0008 2C4A     		ldr	r2, .L24
  143 000a 1368     		ldr	r3, [r2]
  144 000c 43F48073 		orr	r3, r3, #256
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 28
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 28
 
 
  145 0010 1360     		str	r3, [r2]
@@ -1643,10 +1643,10 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  158 001c FFF7FEFF 		bl	HAL_GetTick
  159              	.LVL12:
  232:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     {
- 160              		.loc 1 232 24 view .LVU45
+ 160              		.loc 1 232 24 discriminator 1 view .LVU45
  161 0020 001B     		subs	r0, r0, r4
  232:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     {
- 162              		.loc 1 232 8 view .LVU46
+ 162              		.loc 1 232 8 discriminator 1 view .LVU46
  163 0022 0228     		cmp	r0, #2
  164 0024 F5D9     		bls	.L8
  234:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     }
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  185              		.loc 1 245 3 is_stmt 1 view .LVU52
  245:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  186              		.loc 1 245 13 is_stmt 0 view .LVU53
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 29
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 29
 
 
  187 003c 0123     		movs	r3, #1
@@ -1705,10 +1705,10 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  202 004c FFF7FEFF 		bl	HAL_GetTick
  203              	.LVL18:
  250:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     {
- 204              		.loc 1 250 24 view .LVU60
+ 204              		.loc 1 250 24 discriminator 1 view .LVU60
  205 0050 001B     		subs	r0, r0, r4
  250:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     {
- 206              		.loc 1 250 8 view .LVU61
+ 206              		.loc 1 250 8 discriminator 1 view .LVU61
  207 0052 41F28833 		movw	r3, #5000
  208 0056 9842     		cmp	r0, r3
  209 0058 F2D9     		bls	.L11
@@ -1737,14 +1737,14 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  226 0068 FFF7FEFF 		bl	HAL_InitTick
  227              	.LVL21:
  260:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   {
- 228              		.loc 1 260 6 view .LVU68
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 30
+ 228              		.loc 1 260 6 discriminator 1 view .LVU68
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 30
 
 
  229 006c 0446     		mov	r4, r0
  230              	.LVL22:
  260:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   {
- 231              		.loc 1 260 6 view .LVU69
+ 231              		.loc 1 260 6 discriminator 1 view .LVU69
  232 006e 08B1     		cbz	r0, .L22
  262:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   }
  233              		.loc 1 262 12 view .LVU70
@@ -1791,14 +1791,14 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  262 008e FFF7FEFF 		bl	HAL_GetTick
  263              	.LVL25:
  277:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     {
- 264              		.loc 1 277 24 view .LVU83
+ 264              		.loc 1 277 24 discriminator 1 view .LVU83
  265 0092 401B     		subs	r0, r0, r5
  277:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     {
- 266              		.loc 1 277 8 view .LVU84
+ 266              		.loc 1 277 8 discriminator 1 view .LVU84
  267 0094 0228     		cmp	r0, #2
  268 0096 F5D9     		bls	.L13
  279:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     }
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 31
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 31
 
 
  269              		.loc 1 279 14 view .LVU85
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  315:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   uint32_t temp_pllckcfg;
  316              		.loc 1 315 3 view .LVU95
  316:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 32
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 32
 
 
  317              		.loc 1 316 3 view .LVU96
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  337:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     {
  356              		.loc 1 337 8 is_stmt 0 view .LVU112
  357 0022 0C2B     		cmp	r3, #12
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 33
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 33
 
 
  358 0024 23D0     		beq	.L115
@@ -1959,12 +1959,12 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  347:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  385              		.loc 1 347 7 discriminator 7 view .LVU121
  350:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       {
- 386              		.loc 1 350 7 discriminator 7 view .LVU122
+ 386              		.loc 1 350 7 view .LVU122
  350:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       {
- 387              		.loc 1 350 28 is_stmt 0 discriminator 7 view .LVU123
+ 387              		.loc 1 350 28 is_stmt 0 view .LVU123
  388 004a 6368     		ldr	r3, [r4, #4]
  350:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       {
- 389              		.loc 1 350 10 discriminator 7 view .LVU124
+ 389              		.loc 1 350 10 view .LVU124
  390 004c 002B     		cmp	r3, #0
  391 004e 52D0     		beq	.L35
  353:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  397 0054 0546     		mov	r5, r0
  398              	.LVL32:
  356:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 34
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 34
 
 
  399              		.loc 1 356 9 is_stmt 1 view .LVU128
@@ -2000,10 +2000,10 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  410 0060 FFF7FEFF 		bl	HAL_GetTick
  411              	.LVL33:
  358:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           {
- 412              		.loc 1 358 30 view .LVU134
+ 412              		.loc 1 358 30 discriminator 1 view .LVU134
  413 0064 401B     		subs	r0, r0, r5
  358:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           {
- 414              		.loc 1 358 14 view .LVU135
+ 414              		.loc 1 358 14 discriminator 1 view .LVU135
  415 0066 6428     		cmp	r0, #100
  416 0068 F5D9     		bls	.L36
  360:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           }
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  438 007e 002B     		cmp	r3, #0
  439 0080 00F01282 		beq	.L118
  440              	.LVL36:
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 35
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 35
 
 
  441              	.L28:
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  416:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  478              		.loc 1 416 9 is_stmt 1 view .LVU161
  479 00a8 7F4A     		ldr	r2, .L130
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 36
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 36
 
 
  480              	.LVL40:
@@ -2135,10 +2135,10 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  502 00c2 FFF7FEFF 		bl	HAL_GetTick
  503              	.LVL43:
  424:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           {
- 504              		.loc 1 424 30 view .LVU171
+ 504              		.loc 1 424 30 discriminator 1 view .LVU171
  505 00c6 401B     		subs	r0, r0, r5
  424:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           {
- 506              		.loc 1 424 14 view .LVU172
+ 506              		.loc 1 424 14 discriminator 1 view .LVU172
  507 00c8 0228     		cmp	r0, #2
  508 00ca F5D9     		bls	.L46
  426:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           }
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  520 00d8 1360     		str	r3, [r2]
  521 00da B6E7     		b	.L33
  522              	.LVL46:
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 37
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 37
 
 
  523              	.L117:
@@ -2209,16 +2209,16 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  556 0106 FFF7FEFF 		bl	HAL_GetTick
  557              	.LVL50:
  372:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           {
- 558              		.loc 1 372 30 view .LVU188
+ 558              		.loc 1 372 30 discriminator 1 view .LVU188
  559 010a 401B     		subs	r0, r0, r5
  372:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           {
- 560              		.loc 1 372 14 view .LVU189
+ 560              		.loc 1 372 14 discriminator 1 view .LVU189
  561 010c 6428     		cmp	r0, #100
  562 010e F5D9     		bls	.L38
  374:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           }
  563              		.loc 1 374 20 view .LVU190
  564 0110 0320     		movs	r0, #3
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 38
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 38
 
 
  565 0112 D0E1     		b	.L27
@@ -2270,7 +2270,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  600 013e FFF7FEFF 		bl	HAL_InitTick
  601              	.LVL54:
  404:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
- 602              		.loc 1 404 12 view .LVU202
+ 602              		.loc 1 404 12 discriminator 1 view .LVU202
  603 0142 0028     		cmp	r0, #0
  604 0144 40F0B481 		bne	.L121
  605              	.LVL55:
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  453:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   {
  607              		.loc 1 453 3 is_stmt 1 view .LVU203
  453:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 39
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 39
 
 
  608              		.loc 1 453 26 is_stmt 0 view .LVU204
@@ -2331,14 +2331,14 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  641 0174 FFF7FEFF 		bl	HAL_GetTick
  642              	.LVL58:
  470:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
- 643              		.loc 1 470 28 view .LVU219
+ 643              		.loc 1 470 28 discriminator 1 view .LVU219
  644 0178 401B     		subs	r0, r0, r5
  470:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
- 645              		.loc 1 470 12 view .LVU220
+ 645              		.loc 1 470 12 discriminator 1 view .LVU220
  646 017a 0228     		cmp	r0, #2
  647 017c F4D9     		bls	.L52
  472:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         }
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 40
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 40
 
 
  648              		.loc 1 472 18 view .LVU221
@@ -2394,11 +2394,11 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  687 01ae FFF7FEFF 		bl	HAL_GetTick
  688              	.LVL64:
  444:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           {
- 689              		.loc 1 444 30 view .LVU233
+ 689              		.loc 1 444 30 discriminator 1 view .LVU233
  690 01b2 401B     		subs	r0, r0, r5
  444:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           {
- 691              		.loc 1 444 14 view .LVU234
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 41
+ 691              		.loc 1 444 14 discriminator 1 view .LVU234
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 41
 
 
  692 01b4 0228     		cmp	r0, #2
@@ -2443,10 +2443,10 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  721 01dc FFF7FEFF 		bl	HAL_GetTick
  722              	.LVL68:
  487:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
- 723              		.loc 1 487 27 view .LVU245
+ 723              		.loc 1 487 27 discriminator 1 view .LVU245
  724 01e0 401B     		subs	r0, r0, r5
  487:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
- 725              		.loc 1 487 11 view .LVU246
+ 725              		.loc 1 487 11 discriminator 1 view .LVU246
  726 01e2 0228     		cmp	r0, #2
  727 01e4 F4D9     		bls	.L54
  489:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         }
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  495:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   {
  733              		.loc 1 495 3 is_stmt 1 view .LVU248
  495:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 42
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 42
 
 
  734              		.loc 1 495 26 is_stmt 0 view .LVU249
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  510:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     {
  773              		.loc 1 510 9 is_stmt 0 view .LVU265
  774 0214 264B     		ldr	r3, .L130+8
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 43
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 43
 
 
  775 0216 1B68     		ldr	r3, [r3]
@@ -2553,12 +2553,12 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  528:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  798              		.loc 1 528 5 discriminator 7 view .LVU272
  531:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     {
- 799              		.loc 1 531 5 discriminator 7 view .LVU273
+ 799              		.loc 1 531 5 view .LVU273
  531:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     {
- 800              		.loc 1 531 26 is_stmt 0 discriminator 7 view .LVU274
+ 800              		.loc 1 531 26 is_stmt 0 view .LVU274
  801 0242 A368     		ldr	r3, [r4, #8]
  531:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     {
- 802              		.loc 1 531 8 discriminator 7 view .LVU275
+ 802              		.loc 1 531 8 view .LVU275
  803 0244 002B     		cmp	r3, #0
  804 0246 43D0     		beq	.L64
  534:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  814              		.loc 1 537 14 is_stmt 0 view .LVU280
  815 024e 164B     		ldr	r3, .L130
  816 0250 D3F89030 		ldr	r3, [r3, #144]
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 44
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 44
 
 
  537:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       {
@@ -2592,10 +2592,10 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  822 025a FFF7FEFF 		bl	HAL_GetTick
  823              	.LVL75:
  539:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
- 824              		.loc 1 539 27 view .LVU284
+ 824              		.loc 1 539 27 discriminator 1 view .LVU284
  825 025e 801B     		subs	r0, r0, r6
  539:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
- 826              		.loc 1 539 11 view .LVU285
+ 826              		.loc 1 539 11 discriminator 1 view .LVU285
  827 0260 41F28833 		movw	r3, #5000
  828 0264 9842     		cmp	r0, r3
  829 0266 F2D9     		bls	.L65
@@ -2638,16 +2638,16 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  858              		.loc 1 520 9 view .LVU293
  520:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
  859              		.loc 1 520 14 is_stmt 0 view .LVU294
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 45
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 45
 
 
  860 028a FFF7FEFF 		bl	HAL_GetTick
  861              	.LVL80:
  520:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
- 862              		.loc 1 520 28 view .LVU295
+ 862              		.loc 1 520 28 discriminator 1 view .LVU295
  863 028e 801B     		subs	r0, r0, r6
  520:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
- 864              		.loc 1 520 12 view .LVU296
+ 864              		.loc 1 520 12 discriminator 1 view .LVU296
  865 0290 0228     		cmp	r0, #2
  866 0292 F5D9     		bls	.L59
  522:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         }
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  904              		.loc 1 551 51 view .LVU304
  551:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       {
  905              		.loc 1 551 14 is_stmt 0 view .LVU305
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 46
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 46
 
 
  906 02d6 804B     		ldr	r3, .L132
@@ -2714,10 +2714,10 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  913 02e2 FFF7FEFF 		bl	HAL_GetTick
  914              	.LVL84:
  553:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
- 915              		.loc 1 553 27 view .LVU309
+ 915              		.loc 1 553 27 discriminator 1 view .LVU309
  916 02e6 801B     		subs	r0, r0, r6
  553:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
- 917              		.loc 1 553 11 view .LVU310
+ 917              		.loc 1 553 11 discriminator 1 view .LVU310
  918 02e8 41F28833 		movw	r3, #5000
  919 02ec 9842     		cmp	r0, r3
  920 02ee F2D9     		bls	.L68
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  577:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  944              		.loc 1 577 7 is_stmt 1 view .LVU322
  945 0302 754A     		ldr	r2, .L132
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 47
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 47
 
 
  946 0304 D2F89830 		ldr	r3, [r2, #152]
@@ -2792,10 +2792,10 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  966 0322 FFF7FEFF 		bl	HAL_GetTick
  967              	.LVL88:
  585:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
- 968              		.loc 1 585 27 view .LVU331
+ 968              		.loc 1 585 27 discriminator 1 view .LVU331
  969 0326 401B     		subs	r0, r0, r5
  585:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
- 970              		.loc 1 585 11 view .LVU332
+ 970              		.loc 1 585 11 discriminator 1 view .LVU332
  971 0328 0228     		cmp	r0, #2
  972 032a F4D9     		bls	.L72
  587:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         }
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  987              		.loc 1 563 7 is_stmt 0 view .LVU335
  988              	.LBE4:
  594:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 48
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 48
 
 
  989              		.loc 1 594 7 is_stmt 1 view .LVU336
@@ -2854,10 +2854,10 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1011 035c FFF7FEFF 		bl	HAL_GetTick
  1012              	.LVL93:
  602:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
- 1013              		.loc 1 602 27 view .LVU345
+ 1013              		.loc 1 602 27 discriminator 1 view .LVU345
  1014 0360 401B     		subs	r0, r0, r5
  602:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
- 1015              		.loc 1 602 11 view .LVU346
+ 1015              		.loc 1 602 11 discriminator 1 view .LVU346
  1016 0362 0228     		cmp	r0, #2
  1017 0364 F4D9     		bls	.L74
  604:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         }
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1028 036c 002B     		cmp	r3, #0
  1029 036e 00F0A180 		beq	.L100
  617:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 49
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 49
 
 
  1030              		.loc 1 617 5 is_stmt 1 view .LVU352
@@ -2931,14 +2931,14 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1064 039c FFF7FEFF 		bl	HAL_GetTick
  1065              	.LVL97:
  681:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           {
- 1066              		.loc 1 681 30 view .LVU366
+ 1066              		.loc 1 681 30 discriminator 1 view .LVU366
  1067 03a0 001B     		subs	r0, r0, r4
  681:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           {
- 1068              		.loc 1 681 14 view .LVU367
+ 1068              		.loc 1 681 14 discriminator 1 view .LVU367
  1069 03a2 0228     		cmp	r0, #2
  1070 03a4 F5D9     		bls	.L82
  683:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           }
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 50
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 50
 
 
  1071              		.loc 1 683 20 view .LVU368
@@ -2992,13 +2992,13 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1104 03c4 FFF7FEFF 		bl	HAL_GetTick
  1105              	.LVL101:
  638:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           {
- 1106              		.loc 1 638 30 view .LVU384
+ 1106              		.loc 1 638 30 discriminator 1 view .LVU384
  1107 03c8 401B     		subs	r0, r0, r5
  638:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           {
- 1108              		.loc 1 638 14 view .LVU385
+ 1108              		.loc 1 638 14 discriminator 1 view .LVU385
  1109 03ca 0228     		cmp	r0, #2
  1110 03cc F5D9     		bls	.L78
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 51
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 51
 
 
  640:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           }
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1156 041e 2E4B     		ldr	r3, .L132
  1157 0420 1B68     		ldr	r3, [r3]
  662:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 52
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 52
 
 
  1158              		.loc 1 662 49 view .LVU395
@@ -3071,10 +3071,10 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1163 0428 FFF7FEFF 		bl	HAL_GetTick
  1164              	.LVL104:
  664:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           {
- 1165              		.loc 1 664 30 view .LVU398
+ 1165              		.loc 1 664 30 discriminator 1 view .LVU398
  1166 042c 001B     		subs	r0, r0, r4
  664:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           {
- 1167              		.loc 1 664 14 view .LVU399
+ 1167              		.loc 1 664 14 discriminator 1 view .LVU399
  1168 042e 0228     		cmp	r0, #2
  1169 0430 F5D9     		bls	.L80
  666:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****           }
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1198 044e DB68     		ldr	r3, [r3, #12]
  1199              	.LVL106:
  702:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****          (READ_BIT(temp_pllckcfg, RCC_PLLCFGR_PLLM) != (((RCC_OscInitStruct->PLL.PLLM) - 1U) << RCC
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 53
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 53
 
 
  1200              		.loc 1 702 7 is_stmt 1 view .LVU410
@@ -3133,13 +3133,13 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1206 0456 9142     		cmp	r1, r2
  1207 0458 31D1     		bne	.L105
  703:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****          (READ_BIT(temp_pllckcfg, RCC_PLLCFGR_PLLN) != ((RCC_OscInitStruct->PLL.PLLN) << RCC_PLLCFG
- 1208              		.loc 1 703 11 discriminator 1 view .LVU414
+ 1208              		.loc 1 703 11 view .LVU414
  1209 045a 03F0F002 		and	r2, r3, #240
  703:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****          (READ_BIT(temp_pllckcfg, RCC_PLLCFGR_PLLN) != ((RCC_OscInitStruct->PLL.PLLN) << RCC_PLLCFG
- 1210              		.loc 1 703 81 discriminator 1 view .LVU415
+ 1210              		.loc 1 703 81 view .LVU415
  1211 045e 616A     		ldr	r1, [r4, #36]
  703:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****          (READ_BIT(temp_pllckcfg, RCC_PLLCFGR_PLLN) != ((RCC_OscInitStruct->PLL.PLLN) << RCC_PLLCFG
- 1212              		.loc 1 703 88 discriminator 1 view .LVU416
+ 1212              		.loc 1 703 88 view .LVU416
  1213 0460 0139     		subs	r1, r1, #1
  702:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****          (READ_BIT(temp_pllckcfg, RCC_PLLCFGR_PLLM) != (((RCC_OscInitStruct->PLL.PLLM) - 1U) << RCC
  1214              		.loc 1 702 92 discriminator 1 view .LVU417
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1237              		.loc 1 706 96 view .LVU427
  1238 0488 013A     		subs	r2, r2, #1
  705:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****          (READ_BIT(temp_pllckcfg, RCC_PLLCFGR_PLLQ) != ((((RCC_OscInitStruct->PLL.PLLQ) >> 1U) - 1U
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 54
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 54
 
 
  1239              		.loc 1 705 119 view .LVU428
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1283              	.L88:
  395:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       }
  1284              		.loc 1 395 16 view .LVU439
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 55
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 55
 
 
  1285 04ac 0120     		movs	r0, #1
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1333 04d4 EFE7     		b	.L27
  1334              	.L133:
  1335 04d6 00BF     		.align	2
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 56
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 56
 
 
  1336              	.L132:
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1381 000c 0323     		movs	r3, #3
  1382 000e 0493     		str	r3, [sp, #16]
 1007:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 57
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 57
 
 
  1383              		.loc 1 1007 3 is_stmt 1 view .LVU457
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1421 003a 4FEA8E20 		lsl	r0, lr, #10
  1422              	.LVL124:
 1022:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 58
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 58
 
 
  1423              		.loc 1 1022 3 is_stmt 0 view .LVU474
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
 1065:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   uint32_t sysclockfreq;
  1470              		.loc 1 1065 3 view .LVU484
 1066:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 59
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 59
 
 
  1471              		.loc 1 1066 3 view .LVU485
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1510              	.LVL130:
 1086:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  1511              		.loc 1 1086 5 is_stmt 1 view .LVU501
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 60
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 60
 
 
 1086:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1549              		.loc 1 1100 5 is_stmt 1 view .LVU518
 1100:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   }
  1550              		.loc 1 1100 18 is_stmt 0 view .LVU519
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 61
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 61
 
 
  1551 005a B0FBF3F0 		udiv	r0, r0, r3
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1596              		.thumb_func
  1598              	HAL_RCC_ClockConfig:
  1599              	.LVL140:
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 62
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 62
 
 
  1600              	.LFB331:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1640              		.loc 1 794 5 view .LVU543
  794:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****     {
  1641              		.loc 1 794 9 is_stmt 0 view .LVU544
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 63
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 63
 
 
  1642 0024 1368     		ldr	r3, [r2]
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1679 0052 654B     		ldr	r3, .L188+8
  1680 0054 9842     		cmp	r0, r3
  1681 0056 4DD9     		bls	.L177
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 64
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 64
 
 
  855:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****         hpre = RCC_SYSCLK_DIV2;
@@ -3838,13 +3838,13 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1722 008c FFF7FEFF 		bl	HAL_GetTick
  1723              	.LVL146:
  868:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 65
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 65
 
 
- 1724              		.loc 1 868 26 view .LVU576
+ 1724              		.loc 1 868 26 discriminator 1 view .LVU576
  1725 0090 C01B     		subs	r0, r0, r7
  868:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       {
- 1726              		.loc 1 868 10 view .LVU577
+ 1726              		.loc 1 868 10 discriminator 1 view .LVU577
  1727 0092 41F28833 		movw	r3, #5000
  1728 0096 9842     		cmp	r0, r3
  1729 0098 F0D9     		bls	.L159
@@ -3897,8 +3897,8 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1763 00ba 13F0F00F 		tst	r3, #240
  1764 00be 05D0     		beq	.L156
  821:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****               (RCC_ClkInitStruct->AHBCLKDivider == RCC_SYSCLK_DIV1))))
- 1765              		.loc 1 821 35 discriminator 1 view .LVU591
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 66
+ 1765              		.loc 1 821 35 view .LVU591
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 66
 
 
  1766 00c0 2E68     		ldr	r6, [r5]
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1807 00f0 0026     		movs	r6, #0
  1808 00f2 B9E7     		b	.L155
  1809              	.L177:
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 67
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 67
 
 
  770:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1851 0132 9360     		str	r3, [r2, #8]
  1852              	.L164:
  903:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 68
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 68
 
 
  1853              		.loc 1 903 3 view .LVU618
@@ -4078,29 +4078,29 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  936:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  1894              		.loc 1 936 21 is_stmt 0 view .LVU632
  1895 016e FFF7FEFF 		bl	HAL_RCC_GetSysClockFreq
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 69
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 69
 
 
  1896              	.LVL157:
  936:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
- 1897              		.loc 1 936 65 view .LVU633
+ 1897              		.loc 1 936 65 discriminator 1 view .LVU633
  1898 0172 1C4B     		ldr	r3, .L188+4
  1899 0174 9B68     		ldr	r3, [r3, #8]
  936:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
- 1900              		.loc 1 936 100 view .LVU634
+ 1900              		.loc 1 936 100 discriminator 1 view .LVU634
  1901 0176 C3F30313 		ubfx	r3, r3, #4, #4
  936:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
- 1902              		.loc 1 936 64 view .LVU635
+ 1902              		.loc 1 936 64 discriminator 1 view .LVU635
  1903 017a 1C4A     		ldr	r2, .L188+12
  1904 017c D35C     		ldrb	r3, [r2, r3]	@ zero_extendqisi2
  936:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
- 1905              		.loc 1 936 122 view .LVU636
+ 1905              		.loc 1 936 122 discriminator 1 view .LVU636
  1906 017e 03F01F03 		and	r3, r3, #31
  936:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
- 1907              		.loc 1 936 47 view .LVU637
+ 1907              		.loc 1 936 47 discriminator 1 view .LVU637
  1908 0182 D840     		lsrs	r0, r0, r3
  936:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
- 1909              		.loc 1 936 19 view .LVU638
+ 1909              		.loc 1 936 19 discriminator 1 view .LVU638
  1910 0184 1A4B     		ldr	r3, .L188+16
  1911 0186 1860     		str	r0, [r3]
  939:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** }
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1937 01a6 23F00F03 		bic	r3, r3, #15
  1938 01aa 2343     		orrs	r3, r3, r4
  1939 01ac 1360     		str	r3, [r2]
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 70
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 70
 
 
  910:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
@@ -4170,10 +4170,10 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  1958 01c0 FFF7FEFF 		bl	HAL_GetTick
  1959              	.LVL162:
  914:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       {
- 1960              		.loc 1 914 26 view .LVU654
+ 1960              		.loc 1 914 26 discriminator 1 view .LVU654
  1961 01c4 801B     		subs	r0, r0, r6
  914:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****       {
- 1962              		.loc 1 914 10 view .LVU655
+ 1962              		.loc 1 914 10 discriminator 1 view .LVU655
  1963 01c6 41F28833 		movw	r3, #5000
  1964 01ca 9842     		cmp	r0, r3
  1965 01cc F2D9     		bls	.L166
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  940:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  1982              		.loc 1 940 1 view .LVU658
  1983 01d4 7047     		bx	lr
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 71
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 71
 
 
  1984              	.LVL165:
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  2033              		.loc 1 1121 1 is_stmt 0 view .LVU665
  2034 0000 014B     		ldr	r3, .L191
  2035 0002 1868     		ldr	r0, [r3]
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 72
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 72
 
 
  2036 0004 7047     		bx	lr
@@ -4293,18 +4293,18 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  2064 0002 FFF7FEFF 		bl	HAL_RCC_GetHCLKFreq
  2065              	.LVL169:
 1132:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** }
- 2066              		.loc 1 1132 51 view .LVU669
+ 2066              		.loc 1 1132 51 discriminator 1 view .LVU669
  2067 0006 054B     		ldr	r3, .L195
  2068 0008 9B68     		ldr	r3, [r3, #8]
 1132:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** }
- 2069              		.loc 1 1132 87 view .LVU670
+ 2069              		.loc 1 1132 87 discriminator 1 view .LVU670
  2070 000a C3F30223 		ubfx	r3, r3, #8, #3
 1132:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** }
- 2071              		.loc 1 1132 50 view .LVU671
+ 2071              		.loc 1 1132 50 discriminator 1 view .LVU671
  2072 000e 044A     		ldr	r2, .L195+4
  2073 0010 D35C     		ldrb	r3, [r2, r3]	@ zero_extendqisi2
 1132:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** }
- 2074              		.loc 1 1132 110 view .LVU672
+ 2074              		.loc 1 1132 110 discriminator 1 view .LVU672
  2075 0012 03F01F03 		and	r3, r3, #31
 1133:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  2076              		.loc 1 1133 1 view .LVU673
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  2084              		.cfi_endproc
  2085              	.LFE335:
  2087              		.section	.text.HAL_RCC_GetPCLK2Freq,"ax",%progbits
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 73
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 73
 
 
  2088              		.align	1
@@ -4345,18 +4345,18 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  2107 0002 FFF7FEFF 		bl	HAL_RCC_GetHCLKFreq
  2108              	.LVL170:
 1144:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** }
- 2109              		.loc 1 1144 50 view .LVU677
+ 2109              		.loc 1 1144 50 discriminator 1 view .LVU677
  2110 0006 054B     		ldr	r3, .L199
  2111 0008 9B68     		ldr	r3, [r3, #8]
 1144:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** }
- 2112              		.loc 1 1144 86 view .LVU678
+ 2112              		.loc 1 1144 86 discriminator 1 view .LVU678
  2113 000a C3F3C223 		ubfx	r3, r3, #11, #3
 1144:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** }
- 2114              		.loc 1 1144 49 view .LVU679
+ 2114              		.loc 1 1144 49 discriminator 1 view .LVU679
  2115 000e 044A     		ldr	r2, .L199+4
  2116 0010 D35C     		ldrb	r3, [r2, r3]	@ zero_extendqisi2
 1144:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** }
- 2117              		.loc 1 1144 109 view .LVU680
+ 2117              		.loc 1 1144 109 discriminator 1 view .LVU680
  2118 0012 03F01F03 		and	r3, r3, #31
 1145:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  2119              		.loc 1 1145 1 view .LVU681
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  2137              	HAL_RCC_GetOscConfig:
  2138              	.LVL171:
  2139              	.LFB337:
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 74
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 74
 
 
 1155:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   /* Check the parameters */
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
 1187:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
  2178              		.loc 1 1187 84 view .LVU698
  2179 0028 C3F30663 		ubfx	r3, r3, #24, #7
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 75
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 75
 
 
 1187:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  2217              		.loc 1 1224 3 is_stmt 1 view .LVU715
 1224:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   {
  2218              		.loc 1 1224 6 is_stmt 0 view .LVU716
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 76
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 76
 
 
  2219 005c 244B     		ldr	r3, .L216
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  2255              		.loc 1 1235 77 view .LVU734
  2256 0088 C3F34153 		ubfx	r3, r3, #21, #2
 1235:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   RCC_OscInitStruct->PLL.PLLR = (((READ_BIT(RCC->PLLCFGR, RCC_PLLCFGR_PLLR) >> RCC_PLLCFGR_PLLR_Pos
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 77
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 77
 
 
  2257              		.loc 1 1235 102 view .LVU735
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  2293 00b0 4FF48033 		mov	r3, #65536
  2294 00b4 4360     		str	r3, [r0, #4]
  2295 00b6 ADE7     		b	.L203
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 78
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 78
 
 
  2296              	.L204:
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  2335              		.loc 1 1220 35 is_stmt 0 view .LVU768
  2336 00e2 0023     		movs	r3, #0
  2337 00e4 8361     		str	r3, [r0, #24]
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 79
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 79
 
 
  2338 00e6 B9E7     		b	.L213
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  2382 000e 9A68     		ldr	r2, [r3, #8]
  2383 0010 02F0F002 		and	r2, r2, #240
 1261:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 80
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 80
 
 
  2384              		.loc 1 1261 36 view .LVU781
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  2428              		@ args = 0, pretend = 0, frame = 0
  2429              		@ frame_needed = 0, uses_anonymous_args = 0
  2430              		@ link register save eliminated.
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 81
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 81
 
 
 1285:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c **** }
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  2483              		.cfi_startproc
  2484              		@ args = 0, pretend = 0, frame = 0
  2485              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 82
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 82
 
 
  2486              		@ link register save eliminated.
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  2538              		.loc 1 1321 3 view .LVU805
 1321:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c ****   {
  2539              		.loc 1 1321 6 is_stmt 0 view .LVU806
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 83
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 83
 
 
  2540 0002 064B     		ldr	r3, .L235
@@ -4952,8 +4952,8 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  2563              	.LFE342:
  2565              		.text
  2566              	.Letext0:
- 2567              		.file 2 "c:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
- 2568              		.file 3 "c:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 2567              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/ma
+ 2568              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/sy
  2569              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
  2570              		.file 5 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
  2571              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
@@ -4961,67 +4961,67 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 1
  2573              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h"
  2574              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h"
  2575              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h"
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 84
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 84
 
 
 DEFINED SYMBOLS
-                            *ABS*:0000000000000000 stm32g4xx_hal_rcc.c
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:21     .text.RCC_GetSysClockFreqFromPLLSource:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:26     .text.RCC_GetSysClockFreqFromPLLSource:0000000000000000 RCC_GetSysClockFreqFromPLLSource
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:108    .text.RCC_GetSysClockFreqFromPLLSource:000000000000004c $d
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:115    .text.HAL_RCC_DeInit:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:121    .text.HAL_RCC_DeInit:0000000000000000 HAL_RCC_DeInit
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:294    .text.HAL_RCC_DeInit:00000000000000bc $d
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:302    .text.HAL_RCC_OscConfig:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:308    .text.HAL_RCC_OscConfig:0000000000000000 HAL_RCC_OscConfig
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:881    .text.HAL_RCC_OscConfig:00000000000002a8 $d
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:886    .text.HAL_RCC_OscConfig:00000000000002b4 $t
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:1337   .text.HAL_RCC_OscConfig:00000000000004d8 $d
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:1344   .text.HAL_RCC_MCOConfig:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:1350   .text.HAL_RCC_MCOConfig:0000000000000000 HAL_RCC_MCOConfig
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:1452   .text.HAL_RCC_MCOConfig:0000000000000058 $d
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:1457   .text.HAL_RCC_GetSysClockFreq:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:1463   .text.HAL_RCC_GetSysClockFreq:0000000000000000 HAL_RCC_GetSysClockFreq
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:1585   .text.HAL_RCC_GetSysClockFreq:000000000000007c $d
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:1592   .text.HAL_RCC_ClockConfig:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:1598   .text.HAL_RCC_ClockConfig:0000000000000000 HAL_RCC_ClockConfig
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2009   .text.HAL_RCC_ClockConfig:00000000000001e0 $d
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2019   .text.HAL_RCC_GetHCLKFreq:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2025   .text.HAL_RCC_GetHCLKFreq:0000000000000000 HAL_RCC_GetHCLKFreq
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2040   .text.HAL_RCC_GetHCLKFreq:0000000000000008 $d
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2045   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2051   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 HAL_RCC_GetPCLK1Freq
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2082   .text.HAL_RCC_GetPCLK1Freq:000000000000001c $d
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2088   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2094   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 HAL_RCC_GetPCLK2Freq
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2125   .text.HAL_RCC_GetPCLK2Freq:000000000000001c $d
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2131   .text.HAL_RCC_GetOscConfig:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2137   .text.HAL_RCC_GetOscConfig:0000000000000000 HAL_RCC_GetOscConfig
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2348   .text.HAL_RCC_GetOscConfig:00000000000000f0 $d
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2353   .text.HAL_RCC_GetClockConfig:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2359   .text.HAL_RCC_GetClockConfig:0000000000000000 HAL_RCC_GetClockConfig
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2412   .text.HAL_RCC_GetClockConfig:0000000000000034 $d
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2418   .text.HAL_RCC_EnableCSS:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2424   .text.HAL_RCC_EnableCSS:0000000000000000 HAL_RCC_EnableCSS
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2441   .text.HAL_RCC_EnableCSS:000000000000000c $d
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2446   .text.HAL_RCC_EnableLSECSS:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2452   .text.HAL_RCC_EnableLSECSS:0000000000000000 HAL_RCC_EnableLSECSS
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2469   .text.HAL_RCC_EnableLSECSS:0000000000000010 $d
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2474   .text.HAL_RCC_DisableLSECSS:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2480   .text.HAL_RCC_DisableLSECSS:0000000000000000 HAL_RCC_DisableLSECSS
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2497   .text.HAL_RCC_DisableLSECSS:0000000000000010 $d
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2502   .text.HAL_RCC_CSSCallback:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2508   .text.HAL_RCC_CSSCallback:0000000000000000 HAL_RCC_CSSCallback
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2521   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2527   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 HAL_RCC_NMI_IRQHandler
-C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s:2561   .text.HAL_RCC_NMI_IRQHandler:000000000000001c $d
+                            *ABS*:00000000 stm32g4xx_hal_rcc.c
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:21     .text.RCC_GetSysClockFreqFromPLLSource:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:26     .text.RCC_GetSysClockFreqFromPLLSource:00000000 RCC_GetSysClockFreqFromPLLSource
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:108    .text.RCC_GetSysClockFreqFromPLLSource:0000004c $d
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:115    .text.HAL_RCC_DeInit:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:121    .text.HAL_RCC_DeInit:00000000 HAL_RCC_DeInit
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:294    .text.HAL_RCC_DeInit:000000bc $d
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:302    .text.HAL_RCC_OscConfig:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:308    .text.HAL_RCC_OscConfig:00000000 HAL_RCC_OscConfig
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:881    .text.HAL_RCC_OscConfig:000002a8 $d
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:886    .text.HAL_RCC_OscConfig:000002b4 $t
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:1337   .text.HAL_RCC_OscConfig:000004d8 $d
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:1344   .text.HAL_RCC_MCOConfig:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:1350   .text.HAL_RCC_MCOConfig:00000000 HAL_RCC_MCOConfig
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:1452   .text.HAL_RCC_MCOConfig:00000058 $d
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:1457   .text.HAL_RCC_GetSysClockFreq:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:1463   .text.HAL_RCC_GetSysClockFreq:00000000 HAL_RCC_GetSysClockFreq
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:1585   .text.HAL_RCC_GetSysClockFreq:0000007c $d
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:1592   .text.HAL_RCC_ClockConfig:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:1598   .text.HAL_RCC_ClockConfig:00000000 HAL_RCC_ClockConfig
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2009   .text.HAL_RCC_ClockConfig:000001e0 $d
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2019   .text.HAL_RCC_GetHCLKFreq:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2025   .text.HAL_RCC_GetHCLKFreq:00000000 HAL_RCC_GetHCLKFreq
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2040   .text.HAL_RCC_GetHCLKFreq:00000008 $d
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2045   .text.HAL_RCC_GetPCLK1Freq:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2051   .text.HAL_RCC_GetPCLK1Freq:00000000 HAL_RCC_GetPCLK1Freq
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2082   .text.HAL_RCC_GetPCLK1Freq:0000001c $d
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2088   .text.HAL_RCC_GetPCLK2Freq:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2094   .text.HAL_RCC_GetPCLK2Freq:00000000 HAL_RCC_GetPCLK2Freq
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2125   .text.HAL_RCC_GetPCLK2Freq:0000001c $d
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2131   .text.HAL_RCC_GetOscConfig:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2137   .text.HAL_RCC_GetOscConfig:00000000 HAL_RCC_GetOscConfig
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2348   .text.HAL_RCC_GetOscConfig:000000f0 $d
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2353   .text.HAL_RCC_GetClockConfig:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2359   .text.HAL_RCC_GetClockConfig:00000000 HAL_RCC_GetClockConfig
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2412   .text.HAL_RCC_GetClockConfig:00000034 $d
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2418   .text.HAL_RCC_EnableCSS:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2424   .text.HAL_RCC_EnableCSS:00000000 HAL_RCC_EnableCSS
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2441   .text.HAL_RCC_EnableCSS:0000000c $d
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2446   .text.HAL_RCC_EnableLSECSS:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2452   .text.HAL_RCC_EnableLSECSS:00000000 HAL_RCC_EnableLSECSS
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2469   .text.HAL_RCC_EnableLSECSS:00000010 $d
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2474   .text.HAL_RCC_DisableLSECSS:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2480   .text.HAL_RCC_DisableLSECSS:00000000 HAL_RCC_DisableLSECSS
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2497   .text.HAL_RCC_DisableLSECSS:00000010 $d
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2502   .text.HAL_RCC_CSSCallback:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2508   .text.HAL_RCC_CSSCallback:00000000 HAL_RCC_CSSCallback
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2521   .text.HAL_RCC_NMI_IRQHandler:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2527   .text.HAL_RCC_NMI_IRQHandler:00000000 HAL_RCC_NMI_IRQHandler
+C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s:2561   .text.HAL_RCC_NMI_IRQHandler:0000001c $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick
 HAL_InitTick
 SystemCoreClock
 uwTickPrio
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc3u59qx.s 			page 85
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccfdJWep.s 			page 85
 
 
 HAL_GPIO_Init

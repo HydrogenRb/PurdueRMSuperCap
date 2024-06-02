@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 1
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 1
   28:Core/Src/stm32g4xx_it.c **** /* USER CODE BEGIN TD */
   29:Core/Src/stm32g4xx_it.c **** 
   30:Core/Src/stm32g4xx_it.c **** /* USER CODE END TD */
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 2
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s 			page 2
 
 
   31:Core/Src/stm32g4xx_it.c **** 
@@ -113,15 +113,15 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 1
   73:Core/Src/stm32g4xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 0 */
   74:Core/Src/stm32g4xx_it.c ****   /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
   75:Core/Src/stm32g4xx_it.c ****   while (1)
-  36              		.loc 1 75 3 discriminator 1 view .LVU1
+  36              		.loc 1 75 3 view .LVU1
   76:Core/Src/stm32g4xx_it.c ****   {
   77:Core/Src/stm32g4xx_it.c ****   }
-  37              		.loc 1 77 3 discriminator 1 view .LVU2
+  37              		.loc 1 77 3 view .LVU2
   75:Core/Src/stm32g4xx_it.c ****   {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 3
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s 			page 3
 
 
-  38              		.loc 1 75 9 discriminator 1 view .LVU3
+  38              		.loc 1 75 9 view .LVU3
   39 0000 FEE7     		b	.L2
   40              		.cfi_endproc
   41              	.LFE329:
@@ -152,14 +152,14 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 1
   87:Core/Src/stm32g4xx_it.c **** 
   88:Core/Src/stm32g4xx_it.c ****   /* USER CODE END HardFault_IRQn 0 */
   89:Core/Src/stm32g4xx_it.c ****   while (1)
-  59              		.loc 1 89 3 discriminator 1 view .LVU5
+  59              		.loc 1 89 3 view .LVU5
   90:Core/Src/stm32g4xx_it.c ****   {
   91:Core/Src/stm32g4xx_it.c ****     /* USER CODE BEGIN W1_HardFault_IRQn 0 */
   92:Core/Src/stm32g4xx_it.c ****     /* USER CODE END W1_HardFault_IRQn 0 */
   93:Core/Src/stm32g4xx_it.c ****   }
-  60              		.loc 1 93 3 discriminator 1 view .LVU6
+  60              		.loc 1 93 3 view .LVU6
   89:Core/Src/stm32g4xx_it.c ****   {
-  61              		.loc 1 89 9 discriminator 1 view .LVU7
+  61              		.loc 1 89 9 view .LVU7
   62 0000 FEE7     		b	.L4
   63              		.cfi_endproc
   64              	.LFE330:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 1
   98:Core/Src/stm32g4xx_it.c ****   */
   99:Core/Src/stm32g4xx_it.c **** void MemManage_Handler(void)
  100:Core/Src/stm32g4xx_it.c **** {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 4
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s 			page 4
 
 
   75              		.loc 1 100 1 view -0
@@ -192,14 +192,14 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 1
  102:Core/Src/stm32g4xx_it.c **** 
  103:Core/Src/stm32g4xx_it.c ****   /* USER CODE END MemoryManagement_IRQn 0 */
  104:Core/Src/stm32g4xx_it.c ****   while (1)
-  82              		.loc 1 104 3 discriminator 1 view .LVU9
+  82              		.loc 1 104 3 view .LVU9
  105:Core/Src/stm32g4xx_it.c ****   {
  106:Core/Src/stm32g4xx_it.c ****     /* USER CODE BEGIN W1_MemoryManagement_IRQn 0 */
  107:Core/Src/stm32g4xx_it.c ****     /* USER CODE END W1_MemoryManagement_IRQn 0 */
  108:Core/Src/stm32g4xx_it.c ****   }
-  83              		.loc 1 108 3 discriminator 1 view .LVU10
+  83              		.loc 1 108 3 view .LVU10
  104:Core/Src/stm32g4xx_it.c ****   {
-  84              		.loc 1 104 9 discriminator 1 view .LVU11
+  84              		.loc 1 104 9 view .LVU11
   85 0000 FEE7     		b	.L6
   86              		.cfi_endproc
   87              	.LFE331:
@@ -229,16 +229,16 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 1
  117:Core/Src/stm32g4xx_it.c **** 
  118:Core/Src/stm32g4xx_it.c ****   /* USER CODE END BusFault_IRQn 0 */
  119:Core/Src/stm32g4xx_it.c ****   while (1)
- 105              		.loc 1 119 3 discriminator 1 view .LVU13
+ 105              		.loc 1 119 3 view .LVU13
  120:Core/Src/stm32g4xx_it.c ****   {
  121:Core/Src/stm32g4xx_it.c ****     /* USER CODE BEGIN W1_BusFault_IRQn 0 */
  122:Core/Src/stm32g4xx_it.c ****     /* USER CODE END W1_BusFault_IRQn 0 */
  123:Core/Src/stm32g4xx_it.c ****   }
- 106              		.loc 1 123 3 discriminator 1 view .LVU14
+ 106              		.loc 1 123 3 view .LVU14
  119:Core/Src/stm32g4xx_it.c ****   {
- 107              		.loc 1 119 9 discriminator 1 view .LVU15
+ 107              		.loc 1 119 9 view .LVU15
  108 0000 FEE7     		b	.L8
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 5
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s 			page 5
 
 
  109              		.cfi_endproc
@@ -269,14 +269,14 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 1
  132:Core/Src/stm32g4xx_it.c **** 
  133:Core/Src/stm32g4xx_it.c ****   /* USER CODE END UsageFault_IRQn 0 */
  134:Core/Src/stm32g4xx_it.c ****   while (1)
- 128              		.loc 1 134 3 discriminator 1 view .LVU17
+ 128              		.loc 1 134 3 view .LVU17
  135:Core/Src/stm32g4xx_it.c ****   {
  136:Core/Src/stm32g4xx_it.c ****     /* USER CODE BEGIN W1_UsageFault_IRQn 0 */
  137:Core/Src/stm32g4xx_it.c ****     /* USER CODE END W1_UsageFault_IRQn 0 */
  138:Core/Src/stm32g4xx_it.c ****   }
- 129              		.loc 1 138 3 discriminator 1 view .LVU18
+ 129              		.loc 1 138 3 view .LVU18
  134:Core/Src/stm32g4xx_it.c ****   {
- 130              		.loc 1 134 9 discriminator 1 view .LVU19
+ 130              		.loc 1 134 9 view .LVU19
  131 0000 FEE7     		b	.L10
  132              		.cfi_endproc
  133              	.LFE333:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 1
  144              		.loc 1 145 1 view -0
  145              		.cfi_startproc
  146              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 6
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s 			page 6
 
 
  147              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 1
  169:Core/Src/stm32g4xx_it.c ****   */
  170:Core/Src/stm32g4xx_it.c **** void PendSV_Handler(void)
  171:Core/Src/stm32g4xx_it.c **** {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 7
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s 			page 7
 
 
  182              		.loc 1 171 1 view -0
@@ -418,32 +418,32 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 1
  218              		.text
  219              	.Letext0:
  220              		.file 2 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h"
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 8
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s 			page 8
 
 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccTa456k.s 			page 9
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s 			page 9
 
 
 DEFINED SYMBOLS
-                            *ABS*:0000000000000000 stm32g4xx_it.c
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:21     .text.NMI_Handler:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:27     .text.NMI_Handler:0000000000000000 NMI_Handler
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:44     .text.HardFault_Handler:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:50     .text.HardFault_Handler:0000000000000000 HardFault_Handler
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:67     .text.MemManage_Handler:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:73     .text.MemManage_Handler:0000000000000000 MemManage_Handler
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:90     .text.BusFault_Handler:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:96     .text.BusFault_Handler:0000000000000000 BusFault_Handler
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:113    .text.UsageFault_Handler:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:119    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:136    .text.SVC_Handler:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:142    .text.SVC_Handler:0000000000000000 SVC_Handler
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:155    .text.DebugMon_Handler:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:161    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:174    .text.PendSV_Handler:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:180    .text.PendSV_Handler:0000000000000000 PendSV_Handler
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:193    .text.SysTick_Handler:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccTa456k.s:199    .text.SysTick_Handler:0000000000000000 SysTick_Handler
+                            *ABS*:00000000 stm32g4xx_it.c
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:21     .text.NMI_Handler:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:27     .text.NMI_Handler:00000000 NMI_Handler
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:44     .text.HardFault_Handler:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:50     .text.HardFault_Handler:00000000 HardFault_Handler
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:67     .text.MemManage_Handler:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:73     .text.MemManage_Handler:00000000 MemManage_Handler
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:90     .text.BusFault_Handler:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:96     .text.BusFault_Handler:00000000 BusFault_Handler
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:113    .text.UsageFault_Handler:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:119    .text.UsageFault_Handler:00000000 UsageFault_Handler
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:136    .text.SVC_Handler:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:142    .text.SVC_Handler:00000000 SVC_Handler
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:155    .text.DebugMon_Handler:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:161    .text.DebugMon_Handler:00000000 DebugMon_Handler
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:174    .text.PendSV_Handler:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:180    .text.PendSV_Handler:00000000 PendSV_Handler
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:193    .text.SysTick_Handler:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccghzzBH.s:199    .text.SysTick_Handler:00000000 SysTick_Handler
 
 UNDEFINED SYMBOLS
 HAL_IncTick

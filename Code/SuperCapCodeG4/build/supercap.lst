@@ -1,0 +1,211 @@
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc8gO66s.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"supercap.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/supercap.c"
+  20              		.global	__aeabi_f2d
+  21              		.global	__aeabi_dmul
+  22              		.global	__aeabi_ddiv
+  23              		.global	__aeabi_d2f
+  24              		.section	.text.ADC_to_Voltage_Funtion,"ax",%progbits
+  25              		.align	1
+  26              		.global	ADC_to_Voltage_Funtion
+  27              		.syntax unified
+  28              		.thumb
+  29              		.thumb_func
+  31              	ADC_to_Voltage_Funtion:
+  32              	.LVL0:
+  33              	.LFB329:
+   1:Core/Src/supercap.c **** /**
+   2:Core/Src/supercap.c ****   ******************************************************************************
+   3:Core/Src/supercap.c ****   * @file    supercap.c
+   4:Core/Src/supercap.c ****   * @brief   This file provides code for the configuration
+   5:Core/Src/supercap.c ****   *          of all used supercap pins.
+   6:Core/Src/supercap.c ****   */
+   7:Core/Src/supercap.c **** /* USER CODE END Header */
+   8:Core/Src/supercap.c **** #include "supercap.h"
+   9:Core/Src/supercap.c **** 
+  10:Core/Src/supercap.c **** #define SAMPLE_SIZE 4
+  11:Core/Src/supercap.c **** 
+  12:Core/Src/supercap.c **** float ADC_to_Voltage_Funtion(uint16_t adc_value) {
+  34              		.loc 1 12 50 view -0
+  35              		.cfi_startproc
+  36              		@ args = 0, pretend = 0, frame = 0
+  37              		@ frame_needed = 0, uses_anonymous_args = 0
+  38              		.loc 1 12 50 is_stmt 0 view .LVU1
+  39 0000 08B5     		push	{r3, lr}
+  40              	.LCFI0:
+  41              		.cfi_def_cfa_offset 8
+  42              		.cfi_offset 3, -8
+  43              		.cfi_offset 14, -4
+  44 0002 07EE900A 		vmov	s15, r0	@ int
+  13:Core/Src/supercap.c ****   float voltage = (float)adc_value * 3.3 / 4095.0;
+  45              		.loc 1 13 3 is_stmt 1 view .LVU2
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc8gO66s.s 			page 2
+
+
+  46              		.loc 1 13 19 is_stmt 0 view .LVU3
+  47 0006 F8EE677A 		vcvt.f32.u32	s15, s15
+  48 000a 17EE900A 		vmov	r0, s15
+  49              	.LVL1:
+  50              		.loc 1 13 19 view .LVU4
+  51 000e FFF7FEFF 		bl	__aeabi_f2d
+  52              	.LVL2:
+  53              		.loc 1 13 36 view .LVU5
+  54 0012 07A3     		adr	r3, .L3
+  55 0014 D3E90023 		ldrd	r2, [r3]
+  56 0018 FFF7FEFF 		bl	__aeabi_dmul
+  57              	.LVL3:
+  58              		.loc 1 13 42 view .LVU6
+  59 001c 06A3     		adr	r3, .L3+8
+  60 001e D3E90023 		ldrd	r2, [r3]
+  61 0022 FFF7FEFF 		bl	__aeabi_ddiv
+  62              	.LVL4:
+  63              		.loc 1 13 9 view .LVU7
+  64 0026 FFF7FEFF 		bl	__aeabi_d2f
+  65              	.LVL5:
+  14:Core/Src/supercap.c ****   return voltage;
+  66              		.loc 1 14 3 is_stmt 1 view .LVU8
+  15:Core/Src/supercap.c **** }
+  67              		.loc 1 15 1 is_stmt 0 view .LVU9
+  68 002a 00EE100A 		vmov	s0, r0
+  69 002e 08BD     		pop	{r3, pc}
+  70              	.L4:
+  71              		.align	3
+  72              	.L3:
+  73 0030 66666666 		.word	1717986918
+  74 0034 66660A40 		.word	1074423398
+  75 0038 00000000 		.word	0
+  76 003c 00FEAF40 		.word	1085275648
+  77              		.cfi_endproc
+  78              	.LFE329:
+  80              		.section	.text.Supercap_Average_ADC_Function,"ax",%progbits
+  81              		.align	1
+  82              		.global	Supercap_Average_ADC_Function
+  83              		.syntax unified
+  84              		.thumb
+  85              		.thumb_func
+  87              	Supercap_Average_ADC_Function:
+  88              	.LVL6:
+  89              	.LFB330:
+  16:Core/Src/supercap.c **** 
+  17:Core/Src/supercap.c **** void Supercap_Average_ADC_Function(_ADC_Sample_t *adc_sample) {
+  90              		.loc 1 17 63 is_stmt 1 view -0
+  91              		.cfi_startproc
+  92              		@ args = 0, pretend = 0, frame = 0
+  93              		@ frame_needed = 0, uses_anonymous_args = 0
+  94              		.loc 1 17 63 is_stmt 0 view .LVU11
+  95 0000 10B5     		push	{r4, lr}
+  96              	.LCFI1:
+  97              		.cfi_def_cfa_offset 8
+  98              		.cfi_offset 4, -8
+  99              		.cfi_offset 14, -4
+ 100 0002 0446     		mov	r4, r0
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc8gO66s.s 			page 3
+
+
+  18:Core/Src/supercap.c ****     if(adc_sample->count == 0){
+ 101              		.loc 1 18 5 is_stmt 1 view .LVU12
+ 102              		.loc 1 18 18 is_stmt 0 view .LVU13
+ 103 0004 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 104              		.loc 1 18 7 view .LVU14
+ 105 0006 33B9     		cbnz	r3, .L6
+  19:Core/Src/supercap.c ****       adc_sample->average = *(adc_sample->sample);
+ 106              		.loc 1 19 7 is_stmt 1 view .LVU15
+ 107              		.loc 1 19 41 is_stmt 0 view .LVU16
+ 108 0008 8368     		ldr	r3, [r0, #8]
+ 109              		.loc 1 19 29 view .LVU17
+ 110 000a 1B88     		ldrh	r3, [r3]
+ 111              		.loc 1 19 27 view .LVU18
+ 112 000c 4380     		strh	r3, [r0, #2]	@ movhi
+  20:Core/Src/supercap.c ****       //adc_sample->history_sum = adc_sample->average * SAMPLE_SIZE;
+  21:Core/Src/supercap.c ****       adc_sample->history_sum = adc_sample->average << 2;
+ 113              		.loc 1 21 7 is_stmt 1 view .LVU19
+ 114              		.loc 1 21 53 is_stmt 0 view .LVU20
+ 115 000e 9B00     		lsls	r3, r3, #2
+ 116              		.loc 1 21 31 view .LVU21
+ 117 0010 4360     		str	r3, [r0, #4]
+  22:Core/Src/supercap.c ****       adc_sample->count = 1;
+ 118              		.loc 1 22 7 is_stmt 1 view .LVU22
+ 119              		.loc 1 22 25 is_stmt 0 view .LVU23
+ 120 0012 0123     		movs	r3, #1
+ 121 0014 0370     		strb	r3, [r0]
+ 122              	.L6:
+  23:Core/Src/supercap.c ****     }
+  24:Core/Src/supercap.c ****     adc_sample->history_sum = adc_sample->history_sum - adc_sample->average + *(adc_sample->sample)
+ 123              		.loc 1 24 5 is_stmt 1 view .LVU24
+ 124              		.loc 1 24 41 is_stmt 0 view .LVU25
+ 125 0016 6068     		ldr	r0, [r4, #4]
+ 126              	.LVL7:
+ 127              		.loc 1 24 67 view .LVU26
+ 128 0018 6388     		ldrh	r3, [r4, #2]
+ 129              		.loc 1 24 55 view .LVU27
+ 130 001a C01A     		subs	r0, r0, r3
+ 131              		.loc 1 24 91 view .LVU28
+ 132 001c A368     		ldr	r3, [r4, #8]
+ 133              		.loc 1 24 79 view .LVU29
+ 134 001e 1B88     		ldrh	r3, [r3]
+ 135              		.loc 1 24 77 view .LVU30
+ 136 0020 1844     		add	r0, r0, r3
+ 137              		.loc 1 24 29 view .LVU31
+ 138 0022 6060     		str	r0, [r4, #4]
+  25:Core/Src/supercap.c ****     //adc_sample->average = adc_sample->history_sum / SAMPLE_SIZE;
+  26:Core/Src/supercap.c ****     adc_sample->average = adc_sample->history_sum >> 2; //想看看这个地方能不能快一点
+ 139              		.loc 1 26 5 is_stmt 1 view .LVU32
+ 140              		.loc 1 26 25 is_stmt 0 view .LVU33
+ 141 0024 C0F38F00 		ubfx	r0, r0, #2, #16
+ 142 0028 6080     		strh	r0, [r4, #2]	@ movhi
+  27:Core/Src/supercap.c ****     adc_sample->real_value = ADC_to_Voltage_Funtion(adc_sample->average);
+ 143              		.loc 1 27 5 is_stmt 1 view .LVU34
+ 144              		.loc 1 27 30 is_stmt 0 view .LVU35
+ 145 002a FFF7FEFF 		bl	ADC_to_Voltage_Funtion
+ 146              	.LVL8:
+ 147              		.loc 1 27 28 discriminator 1 view .LVU36
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc8gO66s.s 			page 4
+
+
+ 148 002e 84ED030A 		vstr.32	s0, [r4, #12]
+  28:Core/Src/supercap.c **** }...
+ 149              		.loc 1 28 1 view .LVU37
+ 150 0032 10BD     		pop	{r4, pc}
+ 151              		.loc 1 28 1 view .LVU38
+ 152              		.cfi_endproc
+ 153              	.LFE330:
+ 155              		.text
+ 156              	.Letext0:
+ 157              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/ma
+ 158              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/sy
+ 159              		.file 4 "Core/Inc/supercap.h"
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc8gO66s.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 supercap.c
+C:\Users\purdu\AppData\Local\Temp\cc8gO66s.s:25     .text.ADC_to_Voltage_Funtion:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\cc8gO66s.s:31     .text.ADC_to_Voltage_Funtion:00000000 ADC_to_Voltage_Funtion
+C:\Users\purdu\AppData\Local\Temp\cc8gO66s.s:73     .text.ADC_to_Voltage_Funtion:00000030 $d
+C:\Users\purdu\AppData\Local\Temp\cc8gO66s.s:81     .text.Supercap_Average_ADC_Function:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\cc8gO66s.s:87     .text.Supercap_Average_ADC_Function:00000000 Supercap_Average_ADC_Function
+
+UNDEFINED SYMBOLS
+__aeabi_f2d
+__aeabi_dmul
+__aeabi_ddiv
+__aeabi_d2f

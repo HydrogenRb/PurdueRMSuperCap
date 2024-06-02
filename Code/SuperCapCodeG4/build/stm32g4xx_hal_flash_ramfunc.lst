@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 1
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 1
   28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****     [..] RAM functions are defined using a specific toolchain keyword "__ramfunc".
   29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c **** 
   30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****     *** GNU Compiler ***
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 2
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s 			page 2
 
 
   31:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****     --------------------
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 1
   85:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****   */
   86:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c **** 
   87:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c **** /**
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 3
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s 			page 3
 
 
   88:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****   * @brief  Enable the Power down in Run Mode
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 1
  105:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****   */
  106:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c **** __RAM_FUNC HAL_StatusTypeDef HAL_FLASHEx_DisableRunPowerDown(void)
  107:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c **** {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 4
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s 			page 4
 
 
   68              		.loc 1 107 1 is_stmt 1 view -0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 1
  124:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****   *         This parameter  can be one of the following values:
  125:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****   *            @arg OB_DBANK_128_BITS: Single-bank with 128-bits data
  126:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****   *            @arg OB_DBANK_64_BITS: Dual-bank with 64-bits data
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 5
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s 			page 5
 
 
  127:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****   *
@@ -272,16 +272,16 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 1
  137:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c **** 
  138:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****   /* Check if the PCROP is disabled */
  139:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****   reg = FLASH->PCROP1SR;
- 126              		.loc 1 139 3 discriminator 2 view .LVU23
- 127              		.loc 1 139 7 is_stmt 0 discriminator 2 view .LVU24
+ 126              		.loc 1 139 3 view .LVU23
+ 127              		.loc 1 139 7 is_stmt 0 view .LVU24
  128 0058 4E4B     		ldr	r3, .L19+4
  129 005a 5A6A     		ldr	r2, [r3, #36]
  130              	.LVL1:
  140:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****   if (reg > FLASH->PCROP1ER)
- 131              		.loc 1 140 3 is_stmt 1 discriminator 2 view .LVU25
- 132              		.loc 1 140 18 is_stmt 0 discriminator 2 view .LVU26
+ 131              		.loc 1 140 3 is_stmt 1 view .LVU25
+ 132              		.loc 1 140 18 is_stmt 0 view .LVU26
  133 005c 9B6A     		ldr	r3, [r3, #40]
- 134              		.loc 1 140 6 discriminator 2 view .LVU27
+ 134              		.loc 1 140 6 view .LVU27
  135 005e 9342     		cmp	r3, r2
  136 0060 80F08E80 		bcs	.L9
  141:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****   {
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 1
  145              		.loc 1 143 8 view .LVU32
  146 006a 9342     		cmp	r3, r2
  147 006c 80F08880 		bcs	.L9
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 6
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s 			page 6
 
 
  144:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****     {
@@ -344,11 +344,11 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 1
  155:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****       }
  156:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c **** 
  157:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****       if (READ_BIT(FLASH->ACR, FLASH_ACR_DCEN) != 0U)
- 177              		.loc 1 157 7 discriminator 1 view .LVU43
- 178              		.loc 1 157 11 is_stmt 0 discriminator 1 view .LVU44
+ 177              		.loc 1 157 7 view .LVU43
+ 178              		.loc 1 157 11 is_stmt 0 view .LVU44
  179 009c 3D4B     		ldr	r3, .L19+4
  180 009e 1B68     		ldr	r3, [r3]
- 181              		.loc 1 157 10 discriminator 1 view .LVU45
+ 181              		.loc 1 157 10 view .LVU45
  182 00a0 13F4806F 		tst	r3, #1024
  183 00a4 0CD0     		beq	.L11
  158:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****       {
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 1
  185 00a6 3B4B     		ldr	r3, .L19+4
  186 00a8 1A68     		ldr	r2, [r3]
  187 00aa 22F48062 		bic	r2, r2, #1024
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 7
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s 			page 7
 
 
  188 00ae 1A60     		str	r2, [r3]
@@ -380,21 +380,21 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 1
  165:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c **** 
  166:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****       /* Disable WRP zone A of 1st bank if needed */
  167:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****       reg = FLASH->WRP1AR;
- 200              		.loc 1 167 7 discriminator 1 view .LVU51
- 201              		.loc 1 167 11 is_stmt 0 discriminator 1 view .LVU52
+ 200              		.loc 1 167 7 view .LVU51
+ 201              		.loc 1 167 11 is_stmt 0 view .LVU52
  202 00c0 344B     		ldr	r3, .L19+4
  203 00c2 DB6A     		ldr	r3, [r3, #44]
  204              	.LVL4:
  168:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****       if (((reg & FLASH_WRP1AR_WRP1A_STRT) >> FLASH_WRP1AR_WRP1A_STRT_Pos) <=
- 205              		.loc 1 168 7 is_stmt 1 discriminator 1 view .LVU53
- 206              		.loc 1 168 44 is_stmt 0 discriminator 1 view .LVU54
+ 205              		.loc 1 168 7 is_stmt 1 view .LVU53
+ 206              		.loc 1 168 44 is_stmt 0 view .LVU54
  207 00c4 03F07F02 		and	r2, r3, #127
  169:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****           ((reg & FLASH_WRP1AR_WRP1A_END) >> FLASH_WRP1AR_WRP1A_END_Pos))
- 208              		.loc 1 169 43 discriminator 1 view .LVU55
+ 208              		.loc 1 169 43 view .LVU55
  209 00c8 C3F30643 		ubfx	r3, r3, #16, #7
  210              	.LVL5:
  168:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****       if (((reg & FLASH_WRP1AR_WRP1A_STRT) >> FLASH_WRP1AR_WRP1A_STRT_Pos) <=
- 211              		.loc 1 168 10 discriminator 1 view .LVU56
+ 211              		.loc 1 168 10 view .LVU56
  212 00cc 9A42     		cmp	r2, r3
  213 00ce 06D8     		bhi	.L12
  170:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****       {
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 1
  176:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****       if (((reg & FLASH_WRP1BR_WRP1B_STRT) >> FLASH_WRP1BR_WRP1B_STRT_Pos) <=
  226              		.loc 1 176 7 is_stmt 1 view .LVU60
  227              		.loc 1 176 44 is_stmt 0 view .LVU61
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 8
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s 			page 8
 
 
  228 00e2 03F07F02 		and	r2, r3, #127
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 1
  265 011a 1E4B     		ldr	r3, .L19+4
  266 011c 1B6D     		ldr	r3, [r3, #80]
  267              	.LVL10:
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 9
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s 			page 9
 
 
  192:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****       if (((reg & FLASH_WRP2BR_WRP2B_STRT) >> FLASH_WRP2BR_WRP2B_STRT_Pos) <=
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 1
  207:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****       do
  306              		.loc 1 207 7 is_stmt 1 view .LVU84
  208:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****       {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 10
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s 			page 10
 
 
  209:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c ****         if (count == 0U)
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 1
  341              		.loc 1 228 3 view .LVU98
  342              		.loc 1 228 10 is_stmt 0 view .LVU99
  343 0186 0120     		movs	r0, #1
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 11
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s 			page 11
 
 
  344              	.LVL16:
@@ -607,7 +607,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 1
  347              	.LVL17:
  348              	.L18:
  136:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c **** 
- 349              		.loc 1 136 3 view .LVU101
+ 349              		.loc 1 136 3 discriminator 1 view .LVU101
  350 018a 0220     		movs	r0, #2
  351              	.LVL18:
  229:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c **** }
@@ -624,27 +624,27 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 1
  362              	.LFE331:
  364              		.text
  365              	.Letext0:
- 366              		.file 2 "c:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
- 367              		.file 3 "c:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 366              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/ma
+ 367              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/sy
  368              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
  369              		.file 5 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
  370              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
  371              		.file 7 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h"
  372              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s 			page 12
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s 			page 12
 
 
 DEFINED SYMBOLS
-                            *ABS*:0000000000000000 stm32g4xx_hal_flash_ramfunc.c
-C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s:21     .RamFunc:0000000000000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s:27     .RamFunc:0000000000000000 HAL_FLASHEx_EnableRunPowerDown
-C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s:54     .RamFunc:0000000000000018 $d
-C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s:60     .RamFunc:0000000000000024 $t
-C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s:66     .RamFunc:0000000000000024 HAL_FLASHEx_DisableRunPowerDown
-C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s:93     .RamFunc:000000000000003c $d
-C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s:99     .RamFunc:0000000000000048 $t
-C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s:105    .RamFunc:0000000000000048 HAL_FLASHEx_OB_DBankConfig
-C:\Users\purdu\AppData\Local\Temp\ccvthrrX.s:357    .RamFunc:0000000000000190 $d
+                            *ABS*:00000000 stm32g4xx_hal_flash_ramfunc.c
+C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s:21     .RamFunc:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s:27     .RamFunc:00000000 HAL_FLASHEx_EnableRunPowerDown
+C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s:54     .RamFunc:00000018 $d
+C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s:60     .RamFunc:00000024 $t
+C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s:66     .RamFunc:00000024 HAL_FLASHEx_DisableRunPowerDown
+C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s:93     .RamFunc:0000003c $d
+C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s:99     .RamFunc:00000048 $t
+C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s:105    .RamFunc:00000048 HAL_FLASHEx_OB_DBankConfig
+C:\Users\purdu\AppData\Local\Temp\cc0OC95R.s:357    .RamFunc:00000190 $d
 
 UNDEFINED SYMBOLS
 pFlash

@@ -20,7 +20,8 @@
         "gpio.h": "c",
         "stm32g4xx_hal_def.h": "c",
         "supercap_task.h": "c",
-        "tim.h": "c"
+        "tim.h": "c",
+        "supercap.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

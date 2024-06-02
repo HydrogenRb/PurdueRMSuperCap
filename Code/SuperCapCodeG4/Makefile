@@ -66,7 +66,8 @@ Core/Src/adc.c \
 Core/Src/dma.c \
 Core/Src/fdcan.c \
 Core/Src/tim.c \
-Core/Src/usart.c
+Core/Src/usart.c \
+Core/Src/supercap.c
 
 # ASM sources
 ASM_SOURCES =  \

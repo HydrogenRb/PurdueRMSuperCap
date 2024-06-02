@@ -27,6 +27,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "supercap.h"
+#include <stdio.h>
+#include "Serial.h"
 
 /* USER CODE END Includes */
 
@@ -51,24 +54,30 @@
   uint16_t supercap_ADC1[2];
   uint16_t supercap_ADC2[3];
   uint16_t supercap_ADC3[3];
-  uint16_t C_left;
-  uint16_t C_sys;
-  uint16_t C_right;
-  uint16_t V_sys_op;
-  uint16_t V_cap_op;
-  uint16_t V_cap; //V_right
-  uint16_t V_bat;
-  uint16_t V_sys;
+
+  _ADC_Sample_t C_left = {0};
+  _ADC_Sample_t C_sys = {0};
+  _ADC_Sample_t C_right = {0};
+  _ADC_Sample_t V_sys_op = {0};
+  _ADC_Sample_t V_cap_op = {0};
+  _ADC_Sample_t V_cap = {0}; //V_right
+  _ADC_Sample_t V_bat = {0}; //V_left
+  _ADC_Sample_t V_sys = {0};
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc1)
+{
+  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_14);
+}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
 
 /* USER CODE END 0 */
 
@@ -79,6 +88,17 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+  
+  char tail[4] = {0x00, 0x00, 0x80, 0x7f};
+
+  C_left.sample = &supercap_ADC1[0];
+  C_sys.sample = &supercap_ADC1[1];
+  C_right.sample = &supercap_ADC3[2];
+  V_sys_op.sample = &supercap_ADC2[0];
+  V_cap_op.sample = &supercap_ADC2[1];
+  V_cap.sample = &supercap_ADC2[2];
+  V_bat.sample = &supercap_ADC3[0];
+  V_sys.sample = &supercap_ADC3[1];
 
   /* USER CODE END 1 */
 
@@ -154,22 +174,42 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
+    /*
+    HAL_Delay(3000);
+    //HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &hfdcan1_pHeader, &hfdcan1_pTxData);
+
+    Supercap_Average_ADC_Function(&C_left);
+    Supercap_Average_ADC_Function(&C_sys);
+    Supercap_Average_ADC_Function(&C_right);
+    Supercap_Average_ADC_Function(&V_sys_op);
+    Supercap_Average_ADC_Function(&V_cap_op);
+    Supercap_Average_ADC_Function(&V_cap);
+    Supercap_Average_ADC_Function(&V_bat);
+    Supercap_Average_ADC_Function(&V_sys);
+
+    uint8_t data[2];
+    data[0] = (uint8_t)(C_left.average >> 8);
+    data[1] = (uint8_t)(C_left.average);
+
+    //HAL_UART_Transmit(&huart3, data, 2, 1000);
+		//HAL_UART_Transmit(&huart3, (uint8_t*)C_left.average, 2, 1000);
+
+    //printf("%d,%4.2f\n", C_left.average,C_left.real_value);*/
+		
+
     
-    HAL_Delay(100);
-    HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &hfdcan1_pHeader, &hfdcan1_pTxData);
-
-
-    //运算
-    if(xxx_count == 0){
-      xxx_average = xxx[];
-      xxx_history_sum = xxx_average * n;
-      xxx_coun == 1;
+/*
+    for(float i=0; i<100; i=i+1)
+    {
+      //HAL_Delay(100);
+    //printf("%d\n", i);
+    HAL_UART_Transmit(&huart3, (uint8_t*)&(i), 4, 1000);
+    HAL_UART_Transmit(&huart3, (uint8_t*)tail, 4, 1000);
     }
-    xxx_history_sum = xxx_history_sum - xxx_average + xxx[];
-    xxx_average = xxx_history_sum / n;
-    
-    
+    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 1);
+*/
   }
   /* USER CODE END 3 */
 }
