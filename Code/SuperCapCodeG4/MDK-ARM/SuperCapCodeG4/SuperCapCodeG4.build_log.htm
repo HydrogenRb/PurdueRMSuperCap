@@ -28,7 +28,16 @@ Project File Date:  06/02/2024
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'SuperCapCodeG4'
 Note: source file '..\Core\Src\supercap.c' - object file renamed from 'SuperCapCodeG4\supercap.o' to 'SuperCapCodeG4\supercap_1.o'.
-"SuperCapCodeG4\SuperCapCodeG4.axf" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+../Core/Src/main.c(164): warning:  #550-D: variable "hfdcan1_pHeader"  was set but never used
+    FDCAN_TxHeaderTypeDef hfdcan1_pHeader;
+../Core/Src/main.c(165): warning:  #177-D: variable "hfdcan1_pTxData"  was declared but never referenced
+    uint8_t hfdcan1_pTxData[2] = {0x00, 0x01};
+../Core/Src/main.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=17228 RO-data=568 RW-data=44 ZI-data=2884  
+FromELF: creating hex file...
+"SuperCapCodeG4\SuperCapCodeG4.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -52,7 +61,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.6.0
       Include file:  CMSIS/Core/Include/tz_context.h
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

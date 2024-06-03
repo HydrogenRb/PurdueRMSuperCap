@@ -153,17 +153,17 @@
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>supercap_ADC1</ItemText>
+          <ItemText>C_left</ItemText>
         </Ww>
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>supercap_ADC2</ItemText>
+          <ItemText>V_sys_op</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>supercap_ADC3</ItemText>
+          <ItemText>V_sys</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>

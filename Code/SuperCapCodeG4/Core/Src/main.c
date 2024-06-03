@@ -54,6 +54,7 @@
   uint16_t supercap_ADC1[2];
   uint16_t supercap_ADC2[3];
   uint16_t supercap_ADC3[3];
+	uint16_t supercap_ADC4[2];
 
   _ADC_Sample_t C_left = {0};
   _ADC_Sample_t C_sys = {0};
@@ -63,16 +64,19 @@
   _ADC_Sample_t V_cap = {0}; //V_right
   _ADC_Sample_t V_bat = {0}; //V_left
   _ADC_Sample_t V_sys = {0};
+	
+	_ADC_Sample_t V_1V6 = {0};
+	_ADC_Sample_t ADC4_3 = {0};
 
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc1)
-{
-  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_14);
-}
+//void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc1)
+//{
+//  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_14);
+//}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -99,7 +103,9 @@ int main(void)
   V_cap.sample = &supercap_ADC2[2];
   V_bat.sample = &supercap_ADC3[0];
   V_sys.sample = &supercap_ADC3[1];
-
+	
+	V_1V6.sample = &supercap_ADC4[0];
+	ADC4_3.sample = &supercap_ADC4[1];
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -138,6 +144,7 @@ int main(void)
   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)supercap_ADC1, 2);
   HAL_ADC_Start_DMA(&hadc2, (uint32_t*)supercap_ADC2, 3);
   HAL_ADC_Start_DMA(&hadc3, (uint32_t*)supercap_ADC3, 3);
+	HAL_ADC_Start_DMA(&hadc4, (uint32_t*)supercap_ADC4, 2);
 	
 	HAL_TIM_Base_Start(&htim1);
 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
@@ -176,8 +183,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    /*
-    HAL_Delay(3000);
+    
+    //HAL_Delay(3000);
     //HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &hfdcan1_pHeader, &hfdcan1_pTxData);
 
     Supercap_Average_ADC_Function(&C_left);
@@ -188,16 +195,24 @@ int main(void)
     Supercap_Average_ADC_Function(&V_cap);
     Supercap_Average_ADC_Function(&V_bat);
     Supercap_Average_ADC_Function(&V_sys);
+		
+		Supercap_Average_ADC_Function(&V_1V6);
 
-    uint8_t data[2];
-    data[0] = (uint8_t)(C_left.average >> 8);
-    data[1] = (uint8_t)(C_left.average);
+//    uint8_t data[2];
+//    data[0] = (uint8_t)(C_left.average >> 8);
+//    data[1] = (uint8_t)(C_left.average);
 
     //HAL_UART_Transmit(&huart3, data, 2, 1000);
 		//HAL_UART_Transmit(&huart3, (uint8_t*)C_left.average, 2, 1000);
 
-    //printf("%d,%4.2f\n", C_left.average,C_left.real_value);*/
+    //printf("%d,%4.2f\n", C_left.average,C_left.real_value);
 		
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(C_left.real_value), 4, 1000);
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(C_sys.real_value), 4, 1000);
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(V_sys_op.real_value), 4, 1000);
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(V_sys.real_value), 4, 1000);
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(V_1V6.real_value), 4, 1000);
+		HAL_UART_Transmit(&huart3, (uint8_t*)tail, 4, 1000);
 
     
 /*
