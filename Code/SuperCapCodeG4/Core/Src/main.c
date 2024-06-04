@@ -139,7 +139,12 @@ int main(void)
   MX_FDCAN1_Init();
   MX_ADC5_Init();
   MX_ADC3_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
+	HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
+	HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
+	HAL_ADCEx_Calibration_Start(&hadc3, ADC_SINGLE_ENDED);
+	HAL_ADCEx_Calibration_Start(&hadc4, ADC_SINGLE_ENDED);
 
   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)supercap_ADC1, 2);
   HAL_ADC_Start_DMA(&hadc2, (uint32_t*)supercap_ADC2, 3);
@@ -157,6 +162,8 @@ int main(void)
 	
 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
+	
+	HAL_TIM_Base_Start_IT(&htim2);
 
 	//__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 1);
   //__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, 1);
@@ -187,16 +194,11 @@ int main(void)
     //HAL_Delay(3000);
     //HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &hfdcan1_pHeader, &hfdcan1_pTxData);
 
-    Supercap_Average_ADC_Function(&C_left);
-    Supercap_Average_ADC_Function(&C_sys);
-    Supercap_Average_ADC_Function(&C_right);
-    Supercap_Average_ADC_Function(&V_sys_op);
-    Supercap_Average_ADC_Function(&V_cap_op);
-    Supercap_Average_ADC_Function(&V_cap);
-    Supercap_Average_ADC_Function(&V_bat);
-    Supercap_Average_ADC_Function(&V_sys);
-		
-		Supercap_Average_ADC_Function(&V_1V6);
+
+
+
+    //TIM 2 global interrupt -> 500kHz进行采样
+    
 
 //    uint8_t data[2];
 //    data[0] = (uint8_t)(C_left.average >> 8);
@@ -207,10 +209,10 @@ int main(void)
 
     //printf("%d,%4.2f\n", C_left.average,C_left.real_value);
 		
-		HAL_UART_Transmit(&huart3, (uint8_t*)&(C_left.real_value), 4, 1000);
-		HAL_UART_Transmit(&huart3, (uint8_t*)&(C_sys.real_value), 4, 1000);
-		HAL_UART_Transmit(&huart3, (uint8_t*)&(V_sys_op.real_value), 4, 1000);
-		HAL_UART_Transmit(&huart3, (uint8_t*)&(V_sys.real_value), 4, 1000);
+		//HAL_UART_Transmit(&huart3, (uint8_t*)&(C_left.real_value), 4, 1000);
+		//HAL_UART_Transmit(&huart3, (uint8_t*)&(C_sys.real_value), 4, 1000);
+		//HAL_UART_Transmit(&huart3, (uint8_t*)&(V_sys_op.real_value), 4, 1000);
+		//HAL_UART_Transmit(&huart3, (uint8_t*)&(V_sys.real_value), 4, 1000);
 		HAL_UART_Transmit(&huart3, (uint8_t*)&(V_1V6.real_value), 4, 1000);
 		HAL_UART_Transmit(&huart3, (uint8_t*)tail, 4, 1000);
 

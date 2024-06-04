@@ -9,6 +9,8 @@
 
 #define SAMPLE_SIZE 4
 
+
+
 float ADC_to_Voltage_Funtion(uint16_t adc_value) {
   float voltage = (float)adc_value * 3.3 / 4095.0;
   return voltage;
@@ -38,4 +40,27 @@ void Supercap_PID_Controller_Function(_Supercap_PID_Controller_t *pid_controller
   if(pid_controller->output < pid_controller->output_min) {
     pid_controller->output = pid_controller->output_min;
   }
+}
+
+//帮我在这加入tim2的中断回调函数
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+  if(htim->Instance == TIM2) {
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
+    TIM2_NVIC();
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+  }
+}
+
+void TIM2_NVIC(){
+    Supercap_Average_ADC_Function(&C_left);
+    Supercap_Average_ADC_Function(&C_sys);
+    Supercap_Average_ADC_Function(&C_right);
+    Supercap_Average_ADC_Function(&V_sys_op);
+    Supercap_Average_ADC_Function(&V_cap_op);
+    Supercap_Average_ADC_Function(&V_cap);
+    Supercap_Average_ADC_Function(&V_bat);
+    Supercap_Average_ADC_Function(&V_sys);
+		
+		Supercap_Average_ADC_Function(&V_1V6);
+
 }
