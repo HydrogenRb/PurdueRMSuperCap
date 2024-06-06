@@ -117,7 +117,6 @@ int main(void)
   V_cap.sample = &supercap_ADC2[2];
   V_bat.sample = &supercap_ADC3[0];
   V_sys.sample = &supercap_ADC3[1];
-	
 	V_1V6.sample = &supercap_ADC4[0];
 	ADC4_3.sample = &supercap_ADC4[1];
 	
@@ -182,28 +181,10 @@ int main(void)
 	
 	HAL_TIM_Base_Start_IT(&htim2);
 	HAL_TIM_Base_Start_IT(&htim5);
-
-	//__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 1);
-  
-  HAL_FDCAN_Start(&hfdcan1);
-  FDCAN_TxHeaderTypeDef hfdcan1_pHeader;
-  uint8_t hfdcan1_pTxData[2] = {0x00, 0x01};
-
-  hfdcan1_pHeader.Identifier  = 0x114;
-  hfdcan1_pHeader.IdType  = FDCAN_DATA_FRAME;
-  hfdcan1_pHeader.DataLength  = FDCAN_DLC_BYTES_2;
-  hfdcan1_pHeader.FDFormat = FDCAN_CLASSIC_CAN;
-  //to do list: 这个地方为什么CAN不行
 	
   Supercap_PID_Init(&Out_loop_PID, 1.1f, 0.00f, 0.0f, MAX_CAP_VOLTAGE, 0, 300);
   Supercap_PID_Init(&In_loop_PID, 0.0f, 0.00f, 0.0f, MAX_DUTY, MIN_DUTY, 250);
 	
-	//C_left_kalman.Q = 0.1;
-	//C_left_kalman.R = 1;
-  
-
-  //HAL_UART_Transmit(&huart1, (uint8_t*)"Hello World\n", 12, 1000);
-  //to do list: 弄弄这个配合VOFA
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -213,52 +194,20 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    
-    //HAL_Delay(3000);
-    //HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &hfdcan1_pHeader, &hfdcan1_pTxData);
 
-
-
-
-    //TIM 2 global interrupt -> 500kHz进行采样
-    
-
-//    uint8_t data[2];
-//    data[0] = (uint8_t)(C_left.average >> 8);
-//    data[1] = (uint8_t)(C_left.average);
-
-    //HAL_UART_Transmit(&huart3, data, 2, 1000);
-		//HAL_UART_Transmit(&huart3, (uint8_t*)C_left.average, 2, 1000);
-
-    //printf("%d,%4.2f\n", C_left.average,C_left.real_value);
-		temp = C_left.real_value_float;
+    //sending set: all current in A and the 1.65V
+		temp = Supercap_ADC_to_Current_Funtion(C_left.real_value_12bits,V_1V6.real_value_12bits);
 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-		temp = C_left.real_value_12bits;
+		temp = Supercap_ADC_to_Current_Funtion(C_right.real_value_12bits,V_1V6.real_value_12bits);
 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-		temp = C_right.real_value_12bits;
+		temp = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits,V_1V6.real_value_12bits);
 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-		temp = V_bat.real_value_12bits;
+		temp = Supercap_ADC_to_Voltage_Funtion_Ref(V_1V6.real_value_12bits);
 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-		temp = V_cap.real_value_12bits;
-		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-		temp = V_1V6.real_value_12bits;
-		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-//		temp = In_loop_PID.output;
-//		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-		
+
+    //sending set: 
+
 		HAL_UART_Transmit(&huart3, (uint8_t*)tail, 4, 1000);
-	
-    
-/*
-    for(float i=0; i<100; i=i+1)
-    {
-      //HAL_Delay(100);
-    //printf("%d\n", i);
-    HAL_UART_Transmit(&huart3, (uint8_t*)&(i), 4, 1000);
-    HAL_UART_Transmit(&huart3, (uint8_t*)tail, 4, 1000);
-    }
-    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 1);
-*/
   }
   /* USER CODE END 3 */
 }

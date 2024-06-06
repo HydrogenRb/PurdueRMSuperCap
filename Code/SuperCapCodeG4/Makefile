@@ -67,7 +67,8 @@ Core/Src/dma.c \
 Core/Src/fdcan.c \
 Core/Src/tim.c \
 Core/Src/usart.c \
-Core/Src/supercap.c
+Core/Src/supercap.c \
+Core/Src/Kalman_Filter.c
 
 # ASM sources
 ASM_SOURCES =  \

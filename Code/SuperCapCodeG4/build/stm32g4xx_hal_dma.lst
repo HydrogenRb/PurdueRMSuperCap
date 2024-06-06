@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
   28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****    (#) Enable and configure the peripheral to be connected to the DMA Channel
   29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****        (except for internal SRAM / FLASH memories: no initialization is
   30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****        necessary). Please refer to the Reference manual for connection between peripherals
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 2
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 2
 
 
   31:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****        and DMA requests.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
   85:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
   86:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   @endverbatim
   87:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   */
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 3
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 3
 
 
   88:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  142:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   * @{
  143:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   */
  144:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 4
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 4
 
 
  145:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** /**
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  199:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   /* Prepare the DMA Channel configuration */
  200:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   tmp |=  hdma->Init.Direction        |
  201:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****           hdma->Init.PeriphInc           | hdma->Init.MemInc           |
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 5
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 5
 
 
  202:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****           hdma->Init.PeriphDataAlignment | hdma->Init.MemDataAlignment |
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  256:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
  257:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** /**
  258:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   * @brief  DeInitialize the DMA peripheral.
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 6
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 6
 
 
  259:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   * @param  hdma pointer to a DMA_HandleTypeDef structure that contains
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  313:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****        DMAmuxRequestGen, DMAmuxRequestGenStatus and DMAmuxRequestGenStatusMask
  314:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****     */
  315:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****     DMA_CalcDMAMUXRequestGenBaseAndMask(hdma);
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 7
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 7
 
 
  316:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  370:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   * @brief  Start the DMA Transfer.
  371:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   * @param  hdma pointer to a DMA_HandleTypeDef structure that contains
  372:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   *               the configuration information for the specified DMA Channel.
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 8
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 8
 
 
  373:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   * @param  SrcAddress The source memory Buffer address
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  427:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   assert_param(IS_DMA_BUFFER_SIZE(DataLength));
  428:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
  429:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   /* Process locked */
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 9
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 9
 
 
  430:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   __HAL_LOCK(hdma);
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  484:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
  485:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** /**
  486:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   * @brief  Abort the DMA Transfer.
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 10
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 10
 
 
  487:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   * @param  hdma pointer to a DMA_HandleTypeDef structure that contains
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  541:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   *              the configuration information for the specified DMA Channel.
  542:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   * @retval HAL status
  543:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   */
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 11
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 11
 
 
  544:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** HAL_StatusTypeDef HAL_DMA_Abort_IT(DMA_HandleTypeDef *hdma)
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  598:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****     }
  599:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   }
  600:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   return status;
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 12
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 12
 
 
  601:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** }
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  655:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****       hdma->DmaBaseAddress->IFCR = ((uint32_t)DMA_ISR_GIF1 << (hdma->ChannelIndex & 0x1FU));
  656:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
  657:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****       /* Update error code */
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 13
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 13
 
 
  658:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****       hdma->ErrorCode = HAL_DMA_ERROR_TE;
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  712:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   }
  713:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
  714:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   if (HAL_DMA_FULL_TRANSFER == CompleteLevel)
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 14
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 14
 
 
  715:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   {
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  769:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****            && (0U != (source_it & DMA_IT_TC)))
  770:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   {
  771:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****     if ((hdma->Instance->CCR & DMA_CCR_CIRC) == 0U)
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 15
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 15
 
 
  772:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****     {
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  826:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   * @brief  Register callbacks
  827:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   * @param  hdma                 pointer to a DMA_HandleTypeDef structure that contains
  828:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   *                               the configuration information for the specified DMA Channel.
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 16
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 16
 
 
  829:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   * @param  CallbackID           User Callback identifier
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  883:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   *                               a HAL_DMA_CallbackIDTypeDef ENUM as parameter.
  884:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   * @retval HAL status
  885:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   */
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 17
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 17
 
 
  886:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** HAL_StatusTypeDef HAL_DMA_UnRegisterCallback(DMA_HandleTypeDef *hdma, HAL_DMA_CallbackIDTypeDef Cal
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  940:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
  941:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
  942:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** /** @defgroup DMA_Exported_Functions_Group3 Peripheral State and Errors functions
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 18
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 18
 
 
  943:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   *  @brief    Peripheral State and Errors functions
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  997:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   * @param  SrcAddress The source memory Buffer address
  998:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   * @param  DstAddress The destination memory Buffer address
  999:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   * @param  DataLength The length of data to be transferred from source to destination
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 19
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 19
 
 
 1000:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   * @retval HAL status
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
   68 0020 6C60     		str	r4, [r5, #4]
 1015:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
 1016:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   /* Configure DMA Channel data length */
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 20
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 20
 
 
 1017:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   hdma->Instance->CNDTR = DataLength;
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  102              	.L6:
  103              	.LCFI2:
  104              		.cfi_restore_state
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 21
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 21
 
 
 1023:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  140              		.loc 1 1052 6 view .LVU41
  141 0002 0C4A     		ldr	r2, .L10
  142 0004 9342     		cmp	r3, r2
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 22
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 22
 
 
  143 0006 13D8     		bhi	.L9
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  177 0028 02FA03F3 		lsl	r3, r2, r3
  178              		.loc 1 1072 33 view .LVU58
  179 002c 0365     		str	r3, [r0, #80]
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 23
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 23
 
 
 1073:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** }
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  220 0006 9200     		lsls	r2, r2, #2
  221              		.loc 1 1087 26 view .LVU66
  222 0008 4265     		str	r2, [r0, #84]
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 24
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 24
 
 
 1088:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  269 0004 10B5     		push	{r4, lr}
  270              	.LCFI3:
  271              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 25
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 25
 
 
  272              		.cfi_offset 4, -8
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  307              	.L18:
  189:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
  308              		.loc 1 189 3 is_stmt 1 view .LVU99
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 26
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 26
 
 
  189:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  345 0046 206A     		ldr	r0, [r4, #32]
  203:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
  346              		.loc 1 203 42 view .LVU118
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 27
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 27
 
 
  347 0048 0343     		orrs	r3, r3, r0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  383 006a 013B     		subs	r3, r3, #1
  225:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   {
  384              		.loc 1 225 6 view .LVU137
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 28
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 28
 
 
  385 006c 032B     		cmp	r3, #3
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  184:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****     hdma->DmaBaseAddress = DMA2;
  422              		.loc 1 184 135 view .LVU155
  423 0094 9B00     		lsls	r3, r3, #2
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 29
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 29
 
 
  184:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****     hdma->DmaBaseAddress = DMA2;
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  464 00b8 0120     		movs	r0, #1
  465              	.LVL24:
  255:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 30
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 30
 
 
  466              		.loc 1 255 1 view .LVU170
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  514              		.loc 1 279 22 is_stmt 0 view .LVU178
  515 0012 0268     		ldr	r2, [r0]
  279:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 31
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 31
 
 
  516              		.loc 1 279 6 view .LVU179
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  554 0040 2046     		mov	r0, r4
  555              	.LVL26:
  301:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 32
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 32
 
 
  556              		.loc 1 301 3 is_stmt 0 view .LVU196
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  591              		.loc 1 329 26 is_stmt 0 view .LVU215
  592 0060 E062     		str	r0, [r4, #44]
  330:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   hdma->XferErrorCallback = NULL;
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 33
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 33
 
 
  593              		.loc 1 330 3 is_stmt 1 view .LVU216
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  628 0082 4364     		str	r3, [r0, #68]
  289:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   }
  629              		.loc 1 289 5 is_stmt 1 view .LVU236
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 34
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 34
 
 
  289:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   }
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  673 00b0 F8FBFDBF 		.word	-1073873928
  674 00b4 00040240 		.word	1073873920
  675              		.cfi_endproc
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 35
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 35
 
 
  676              	.LFE330:
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  720 0018 0128     		cmp	r0, #1
  721 001a 04D0     		beq	.L49
  406:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****     status = HAL_BUSY;
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 36
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 36
 
 
  722              		.loc 1 406 5 is_stmt 1 view .LVU260
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  762 004a 2846     		mov	r0, r5
  763 004c EAE7     		b	.L45
  764              	.LVL41:
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 37
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 37
 
 
  765              	.L47:
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  432:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   {
  810              		.loc 1 432 34 is_stmt 0 view .LVU286
  811 0012 94F82500 		ldrb	r0, [r4, #37]	@ zero_extendqisi2
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 38
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 38
 
 
  812 0016 C0B2     		uxtb	r0, r0
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  446:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****     {
  851              		.loc 1 446 21 is_stmt 0 view .LVU302
  852 0040 236B     		ldr	r3, [r4, #48]
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 39
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 39
 
 
  446:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****     {
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  891 0070 43F00103 		orr	r3, r3, #1
  892 0074 1360     		str	r3, [r2]
  424:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 40
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 40
 
 
  893              		.loc 1 424 21 is_stmt 0 view .LVU319
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  940 0008 022A     		cmp	r2, #2
  941 000a 09D0     		beq	.L61
  498:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 41
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 41
 
 
  942              		.loc 1 498 5 is_stmt 1 view .LVU329
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  980 0034 0168     		ldr	r1, [r0]
  981 0036 0A68     		ldr	r2, [r1]
  982 0038 22F00102 		bic	r2, r2, #1
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 42
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 42
 
 
  983 003c 0A60     		str	r2, [r1]
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  1018              		.loc 1 526 50 view .LVU364
  1019 0060 D96D     		ldr	r1, [r3, #92]
  526:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****      }
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 43
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 43
 
 
  1020              		.loc 1 526 44 view .LVU365
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  1065              		.loc 1 554 17 is_stmt 0 view .LVU376
  1066 0010 0123     		movs	r3, #1
  1067 0012 80F82530 		strb	r3, [r0, #37]
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 44
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 44
 
 
  557:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  1106 0040 03F01F02 		and	r2, r3, #31
  573:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
  1107              		.loc 1 573 9 view .LVU393
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 45
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 45
 
 
  1108 0044 016C     		ldr	r1, [r0, #64]
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  592:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
  1144              		.loc 1 592 5 is_stmt 1 view .LVU412
  592:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 46
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 46
 
 
  1145              		.loc 1 592 5 view .LVU413
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  1191              		.cfi_offset 7, -12
  1192              		.cfi_offset 8, -8
  1193              		.cfi_offset 14, -4
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 47
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 47
 
 
  1194 0004 0446     		mov	r4, r0
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  1230              		.loc 1 626 6 view .LVU441
  1231 0028 13F0200F 		tst	r3, #32
  1232 002c 2BD1     		bne	.L86
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 48
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 48
 
 
  633:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   {
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  1269 004c 03F01F03 		and	r3, r3, #31
  650:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****     {
  1270              		.loc 1 650 69 view .LVU460
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 49
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 49
 
 
  1271 0050 4FF0080C 		mov	ip, #8
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  1308 0084 CAE7     		b	.L72
  1309              	.LVL72:
  1310              	.L86:
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 50
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 50
 
 
  628:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****     return HAL_ERROR;
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  664:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
  1348              		.loc 1 664 7 is_stmt 1 view .LVU495
  664:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 51
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 51
 
 
  1349              		.loc 1 664 7 view .LVU496
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  700:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****     }
  1385              		.loc 1 700 7 is_stmt 1 view .LVU515
  700:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****     }
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 52
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 52
 
 
  1386              		.loc 1 700 11 is_stmt 0 view .LVU516
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  1422              		.loc 1 717 58 view .LVU534
  1423 00f4 0223     		movs	r3, #2
  1424 00f6 9340     		lsls	r3, r3, r2
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 53
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 53
 
 
  717:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  742:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   uint32_t flag_it = hdma->DmaBaseAddress->ISR;
  1467              		.loc 1 742 1 is_stmt 1 view -0
  1468              		.cfi_startproc
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 54
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 54
 
 
  1469              		@ args = 0, pretend = 0, frame = 0
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  750:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****     {
  1508              		.loc 1 750 8 view .LVU565
  1509 0020 13F0200F 		tst	r3, #32
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 55
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 55
 
 
  1510 0024 03D1     		bne	.L91
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  769:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****   {
  1549              		.loc 1 769 12 view .LVU581
  1550 004c 15F0020F 		tst	r5, #2
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 56
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 56
 
 
  1551 0050 19D0     		beq	.L93
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  785:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****     {
  1588              		.loc 1 785 8 view .LVU599
  1589 007e 002B     		cmp	r3, #0
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 57
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 57
 
 
  1590 0080 DFD0     		beq	.L89
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  1628              		.loc 1 807 5 is_stmt 1 view .LVU615
  807:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
  1629              		.loc 1 807 17 is_stmt 0 view .LVU616
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 58
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 58
 
 
  1630 00b0 80F82520 		strb	r2, [r0, #37]
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  1672 0002 90F82400 		ldrb	r0, [r0, #36]	@ zero_extendqisi2
  1673              	.LVL90:
  840:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 59
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 59
 
 
  1674              		.loc 1 840 3 is_stmt 0 view .LVU631
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  847:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****         break;
  1715              		.loc 1 847 9 view .LVU645
  847:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****         break;
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 60
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 60
 
 
  1716              		.loc 1 847 32 is_stmt 0 view .LVU646
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  1751              		.loc 1 840 3 discriminator 1 view .LVU665
  1752 0048 0220     		movs	r0, #2
  876:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 61
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 61
 
 
  1753              		.loc 1 876 1 view .LVU666
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  1797              	.L110:
  1798              	.LVL97:
  931:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 62
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 62
 
 
  1799              		.loc 1 931 3 is_stmt 1 view .LVU679
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  906:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c ****         break;
  1839              		.loc 1 906 33 is_stmt 0 view .LVU694
  1840 0040 0020     		movs	r0, #0
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 63
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 63
 
 
  1841 0042 5863     		str	r0, [r3, #52]
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  1881              		.thumb
  1882              		.thumb_func
  1884              	HAL_DMA_GetState:
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 64
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 64
 
 
  1885              	.LVL101:
@@ -3834,50 +3834,50 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 1
  1930              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
  1931              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
  1932              		.file 7 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h"
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s 			page 65
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s 			page 65
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_hal_dma.c
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:21     .text.DMA_SetConfig:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:26     .text.DMA_SetConfig:00000000 DMA_SetConfig
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:121    .text.DMA_CalcDMAMUXChannelBaseAndMask:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:126    .text.DMA_CalcDMAMUXChannelBaseAndMask:00000000 DMA_CalcDMAMUXChannelBaseAndMask
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:190    .text.DMA_CalcDMAMUXChannelBaseAndMask:00000034 $d
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:199    .text.DMA_CalcDMAMUXRequestGenBaseAndMask:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:204    .text.DMA_CalcDMAMUXRequestGenBaseAndMask:00000000 DMA_CalcDMAMUXRequestGenBaseAndMask
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:244    .text.DMA_CalcDMAMUXRequestGenBaseAndMask:00000020 $d
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:250    .text.HAL_DMA_Init:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:256    .text.HAL_DMA_Init:00000000 HAL_DMA_Init
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:471    .text.HAL_DMA_Init:000000bc $d
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:481    .text.HAL_DMA_DeInit:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:487    .text.HAL_DMA_DeInit:00000000 HAL_DMA_DeInit
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:669    .text.HAL_DMA_DeInit:000000a0 $d
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:679    .text.HAL_DMA_Start:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:685    .text.HAL_DMA_Start:00000000 HAL_DMA_Start
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:773    .text.HAL_DMA_Start_IT:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:779    .text.HAL_DMA_Start_IT:00000000 HAL_DMA_Start_IT
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:917    .text.HAL_DMA_Abort:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:923    .text.HAL_DMA_Abort:00000000 HAL_DMA_Abort
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1032   .text.HAL_DMA_Abort_IT:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1038   .text.HAL_DMA_Abort_IT:00000000 HAL_DMA_Abort_IT
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1171   .text.HAL_DMA_PollForTransfer:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1177   .text.HAL_DMA_PollForTransfer:00000000 HAL_DMA_PollForTransfer
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1458   .text.HAL_DMA_IRQHandler:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1464   .text.HAL_DMA_IRQHandler:00000000 HAL_DMA_IRQHandler
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1652   .text.HAL_DMA_RegisterCallback:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1658   .text.HAL_DMA_RegisterCallback:00000000 HAL_DMA_RegisterCallback
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1709   .text.HAL_DMA_RegisterCallback:0000002c $d
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1713   .text.HAL_DMA_RegisterCallback:00000030 $t
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1759   .text.HAL_DMA_UnRegisterCallback:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1765   .text.HAL_DMA_UnRegisterCallback:00000000 HAL_DMA_UnRegisterCallback
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1814   .text.HAL_DMA_UnRegisterCallback:0000002c $d
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1878   .text.HAL_DMA_GetState:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1884   .text.HAL_DMA_GetState:00000000 HAL_DMA_GetState
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1902   .text.HAL_DMA_GetError:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1908   .text.HAL_DMA_GetError:00000000 HAL_DMA_GetError
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1819   .text.HAL_DMA_UnRegisterCallback:00000031 $d
-C:\Users\purdu\AppData\Local\Temp\ccpF1Z9g.s:1819   .text.HAL_DMA_UnRegisterCallback:00000032 $t
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:21     .text.DMA_SetConfig:00000000 $t
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:26     .text.DMA_SetConfig:00000000 DMA_SetConfig
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:121    .text.DMA_CalcDMAMUXChannelBaseAndMask:00000000 $t
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:126    .text.DMA_CalcDMAMUXChannelBaseAndMask:00000000 DMA_CalcDMAMUXChannelBaseAndMask
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:190    .text.DMA_CalcDMAMUXChannelBaseAndMask:00000034 $d
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:199    .text.DMA_CalcDMAMUXRequestGenBaseAndMask:00000000 $t
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:204    .text.DMA_CalcDMAMUXRequestGenBaseAndMask:00000000 DMA_CalcDMAMUXRequestGenBaseAndMask
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:244    .text.DMA_CalcDMAMUXRequestGenBaseAndMask:00000020 $d
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:250    .text.HAL_DMA_Init:00000000 $t
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:256    .text.HAL_DMA_Init:00000000 HAL_DMA_Init
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:471    .text.HAL_DMA_Init:000000bc $d
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:481    .text.HAL_DMA_DeInit:00000000 $t
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:487    .text.HAL_DMA_DeInit:00000000 HAL_DMA_DeInit
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:669    .text.HAL_DMA_DeInit:000000a0 $d
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:679    .text.HAL_DMA_Start:00000000 $t
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:685    .text.HAL_DMA_Start:00000000 HAL_DMA_Start
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:773    .text.HAL_DMA_Start_IT:00000000 $t
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:779    .text.HAL_DMA_Start_IT:00000000 HAL_DMA_Start_IT
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:917    .text.HAL_DMA_Abort:00000000 $t
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:923    .text.HAL_DMA_Abort:00000000 HAL_DMA_Abort
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1032   .text.HAL_DMA_Abort_IT:00000000 $t
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1038   .text.HAL_DMA_Abort_IT:00000000 HAL_DMA_Abort_IT
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1171   .text.HAL_DMA_PollForTransfer:00000000 $t
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1177   .text.HAL_DMA_PollForTransfer:00000000 HAL_DMA_PollForTransfer
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1458   .text.HAL_DMA_IRQHandler:00000000 $t
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1464   .text.HAL_DMA_IRQHandler:00000000 HAL_DMA_IRQHandler
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1652   .text.HAL_DMA_RegisterCallback:00000000 $t
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1658   .text.HAL_DMA_RegisterCallback:00000000 HAL_DMA_RegisterCallback
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1709   .text.HAL_DMA_RegisterCallback:0000002c $d
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1713   .text.HAL_DMA_RegisterCallback:00000030 $t
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1759   .text.HAL_DMA_UnRegisterCallback:00000000 $t
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1765   .text.HAL_DMA_UnRegisterCallback:00000000 HAL_DMA_UnRegisterCallback
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1814   .text.HAL_DMA_UnRegisterCallback:0000002c $d
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1878   .text.HAL_DMA_GetState:00000000 $t
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1884   .text.HAL_DMA_GetState:00000000 HAL_DMA_GetState
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1902   .text.HAL_DMA_GetError:00000000 $t
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1908   .text.HAL_DMA_GetError:00000000 HAL_DMA_GetError
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1819   .text.HAL_DMA_UnRegisterCallback:00000031 $d
+C:\Users\HRb\AppData\Local\Temp\ccwItX0h.s:1819   .text.HAL_DMA_UnRegisterCallback:00000032 $t
 
 UNDEFINED SYMBOLS
 HAL_GetTick

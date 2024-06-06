@@ -1,0 +1,116 @@
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccywksJh.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"Kalman_Filter.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/Kalman_Filter.c"
+  20              		.section	.text.First_Order_Kalman_Filter,"ax",%progbits
+  21              		.align	1
+  22              		.global	First_Order_Kalman_Filter
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	First_Order_Kalman_Filter:
+  28              	.LVL0:
+  29              	.LFB3:
+   1:Core/Src/Kalman_Filter.c **** /**
+   2:Core/Src/Kalman_Filter.c ****  * @file Kalman Filter.c
+   3:Core/Src/Kalman_Filter.c ****  * @author Leo Liu
+   4:Core/Src/Kalman_Filter.c ****  * @brief Kalman Filter Algorithm Library
+   5:Core/Src/Kalman_Filter.c ****  * @version 1.0
+   6:Core/Src/Kalman_Filter.c ****  * @date 2023-09-14
+   7:Core/Src/Kalman_Filter.c ****  * 
+   8:Core/Src/Kalman_Filter.c ****  * @copyright Copyright (c) 2023
+   9:Core/Src/Kalman_Filter.c ****  * 
+  10:Core/Src/Kalman_Filter.c ****  */
+  11:Core/Src/Kalman_Filter.c ****  
+  12:Core/Src/Kalman_Filter.c **** #include "Kalman_Filter.h"
+  13:Core/Src/Kalman_Filter.c **** 
+  14:Core/Src/Kalman_Filter.c **** float First_Order_Kalman_Filter(Kalman_Filter_t *KF, float Measurement)
+  15:Core/Src/Kalman_Filter.c **** {
+  30              		.loc 1 15 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  16:Core/Src/Kalman_Filter.c **** 	KF->Current_P = KF->Prev_P + KF->Q;
+  35              		.loc 1 16 2 view .LVU1
+  36              		.loc 1 16 20 is_stmt 0 view .LVU2
+  37 0000 D0ED007A 		vldr.32	s15, [r0]
+  38              		.loc 1 16 33 view .LVU3
+  39 0004 90ED047A 		vldr.32	s14, [r0, #16]
+  40              		.loc 1 16 29 view .LVU4
+  41 0008 77EE877A 		vadd.f32	s15, s15, s14
+  42              		.loc 1 16 16 view .LVU5
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccywksJh.s 			page 2
+
+
+  43 000c C0ED017A 		vstr.32	s15, [r0, #4]
+  17:Core/Src/Kalman_Filter.c **** 	KF->K = KF->Current_P / (KF->Current_P + KF->R);
+  44              		.loc 1 17 2 is_stmt 1 view .LVU6
+  45              		.loc 1 17 45 is_stmt 0 view .LVU7
+  46 0010 90ED057A 		vldr.32	s14, [r0, #20]
+  47              		.loc 1 17 41 view .LVU8
+  48 0014 37EE877A 		vadd.f32	s14, s15, s14
+  49              		.loc 1 17 24 view .LVU9
+  50 0018 C7EE876A 		vdiv.f32	s13, s15, s14
+  51              		.loc 1 17 8 view .LVU10
+  52 001c C0ED036A 		vstr.32	s13, [r0, #12]
+  18:Core/Src/Kalman_Filter.c **** 	KF->Output = KF->Output + KF->K*(Measurement - KF->Output);
+  53              		.loc 1 18 2 is_stmt 1 view .LVU11
+  54              		.loc 1 18 17 is_stmt 0 view .LVU12
+  55 0020 90ED027A 		vldr.32	s14, [r0, #8]
+  56              		.loc 1 18 47 view .LVU13
+  57 0024 30EE470A 		vsub.f32	s0, s0, s14
+  58              	.LVL1:
+  59              		.loc 1 18 33 view .LVU14
+  60 0028 26EE800A 		vmul.f32	s0, s13, s0
+  61              		.loc 1 18 26 view .LVU15
+  62 002c 37EE000A 		vadd.f32	s0, s14, s0
+  63              		.loc 1 18 13 view .LVU16
+  64 0030 80ED020A 		vstr.32	s0, [r0, #8]
+  19:Core/Src/Kalman_Filter.c **** 	KF->Prev_P = (1 - KF->K)*KF->Current_P;
+  65              		.loc 1 19 2 is_stmt 1 view .LVU17
+  66              		.loc 1 19 18 is_stmt 0 view .LVU18
+  67 0034 B7EE007A 		vmov.f32	s14, #1.0e+0
+  68 0038 37EE667A 		vsub.f32	s14, s14, s13
+  69              		.loc 1 19 26 view .LVU19
+  70 003c 67EE877A 		vmul.f32	s15, s15, s14
+  71              		.loc 1 19 13 view .LVU20
+  72 0040 C0ED007A 		vstr.32	s15, [r0]
+  20:Core/Src/Kalman_Filter.c **** 	
+  21:Core/Src/Kalman_Filter.c **** 	return KF->Output;
+  73              		.loc 1 21 2 is_stmt 1 view .LVU21
+  22:Core/Src/Kalman_Filter.c **** }
+  74              		.loc 1 22 1 is_stmt 0 view .LVU22
+  75 0044 7047     		bx	lr
+  76              		.cfi_endproc
+  77              	.LFE3:
+  79              		.text
+  80              	.Letext0:
+  81              		.file 2 "Core/Inc/Kalman_Filter.h"
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccywksJh.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 Kalman_Filter.c
+C:\Users\HRb\AppData\Local\Temp\ccywksJh.s:21     .text.First_Order_Kalman_Filter:00000000 $t
+C:\Users\HRb\AppData\Local\Temp\ccywksJh.s:27     .text.First_Order_Kalman_Filter:00000000 First_Order_Kalman_Filter
+
+NO UNDEFINED SYMBOLS

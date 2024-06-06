@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s 			page 1
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccnnT8Jn.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s 			page 1
   28:Core/Src/gpio.c **** /*----------------------------------------------------------------------------*/
   29:Core/Src/gpio.c **** /* Configure GPIO                                                             */
   30:Core/Src/gpio.c **** /*----------------------------------------------------------------------------*/
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s 			page 2
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccnnT8Jn.s 			page 2
 
 
   31:Core/Src/gpio.c **** /* USER CODE BEGIN 1 */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s 			page 1
   65              		.loc 1 48 3 view .LVU8
   49:Core/Src/gpio.c ****   __HAL_RCC_GPIOC_CLK_ENABLE();
   66              		.loc 1 49 3 view .LVU9
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s 			page 3
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccnnT8Jn.s 			page 3
 
 
   67              	.LBB3:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s 			page 1
  118              		.loc 1 52 3 view .LVU30
  119 0062 DA6C     		ldr	r2, [r3, #76]
  120 0064 02F00202 		and	r2, r2, #2
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s 			page 4
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccnnT8Jn.s 			page 4
 
 
  121 0068 0592     		str	r2, [sp, #20]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s 			page 1
  164 009c 2846     		mov	r0, r5
  165 009e FFF7FEFF 		bl	HAL_GPIO_Init
  166              	.LVL1:
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s 			page 5
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccnnT8Jn.s 			page 5
 
 
   64:Core/Src/gpio.c **** 
@@ -262,14 +262,14 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s 			page 1
  184              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/sy
  185              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
  186              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h"
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s 			page 6
+ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccnnT8Jn.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 gpio.c
-C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s:21     .text.MX_GPIO_Init:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s:27     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
-C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s:176    .text.MX_GPIO_Init:000000a8 $d
+C:\Users\HRb\AppData\Local\Temp\ccnnT8Jn.s:21     .text.MX_GPIO_Init:00000000 $t
+C:\Users\HRb\AppData\Local\Temp\ccnnT8Jn.s:27     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\HRb\AppData\Local\Temp\ccnnT8Jn.s:176    .text.MX_GPIO_Init:000000a8 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin
