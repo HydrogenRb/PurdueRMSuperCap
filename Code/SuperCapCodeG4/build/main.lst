@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 1
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 1
   36 0000 00B5     		push	{lr}
   37              	.LCFI0:
   38              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 2
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 2
 
 
   39              		.cfi_offset 14, -4
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 1
   14:Core/Src/main.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
   15:Core/Src/main.c ****   *
   16:Core/Src/main.c ****   ******************************************************************************
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 3
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 3
 
 
   17:Core/Src/main.c ****   */
@@ -138,289 +138,314 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 1
   31:Core/Src/main.c **** #include <stdio.h>
   32:Core/Src/main.c **** #include "Serial.h"
   33:Core/Src/main.c **** 
-  34:Core/Src/main.c **** /* USER CODE END Includes */
-  35:Core/Src/main.c **** 
-  36:Core/Src/main.c **** /* Private typedef -----------------------------------------------------------*/
-  37:Core/Src/main.c **** /* USER CODE BEGIN PTD */
-  38:Core/Src/main.c **** 
-  39:Core/Src/main.c **** /* USER CODE END PTD */
-  40:Core/Src/main.c **** 
-  41:Core/Src/main.c **** /* Private define ------------------------------------------------------------*/
-  42:Core/Src/main.c **** /* USER CODE BEGIN PD */
-  43:Core/Src/main.c **** 
-  44:Core/Src/main.c **** /* USER CODE END PD */
-  45:Core/Src/main.c **** 
-  46:Core/Src/main.c **** /* Private macro -------------------------------------------------------------*/
-  47:Core/Src/main.c **** /* USER CODE BEGIN PM */
-  48:Core/Src/main.c **** 
-  49:Core/Src/main.c **** /* USER CODE END PM */
-  50:Core/Src/main.c **** 
-  51:Core/Src/main.c **** /* Private variables ---------------------------------------------------------*/
-  52:Core/Src/main.c **** 
-  53:Core/Src/main.c **** /* USER CODE BEGIN PV */
-  54:Core/Src/main.c ****   uint16_t supercap_ADC1[2];
-  55:Core/Src/main.c ****   uint16_t supercap_ADC2[3];
-  56:Core/Src/main.c ****   uint16_t supercap_ADC3[3];
-  57:Core/Src/main.c **** 	uint16_t supercap_ADC4[2];
+  34:Core/Src/main.c **** #define MAX_CAP_VOLTAGE 338 //3V in 12 bits
+  35:Core/Src/main.c **** #define MAX_CURRENT 2125 //0.5A in 12 bits
+  36:Core/Src/main.c **** #define MIN_CURRENT 2047 //0A in 12 bits
+  37:Core/Src/main.c **** #define MAX_DUTY 300
+  38:Core/Src/main.c **** #define MIN_DUTY 0
+  39:Core/Src/main.c **** 
+  40:Core/Src/main.c **** /* USER CODE END Includes */
+  41:Core/Src/main.c **** 
+  42:Core/Src/main.c **** /* Private typedef -----------------------------------------------------------*/
+  43:Core/Src/main.c **** /* USER CODE BEGIN PTD */
+  44:Core/Src/main.c **** 
+  45:Core/Src/main.c **** /* USER CODE END PTD */
+  46:Core/Src/main.c **** 
+  47:Core/Src/main.c **** /* Private define ------------------------------------------------------------*/
+  48:Core/Src/main.c **** /* USER CODE BEGIN PD */
+  49:Core/Src/main.c **** 
+  50:Core/Src/main.c **** /* USER CODE END PD */
+  51:Core/Src/main.c **** 
+  52:Core/Src/main.c **** /* Private macro -------------------------------------------------------------*/
+  53:Core/Src/main.c **** /* USER CODE BEGIN PM */
+  54:Core/Src/main.c **** 
+  55:Core/Src/main.c **** /* USER CODE END PM */
+  56:Core/Src/main.c **** 
+  57:Core/Src/main.c **** /* Private variables ---------------------------------------------------------*/
   58:Core/Src/main.c **** 
-  59:Core/Src/main.c ****   _ADC_Sample_t C_left = {0};
-  60:Core/Src/main.c ****   _ADC_Sample_t C_sys = {0};
-  61:Core/Src/main.c ****   _ADC_Sample_t C_right = {0};
-  62:Core/Src/main.c ****   _ADC_Sample_t V_sys_op = {0};
-  63:Core/Src/main.c ****   _ADC_Sample_t V_cap_op = {0};
-  64:Core/Src/main.c ****   _ADC_Sample_t V_cap = {0}; //V_right
-  65:Core/Src/main.c ****   _ADC_Sample_t V_bat = {0}; //V_left
-  66:Core/Src/main.c ****   _ADC_Sample_t V_sys = {0};
-  67:Core/Src/main.c **** 	
-  68:Core/Src/main.c **** 	_ADC_Sample_t V_1V6 = {0};
-  69:Core/Src/main.c **** 	_ADC_Sample_t ADC4_3 = {0};
-  70:Core/Src/main.c **** 
-  71:Core/Src/main.c **** /* USER CODE END PV */
-  72:Core/Src/main.c **** 
-  73:Core/Src/main.c **** /* Private function prototypes -----------------------------------------------*/
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 4
+  59:Core/Src/main.c **** /* USER CODE BEGIN PV */
+  60:Core/Src/main.c ****   uint16_t supercap_ADC1[2];
+  61:Core/Src/main.c ****   uint16_t supercap_ADC2[3];
+  62:Core/Src/main.c ****   uint16_t supercap_ADC3[3];
+  63:Core/Src/main.c **** 	uint16_t supercap_ADC4[2];
+  64:Core/Src/main.c **** 
+  65:Core/Src/main.c ****   _ADC_Sample_t C_left = {0};
+  66:Core/Src/main.c ****   _ADC_Sample_t C_sys = {0};
+  67:Core/Src/main.c ****   _ADC_Sample_t C_right = {0};
+  68:Core/Src/main.c ****   _ADC_Sample_t V_sys_op = {0};
+  69:Core/Src/main.c ****   _ADC_Sample_t V_cap_op = {0};
+  70:Core/Src/main.c ****   _ADC_Sample_t V_cap = {0}; //V_right
+  71:Core/Src/main.c ****   _ADC_Sample_t V_bat = {0}; //V_left
+  72:Core/Src/main.c ****   _ADC_Sample_t V_sys = {0};
+  73:Core/Src/main.c **** 	
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 4
 
 
-  74:Core/Src/main.c **** void SystemClock_Config(void);
-  75:Core/Src/main.c **** /* USER CODE BEGIN PFP */
-  76:Core/Src/main.c **** //void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc1)
-  77:Core/Src/main.c **** //{
-  78:Core/Src/main.c **** //  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_14);
-  79:Core/Src/main.c **** //}
-  80:Core/Src/main.c **** /* USER CODE END PFP */
+  74:Core/Src/main.c **** 	_ADC_Sample_t V_1V6 = {0};
+  75:Core/Src/main.c **** 	_ADC_Sample_t ADC4_3 = {0};
+  76:Core/Src/main.c **** 
+  77:Core/Src/main.c ****   _Supercap_PID_Controller_t Out_loop_PID;
+  78:Core/Src/main.c ****   _Supercap_PID_Controller_t In_loop_PID;
+  79:Core/Src/main.c **** 
+  80:Core/Src/main.c **** /* USER CODE END PV */
   81:Core/Src/main.c **** 
-  82:Core/Src/main.c **** /* Private user code ---------------------------------------------------------*/
-  83:Core/Src/main.c **** /* USER CODE BEGIN 0 */
-  84:Core/Src/main.c **** 
-  85:Core/Src/main.c **** 
-  86:Core/Src/main.c **** /* USER CODE END 0 */
-  87:Core/Src/main.c **** 
-  88:Core/Src/main.c **** /**
-  89:Core/Src/main.c ****   * @brief  The application entry point.
-  90:Core/Src/main.c ****   * @retval int
-  91:Core/Src/main.c ****   */
-  92:Core/Src/main.c **** int main(void)
-  93:Core/Src/main.c **** {
-  94:Core/Src/main.c ****   /* USER CODE BEGIN 1 */
-  95:Core/Src/main.c ****   
-  96:Core/Src/main.c ****   char tail[4] = {0x00, 0x00, 0x80, 0x7f};
-  97:Core/Src/main.c **** 
-  98:Core/Src/main.c ****   C_left.sample = &supercap_ADC1[0];
-  99:Core/Src/main.c ****   C_sys.sample = &supercap_ADC1[1];
- 100:Core/Src/main.c ****   C_right.sample = &supercap_ADC3[2];
- 101:Core/Src/main.c ****   V_sys_op.sample = &supercap_ADC2[0];
- 102:Core/Src/main.c ****   V_cap_op.sample = &supercap_ADC2[1];
- 103:Core/Src/main.c ****   V_cap.sample = &supercap_ADC2[2];
- 104:Core/Src/main.c ****   V_bat.sample = &supercap_ADC3[0];
- 105:Core/Src/main.c ****   V_sys.sample = &supercap_ADC3[1];
- 106:Core/Src/main.c **** 	
- 107:Core/Src/main.c **** 	V_1V6.sample = &supercap_ADC4[0];
- 108:Core/Src/main.c **** 	ADC4_3.sample = &supercap_ADC4[1];
- 109:Core/Src/main.c ****   /* USER CODE END 1 */
- 110:Core/Src/main.c **** 
- 111:Core/Src/main.c ****   /* MCU Configuration--------------------------------------------------------*/
- 112:Core/Src/main.c **** 
- 113:Core/Src/main.c ****   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
- 114:Core/Src/main.c ****   HAL_Init();
- 115:Core/Src/main.c **** 
- 116:Core/Src/main.c ****   /* USER CODE BEGIN Init */
- 117:Core/Src/main.c **** 
- 118:Core/Src/main.c ****   /* USER CODE END Init */
- 119:Core/Src/main.c **** 
- 120:Core/Src/main.c ****   /* Configure the system clock */
- 121:Core/Src/main.c ****   SystemClock_Config();
- 122:Core/Src/main.c **** 
- 123:Core/Src/main.c ****   /* USER CODE BEGIN SysInit */
- 124:Core/Src/main.c **** 
- 125:Core/Src/main.c ****   /* USER CODE END SysInit */
+  82:Core/Src/main.c **** /* Private function prototypes -----------------------------------------------*/
+  83:Core/Src/main.c **** void SystemClock_Config(void);
+  84:Core/Src/main.c **** /* USER CODE BEGIN PFP */
+  85:Core/Src/main.c **** //void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc1)
+  86:Core/Src/main.c **** //{
+  87:Core/Src/main.c **** //  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_14);
+  88:Core/Src/main.c **** //}
+  89:Core/Src/main.c **** /* USER CODE END PFP */
+  90:Core/Src/main.c **** 
+  91:Core/Src/main.c **** /* Private user code ---------------------------------------------------------*/
+  92:Core/Src/main.c **** /* USER CODE BEGIN 0 */
+  93:Core/Src/main.c **** 
+  94:Core/Src/main.c **** 
+  95:Core/Src/main.c **** /* USER CODE END 0 */
+  96:Core/Src/main.c **** 
+  97:Core/Src/main.c **** /**
+  98:Core/Src/main.c ****   * @brief  The application entry point.
+  99:Core/Src/main.c ****   * @retval int
+ 100:Core/Src/main.c ****   */
+ 101:Core/Src/main.c **** int main(void)
+ 102:Core/Src/main.c **** {
+ 103:Core/Src/main.c ****   /* USER CODE BEGIN 1 */
+ 104:Core/Src/main.c ****   
+ 105:Core/Src/main.c ****   char tail[4] = {0x00, 0x00, 0x80, 0x7f};
+ 106:Core/Src/main.c **** 
+ 107:Core/Src/main.c ****   C_left.sample = &supercap_ADC1[0];
+ 108:Core/Src/main.c ****   C_sys.sample = &supercap_ADC1[1];
+ 109:Core/Src/main.c ****   C_right.sample = &supercap_ADC3[2];
+ 110:Core/Src/main.c ****   V_sys_op.sample = &supercap_ADC2[0];
+ 111:Core/Src/main.c ****   V_cap_op.sample = &supercap_ADC2[1];
+ 112:Core/Src/main.c ****   V_cap.sample = &supercap_ADC2[2];
+ 113:Core/Src/main.c ****   V_bat.sample = &supercap_ADC3[0];
+ 114:Core/Src/main.c ****   V_sys.sample = &supercap_ADC3[1];
+ 115:Core/Src/main.c **** 	
+ 116:Core/Src/main.c **** 	V_1V6.sample = &supercap_ADC4[0];
+ 117:Core/Src/main.c **** 	ADC4_3.sample = &supercap_ADC4[1];
+ 118:Core/Src/main.c **** 	
+ 119:Core/Src/main.c **** 	float temp;
+ 120:Core/Src/main.c ****   /* USER CODE END 1 */
+ 121:Core/Src/main.c **** 
+ 122:Core/Src/main.c ****   /* MCU Configuration--------------------------------------------------------*/
+ 123:Core/Src/main.c **** 
+ 124:Core/Src/main.c ****   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+ 125:Core/Src/main.c ****   HAL_Init();
  126:Core/Src/main.c **** 
- 127:Core/Src/main.c ****   /* Initialize all configured peripherals */
- 128:Core/Src/main.c ****   MX_GPIO_Init();
- 129:Core/Src/main.c ****   MX_DMA_Init();
- 130:Core/Src/main.c ****   MX_ADC1_Init();
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 5
+ 127:Core/Src/main.c ****   /* USER CODE BEGIN Init */
+ 128:Core/Src/main.c **** 
+ 129:Core/Src/main.c ****   /* USER CODE END Init */
+ 130:Core/Src/main.c **** 
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 5
 
 
- 131:Core/Src/main.c ****   MX_ADC2_Init();
- 132:Core/Src/main.c ****   MX_TIM1_Init();
- 133:Core/Src/main.c ****   MX_USART1_UART_Init();
- 134:Core/Src/main.c ****   MX_USART2_UART_Init();
- 135:Core/Src/main.c ****   MX_USART3_UART_Init();
- 136:Core/Src/main.c ****   MX_TIM3_Init();
- 137:Core/Src/main.c ****   MX_TIM4_Init();
- 138:Core/Src/main.c ****   MX_ADC4_Init();
- 139:Core/Src/main.c ****   MX_FDCAN1_Init();
- 140:Core/Src/main.c ****   MX_ADC5_Init();
- 141:Core/Src/main.c ****   MX_ADC3_Init();
- 142:Core/Src/main.c ****   MX_TIM2_Init();
- 143:Core/Src/main.c ****   /* USER CODE BEGIN 2 */
- 144:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
- 145:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
- 146:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc3, ADC_SINGLE_ENDED);
- 147:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc4, ADC_SINGLE_ENDED);
- 148:Core/Src/main.c **** 
- 149:Core/Src/main.c ****   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)supercap_ADC1, 2);
- 150:Core/Src/main.c ****   HAL_ADC_Start_DMA(&hadc2, (uint32_t*)supercap_ADC2, 3);
- 151:Core/Src/main.c ****   HAL_ADC_Start_DMA(&hadc3, (uint32_t*)supercap_ADC3, 3);
- 152:Core/Src/main.c **** 	HAL_ADC_Start_DMA(&hadc4, (uint32_t*)supercap_ADC4, 2);
- 153:Core/Src/main.c **** 	
- 154:Core/Src/main.c **** 	HAL_TIM_Base_Start(&htim1);
- 155:Core/Src/main.c **** 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
- 156:Core/Src/main.c ****   HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
- 157:Core/Src/main.c ****   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
- 158:Core/Src/main.c ****   HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_4);
- 159:Core/Src/main.c **** 	
- 160:Core/Src/main.c ****   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
- 161:Core/Src/main.c **** 	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
- 162:Core/Src/main.c **** 	
- 163:Core/Src/main.c **** 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
- 164:Core/Src/main.c **** 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
- 165:Core/Src/main.c **** 
- 166:Core/Src/main.c **** 	//__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 1);
- 167:Core/Src/main.c ****   //__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, 1);
- 168:Core/Src/main.c ****   HAL_FDCAN_Start(&hfdcan1);
- 169:Core/Src/main.c ****   FDCAN_TxHeaderTypeDef hfdcan1_pHeader;
- 170:Core/Src/main.c ****   uint8_t hfdcan1_pTxData[2] = {0x00, 0x01};
- 171:Core/Src/main.c **** 
- 172:Core/Src/main.c ****   hfdcan1_pHeader.Identifier  = 0x114;
- 173:Core/Src/main.c ****   hfdcan1_pHeader.IdType  = FDCAN_DATA_FRAME;
- 174:Core/Src/main.c ****   hfdcan1_pHeader.DataLength  = FDCAN_DLC_BYTES_2;
- 175:Core/Src/main.c ****   hfdcan1_pHeader.FDFormat = FDCAN_CLASSIC_CAN;
- 176:Core/Src/main.c ****   //to do list: 这个地方为什么CAN不行
+ 131:Core/Src/main.c ****   /* Configure the system clock */
+ 132:Core/Src/main.c ****   SystemClock_Config();
+ 133:Core/Src/main.c **** 
+ 134:Core/Src/main.c ****   /* USER CODE BEGIN SysInit */
+ 135:Core/Src/main.c **** 
+ 136:Core/Src/main.c ****   /* USER CODE END SysInit */
+ 137:Core/Src/main.c **** 
+ 138:Core/Src/main.c ****   /* Initialize all configured peripherals */
+ 139:Core/Src/main.c ****   MX_GPIO_Init();
+ 140:Core/Src/main.c ****   MX_DMA_Init();
+ 141:Core/Src/main.c ****   MX_ADC1_Init();
+ 142:Core/Src/main.c ****   MX_ADC2_Init();
+ 143:Core/Src/main.c ****   MX_TIM1_Init();
+ 144:Core/Src/main.c ****   MX_USART1_UART_Init();
+ 145:Core/Src/main.c ****   MX_USART2_UART_Init();
+ 146:Core/Src/main.c ****   MX_USART3_UART_Init();
+ 147:Core/Src/main.c ****   MX_TIM3_Init();
+ 148:Core/Src/main.c ****   MX_TIM4_Init();
+ 149:Core/Src/main.c ****   MX_ADC4_Init();
+ 150:Core/Src/main.c ****   MX_FDCAN1_Init();
+ 151:Core/Src/main.c ****   MX_ADC5_Init();
+ 152:Core/Src/main.c ****   MX_ADC3_Init();
+ 153:Core/Src/main.c ****   MX_TIM2_Init();
+ 154:Core/Src/main.c ****   MX_TIM5_Init();
+ 155:Core/Src/main.c ****   /* USER CODE BEGIN 2 */
+ 156:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
+ 157:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
+ 158:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc3, ADC_SINGLE_ENDED);
+ 159:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc4, ADC_SINGLE_ENDED);
+ 160:Core/Src/main.c **** 
+ 161:Core/Src/main.c ****   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)supercap_ADC1, 2);
+ 162:Core/Src/main.c ****   HAL_ADC_Start_DMA(&hadc2, (uint32_t*)supercap_ADC2, 3);
+ 163:Core/Src/main.c ****   HAL_ADC_Start_DMA(&hadc3, (uint32_t*)supercap_ADC3, 3);
+ 164:Core/Src/main.c **** 	HAL_ADC_Start_DMA(&hadc4, (uint32_t*)supercap_ADC4, 2);
+ 165:Core/Src/main.c **** 	
+ 166:Core/Src/main.c **** 	HAL_TIM_Base_Start(&htim1);
+ 167:Core/Src/main.c **** 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+ 168:Core/Src/main.c ****   HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
+ 169:Core/Src/main.c ****   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
+ 170:Core/Src/main.c ****   HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_4);
+ 171:Core/Src/main.c **** 	
+ 172:Core/Src/main.c ****   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+ 173:Core/Src/main.c **** 	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
+ 174:Core/Src/main.c **** 	
+ 175:Core/Src/main.c **** 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
+ 176:Core/Src/main.c **** 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
  177:Core/Src/main.c **** 	
- 178:Core/Src/main.c ****   
- 179:Core/Src/main.c **** 
- 180:Core/Src/main.c ****   HAL_UART_Transmit(&huart1, (uint8_t*)"Hello World\n", 12, 1000);
- 181:Core/Src/main.c ****   //to do list: 弄弄这个配合VOFA
- 182:Core/Src/main.c ****   /* USER CODE END 2 */
- 183:Core/Src/main.c **** 
- 184:Core/Src/main.c ****   /* Infinite loop */
- 185:Core/Src/main.c ****   /* USER CODE BEGIN WHILE */
- 186:Core/Src/main.c ****   while (1)
- 187:Core/Src/main.c ****   {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 6
+ 178:Core/Src/main.c **** 	HAL_TIM_Base_Start_IT(&htim2);
+ 179:Core/Src/main.c **** 	HAL_TIM_Base_Start_IT(&htim5);
+ 180:Core/Src/main.c **** 
+ 181:Core/Src/main.c **** 	//__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 1);
+ 182:Core/Src/main.c ****   
+ 183:Core/Src/main.c ****   HAL_FDCAN_Start(&hfdcan1);
+ 184:Core/Src/main.c ****   FDCAN_TxHeaderTypeDef hfdcan1_pHeader;
+ 185:Core/Src/main.c ****   uint8_t hfdcan1_pTxData[2] = {0x00, 0x01};
+ 186:Core/Src/main.c **** 
+ 187:Core/Src/main.c ****   hfdcan1_pHeader.Identifier  = 0x114;
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 6
 
 
- 188:Core/Src/main.c ****     /* USER CODE END WHILE */
- 189:Core/Src/main.c **** 
- 190:Core/Src/main.c ****     /* USER CODE BEGIN 3 */
- 191:Core/Src/main.c ****     
- 192:Core/Src/main.c ****     //HAL_Delay(3000);
- 193:Core/Src/main.c ****     //HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &hfdcan1_pHeader, &hfdcan1_pTxData);
- 194:Core/Src/main.c **** 
- 195:Core/Src/main.c **** 
+ 188:Core/Src/main.c ****   hfdcan1_pHeader.IdType  = FDCAN_DATA_FRAME;
+ 189:Core/Src/main.c ****   hfdcan1_pHeader.DataLength  = FDCAN_DLC_BYTES_2;
+ 190:Core/Src/main.c ****   hfdcan1_pHeader.FDFormat = FDCAN_CLASSIC_CAN;
+ 191:Core/Src/main.c ****   //to do list: 这个地方为什么CAN不行
+ 192:Core/Src/main.c **** 	
+ 193:Core/Src/main.c ****   Supercap_PID_Init(&Out_loop_PID, 2, 0, 0, MAX_CAP_VOLTAGE, 0);
+ 194:Core/Src/main.c ****   Supercap_PID_Init(&In_loop_PID, 1, 0, 0, MAX_DUTY, MIN_DUTY);
+ 195:Core/Src/main.c ****   
  196:Core/Src/main.c **** 
- 197:Core/Src/main.c **** 
- 198:Core/Src/main.c ****     //TIM 2 global interrupt -> 500kHz进行采样
- 199:Core/Src/main.c ****     
+ 197:Core/Src/main.c ****   //HAL_UART_Transmit(&huart1, (uint8_t*)"Hello World\n", 12, 1000);
+ 198:Core/Src/main.c ****   //to do list: 弄弄这个配合VOFA
+ 199:Core/Src/main.c ****   /* USER CODE END 2 */
  200:Core/Src/main.c **** 
- 201:Core/Src/main.c **** //    uint8_t data[2];
- 202:Core/Src/main.c **** //    data[0] = (uint8_t)(C_left.average >> 8);
- 203:Core/Src/main.c **** //    data[1] = (uint8_t)(C_left.average);
- 204:Core/Src/main.c **** 
- 205:Core/Src/main.c ****     //HAL_UART_Transmit(&huart3, data, 2, 1000);
- 206:Core/Src/main.c **** 		//HAL_UART_Transmit(&huart3, (uint8_t*)C_left.average, 2, 1000);
- 207:Core/Src/main.c **** 
- 208:Core/Src/main.c ****     //printf("%d,%4.2f\n", C_left.average,C_left.real_value);
- 209:Core/Src/main.c **** 		
- 210:Core/Src/main.c **** 		//HAL_UART_Transmit(&huart3, (uint8_t*)&(C_left.real_value), 4, 1000);
- 211:Core/Src/main.c **** 		//HAL_UART_Transmit(&huart3, (uint8_t*)&(C_sys.real_value), 4, 1000);
- 212:Core/Src/main.c **** 		//HAL_UART_Transmit(&huart3, (uint8_t*)&(V_sys_op.real_value), 4, 1000);
- 213:Core/Src/main.c **** 		//HAL_UART_Transmit(&huart3, (uint8_t*)&(V_sys.real_value), 4, 1000);
- 214:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(V_1V6.real_value), 4, 1000);
- 215:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)tail, 4, 1000);
- 216:Core/Src/main.c **** 
- 217:Core/Src/main.c ****     
- 218:Core/Src/main.c **** /*
- 219:Core/Src/main.c ****     for(float i=0; i<100; i=i+1)
- 220:Core/Src/main.c ****     {
- 221:Core/Src/main.c ****       //HAL_Delay(100);
- 222:Core/Src/main.c ****     //printf("%d\n", i);
- 223:Core/Src/main.c ****     HAL_UART_Transmit(&huart3, (uint8_t*)&(i), 4, 1000);
- 224:Core/Src/main.c ****     HAL_UART_Transmit(&huart3, (uint8_t*)tail, 4, 1000);
- 225:Core/Src/main.c ****     }
- 226:Core/Src/main.c ****     __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 1);
- 227:Core/Src/main.c **** */
- 228:Core/Src/main.c ****   }
- 229:Core/Src/main.c ****   /* USER CODE END 3 */
- 230:Core/Src/main.c **** }
- 231:Core/Src/main.c **** 
- 232:Core/Src/main.c **** /**
- 233:Core/Src/main.c ****   * @brief System Clock Configuration
- 234:Core/Src/main.c ****   * @retval None
- 235:Core/Src/main.c ****   */
- 236:Core/Src/main.c **** void SystemClock_Config(void)
- 237:Core/Src/main.c **** {
- 238:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
- 239:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 240:Core/Src/main.c **** 
- 241:Core/Src/main.c ****   /** Configure the main internal regulator output voltage
- 242:Core/Src/main.c ****   */
- 243:Core/Src/main.c ****   HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1);
- 244:Core/Src/main.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 7
+ 201:Core/Src/main.c ****   /* Infinite loop */
+ 202:Core/Src/main.c ****   /* USER CODE BEGIN WHILE */
+ 203:Core/Src/main.c ****   while (1)
+ 204:Core/Src/main.c ****   {
+ 205:Core/Src/main.c ****     /* USER CODE END WHILE */
+ 206:Core/Src/main.c **** 
+ 207:Core/Src/main.c ****     /* USER CODE BEGIN 3 */
+ 208:Core/Src/main.c ****     
+ 209:Core/Src/main.c ****     //HAL_Delay(3000);
+ 210:Core/Src/main.c ****     //HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &hfdcan1_pHeader, &hfdcan1_pTxData);
+ 211:Core/Src/main.c **** 
+ 212:Core/Src/main.c **** 
+ 213:Core/Src/main.c **** 
+ 214:Core/Src/main.c **** 
+ 215:Core/Src/main.c ****     //TIM 2 global interrupt -> 500kHz进行采样
+ 216:Core/Src/main.c ****     
+ 217:Core/Src/main.c **** 
+ 218:Core/Src/main.c **** //    uint8_t data[2];
+ 219:Core/Src/main.c **** //    data[0] = (uint8_t)(C_left.average >> 8);
+ 220:Core/Src/main.c **** //    data[1] = (uint8_t)(C_left.average);
+ 221:Core/Src/main.c **** 
+ 222:Core/Src/main.c ****     //HAL_UART_Transmit(&huart3, data, 2, 1000);
+ 223:Core/Src/main.c **** 		//HAL_UART_Transmit(&huart3, (uint8_t*)C_left.average, 2, 1000);
+ 224:Core/Src/main.c **** 
+ 225:Core/Src/main.c ****     //printf("%d,%4.2f\n", C_left.average,C_left.real_value);
+ 226:Core/Src/main.c **** 		temp = C_left.real_value_12bits;
+ 227:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 228:Core/Src/main.c **** 		temp = C_sys.real_value_12bits;
+ 229:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 230:Core/Src/main.c **** 		temp = C_right.real_value_12bits;
+ 231:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 232:Core/Src/main.c **** 		temp = V_cap.real_value_12bits;
+ 233:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 234:Core/Src/main.c **** 		temp = V_bat.real_value_12bits;
+ 235:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 236:Core/Src/main.c **** 		temp = V_sys.real_value_12bits;
+ 237:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 238:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)tail, 4, 1000);
+ 239:Core/Src/main.c **** 	
+ 240:Core/Src/main.c **** 	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 100);
+ 241:Core/Src/main.c **** 	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, 50);
+ 242:Core/Src/main.c ****     
+ 243:Core/Src/main.c **** /*
+ 244:Core/Src/main.c ****     for(float i=0; i<100; i=i+1)
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 7
 
 
- 245:Core/Src/main.c ****   /** Initializes the RCC Oscillators according to the specified parameters
- 246:Core/Src/main.c ****   * in the RCC_OscInitTypeDef structure.
- 247:Core/Src/main.c ****   */
- 248:Core/Src/main.c ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
- 249:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
- 250:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
- 251:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
- 252:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
- 253:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
- 254:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLN = 75;
- 255:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
- 256:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
- 257:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
- 258:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
- 259:Core/Src/main.c ****   {
- 260:Core/Src/main.c ****     Error_Handler();
- 261:Core/Src/main.c ****   }
- 262:Core/Src/main.c **** 
- 263:Core/Src/main.c ****   /** Initializes the CPU, AHB and APB buses clocks
- 264:Core/Src/main.c ****   */
- 265:Core/Src/main.c ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
- 266:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
- 267:Core/Src/main.c ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
- 268:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 269:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 270:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 271:Core/Src/main.c **** 
- 272:Core/Src/main.c ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
- 273:Core/Src/main.c ****   {
- 274:Core/Src/main.c ****     Error_Handler();
- 275:Core/Src/main.c ****   }
- 276:Core/Src/main.c **** }
- 277:Core/Src/main.c **** 
- 278:Core/Src/main.c **** /* USER CODE BEGIN 4 */
- 279:Core/Src/main.c **** 
- 280:Core/Src/main.c **** /* USER CODE END 4 */
- 281:Core/Src/main.c **** 
- 282:Core/Src/main.c **** /**
- 283:Core/Src/main.c ****   * @brief  This function is executed in case of error occurrence.
- 284:Core/Src/main.c ****   * @retval None
- 285:Core/Src/main.c ****   */
- 286:Core/Src/main.c **** void Error_Handler(void)
- 287:Core/Src/main.c **** {
-  79              		.loc 1 287 1 is_stmt 1 view -0
+ 245:Core/Src/main.c ****     {
+ 246:Core/Src/main.c ****       //HAL_Delay(100);
+ 247:Core/Src/main.c ****     //printf("%d\n", i);
+ 248:Core/Src/main.c ****     HAL_UART_Transmit(&huart3, (uint8_t*)&(i), 4, 1000);
+ 249:Core/Src/main.c ****     HAL_UART_Transmit(&huart3, (uint8_t*)tail, 4, 1000);
+ 250:Core/Src/main.c ****     }
+ 251:Core/Src/main.c ****     __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 1);
+ 252:Core/Src/main.c **** */
+ 253:Core/Src/main.c ****   }
+ 254:Core/Src/main.c ****   /* USER CODE END 3 */
+ 255:Core/Src/main.c **** }
+ 256:Core/Src/main.c **** 
+ 257:Core/Src/main.c **** /**
+ 258:Core/Src/main.c ****   * @brief System Clock Configuration
+ 259:Core/Src/main.c ****   * @retval None
+ 260:Core/Src/main.c ****   */
+ 261:Core/Src/main.c **** void SystemClock_Config(void)
+ 262:Core/Src/main.c **** {
+ 263:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 264:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 265:Core/Src/main.c **** 
+ 266:Core/Src/main.c ****   /** Configure the main internal regulator output voltage
+ 267:Core/Src/main.c ****   */
+ 268:Core/Src/main.c ****   HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1);
+ 269:Core/Src/main.c **** 
+ 270:Core/Src/main.c ****   /** Initializes the RCC Oscillators according to the specified parameters
+ 271:Core/Src/main.c ****   * in the RCC_OscInitTypeDef structure.
+ 272:Core/Src/main.c ****   */
+ 273:Core/Src/main.c ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+ 274:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+ 275:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+ 276:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+ 277:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+ 278:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
+ 279:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLN = 75;
+ 280:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+ 281:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
+ 282:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
+ 283:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 284:Core/Src/main.c ****   {
+ 285:Core/Src/main.c ****     Error_Handler();
+ 286:Core/Src/main.c ****   }
+ 287:Core/Src/main.c **** 
+ 288:Core/Src/main.c ****   /** Initializes the CPU, AHB and APB buses clocks
+ 289:Core/Src/main.c ****   */
+ 290:Core/Src/main.c ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+ 291:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 292:Core/Src/main.c ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+ 293:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 294:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 295:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 296:Core/Src/main.c **** 
+ 297:Core/Src/main.c ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
+ 298:Core/Src/main.c ****   {
+ 299:Core/Src/main.c ****     Error_Handler();
+ 300:Core/Src/main.c ****   }
+ 301:Core/Src/main.c **** }
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 8
+
+
+ 302:Core/Src/main.c **** 
+ 303:Core/Src/main.c **** /* USER CODE BEGIN 4 */
+ 304:Core/Src/main.c **** 
+ 305:Core/Src/main.c **** /* USER CODE END 4 */
+ 306:Core/Src/main.c **** 
+ 307:Core/Src/main.c **** /**
+ 308:Core/Src/main.c ****   * @brief  This function is executed in case of error occurrence.
+ 309:Core/Src/main.c ****   * @retval None
+ 310:Core/Src/main.c ****   */
+ 311:Core/Src/main.c **** void Error_Handler(void)
+ 312:Core/Src/main.c **** {
+  79              		.loc 1 312 1 is_stmt 1 view -0
   80              		.cfi_startproc
   81              		@ Volatile: function does not return.
   82              		@ args = 0, pretend = 0, frame = 0
   83              		@ frame_needed = 0, uses_anonymous_args = 0
   84              		@ link register save eliminated.
- 288:Core/Src/main.c ****   /* USER CODE BEGIN Error_Handler_Debug */
- 289:Core/Src/main.c ****   /* User can add his own implementation to report the HAL error return state */
- 290:Core/Src/main.c ****   __disable_irq();
-  85              		.loc 1 290 3 view .LVU8
+ 313:Core/Src/main.c ****   /* USER CODE BEGIN Error_Handler_Debug */
+ 314:Core/Src/main.c ****   /* User can add his own implementation to report the HAL error return state */
+ 315:Core/Src/main.c ****   __disable_irq();
+  85              		.loc 1 315 3 view .LVU8
   86              	.LBB4:
   87              	.LBI4:
   88              		.file 3 "Drivers/CMSIS/Include/cmsis_gcc.h"
    1:Drivers/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 8
-
-
    2:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
    3:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
    4:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @version  V5.2.0
@@ -453,6 +478,9 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 1
   31:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
   32:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wunused-parameter"
   33:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 9
+
+
   34:Drivers/CMSIS/Include/cmsis_gcc.h **** /* Fallback for __has_builtin */
   35:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __has_builtin
   36:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __has_builtin(x) (0)
@@ -478,9 +506,6 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 1
   56:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __USED                                 __attribute__((used))
   57:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   58:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __WEAK
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 9
-
-
   59:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
   60:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   61:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED
@@ -513,6 +538,9 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 1
   88:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
   89:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
   90:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_READ { uint16_t v; };
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 10
+
+
   91:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
   92:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_READ(addr)          (((const struct T_UINT16_READ *)(const void *)(add
   93:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -538,9 +566,6 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 1
  113:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __RESTRICT
  114:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __RESTRICT                             __restrict
  115:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 10
-
-
  116:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __COMPILER_BARRIER
  117:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __COMPILER_BARRIER()                   __ASM volatile("":::"memory")
  118:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -573,6 +598,9 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 1
  145:Drivers/CMSIS/Include/cmsis_gcc.h ****   
  146:Drivers/CMSIS/Include/cmsis_gcc.h ****   extern const __copy_table_t __copy_table_start__;
  147:Drivers/CMSIS/Include/cmsis_gcc.h ****   extern const __copy_table_t __copy_table_end__;
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 11
+
+
  148:Drivers/CMSIS/Include/cmsis_gcc.h ****   extern const __zero_table_t __zero_table_start__;
  149:Drivers/CMSIS/Include/cmsis_gcc.h ****   extern const __zero_table_t __zero_table_end__;
  150:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -598,9 +626,6 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 1
  170:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __INITIAL_SP              __StackTop
  171:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  172:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 11
-
-
  173:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __STACK_LIMIT
  174:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __STACK_LIMIT             __StackLimit
  175:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -633,6 +658,9 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 1
  202:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  203:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
  204:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Disables IRQ interrupts by setting the I-bit in the CPSR.
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 12
+
+
  205:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
  206:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  207:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
@@ -650,17 +678,14 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 1
   98              	.L6:
   99              	.LBE5:
  100              	.LBE4:
- 291:Core/Src/main.c ****   while (1)
- 101              		.loc 1 291 3 view .LVU11
- 292:Core/Src/main.c ****   {
- 293:Core/Src/main.c ****   }
- 102              		.loc 1 293 3 view .LVU12
- 291:Core/Src/main.c ****   while (1)
- 103              		.loc 1 291 9 view .LVU13
+ 316:Core/Src/main.c ****   while (1)
+ 101              		.loc 1 316 3 view .LVU11
+ 317:Core/Src/main.c ****   {
+ 318:Core/Src/main.c ****   }
+ 102              		.loc 1 318 3 view .LVU12
+ 316:Core/Src/main.c ****   while (1)
+ 103              		.loc 1 316 9 view .LVU13
  104 0002 FEE7     		b	.L6
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 12
-
-
  105              		.cfi_endproc
  106              	.LFE335:
  108              		.section	.text.SystemClock_Config,"ax",%progbits
@@ -671,8 +696,8 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 1
  113              		.thumb_func
  115              	SystemClock_Config:
  116              	.LFB334:
- 237:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
- 117              		.loc 1 237 1 view -0
+ 262:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 117              		.loc 1 262 1 view -0
  118              		.cfi_startproc
  119              		@ args = 0, pretend = 0, frame = 80
  120              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -683,142 +708,145 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 1
  125 0002 95B0     		sub	sp, sp, #84
  126              	.LCFI4:
  127              		.cfi_def_cfa_offset 88
- 238:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 128              		.loc 1 238 3 view .LVU15
- 238:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 129              		.loc 1 238 22 is_stmt 0 view .LVU16
+ 263:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 128              		.loc 1 263 3 view .LVU15
+ 263:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 129              		.loc 1 263 22 is_stmt 0 view .LVU16
  130 0004 3822     		movs	r2, #56
  131 0006 0021     		movs	r1, #0
  132 0008 06A8     		add	r0, sp, #24
  133 000a FFF7FEFF 		bl	memset
  134              	.LVL4:
- 239:Core/Src/main.c **** 
- 135              		.loc 1 239 3 is_stmt 1 view .LVU17
- 239:Core/Src/main.c **** 
- 136              		.loc 1 239 22 is_stmt 0 view .LVU18
+ 264:Core/Src/main.c **** 
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 13
+
+
+ 135              		.loc 1 264 3 is_stmt 1 view .LVU17
+ 264:Core/Src/main.c **** 
+ 136              		.loc 1 264 22 is_stmt 0 view .LVU18
  137 000e 0023     		movs	r3, #0
  138 0010 0193     		str	r3, [sp, #4]
  139 0012 0293     		str	r3, [sp, #8]
  140 0014 0393     		str	r3, [sp, #12]
  141 0016 0493     		str	r3, [sp, #16]
  142 0018 0593     		str	r3, [sp, #20]
- 243:Core/Src/main.c **** 
- 143              		.loc 1 243 3 is_stmt 1 view .LVU19
+ 268:Core/Src/main.c **** 
+ 143              		.loc 1 268 3 is_stmt 1 view .LVU19
  144 001a 4FF40070 		mov	r0, #512
  145 001e FFF7FEFF 		bl	HAL_PWREx_ControlVoltageScaling
  146              	.LVL5:
- 248:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
- 147              		.loc 1 248 3 view .LVU20
- 248:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
- 148              		.loc 1 248 36 is_stmt 0 view .LVU21
+ 273:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+ 147              		.loc 1 273 3 view .LVU20
+ 273:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+ 148              		.loc 1 273 36 is_stmt 0 view .LVU21
  149 0022 0223     		movs	r3, #2
  150 0024 0693     		str	r3, [sp, #24]
- 249:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
- 151              		.loc 1 249 3 is_stmt 1 view .LVU22
- 249:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
- 152              		.loc 1 249 30 is_stmt 0 view .LVU23
+ 274:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+ 151              		.loc 1 274 3 is_stmt 1 view .LVU22
+ 274:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+ 152              		.loc 1 274 30 is_stmt 0 view .LVU23
  153 0026 4FF48072 		mov	r2, #256
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 13
-
-
  154 002a 0992     		str	r2, [sp, #36]
- 250:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
- 155              		.loc 1 250 3 is_stmt 1 view .LVU24
- 250:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
- 156              		.loc 1 250 41 is_stmt 0 view .LVU25
+ 275:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+ 155              		.loc 1 275 3 is_stmt 1 view .LVU24
+ 275:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+ 156              		.loc 1 275 41 is_stmt 0 view .LVU25
  157 002c 4022     		movs	r2, #64
  158 002e 0A92     		str	r2, [sp, #40]
- 251:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
- 159              		.loc 1 251 3 is_stmt 1 view .LVU26
- 251:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
- 160              		.loc 1 251 34 is_stmt 0 view .LVU27
+ 276:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+ 159              		.loc 1 276 3 is_stmt 1 view .LVU26
+ 276:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+ 160              		.loc 1 276 34 is_stmt 0 view .LVU27
  161 0030 0D93     		str	r3, [sp, #52]
- 252:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
- 162              		.loc 1 252 3 is_stmt 1 view .LVU28
- 252:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
- 163              		.loc 1 252 35 is_stmt 0 view .LVU29
+ 277:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
+ 162              		.loc 1 277 3 is_stmt 1 view .LVU28
+ 277:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
+ 163              		.loc 1 277 35 is_stmt 0 view .LVU29
  164 0032 0E93     		str	r3, [sp, #56]
- 253:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLN = 75;
- 165              		.loc 1 253 3 is_stmt 1 view .LVU30
- 253:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLN = 75;
- 166              		.loc 1 253 30 is_stmt 0 view .LVU31
+ 278:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLN = 75;
+ 165              		.loc 1 278 3 is_stmt 1 view .LVU30
+ 278:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLN = 75;
+ 166              		.loc 1 278 30 is_stmt 0 view .LVU31
  167 0034 0422     		movs	r2, #4
  168 0036 0F92     		str	r2, [sp, #60]
- 254:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
- 169              		.loc 1 254 3 is_stmt 1 view .LVU32
- 254:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
- 170              		.loc 1 254 30 is_stmt 0 view .LVU33
+ 279:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+ 169              		.loc 1 279 3 is_stmt 1 view .LVU32
+ 279:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+ 170              		.loc 1 279 30 is_stmt 0 view .LVU33
  171 0038 4B22     		movs	r2, #75
  172 003a 1092     		str	r2, [sp, #64]
- 255:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
- 173              		.loc 1 255 3 is_stmt 1 view .LVU34
- 255:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
- 174              		.loc 1 255 30 is_stmt 0 view .LVU35
+ 280:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
+ 173              		.loc 1 280 3 is_stmt 1 view .LVU34
+ 280:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 14
+
+
+ 174              		.loc 1 280 30 is_stmt 0 view .LVU35
  175 003c 1193     		str	r3, [sp, #68]
- 256:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
- 176              		.loc 1 256 3 is_stmt 1 view .LVU36
- 256:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
- 177              		.loc 1 256 30 is_stmt 0 view .LVU37
+ 281:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
+ 176              		.loc 1 281 3 is_stmt 1 view .LVU36
+ 281:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
+ 177              		.loc 1 281 30 is_stmt 0 view .LVU37
  178 003e 1293     		str	r3, [sp, #72]
- 257:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
- 179              		.loc 1 257 3 is_stmt 1 view .LVU38
- 257:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
- 180              		.loc 1 257 30 is_stmt 0 view .LVU39
+ 282:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 179              		.loc 1 282 3 is_stmt 1 view .LVU38
+ 282:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 180              		.loc 1 282 30 is_stmt 0 view .LVU39
  181 0040 1393     		str	r3, [sp, #76]
- 258:Core/Src/main.c ****   {
- 182              		.loc 1 258 3 is_stmt 1 view .LVU40
- 258:Core/Src/main.c ****   {
- 183              		.loc 1 258 7 is_stmt 0 view .LVU41
+ 283:Core/Src/main.c ****   {
+ 182              		.loc 1 283 3 is_stmt 1 view .LVU40
+ 283:Core/Src/main.c ****   {
+ 183              		.loc 1 283 7 is_stmt 0 view .LVU41
  184 0042 06A8     		add	r0, sp, #24
  185 0044 FFF7FEFF 		bl	HAL_RCC_OscConfig
  186              	.LVL6:
- 258:Core/Src/main.c ****   {
- 187              		.loc 1 258 6 discriminator 1 view .LVU42
+ 283:Core/Src/main.c ****   {
+ 187              		.loc 1 283 6 discriminator 1 view .LVU42
  188 0048 80B9     		cbnz	r0, .L11
- 265:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
- 189              		.loc 1 265 3 is_stmt 1 view .LVU43
- 265:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 14
-
-
- 190              		.loc 1 265 31 is_stmt 0 view .LVU44
+ 290:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 189              		.loc 1 290 3 is_stmt 1 view .LVU43
+ 290:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 190              		.loc 1 290 31 is_stmt 0 view .LVU44
  191 004a 0F23     		movs	r3, #15
  192 004c 0193     		str	r3, [sp, #4]
- 267:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 193              		.loc 1 267 3 is_stmt 1 view .LVU45
- 267:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 194              		.loc 1 267 34 is_stmt 0 view .LVU46
+ 292:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 193              		.loc 1 292 3 is_stmt 1 view .LVU45
+ 292:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 194              		.loc 1 292 34 is_stmt 0 view .LVU46
  195 004e 0323     		movs	r3, #3
  196 0050 0293     		str	r3, [sp, #8]
- 268:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 197              		.loc 1 268 3 is_stmt 1 view .LVU47
- 268:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 198              		.loc 1 268 35 is_stmt 0 view .LVU48
+ 293:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 197              		.loc 1 293 3 is_stmt 1 view .LVU47
+ 293:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 198              		.loc 1 293 35 is_stmt 0 view .LVU48
  199 0052 0023     		movs	r3, #0
  200 0054 0393     		str	r3, [sp, #12]
- 269:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 201              		.loc 1 269 3 is_stmt 1 view .LVU49
- 269:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 202              		.loc 1 269 36 is_stmt 0 view .LVU50
+ 294:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 201              		.loc 1 294 3 is_stmt 1 view .LVU49
+ 294:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 202              		.loc 1 294 36 is_stmt 0 view .LVU50
  203 0056 0493     		str	r3, [sp, #16]
- 270:Core/Src/main.c **** 
- 204              		.loc 1 270 3 is_stmt 1 view .LVU51
- 270:Core/Src/main.c **** 
- 205              		.loc 1 270 36 is_stmt 0 view .LVU52
+ 295:Core/Src/main.c **** 
+ 204              		.loc 1 295 3 is_stmt 1 view .LVU51
+ 295:Core/Src/main.c **** 
+ 205              		.loc 1 295 36 is_stmt 0 view .LVU52
  206 0058 0593     		str	r3, [sp, #20]
- 272:Core/Src/main.c ****   {
- 207              		.loc 1 272 3 is_stmt 1 view .LVU53
- 272:Core/Src/main.c ****   {
- 208              		.loc 1 272 7 is_stmt 0 view .LVU54
+ 297:Core/Src/main.c ****   {
+ 207              		.loc 1 297 3 is_stmt 1 view .LVU53
+ 297:Core/Src/main.c ****   {
+ 208              		.loc 1 297 7 is_stmt 0 view .LVU54
  209 005a 0421     		movs	r1, #4
  210 005c 0DEB0100 		add	r0, sp, r1
  211 0060 FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 15
+
+
  212              	.LVL7:
- 272:Core/Src/main.c ****   {
- 213              		.loc 1 272 6 discriminator 1 view .LVU55
+ 297:Core/Src/main.c ****   {
+ 213              		.loc 1 297 6 discriminator 1 view .LVU55
  214 0064 20B9     		cbnz	r0, .L12
- 276:Core/Src/main.c **** 
- 215              		.loc 1 276 1 view .LVU56
+ 301:Core/Src/main.c **** 
+ 215              		.loc 1 301 1 view .LVU56
  216 0066 15B0     		add	sp, sp, #84
  217              	.LCFI5:
  218              		.cfi_remember_state
@@ -828,607 +856,750 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 1
  222              	.L11:
  223              	.LCFI6:
  224              		.cfi_restore_state
- 260:Core/Src/main.c ****   }
- 225              		.loc 1 260 5 is_stmt 1 view .LVU57
+ 285:Core/Src/main.c ****   }
+ 225              		.loc 1 285 5 is_stmt 1 view .LVU57
  226 006c FFF7FEFF 		bl	Error_Handler
  227              	.LVL8:
  228              	.L12:
- 274:Core/Src/main.c ****   }
- 229              		.loc 1 274 5 view .LVU58
+ 299:Core/Src/main.c ****   }
+ 229              		.loc 1 299 5 view .LVU58
  230 0070 FFF7FEFF 		bl	Error_Handler
  231              	.LVL9:
  232              		.cfi_endproc
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 15
-
-
  233              	.LFE334:
- 235              		.section	.rodata.main.str1.4,"aMS",%progbits,1
- 236              		.align	2
- 237              	.LC0:
- 238 0000 48656C6C 		.ascii	"Hello World\012\000"
- 238      6F20576F 
- 238      726C640A 
- 238      00
- 239              		.section	.text.main,"ax",%progbits
- 240              		.align	1
- 241              		.global	main
- 242              		.syntax unified
- 243              		.thumb
- 244              		.thumb_func
- 246              	main:
- 247              	.LFB333:
-  93:Core/Src/main.c ****   /* USER CODE BEGIN 1 */
- 248              		.loc 1 93 1 view -0
- 249              		.cfi_startproc
- 250              		@ Volatile: function does not return.
- 251              		@ args = 0, pretend = 0, frame = 48
- 252              		@ frame_needed = 0, uses_anonymous_args = 0
- 253 0000 2DE98048 		push	{r7, fp, lr}
- 254              	.LCFI7:
- 255              		.cfi_def_cfa_offset 12
- 256              		.cfi_offset 7, -12
- 257              		.cfi_offset 11, -8
- 258              		.cfi_offset 14, -4
- 259 0004 8DB0     		sub	sp, sp, #52
- 260              	.LCFI8:
- 261              		.cfi_def_cfa_offset 64
-  96:Core/Src/main.c **** 
- 262              		.loc 1 96 3 view .LVU60
-  96:Core/Src/main.c **** 
- 263              		.loc 1 96 8 is_stmt 0 view .LVU61
- 264 0006 4FF0FF43 		mov	r3, #2139095040
- 265 000a 0B93     		str	r3, [sp, #44]
-  98:Core/Src/main.c ****   C_sys.sample = &supercap_ADC1[1];
- 266              		.loc 1 98 3 is_stmt 1 view .LVU62
-  98:Core/Src/main.c ****   C_sys.sample = &supercap_ADC1[1];
- 267              		.loc 1 98 17 is_stmt 0 view .LVU63
- 268 000c 5B4F     		ldr	r7, .L16
- 269 000e 5C4B     		ldr	r3, .L16+4
- 270 0010 9F60     		str	r7, [r3, #8]
-  99:Core/Src/main.c ****   C_right.sample = &supercap_ADC3[2];
- 271              		.loc 1 99 3 is_stmt 1 view .LVU64
-  99:Core/Src/main.c ****   C_right.sample = &supercap_ADC3[2];
- 272              		.loc 1 99 16 is_stmt 0 view .LVU65
- 273 0012 BA1C     		adds	r2, r7, #2
- 274 0014 5B4B     		ldr	r3, .L16+8
- 275 0016 9A60     		str	r2, [r3, #8]
- 100:Core/Src/main.c ****   V_sys_op.sample = &supercap_ADC2[0];
- 276              		.loc 1 100 3 is_stmt 1 view .LVU66
- 100:Core/Src/main.c ****   V_sys_op.sample = &supercap_ADC2[0];
- 277              		.loc 1 100 18 is_stmt 0 view .LVU67
- 278 0018 5B4C     		ldr	r4, .L16+12
- 279 001a 5C4B     		ldr	r3, .L16+16
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 16
+ 235              		.section	.text.main,"ax",%progbits
+ 236              		.align	1
+ 237              		.global	main
+ 238              		.syntax unified
+ 239              		.thumb
+ 240              		.thumb_func
+ 242              	main:
+ 243              	.LFB333:
+ 102:Core/Src/main.c ****   /* USER CODE BEGIN 1 */
+ 244              		.loc 1 102 1 view -0
+ 245              		.cfi_startproc
+ 246              		@ Volatile: function does not return.
+ 247              		@ args = 0, pretend = 0, frame = 48
+ 248              		@ frame_needed = 0, uses_anonymous_args = 0
+ 249 0000 2DE98048 		push	{r7, fp, lr}
+ 250              	.LCFI7:
+ 251              		.cfi_def_cfa_offset 12
+ 252              		.cfi_offset 7, -12
+ 253              		.cfi_offset 11, -8
+ 254              		.cfi_offset 14, -4
+ 255 0004 8FB0     		sub	sp, sp, #60
+ 256              	.LCFI8:
+ 257              		.cfi_def_cfa_offset 72
+ 105:Core/Src/main.c **** 
+ 258              		.loc 1 105 3 view .LVU60
+ 105:Core/Src/main.c **** 
+ 259              		.loc 1 105 8 is_stmt 0 view .LVU61
+ 260 0006 4FF0FF43 		mov	r3, #2139095040
+ 261 000a 0D93     		str	r3, [sp, #52]
+ 107:Core/Src/main.c ****   C_sys.sample = &supercap_ADC1[1];
+ 262              		.loc 1 107 3 is_stmt 1 view .LVU62
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 16
 
 
- 280 001c 9C60     		str	r4, [r3, #8]
- 101:Core/Src/main.c ****   V_cap_op.sample = &supercap_ADC2[1];
- 281              		.loc 1 101 3 is_stmt 1 view .LVU68
- 101:Core/Src/main.c ****   V_cap_op.sample = &supercap_ADC2[1];
- 282              		.loc 1 101 19 is_stmt 0 view .LVU69
- 283 001e 5C4D     		ldr	r5, .L16+20
- 284 0020 5C4B     		ldr	r3, .L16+24
- 285 0022 9D60     		str	r5, [r3, #8]
- 102:Core/Src/main.c ****   V_cap.sample = &supercap_ADC2[2];
- 286              		.loc 1 102 3 is_stmt 1 view .LVU70
- 102:Core/Src/main.c ****   V_cap.sample = &supercap_ADC2[2];
- 287              		.loc 1 102 19 is_stmt 0 view .LVU71
- 288 0024 AA1C     		adds	r2, r5, #2
- 289 0026 5C4B     		ldr	r3, .L16+28
- 290 0028 9A60     		str	r2, [r3, #8]
- 103:Core/Src/main.c ****   V_bat.sample = &supercap_ADC3[0];
- 291              		.loc 1 103 3 is_stmt 1 view .LVU72
- 103:Core/Src/main.c ****   V_bat.sample = &supercap_ADC3[0];
- 292              		.loc 1 103 16 is_stmt 0 view .LVU73
- 293 002a 2A1D     		adds	r2, r5, #4
- 294 002c 5B4B     		ldr	r3, .L16+32
- 295 002e 9A60     		str	r2, [r3, #8]
- 104:Core/Src/main.c ****   V_sys.sample = &supercap_ADC3[1];
- 296              		.loc 1 104 3 is_stmt 1 view .LVU74
- 104:Core/Src/main.c ****   V_sys.sample = &supercap_ADC3[1];
- 297              		.loc 1 104 16 is_stmt 0 view .LVU75
- 298 0030 043C     		subs	r4, r4, #4
- 299 0032 5B4B     		ldr	r3, .L16+36
- 300 0034 9C60     		str	r4, [r3, #8]
- 105:Core/Src/main.c **** 	
- 301              		.loc 1 105 3 is_stmt 1 view .LVU76
- 105:Core/Src/main.c **** 	
- 302              		.loc 1 105 16 is_stmt 0 view .LVU77
- 303 0036 A21C     		adds	r2, r4, #2
- 304 0038 5A4B     		ldr	r3, .L16+40
- 305 003a 9A60     		str	r2, [r3, #8]
- 107:Core/Src/main.c **** 	ADC4_3.sample = &supercap_ADC4[1];
- 306              		.loc 1 107 2 is_stmt 1 view .LVU78
- 107:Core/Src/main.c **** 	ADC4_3.sample = &supercap_ADC4[1];
- 307              		.loc 1 107 15 is_stmt 0 view .LVU79
- 308 003c 5A4E     		ldr	r6, .L16+44
- 309 003e 5B4B     		ldr	r3, .L16+48
- 310 0040 9E60     		str	r6, [r3, #8]
- 108:Core/Src/main.c ****   /* USER CODE END 1 */
- 311              		.loc 1 108 2 is_stmt 1 view .LVU80
- 108:Core/Src/main.c ****   /* USER CODE END 1 */
- 312              		.loc 1 108 16 is_stmt 0 view .LVU81
- 313 0042 B21C     		adds	r2, r6, #2
- 314 0044 5A4B     		ldr	r3, .L16+52
- 315 0046 9A60     		str	r2, [r3, #8]
- 114:Core/Src/main.c **** 
- 316              		.loc 1 114 3 is_stmt 1 view .LVU82
- 317 0048 FFF7FEFF 		bl	HAL_Init
- 318              	.LVL10:
- 121:Core/Src/main.c **** 
- 319              		.loc 1 121 3 view .LVU83
- 320 004c FFF7FEFF 		bl	SystemClock_Config
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 17
+ 107:Core/Src/main.c ****   C_sys.sample = &supercap_ADC1[1];
+ 263              		.loc 1 107 17 is_stmt 0 view .LVU63
+ 264 000c 924F     		ldr	r7, .L16
+ 265 000e 934B     		ldr	r3, .L16+4
+ 266 0010 1F60     		str	r7, [r3]
+ 108:Core/Src/main.c ****   C_right.sample = &supercap_ADC3[2];
+ 267              		.loc 1 108 3 is_stmt 1 view .LVU64
+ 108:Core/Src/main.c ****   C_right.sample = &supercap_ADC3[2];
+ 268              		.loc 1 108 16 is_stmt 0 view .LVU65
+ 269 0012 BA1C     		adds	r2, r7, #2
+ 270 0014 924B     		ldr	r3, .L16+8
+ 271 0016 1A60     		str	r2, [r3]
+ 109:Core/Src/main.c ****   V_sys_op.sample = &supercap_ADC2[0];
+ 272              		.loc 1 109 3 is_stmt 1 view .LVU66
+ 109:Core/Src/main.c ****   V_sys_op.sample = &supercap_ADC2[0];
+ 273              		.loc 1 109 18 is_stmt 0 view .LVU67
+ 274 0018 924C     		ldr	r4, .L16+12
+ 275 001a 934B     		ldr	r3, .L16+16
+ 276 001c 1C60     		str	r4, [r3]
+ 110:Core/Src/main.c ****   V_cap_op.sample = &supercap_ADC2[1];
+ 277              		.loc 1 110 3 is_stmt 1 view .LVU68
+ 110:Core/Src/main.c ****   V_cap_op.sample = &supercap_ADC2[1];
+ 278              		.loc 1 110 19 is_stmt 0 view .LVU69
+ 279 001e 934D     		ldr	r5, .L16+20
+ 280 0020 934B     		ldr	r3, .L16+24
+ 281 0022 1D60     		str	r5, [r3]
+ 111:Core/Src/main.c ****   V_cap.sample = &supercap_ADC2[2];
+ 282              		.loc 1 111 3 is_stmt 1 view .LVU70
+ 111:Core/Src/main.c ****   V_cap.sample = &supercap_ADC2[2];
+ 283              		.loc 1 111 19 is_stmt 0 view .LVU71
+ 284 0024 AA1C     		adds	r2, r5, #2
+ 285 0026 934B     		ldr	r3, .L16+28
+ 286 0028 1A60     		str	r2, [r3]
+ 112:Core/Src/main.c ****   V_bat.sample = &supercap_ADC3[0];
+ 287              		.loc 1 112 3 is_stmt 1 view .LVU72
+ 112:Core/Src/main.c ****   V_bat.sample = &supercap_ADC3[0];
+ 288              		.loc 1 112 16 is_stmt 0 view .LVU73
+ 289 002a 2A1D     		adds	r2, r5, #4
+ 290 002c 924B     		ldr	r3, .L16+32
+ 291 002e 1A60     		str	r2, [r3]
+ 113:Core/Src/main.c ****   V_sys.sample = &supercap_ADC3[1];
+ 292              		.loc 1 113 3 is_stmt 1 view .LVU74
+ 113:Core/Src/main.c ****   V_sys.sample = &supercap_ADC3[1];
+ 293              		.loc 1 113 16 is_stmt 0 view .LVU75
+ 294 0030 043C     		subs	r4, r4, #4
+ 295 0032 924B     		ldr	r3, .L16+36
+ 296 0034 1C60     		str	r4, [r3]
+ 114:Core/Src/main.c **** 	
+ 297              		.loc 1 114 3 is_stmt 1 view .LVU76
+ 114:Core/Src/main.c **** 	
+ 298              		.loc 1 114 16 is_stmt 0 view .LVU77
+ 299 0036 A21C     		adds	r2, r4, #2
+ 300 0038 914B     		ldr	r3, .L16+40
+ 301 003a 1A60     		str	r2, [r3]
+ 116:Core/Src/main.c **** 	ADC4_3.sample = &supercap_ADC4[1];
+ 302              		.loc 1 116 2 is_stmt 1 view .LVU78
+ 116:Core/Src/main.c **** 	ADC4_3.sample = &supercap_ADC4[1];
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 17
 
 
- 321              	.LVL11:
- 128:Core/Src/main.c ****   MX_DMA_Init();
- 322              		.loc 1 128 3 view .LVU84
- 323 0050 FFF7FEFF 		bl	MX_GPIO_Init
- 324              	.LVL12:
- 129:Core/Src/main.c ****   MX_ADC1_Init();
- 325              		.loc 1 129 3 view .LVU85
- 326 0054 FFF7FEFF 		bl	MX_DMA_Init
- 327              	.LVL13:
- 130:Core/Src/main.c ****   MX_ADC2_Init();
- 328              		.loc 1 130 3 view .LVU86
- 329 0058 FFF7FEFF 		bl	MX_ADC1_Init
- 330              	.LVL14:
- 131:Core/Src/main.c ****   MX_TIM1_Init();
- 331              		.loc 1 131 3 view .LVU87
- 332 005c FFF7FEFF 		bl	MX_ADC2_Init
- 333              	.LVL15:
- 132:Core/Src/main.c ****   MX_USART1_UART_Init();
- 334              		.loc 1 132 3 view .LVU88
- 335 0060 FFF7FEFF 		bl	MX_TIM1_Init
- 336              	.LVL16:
- 133:Core/Src/main.c ****   MX_USART2_UART_Init();
- 337              		.loc 1 133 3 view .LVU89
- 338 0064 FFF7FEFF 		bl	MX_USART1_UART_Init
- 339              	.LVL17:
- 134:Core/Src/main.c ****   MX_USART3_UART_Init();
- 340              		.loc 1 134 3 view .LVU90
- 341 0068 FFF7FEFF 		bl	MX_USART2_UART_Init
- 342              	.LVL18:
- 135:Core/Src/main.c ****   MX_TIM3_Init();
- 343              		.loc 1 135 3 view .LVU91
- 344 006c FFF7FEFF 		bl	MX_USART3_UART_Init
- 345              	.LVL19:
- 136:Core/Src/main.c ****   MX_TIM4_Init();
- 346              		.loc 1 136 3 view .LVU92
- 347 0070 FFF7FEFF 		bl	MX_TIM3_Init
- 348              	.LVL20:
- 137:Core/Src/main.c ****   MX_ADC4_Init();
- 349              		.loc 1 137 3 view .LVU93
- 350 0074 FFF7FEFF 		bl	MX_TIM4_Init
- 351              	.LVL21:
- 138:Core/Src/main.c ****   MX_FDCAN1_Init();
- 352              		.loc 1 138 3 view .LVU94
- 353 0078 FFF7FEFF 		bl	MX_ADC4_Init
- 354              	.LVL22:
- 139:Core/Src/main.c ****   MX_ADC5_Init();
- 355              		.loc 1 139 3 view .LVU95
- 356 007c FFF7FEFF 		bl	MX_FDCAN1_Init
- 357              	.LVL23:
- 140:Core/Src/main.c ****   MX_ADC3_Init();
- 358              		.loc 1 140 3 view .LVU96
- 359 0080 FFF7FEFF 		bl	MX_ADC5_Init
- 360              	.LVL24:
- 141:Core/Src/main.c ****   MX_TIM2_Init();
- 361              		.loc 1 141 3 view .LVU97
- 362 0084 FFF7FEFF 		bl	MX_ADC3_Init
- 363              	.LVL25:
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 18
+ 303              		.loc 1 116 15 is_stmt 0 view .LVU79
+ 304 003c 914E     		ldr	r6, .L16+44
+ 305 003e 924B     		ldr	r3, .L16+48
+ 306 0040 1E60     		str	r6, [r3]
+ 117:Core/Src/main.c **** 	
+ 307              		.loc 1 117 2 is_stmt 1 view .LVU80
+ 117:Core/Src/main.c **** 	
+ 308              		.loc 1 117 16 is_stmt 0 view .LVU81
+ 309 0042 B21C     		adds	r2, r6, #2
+ 310 0044 914B     		ldr	r3, .L16+52
+ 311 0046 1A60     		str	r2, [r3]
+ 119:Core/Src/main.c ****   /* USER CODE END 1 */
+ 312              		.loc 1 119 2 is_stmt 1 view .LVU82
+ 125:Core/Src/main.c **** 
+ 313              		.loc 1 125 3 view .LVU83
+ 314 0048 FFF7FEFF 		bl	HAL_Init
+ 315              	.LVL10:
+ 132:Core/Src/main.c **** 
+ 316              		.loc 1 132 3 view .LVU84
+ 317 004c FFF7FEFF 		bl	SystemClock_Config
+ 318              	.LVL11:
+ 139:Core/Src/main.c ****   MX_DMA_Init();
+ 319              		.loc 1 139 3 view .LVU85
+ 320 0050 FFF7FEFF 		bl	MX_GPIO_Init
+ 321              	.LVL12:
+ 140:Core/Src/main.c ****   MX_ADC1_Init();
+ 322              		.loc 1 140 3 view .LVU86
+ 323 0054 FFF7FEFF 		bl	MX_DMA_Init
+ 324              	.LVL13:
+ 141:Core/Src/main.c ****   MX_ADC2_Init();
+ 325              		.loc 1 141 3 view .LVU87
+ 326 0058 FFF7FEFF 		bl	MX_ADC1_Init
+ 327              	.LVL14:
+ 142:Core/Src/main.c ****   MX_TIM1_Init();
+ 328              		.loc 1 142 3 view .LVU88
+ 329 005c FFF7FEFF 		bl	MX_ADC2_Init
+ 330              	.LVL15:
+ 143:Core/Src/main.c ****   MX_USART1_UART_Init();
+ 331              		.loc 1 143 3 view .LVU89
+ 332 0060 FFF7FEFF 		bl	MX_TIM1_Init
+ 333              	.LVL16:
+ 144:Core/Src/main.c ****   MX_USART2_UART_Init();
+ 334              		.loc 1 144 3 view .LVU90
+ 335 0064 FFF7FEFF 		bl	MX_USART1_UART_Init
+ 336              	.LVL17:
+ 145:Core/Src/main.c ****   MX_USART3_UART_Init();
+ 337              		.loc 1 145 3 view .LVU91
+ 338 0068 FFF7FEFF 		bl	MX_USART2_UART_Init
+ 339              	.LVL18:
+ 146:Core/Src/main.c ****   MX_TIM3_Init();
+ 340              		.loc 1 146 3 view .LVU92
+ 341 006c FFF7FEFF 		bl	MX_USART3_UART_Init
+ 342              	.LVL19:
+ 147:Core/Src/main.c ****   MX_TIM4_Init();
+ 343              		.loc 1 147 3 view .LVU93
+ 344 0070 FFF7FEFF 		bl	MX_TIM3_Init
+ 345              	.LVL20:
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 18
 
 
- 142:Core/Src/main.c ****   /* USER CODE BEGIN 2 */
- 364              		.loc 1 142 3 view .LVU98
- 365 0088 FFF7FEFF 		bl	MX_TIM2_Init
- 366              	.LVL26:
- 144:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
- 367              		.loc 1 144 2 view .LVU99
- 368 008c DFF844B1 		ldr	fp, .L16+88
- 369 0090 7F21     		movs	r1, #127
- 370 0092 5846     		mov	r0, fp
- 371 0094 FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
- 372              	.LVL27:
- 145:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc3, ADC_SINGLE_ENDED);
- 373              		.loc 1 145 2 view .LVU100
- 374 0098 DFF83CA1 		ldr	r10, .L16+92
- 375 009c 7F21     		movs	r1, #127
- 376 009e 5046     		mov	r0, r10
- 377 00a0 FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
- 378              	.LVL28:
- 146:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc4, ADC_SINGLE_ENDED);
- 379              		.loc 1 146 2 view .LVU101
- 380 00a4 DFF83491 		ldr	r9, .L16+96
- 381 00a8 7F21     		movs	r1, #127
- 382 00aa 4846     		mov	r0, r9
- 383 00ac FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
- 384              	.LVL29:
- 147:Core/Src/main.c **** 
- 385              		.loc 1 147 2 view .LVU102
- 386 00b0 DFF82C81 		ldr	r8, .L16+100
- 387 00b4 7F21     		movs	r1, #127
- 388 00b6 4046     		mov	r0, r8
- 389 00b8 FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
- 390              	.LVL30:
- 149:Core/Src/main.c ****   HAL_ADC_Start_DMA(&hadc2, (uint32_t*)supercap_ADC2, 3);
- 391              		.loc 1 149 3 view .LVU103
- 392 00bc 0222     		movs	r2, #2
- 393 00be 3946     		mov	r1, r7
- 394 00c0 5846     		mov	r0, fp
- 395 00c2 FFF7FEFF 		bl	HAL_ADC_Start_DMA
- 396              	.LVL31:
- 150:Core/Src/main.c ****   HAL_ADC_Start_DMA(&hadc3, (uint32_t*)supercap_ADC3, 3);
- 397              		.loc 1 150 3 view .LVU104
- 398 00c6 0322     		movs	r2, #3
- 399 00c8 2946     		mov	r1, r5
- 400 00ca 5046     		mov	r0, r10
- 401 00cc FFF7FEFF 		bl	HAL_ADC_Start_DMA
- 402              	.LVL32:
- 151:Core/Src/main.c **** 	HAL_ADC_Start_DMA(&hadc4, (uint32_t*)supercap_ADC4, 2);
- 403              		.loc 1 151 3 view .LVU105
- 404 00d0 0322     		movs	r2, #3
- 405 00d2 2146     		mov	r1, r4
- 406 00d4 4846     		mov	r0, r9
- 407 00d6 FFF7FEFF 		bl	HAL_ADC_Start_DMA
- 408              	.LVL33:
- 152:Core/Src/main.c **** 	
- 409              		.loc 1 152 2 view .LVU106
- 410 00da 0222     		movs	r2, #2
- 411 00dc 3146     		mov	r1, r6
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 19
+ 148:Core/Src/main.c ****   MX_ADC4_Init();
+ 346              		.loc 1 148 3 view .LVU94
+ 347 0074 FFF7FEFF 		bl	MX_TIM4_Init
+ 348              	.LVL21:
+ 149:Core/Src/main.c ****   MX_FDCAN1_Init();
+ 349              		.loc 1 149 3 view .LVU95
+ 350 0078 FFF7FEFF 		bl	MX_ADC4_Init
+ 351              	.LVL22:
+ 150:Core/Src/main.c ****   MX_ADC5_Init();
+ 352              		.loc 1 150 3 view .LVU96
+ 353 007c FFF7FEFF 		bl	MX_FDCAN1_Init
+ 354              	.LVL23:
+ 151:Core/Src/main.c ****   MX_ADC3_Init();
+ 355              		.loc 1 151 3 view .LVU97
+ 356 0080 FFF7FEFF 		bl	MX_ADC5_Init
+ 357              	.LVL24:
+ 152:Core/Src/main.c ****   MX_TIM2_Init();
+ 358              		.loc 1 152 3 view .LVU98
+ 359 0084 FFF7FEFF 		bl	MX_ADC3_Init
+ 360              	.LVL25:
+ 153:Core/Src/main.c ****   MX_TIM5_Init();
+ 361              		.loc 1 153 3 view .LVU99
+ 362 0088 FFF7FEFF 		bl	MX_TIM2_Init
+ 363              	.LVL26:
+ 154:Core/Src/main.c ****   /* USER CODE BEGIN 2 */
+ 364              		.loc 1 154 3 view .LVU100
+ 365 008c FFF7FEFF 		bl	MX_TIM5_Init
+ 366              	.LVL27:
+ 156:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
+ 367              		.loc 1 156 2 view .LVU101
+ 368 0090 DFF820B2 		ldr	fp, .L16+92
+ 369 0094 7F21     		movs	r1, #127
+ 370 0096 5846     		mov	r0, fp
+ 371 0098 FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
+ 372              	.LVL28:
+ 157:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc3, ADC_SINGLE_ENDED);
+ 373              		.loc 1 157 2 view .LVU102
+ 374 009c DFF818A2 		ldr	r10, .L16+96
+ 375 00a0 7F21     		movs	r1, #127
+ 376 00a2 5046     		mov	r0, r10
+ 377 00a4 FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
+ 378              	.LVL29:
+ 158:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc4, ADC_SINGLE_ENDED);
+ 379              		.loc 1 158 2 view .LVU103
+ 380 00a8 DFF81092 		ldr	r9, .L16+100
+ 381 00ac 7F21     		movs	r1, #127
+ 382 00ae 4846     		mov	r0, r9
+ 383 00b0 FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
+ 384              	.LVL30:
+ 159:Core/Src/main.c **** 
+ 385              		.loc 1 159 2 view .LVU104
+ 386 00b4 DFF80882 		ldr	r8, .L16+104
+ 387 00b8 7F21     		movs	r1, #127
+ 388 00ba 4046     		mov	r0, r8
+ 389 00bc FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
+ 390              	.LVL31:
+ 161:Core/Src/main.c ****   HAL_ADC_Start_DMA(&hadc2, (uint32_t*)supercap_ADC2, 3);
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 19
 
 
- 412 00de 4046     		mov	r0, r8
- 413 00e0 FFF7FEFF 		bl	HAL_ADC_Start_DMA
- 414              	.LVL34:
- 154:Core/Src/main.c **** 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
- 415              		.loc 1 154 2 view .LVU107
- 416 00e4 334C     		ldr	r4, .L16+56
- 417 00e6 2046     		mov	r0, r4
- 418 00e8 FFF7FEFF 		bl	HAL_TIM_Base_Start
- 419              	.LVL35:
- 155:Core/Src/main.c ****   HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
- 420              		.loc 1 155 2 view .LVU108
- 421 00ec 0021     		movs	r1, #0
- 422 00ee 2046     		mov	r0, r4
- 423 00f0 FFF7FEFF 		bl	HAL_TIM_PWM_Start
- 424              	.LVL36:
- 156:Core/Src/main.c ****   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
- 425              		.loc 1 156 3 view .LVU109
- 426 00f4 0021     		movs	r1, #0
- 427 00f6 2046     		mov	r0, r4
- 428 00f8 FFF7FEFF 		bl	HAL_TIMEx_PWMN_Start
- 429              	.LVL37:
- 157:Core/Src/main.c ****   HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_4);
- 430              		.loc 1 157 3 view .LVU110
- 431 00fc 0C21     		movs	r1, #12
- 432 00fe 2046     		mov	r0, r4
- 433 0100 FFF7FEFF 		bl	HAL_TIM_PWM_Start
- 434              	.LVL38:
- 158:Core/Src/main.c **** 	
- 435              		.loc 1 158 3 view .LVU111
- 436 0104 0C21     		movs	r1, #12
- 437 0106 2046     		mov	r0, r4
- 438 0108 FFF7FEFF 		bl	HAL_TIMEx_PWMN_Start
- 439              	.LVL39:
- 160:Core/Src/main.c **** 	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
- 440              		.loc 1 160 3 view .LVU112
- 441 010c 2A4C     		ldr	r4, .L16+60
- 442 010e 0421     		movs	r1, #4
- 443 0110 2046     		mov	r0, r4
- 444 0112 FFF7FEFF 		bl	HAL_TIM_PWM_Start
- 445              	.LVL40:
- 161:Core/Src/main.c **** 	
- 446              		.loc 1 161 2 view .LVU113
- 447 0116 0821     		movs	r1, #8
- 448 0118 2046     		mov	r0, r4
- 449 011a FFF7FEFF 		bl	HAL_TIM_PWM_Start
- 450              	.LVL41:
- 163:Core/Src/main.c **** 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
- 451              		.loc 1 163 2 view .LVU114
- 452 011e 274C     		ldr	r4, .L16+64
- 453 0120 0021     		movs	r1, #0
- 454 0122 2046     		mov	r0, r4
- 455 0124 FFF7FEFF 		bl	HAL_TIM_PWM_Start
- 456              	.LVL42:
- 164:Core/Src/main.c **** 
- 457              		.loc 1 164 2 view .LVU115
- 458 0128 0421     		movs	r1, #4
- 459 012a 2046     		mov	r0, r4
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 20
+ 391              		.loc 1 161 3 view .LVU105
+ 392 00c0 0222     		movs	r2, #2
+ 393 00c2 3946     		mov	r1, r7
+ 394 00c4 5846     		mov	r0, fp
+ 395 00c6 FFF7FEFF 		bl	HAL_ADC_Start_DMA
+ 396              	.LVL32:
+ 162:Core/Src/main.c ****   HAL_ADC_Start_DMA(&hadc3, (uint32_t*)supercap_ADC3, 3);
+ 397              		.loc 1 162 3 view .LVU106
+ 398 00ca 0322     		movs	r2, #3
+ 399 00cc 2946     		mov	r1, r5
+ 400 00ce 5046     		mov	r0, r10
+ 401 00d0 FFF7FEFF 		bl	HAL_ADC_Start_DMA
+ 402              	.LVL33:
+ 163:Core/Src/main.c **** 	HAL_ADC_Start_DMA(&hadc4, (uint32_t*)supercap_ADC4, 2);
+ 403              		.loc 1 163 3 view .LVU107
+ 404 00d4 0322     		movs	r2, #3
+ 405 00d6 2146     		mov	r1, r4
+ 406 00d8 4846     		mov	r0, r9
+ 407 00da FFF7FEFF 		bl	HAL_ADC_Start_DMA
+ 408              	.LVL34:
+ 164:Core/Src/main.c **** 	
+ 409              		.loc 1 164 2 view .LVU108
+ 410 00de 0222     		movs	r2, #2
+ 411 00e0 3146     		mov	r1, r6
+ 412 00e2 4046     		mov	r0, r8
+ 413 00e4 FFF7FEFF 		bl	HAL_ADC_Start_DMA
+ 414              	.LVL35:
+ 166:Core/Src/main.c **** 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+ 415              		.loc 1 166 2 view .LVU109
+ 416 00e8 694C     		ldr	r4, .L16+56
+ 417 00ea 2046     		mov	r0, r4
+ 418 00ec FFF7FEFF 		bl	HAL_TIM_Base_Start
+ 419              	.LVL36:
+ 167:Core/Src/main.c ****   HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
+ 420              		.loc 1 167 2 view .LVU110
+ 421 00f0 0021     		movs	r1, #0
+ 422 00f2 2046     		mov	r0, r4
+ 423 00f4 FFF7FEFF 		bl	HAL_TIM_PWM_Start
+ 424              	.LVL37:
+ 168:Core/Src/main.c ****   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
+ 425              		.loc 1 168 3 view .LVU111
+ 426 00f8 0021     		movs	r1, #0
+ 427 00fa 2046     		mov	r0, r4
+ 428 00fc FFF7FEFF 		bl	HAL_TIMEx_PWMN_Start
+ 429              	.LVL38:
+ 169:Core/Src/main.c ****   HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_4);
+ 430              		.loc 1 169 3 view .LVU112
+ 431 0100 0C21     		movs	r1, #12
+ 432 0102 2046     		mov	r0, r4
+ 433 0104 FFF7FEFF 		bl	HAL_TIM_PWM_Start
+ 434              	.LVL39:
+ 170:Core/Src/main.c **** 	
+ 435              		.loc 1 170 3 view .LVU113
+ 436 0108 0C21     		movs	r1, #12
+ 437 010a 2046     		mov	r0, r4
+ 438 010c FFF7FEFF 		bl	HAL_TIMEx_PWMN_Start
+ 439              	.LVL40:
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 20
 
 
- 460 012c FFF7FEFF 		bl	HAL_TIM_PWM_Start
- 461              	.LVL43:
- 168:Core/Src/main.c ****   FDCAN_TxHeaderTypeDef hfdcan1_pHeader;
- 462              		.loc 1 168 3 view .LVU116
- 463 0130 2348     		ldr	r0, .L16+68
- 464 0132 FFF7FEFF 		bl	HAL_FDCAN_Start
- 465              	.LVL44:
- 169:Core/Src/main.c ****   uint8_t hfdcan1_pTxData[2] = {0x00, 0x01};
- 466              		.loc 1 169 3 view .LVU117
- 170:Core/Src/main.c **** 
- 467              		.loc 1 170 3 view .LVU118
- 170:Core/Src/main.c **** 
- 468              		.loc 1 170 11 is_stmt 0 view .LVU119
- 469 0136 4FF48073 		mov	r3, #256
- 470 013a ADF80430 		strh	r3, [sp, #4]	@ movhi
- 172:Core/Src/main.c ****   hfdcan1_pHeader.IdType  = FDCAN_DATA_FRAME;
- 471              		.loc 1 172 3 is_stmt 1 view .LVU120
- 172:Core/Src/main.c ****   hfdcan1_pHeader.IdType  = FDCAN_DATA_FRAME;
- 472              		.loc 1 172 31 is_stmt 0 view .LVU121
- 473 013e 4FF48A73 		mov	r3, #276
- 474 0142 0293     		str	r3, [sp, #8]
- 173:Core/Src/main.c ****   hfdcan1_pHeader.DataLength  = FDCAN_DLC_BYTES_2;
- 475              		.loc 1 173 3 is_stmt 1 view .LVU122
- 173:Core/Src/main.c ****   hfdcan1_pHeader.DataLength  = FDCAN_DLC_BYTES_2;
- 476              		.loc 1 173 27 is_stmt 0 view .LVU123
- 477 0144 0023     		movs	r3, #0
- 478 0146 0393     		str	r3, [sp, #12]
- 174:Core/Src/main.c ****   hfdcan1_pHeader.FDFormat = FDCAN_CLASSIC_CAN;
- 479              		.loc 1 174 3 is_stmt 1 view .LVU124
- 174:Core/Src/main.c ****   hfdcan1_pHeader.FDFormat = FDCAN_CLASSIC_CAN;
- 480              		.loc 1 174 31 is_stmt 0 view .LVU125
- 481 0148 0222     		movs	r2, #2
- 482 014a 0592     		str	r2, [sp, #20]
- 175:Core/Src/main.c ****   //to do list: 这个地方为什么CAN不行
- 483              		.loc 1 175 3 is_stmt 1 view .LVU126
- 175:Core/Src/main.c ****   //to do list: 这个地方为什么CAN不行
- 484              		.loc 1 175 28 is_stmt 0 view .LVU127
- 485 014c 0893     		str	r3, [sp, #32]
- 180:Core/Src/main.c ****   //to do list: 弄弄这个配合VOFA
- 486              		.loc 1 180 3 is_stmt 1 view .LVU128
- 487 014e 4FF47A73 		mov	r3, #1000
- 488 0152 0C22     		movs	r2, #12
- 489 0154 1B49     		ldr	r1, .L16+72
- 490 0156 1C48     		ldr	r0, .L16+76
- 491 0158 FFF7FEFF 		bl	HAL_UART_Transmit
- 492              	.LVL45:
- 493              	.L14:
- 186:Core/Src/main.c ****   {
- 494              		.loc 1 186 3 view .LVU129
- 214:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)tail, 4, 1000);
- 495              		.loc 1 214 3 view .LVU130
- 496 015c 1B4C     		ldr	r4, .L16+80
- 497 015e 4FF47A73 		mov	r3, #1000
- 498 0162 0422     		movs	r2, #4
- 499 0164 1A49     		ldr	r1, .L16+84
- 500 0166 2046     		mov	r0, r4
- 501 0168 FFF7FEFF 		bl	HAL_UART_Transmit
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 21
+ 172:Core/Src/main.c **** 	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
+ 440              		.loc 1 172 3 view .LVU114
+ 441 0110 604C     		ldr	r4, .L16+60
+ 442 0112 0421     		movs	r1, #4
+ 443 0114 2046     		mov	r0, r4
+ 444 0116 FFF7FEFF 		bl	HAL_TIM_PWM_Start
+ 445              	.LVL41:
+ 173:Core/Src/main.c **** 	
+ 446              		.loc 1 173 2 view .LVU115
+ 447 011a 0821     		movs	r1, #8
+ 448 011c 2046     		mov	r0, r4
+ 449 011e FFF7FEFF 		bl	HAL_TIM_PWM_Start
+ 450              	.LVL42:
+ 175:Core/Src/main.c **** 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
+ 451              		.loc 1 175 2 view .LVU116
+ 452 0122 5D4C     		ldr	r4, .L16+64
+ 453 0124 0021     		movs	r1, #0
+ 454 0126 2046     		mov	r0, r4
+ 455 0128 FFF7FEFF 		bl	HAL_TIM_PWM_Start
+ 456              	.LVL43:
+ 176:Core/Src/main.c **** 	
+ 457              		.loc 1 176 2 view .LVU117
+ 458 012c 0421     		movs	r1, #4
+ 459 012e 2046     		mov	r0, r4
+ 460 0130 FFF7FEFF 		bl	HAL_TIM_PWM_Start
+ 461              	.LVL44:
+ 178:Core/Src/main.c **** 	HAL_TIM_Base_Start_IT(&htim5);
+ 462              		.loc 1 178 2 view .LVU118
+ 463 0134 5948     		ldr	r0, .L16+68
+ 464 0136 FFF7FEFF 		bl	HAL_TIM_Base_Start_IT
+ 465              	.LVL45:
+ 179:Core/Src/main.c **** 
+ 466              		.loc 1 179 2 view .LVU119
+ 467 013a 5948     		ldr	r0, .L16+72
+ 468 013c FFF7FEFF 		bl	HAL_TIM_Base_Start_IT
+ 469              	.LVL46:
+ 183:Core/Src/main.c ****   FDCAN_TxHeaderTypeDef hfdcan1_pHeader;
+ 470              		.loc 1 183 3 view .LVU120
+ 471 0140 5848     		ldr	r0, .L16+76
+ 472 0142 FFF7FEFF 		bl	HAL_FDCAN_Start
+ 473              	.LVL47:
+ 184:Core/Src/main.c ****   uint8_t hfdcan1_pTxData[2] = {0x00, 0x01};
+ 474              		.loc 1 184 3 view .LVU121
+ 185:Core/Src/main.c **** 
+ 475              		.loc 1 185 3 view .LVU122
+ 185:Core/Src/main.c **** 
+ 476              		.loc 1 185 11 is_stmt 0 view .LVU123
+ 477 0146 4FF48073 		mov	r3, #256
+ 478 014a ADF80830 		strh	r3, [sp, #8]	@ movhi
+ 187:Core/Src/main.c ****   hfdcan1_pHeader.IdType  = FDCAN_DATA_FRAME;
+ 479              		.loc 1 187 3 is_stmt 1 view .LVU124
+ 187:Core/Src/main.c ****   hfdcan1_pHeader.IdType  = FDCAN_DATA_FRAME;
+ 480              		.loc 1 187 31 is_stmt 0 view .LVU125
+ 481 014e 4FF48A73 		mov	r3, #276
+ 482 0152 0393     		str	r3, [sp, #12]
+ 188:Core/Src/main.c ****   hfdcan1_pHeader.DataLength  = FDCAN_DLC_BYTES_2;
+ 483              		.loc 1 188 3 is_stmt 1 view .LVU126
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 21
 
 
- 502              	.LVL46:
- 215:Core/Src/main.c **** 
- 503              		.loc 1 215 3 discriminator 1 view .LVU131
- 504 016c 4FF47A73 		mov	r3, #1000
- 505 0170 0422     		movs	r2, #4
- 506 0172 0BA9     		add	r1, sp, #44
- 507 0174 2046     		mov	r0, r4
- 508 0176 FFF7FEFF 		bl	HAL_UART_Transmit
- 509              	.LVL47:
- 186:Core/Src/main.c ****   {
- 510              		.loc 1 186 9 view .LVU132
- 511 017a EFE7     		b	.L14
- 512              	.L17:
- 513              		.align	2
- 514              	.L16:
- 515 017c 00000000 		.word	supercap_ADC1
- 516 0180 00000000 		.word	C_left
- 517 0184 00000000 		.word	C_sys
- 518 0188 04000000 		.word	supercap_ADC3+4
- 519 018c 00000000 		.word	C_right
- 520 0190 00000000 		.word	supercap_ADC2
- 521 0194 00000000 		.word	V_sys_op
- 522 0198 00000000 		.word	V_cap_op
- 523 019c 00000000 		.word	V_cap
- 524 01a0 00000000 		.word	V_bat
- 525 01a4 00000000 		.word	V_sys
- 526 01a8 00000000 		.word	supercap_ADC4
- 527 01ac 00000000 		.word	V_1V6
- 528 01b0 00000000 		.word	ADC4_3
- 529 01b4 00000000 		.word	htim1
- 530 01b8 00000000 		.word	htim3
- 531 01bc 00000000 		.word	htim4
- 532 01c0 00000000 		.word	hfdcan1
- 533 01c4 00000000 		.word	.LC0
- 534 01c8 00000000 		.word	huart1
- 535 01cc 00000000 		.word	huart3
- 536 01d0 0C000000 		.word	V_1V6+12
- 537 01d4 00000000 		.word	hadc1
- 538 01d8 00000000 		.word	hadc2
- 539 01dc 00000000 		.word	hadc3
- 540 01e0 00000000 		.word	hadc4
- 541              		.cfi_endproc
- 542              	.LFE333:
- 544              		.global	ADC4_3
- 545              		.section	.bss.ADC4_3,"aw",%nobits
- 546              		.align	2
- 549              	ADC4_3:
- 550 0000 00000000 		.space	16
- 550      00000000 
- 550      00000000 
- 550      00000000 
- 551              		.global	V_1V6
- 552              		.section	.bss.V_1V6,"aw",%nobits
- 553              		.align	2
- 556              	V_1V6:
- 557 0000 00000000 		.space	16
- 557      00000000 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 22
+ 188:Core/Src/main.c ****   hfdcan1_pHeader.DataLength  = FDCAN_DLC_BYTES_2;
+ 484              		.loc 1 188 27 is_stmt 0 view .LVU127
+ 485 0154 0024     		movs	r4, #0
+ 486 0156 0494     		str	r4, [sp, #16]
+ 189:Core/Src/main.c ****   hfdcan1_pHeader.FDFormat = FDCAN_CLASSIC_CAN;
+ 487              		.loc 1 189 3 is_stmt 1 view .LVU128
+ 189:Core/Src/main.c ****   hfdcan1_pHeader.FDFormat = FDCAN_CLASSIC_CAN;
+ 488              		.loc 1 189 31 is_stmt 0 view .LVU129
+ 489 0158 0221     		movs	r1, #2
+ 490 015a 0691     		str	r1, [sp, #24]
+ 190:Core/Src/main.c ****   //to do list: 这个地方为什么CAN不行
+ 491              		.loc 1 190 3 is_stmt 1 view .LVU130
+ 190:Core/Src/main.c ****   //to do list: 这个地方为什么CAN不行
+ 492              		.loc 1 190 28 is_stmt 0 view .LVU131
+ 493 015c 0994     		str	r4, [sp, #36]
+ 193:Core/Src/main.c ****   Supercap_PID_Init(&In_loop_PID, 1, 0, 0, MAX_DUTY, MIN_DUTY);
+ 494              		.loc 1 193 3 is_stmt 1 view .LVU132
+ 495 015e 0194     		str	r4, [sp, #4]
+ 496 0160 4FF4A973 		mov	r3, #338
+ 497 0164 0093     		str	r3, [sp]
+ 498 0166 2346     		mov	r3, r4
+ 499 0168 2246     		mov	r2, r4
+ 500 016a 4F48     		ldr	r0, .L16+80
+ 501 016c FFF7FEFF 		bl	Supercap_PID_Init
+ 502              	.LVL48:
+ 194:Core/Src/main.c ****   
+ 503              		.loc 1 194 3 view .LVU133
+ 504 0170 0194     		str	r4, [sp, #4]
+ 505 0172 4FF49673 		mov	r3, #300
+ 506 0176 0093     		str	r3, [sp]
+ 507 0178 2346     		mov	r3, r4
+ 508 017a 2246     		mov	r2, r4
+ 509 017c 0121     		movs	r1, #1
+ 510 017e 4B48     		ldr	r0, .L16+84
+ 511 0180 FFF7FEFF 		bl	Supercap_PID_Init
+ 512              	.LVL49:
+ 513              	.L14:
+ 203:Core/Src/main.c ****   {
+ 514              		.loc 1 203 3 view .LVU134
+ 226:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 515              		.loc 1 226 3 view .LVU135
+ 226:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 516              		.loc 1 226 16 is_stmt 0 view .LVU136
+ 517 0184 354B     		ldr	r3, .L16+4
+ 518 0186 9B88     		ldrh	r3, [r3, #4]
+ 519 0188 07EE903A 		vmov	s15, r3	@ int
+ 226:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 520              		.loc 1 226 8 view .LVU137
+ 521 018c F8EE677A 		vcvt.f32.u32	s15, s15
+ 522 0190 CDED0C7A 		vstr.32	s15, [sp, #48]
+ 227:Core/Src/main.c **** 		temp = C_sys.real_value_12bits;
+ 523              		.loc 1 227 3 is_stmt 1 view .LVU138
+ 524 0194 464C     		ldr	r4, .L16+88
+ 525 0196 4FF47A73 		mov	r3, #1000
+ 526 019a 0422     		movs	r2, #4
+ 527 019c 0CA9     		add	r1, sp, #48
+ 528 019e 2046     		mov	r0, r4
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 22
 
 
- 557      00000000 
- 557      00000000 
- 558              		.global	V_sys
- 559              		.section	.bss.V_sys,"aw",%nobits
- 560              		.align	2
- 563              	V_sys:
- 564 0000 00000000 		.space	16
- 564      00000000 
- 564      00000000 
- 564      00000000 
- 565              		.global	V_bat
- 566              		.section	.bss.V_bat,"aw",%nobits
- 567              		.align	2
- 570              	V_bat:
- 571 0000 00000000 		.space	16
- 571      00000000 
- 571      00000000 
- 571      00000000 
- 572              		.global	V_cap
- 573              		.section	.bss.V_cap,"aw",%nobits
- 574              		.align	2
- 577              	V_cap:
- 578 0000 00000000 		.space	16
- 578      00000000 
- 578      00000000 
- 578      00000000 
- 579              		.global	V_cap_op
- 580              		.section	.bss.V_cap_op,"aw",%nobits
- 581              		.align	2
- 584              	V_cap_op:
- 585 0000 00000000 		.space	16
- 585      00000000 
- 585      00000000 
- 585      00000000 
- 586              		.global	V_sys_op
- 587              		.section	.bss.V_sys_op,"aw",%nobits
- 588              		.align	2
- 591              	V_sys_op:
- 592 0000 00000000 		.space	16
- 592      00000000 
- 592      00000000 
- 592      00000000 
- 593              		.global	C_right
- 594              		.section	.bss.C_right,"aw",%nobits
- 595              		.align	2
- 598              	C_right:
- 599 0000 00000000 		.space	16
- 599      00000000 
- 599      00000000 
- 599      00000000 
- 600              		.global	C_sys
- 601              		.section	.bss.C_sys,"aw",%nobits
- 602              		.align	2
- 605              	C_sys:
- 606 0000 00000000 		.space	16
- 606      00000000 
- 606      00000000 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 23
+ 529 01a0 FFF7FEFF 		bl	HAL_UART_Transmit
+ 530              	.LVL50:
+ 228:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 531              		.loc 1 228 3 view .LVU139
+ 228:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 532              		.loc 1 228 15 is_stmt 0 view .LVU140
+ 533 01a4 2E4B     		ldr	r3, .L16+8
+ 534 01a6 9B88     		ldrh	r3, [r3, #4]
+ 535 01a8 07EE903A 		vmov	s15, r3	@ int
+ 228:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 536              		.loc 1 228 8 view .LVU141
+ 537 01ac F8EE677A 		vcvt.f32.u32	s15, s15
+ 538 01b0 CDED0C7A 		vstr.32	s15, [sp, #48]
+ 229:Core/Src/main.c **** 		temp = C_right.real_value_12bits;
+ 539              		.loc 1 229 3 is_stmt 1 view .LVU142
+ 540 01b4 4FF47A73 		mov	r3, #1000
+ 541 01b8 0422     		movs	r2, #4
+ 542 01ba 0CA9     		add	r1, sp, #48
+ 543 01bc 2046     		mov	r0, r4
+ 544 01be FFF7FEFF 		bl	HAL_UART_Transmit
+ 545              	.LVL51:
+ 230:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 546              		.loc 1 230 3 view .LVU143
+ 230:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 547              		.loc 1 230 17 is_stmt 0 view .LVU144
+ 548 01c2 294B     		ldr	r3, .L16+16
+ 549 01c4 9B88     		ldrh	r3, [r3, #4]
+ 550 01c6 07EE903A 		vmov	s15, r3	@ int
+ 230:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 551              		.loc 1 230 8 view .LVU145
+ 552 01ca F8EE677A 		vcvt.f32.u32	s15, s15
+ 553 01ce CDED0C7A 		vstr.32	s15, [sp, #48]
+ 231:Core/Src/main.c **** 		temp = V_cap.real_value_12bits;
+ 554              		.loc 1 231 3 is_stmt 1 view .LVU146
+ 555 01d2 4FF47A73 		mov	r3, #1000
+ 556 01d6 0422     		movs	r2, #4
+ 557 01d8 0CA9     		add	r1, sp, #48
+ 558 01da 2046     		mov	r0, r4
+ 559 01dc FFF7FEFF 		bl	HAL_UART_Transmit
+ 560              	.LVL52:
+ 232:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 561              		.loc 1 232 3 view .LVU147
+ 232:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 562              		.loc 1 232 15 is_stmt 0 view .LVU148
+ 563 01e0 254B     		ldr	r3, .L16+32
+ 564 01e2 9B88     		ldrh	r3, [r3, #4]
+ 565 01e4 07EE903A 		vmov	s15, r3	@ int
+ 232:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 566              		.loc 1 232 8 view .LVU149
+ 567 01e8 F8EE677A 		vcvt.f32.u32	s15, s15
+ 568 01ec CDED0C7A 		vstr.32	s15, [sp, #48]
+ 233:Core/Src/main.c **** 		temp = V_bat.real_value_12bits;
+ 569              		.loc 1 233 3 is_stmt 1 view .LVU150
+ 570 01f0 4FF47A73 		mov	r3, #1000
+ 571 01f4 0422     		movs	r2, #4
+ 572 01f6 0CA9     		add	r1, sp, #48
+ 573 01f8 2046     		mov	r0, r4
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 23
 
 
- 606      00000000 
- 607              		.global	C_left
- 608              		.section	.bss.C_left,"aw",%nobits
- 609              		.align	2
- 612              	C_left:
- 613 0000 00000000 		.space	16
- 613      00000000 
- 613      00000000 
- 613      00000000 
- 614              		.global	supercap_ADC4
- 615              		.section	.bss.supercap_ADC4,"aw",%nobits
- 616              		.align	2
- 619              	supercap_ADC4:
- 620 0000 00000000 		.space	4
- 621              		.global	supercap_ADC3
- 622              		.section	.bss.supercap_ADC3,"aw",%nobits
- 623              		.align	2
- 626              	supercap_ADC3:
- 627 0000 00000000 		.space	6
- 627      0000
- 628              		.global	supercap_ADC2
- 629              		.section	.bss.supercap_ADC2,"aw",%nobits
- 630              		.align	2
- 633              	supercap_ADC2:
- 634 0000 00000000 		.space	6
- 634      0000
- 635              		.global	supercap_ADC1
- 636              		.section	.bss.supercap_ADC1,"aw",%nobits
- 637              		.align	2
- 640              	supercap_ADC1:
- 641 0000 00000000 		.space	4
- 642              		.text
- 643              	.Letext0:
- 644              		.file 4 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/ma
- 645              		.file 5 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/sy
- 646              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
- 647              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
- 648              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
- 649              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h"
- 650              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
- 651              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h"
- 652              		.file 12 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h"
- 653              		.file 13 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h"
- 654              		.file 14 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h"
- 655              		.file 15 "Core/Inc/adc.h"
- 656              		.file 16 "Core/Inc/fdcan.h"
- 657              		.file 17 "Core/Inc/tim.h"
- 658              		.file 18 "Core/Inc/usart.h"
- 659              		.file 19 "Core/Inc/supercap.h"
- 660              		.file 20 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/lib/gcc/arm-none-eabi/1
- 661              		.file 21 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/s
- 662              		.file 22 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/s
- 663              		.file 23 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/s
- 664              		.file 24 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/s
- 665              		.file 25 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h"
- 666              		.file 26 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h"
- 667              		.file 27 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h"
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 24
+ 574 01fa FFF7FEFF 		bl	HAL_UART_Transmit
+ 575              	.LVL53:
+ 234:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 576              		.loc 1 234 3 view .LVU151
+ 234:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 577              		.loc 1 234 15 is_stmt 0 view .LVU152
+ 578 01fe 1F4B     		ldr	r3, .L16+36
+ 579 0200 9B88     		ldrh	r3, [r3, #4]
+ 580 0202 07EE903A 		vmov	s15, r3	@ int
+ 234:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 581              		.loc 1 234 8 view .LVU153
+ 582 0206 F8EE677A 		vcvt.f32.u32	s15, s15
+ 583 020a CDED0C7A 		vstr.32	s15, [sp, #48]
+ 235:Core/Src/main.c **** 		temp = V_sys.real_value_12bits;
+ 584              		.loc 1 235 3 is_stmt 1 view .LVU154
+ 585 020e 4FF47A73 		mov	r3, #1000
+ 586 0212 0422     		movs	r2, #4
+ 587 0214 0CA9     		add	r1, sp, #48
+ 588 0216 2046     		mov	r0, r4
+ 589 0218 FFF7FEFF 		bl	HAL_UART_Transmit
+ 590              	.LVL54:
+ 236:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 591              		.loc 1 236 3 view .LVU155
+ 236:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 592              		.loc 1 236 15 is_stmt 0 view .LVU156
+ 593 021c 184B     		ldr	r3, .L16+40
+ 594 021e 9B88     		ldrh	r3, [r3, #4]
+ 595 0220 07EE903A 		vmov	s15, r3	@ int
+ 236:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+ 596              		.loc 1 236 8 view .LVU157
+ 597 0224 F8EE677A 		vcvt.f32.u32	s15, s15
+ 598 0228 CDED0C7A 		vstr.32	s15, [sp, #48]
+ 237:Core/Src/main.c **** 		HAL_UART_Transmit(&huart3, (uint8_t*)tail, 4, 1000);
+ 599              		.loc 1 237 3 is_stmt 1 view .LVU158
+ 600 022c 4FF47A73 		mov	r3, #1000
+ 601 0230 0422     		movs	r2, #4
+ 602 0232 0CA9     		add	r1, sp, #48
+ 603 0234 2046     		mov	r0, r4
+ 604 0236 FFF7FEFF 		bl	HAL_UART_Transmit
+ 605              	.LVL55:
+ 238:Core/Src/main.c **** 	
+ 606              		.loc 1 238 3 view .LVU159
+ 607 023a 4FF47A73 		mov	r3, #1000
+ 608 023e 0422     		movs	r2, #4
+ 609 0240 0DA9     		add	r1, sp, #52
+ 610 0242 2046     		mov	r0, r4
+ 611 0244 FFF7FEFF 		bl	HAL_UART_Transmit
+ 612              	.LVL56:
+ 240:Core/Src/main.c **** 	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, 50);
+ 613              		.loc 1 240 2 view .LVU160
+ 614 0248 114B     		ldr	r3, .L16+56
+ 615 024a 1B68     		ldr	r3, [r3]
+ 616 024c 6422     		movs	r2, #100
+ 617 024e 5A63     		str	r2, [r3, #52]
+ 241:Core/Src/main.c ****     
+ 618              		.loc 1 241 2 discriminator 1 view .LVU161
+ 619 0250 3222     		movs	r2, #50
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 24
 
 
- 668              		.file 28 "Core/Inc/dma.h"
- 669              		.file 29 "Core/Inc/gpio.h"
- 670              		.file 30 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h"
- 671              		.file 31 "<built-in>"
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 25
+ 620 0252 1A64     		str	r2, [r3, #64]
+ 203:Core/Src/main.c ****   {
+ 621              		.loc 1 203 9 view .LVU162
+ 622 0254 96E7     		b	.L14
+ 623              	.L17:
+ 624 0256 00BF     		.align	2
+ 625              	.L16:
+ 626 0258 00000000 		.word	supercap_ADC1
+ 627 025c 00000000 		.word	C_left
+ 628 0260 00000000 		.word	C_sys
+ 629 0264 04000000 		.word	supercap_ADC3+4
+ 630 0268 00000000 		.word	C_right
+ 631 026c 00000000 		.word	supercap_ADC2
+ 632 0270 00000000 		.word	V_sys_op
+ 633 0274 00000000 		.word	V_cap_op
+ 634 0278 00000000 		.word	V_cap
+ 635 027c 00000000 		.word	V_bat
+ 636 0280 00000000 		.word	V_sys
+ 637 0284 00000000 		.word	supercap_ADC4
+ 638 0288 00000000 		.word	V_1V6
+ 639 028c 00000000 		.word	ADC4_3
+ 640 0290 00000000 		.word	htim1
+ 641 0294 00000000 		.word	htim3
+ 642 0298 00000000 		.word	htim4
+ 643 029c 00000000 		.word	htim2
+ 644 02a0 00000000 		.word	htim5
+ 645 02a4 00000000 		.word	hfdcan1
+ 646 02a8 00000000 		.word	Out_loop_PID
+ 647 02ac 00000000 		.word	In_loop_PID
+ 648 02b0 00000000 		.word	huart3
+ 649 02b4 00000000 		.word	hadc1
+ 650 02b8 00000000 		.word	hadc2
+ 651 02bc 00000000 		.word	hadc3
+ 652 02c0 00000000 		.word	hadc4
+ 653              		.cfi_endproc
+ 654              	.LFE333:
+ 656              		.global	In_loop_PID
+ 657              		.section	.bss.In_loop_PID,"aw",%nobits
+ 658              		.align	2
+ 661              	In_loop_PID:
+ 662 0000 00000000 		.space	18
+ 662      00000000 
+ 662      00000000 
+ 662      00000000 
+ 662      0000
+ 663              		.global	Out_loop_PID
+ 664              		.section	.bss.Out_loop_PID,"aw",%nobits
+ 665              		.align	2
+ 668              	Out_loop_PID:
+ 669 0000 00000000 		.space	18
+ 669      00000000 
+ 669      00000000 
+ 669      00000000 
+ 669      0000
+ 670              		.global	ADC4_3
+ 671              		.section	.bss.ADC4_3,"aw",%nobits
+ 672              		.align	2
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 25
+
+
+ 675              	ADC4_3:
+ 676 0000 00000000 		.space	8
+ 676      00000000 
+ 677              		.global	V_1V6
+ 678              		.section	.bss.V_1V6,"aw",%nobits
+ 679              		.align	2
+ 682              	V_1V6:
+ 683 0000 00000000 		.space	8
+ 683      00000000 
+ 684              		.global	V_sys
+ 685              		.section	.bss.V_sys,"aw",%nobits
+ 686              		.align	2
+ 689              	V_sys:
+ 690 0000 00000000 		.space	8
+ 690      00000000 
+ 691              		.global	V_bat
+ 692              		.section	.bss.V_bat,"aw",%nobits
+ 693              		.align	2
+ 696              	V_bat:
+ 697 0000 00000000 		.space	8
+ 697      00000000 
+ 698              		.global	V_cap
+ 699              		.section	.bss.V_cap,"aw",%nobits
+ 700              		.align	2
+ 703              	V_cap:
+ 704 0000 00000000 		.space	8
+ 704      00000000 
+ 705              		.global	V_cap_op
+ 706              		.section	.bss.V_cap_op,"aw",%nobits
+ 707              		.align	2
+ 710              	V_cap_op:
+ 711 0000 00000000 		.space	8
+ 711      00000000 
+ 712              		.global	V_sys_op
+ 713              		.section	.bss.V_sys_op,"aw",%nobits
+ 714              		.align	2
+ 717              	V_sys_op:
+ 718 0000 00000000 		.space	8
+ 718      00000000 
+ 719              		.global	C_right
+ 720              		.section	.bss.C_right,"aw",%nobits
+ 721              		.align	2
+ 724              	C_right:
+ 725 0000 00000000 		.space	8
+ 725      00000000 
+ 726              		.global	C_sys
+ 727              		.section	.bss.C_sys,"aw",%nobits
+ 728              		.align	2
+ 731              	C_sys:
+ 732 0000 00000000 		.space	8
+ 732      00000000 
+ 733              		.global	C_left
+ 734              		.section	.bss.C_left,"aw",%nobits
+ 735              		.align	2
+ 738              	C_left:
+ 739 0000 00000000 		.space	8
+ 739      00000000 
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 26
+
+
+ 740              		.global	supercap_ADC4
+ 741              		.section	.bss.supercap_ADC4,"aw",%nobits
+ 742              		.align	2
+ 745              	supercap_ADC4:
+ 746 0000 00000000 		.space	4
+ 747              		.global	supercap_ADC3
+ 748              		.section	.bss.supercap_ADC3,"aw",%nobits
+ 749              		.align	2
+ 752              	supercap_ADC3:
+ 753 0000 00000000 		.space	6
+ 753      0000
+ 754              		.global	supercap_ADC2
+ 755              		.section	.bss.supercap_ADC2,"aw",%nobits
+ 756              		.align	2
+ 759              	supercap_ADC2:
+ 760 0000 00000000 		.space	6
+ 760      0000
+ 761              		.global	supercap_ADC1
+ 762              		.section	.bss.supercap_ADC1,"aw",%nobits
+ 763              		.align	2
+ 766              	supercap_ADC1:
+ 767 0000 00000000 		.space	4
+ 768              		.text
+ 769              	.Letext0:
+ 770              		.file 4 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/ma
+ 771              		.file 5 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/sy
+ 772              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
+ 773              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
+ 774              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
+ 775              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h"
+ 776              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
+ 777              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h"
+ 778              		.file 12 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h"
+ 779              		.file 13 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h"
+ 780              		.file 14 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h"
+ 781              		.file 15 "Core/Inc/adc.h"
+ 782              		.file 16 "Core/Inc/fdcan.h"
+ 783              		.file 17 "Core/Inc/tim.h"
+ 784              		.file 18 "Core/Inc/usart.h"
+ 785              		.file 19 "Core/Inc/supercap.h"
+ 786              		.file 20 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/lib/gcc/arm-none-eabi/1
+ 787              		.file 21 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/s
+ 788              		.file 22 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/s
+ 789              		.file 23 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/s
+ 790              		.file 24 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/s
+ 791              		.file 25 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h"
+ 792              		.file 26 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h"
+ 793              		.file 27 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h"
+ 794              		.file 28 "Core/Inc/dma.h"
+ 795              		.file 29 "Core/Inc/gpio.h"
+ 796              		.file 30 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h"
+ 797              		.file 31 "<built-in>"
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 27
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:21     .text.fputc:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:27     .text.fputc:00000000 fputc
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:66     .text.fputc:0000001c $d
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:71     .text.Error_Handler:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:77     .text.Error_Handler:00000000 Error_Handler
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:109    .text.SystemClock_Config:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:115    .text.SystemClock_Config:00000000 SystemClock_Config
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:236    .rodata.main.str1.4:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:240    .text.main:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:246    .text.main:00000000 main
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:515    .text.main:0000017c $d
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:640    .bss.supercap_ADC1:00000000 supercap_ADC1
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:612    .bss.C_left:00000000 C_left
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:605    .bss.C_sys:00000000 C_sys
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:626    .bss.supercap_ADC3:00000000 supercap_ADC3
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:598    .bss.C_right:00000000 C_right
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:633    .bss.supercap_ADC2:00000000 supercap_ADC2
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:591    .bss.V_sys_op:00000000 V_sys_op
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:584    .bss.V_cap_op:00000000 V_cap_op
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:577    .bss.V_cap:00000000 V_cap
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:570    .bss.V_bat:00000000 V_bat
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:563    .bss.V_sys:00000000 V_sys
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:619    .bss.supercap_ADC4:00000000 supercap_ADC4
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:556    .bss.V_1V6:00000000 V_1V6
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:549    .bss.ADC4_3:00000000 ADC4_3
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:546    .bss.ADC4_3:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:553    .bss.V_1V6:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:560    .bss.V_sys:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:567    .bss.V_bat:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:574    .bss.V_cap:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:581    .bss.V_cap_op:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:588    .bss.V_sys_op:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:595    .bss.C_right:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:602    .bss.C_sys:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:609    .bss.C_left:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:616    .bss.supercap_ADC4:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:623    .bss.supercap_ADC3:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:630    .bss.supercap_ADC2:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s:637    .bss.supercap_ADC1:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:21     .text.fputc:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:27     .text.fputc:00000000 fputc
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:66     .text.fputc:0000001c $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:71     .text.Error_Handler:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:77     .text.Error_Handler:00000000 Error_Handler
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:109    .text.SystemClock_Config:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:115    .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:236    .text.main:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:242    .text.main:00000000 main
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:626    .text.main:00000258 $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:766    .bss.supercap_ADC1:00000000 supercap_ADC1
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:738    .bss.C_left:00000000 C_left
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:731    .bss.C_sys:00000000 C_sys
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:752    .bss.supercap_ADC3:00000000 supercap_ADC3
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:724    .bss.C_right:00000000 C_right
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:759    .bss.supercap_ADC2:00000000 supercap_ADC2
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:717    .bss.V_sys_op:00000000 V_sys_op
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:710    .bss.V_cap_op:00000000 V_cap_op
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:703    .bss.V_cap:00000000 V_cap
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:696    .bss.V_bat:00000000 V_bat
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:689    .bss.V_sys:00000000 V_sys
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:745    .bss.supercap_ADC4:00000000 supercap_ADC4
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:682    .bss.V_1V6:00000000 V_1V6
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:675    .bss.ADC4_3:00000000 ADC4_3
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:668    .bss.Out_loop_PID:00000000 Out_loop_PID
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:661    .bss.In_loop_PID:00000000 In_loop_PID
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:658    .bss.In_loop_PID:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:665    .bss.Out_loop_PID:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:672    .bss.ADC4_3:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:679    .bss.V_1V6:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:686    .bss.V_sys:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:693    .bss.V_bat:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:700    .bss.V_cap:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:707    .bss.V_cap_op:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:714    .bss.V_sys_op:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:721    .bss.C_right:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:728    .bss.C_sys:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:735    .bss.C_left:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:742    .bss.supercap_ADC4:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:749    .bss.supercap_ADC3:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:756    .bss.supercap_ADC2:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s:763    .bss.supercap_ADC1:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_UART_Transmit
@@ -1442,12 +1613,12 @@ MX_GPIO_Init
 MX_DMA_Init
 MX_ADC1_Init
 MX_ADC2_Init
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccQwcgOa.s 			page 28
+
+
 MX_TIM1_Init
 MX_USART1_UART_Init
 MX_USART2_UART_Init
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccRtHH4g.s 			page 26
-
-
 MX_USART3_UART_Init
 MX_TIM3_Init
 MX_TIM4_Init
@@ -1456,17 +1627,21 @@ MX_FDCAN1_Init
 MX_ADC5_Init
 MX_ADC3_Init
 MX_TIM2_Init
+MX_TIM5_Init
 HAL_ADCEx_Calibration_Start
 HAL_ADC_Start_DMA
 HAL_TIM_Base_Start
 HAL_TIM_PWM_Start
 HAL_TIMEx_PWMN_Start
+HAL_TIM_Base_Start_IT
 HAL_FDCAN_Start
+Supercap_PID_Init
 htim1
 htim3
 htim4
+htim2
+htim5
 hfdcan1
-huart1
 hadc1
 hadc2
 hadc3

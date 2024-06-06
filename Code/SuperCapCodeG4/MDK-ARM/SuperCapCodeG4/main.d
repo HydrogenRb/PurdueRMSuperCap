@@ -43,5 +43,6 @@ supercapcodeg4\main.o: ../Core/Inc/tim.h
 supercapcodeg4\main.o: ../Core/Inc/usart.h
 supercapcodeg4\main.o: ../Core/Inc/gpio.h
 supercapcodeg4\main.o: ../Core/Inc/supercap.h
+supercapcodeg4\main.o: ../Core/Inc/Kalman_Filter.h
 supercapcodeg4\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 supercapcodeg4\main.o: ../Core/Inc/Serial.h

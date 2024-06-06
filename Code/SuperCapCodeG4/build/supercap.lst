@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s 			page 1
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -20,19 +20,15 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s 			page 1
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
   19              		.file 1 "Core/Src/supercap.c"
-  20              		.global	__aeabi_f2d
-  21              		.global	__aeabi_dmul
-  22              		.global	__aeabi_ddiv
-  23              		.global	__aeabi_d2f
-  24              		.section	.text.ADC_to_Voltage_Funtion,"ax",%progbits
-  25              		.align	1
-  26              		.global	ADC_to_Voltage_Funtion
-  27              		.syntax unified
-  28              		.thumb
-  29              		.thumb_func
-  31              	ADC_to_Voltage_Funtion:
-  32              	.LVL0:
-  33              	.LFB329:
+  20              		.section	.text.ADC_to_Voltage_Funtion,"ax",%progbits
+  21              		.align	1
+  22              		.global	ADC_to_Voltage_Funtion
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	ADC_to_Voltage_Funtion:
+  28              	.LVL0:
+  29              	.LFB329:
    1:Core/Src/supercap.c **** /**
    2:Core/Src/supercap.c ****   ******************************************************************************
    3:Core/Src/supercap.c ****   * @file    supercap.c
@@ -42,457 +38,573 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s 			page 1
    7:Core/Src/supercap.c **** /* USER CODE END Header */
    8:Core/Src/supercap.c **** #include "supercap.h"
    9:Core/Src/supercap.c **** 
-  10:Core/Src/supercap.c **** #define SAMPLE_SIZE 4
+  10:Core/Src/supercap.c **** 
   11:Core/Src/supercap.c **** 
-  12:Core/Src/supercap.c **** 
-  13:Core/Src/supercap.c **** 
-  14:Core/Src/supercap.c **** float ADC_to_Voltage_Funtion(uint16_t adc_value) {
-  34              		.loc 1 14 50 view -0
-  35              		.cfi_startproc
-  36              		@ args = 0, pretend = 0, frame = 0
-  37              		@ frame_needed = 0, uses_anonymous_args = 0
-  38              		.loc 1 14 50 is_stmt 0 view .LVU1
-  39 0000 08B5     		push	{r3, lr}
-  40              	.LCFI0:
-  41              		.cfi_def_cfa_offset 8
-  42              		.cfi_offset 3, -8
-  43              		.cfi_offset 14, -4
-  44 0002 07EE900A 		vmov	s15, r0	@ int
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s 			page 2
+  12:Core/Src/supercap.c **** float ADC_to_Voltage_Funtion(uint16_t adc_value) {
+  30              		.loc 1 12 50 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  35              		.loc 1 12 50 is_stmt 0 view .LVU1
+  36 0000 07EE900A 		vmov	s15, r0	@ int
+  13:Core/Src/supercap.c ****   float voltage = (float)adc_value * 3.3f / 4095.0f;
+  37              		.loc 1 13 3 is_stmt 1 view .LVU2
+  38              		.loc 1 13 19 is_stmt 0 view .LVU3
+  39 0004 F8EE677A 		vcvt.f32.u32	s15, s15
+  40              		.loc 1 13 36 view .LVU4
+  41 0008 9FED047A 		vldr.32	s14, .L2
+  42 000c 67EE877A 		vmul.f32	s15, s15, s14
+  43              	.LVL1:
+  14:Core/Src/supercap.c ****   return voltage;
+  44              		.loc 1 14 3 is_stmt 1 view .LVU5
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s 			page 2
 
 
-  15:Core/Src/supercap.c ****   float voltage = (float)adc_value * 3.3 / 4095.0;
-  45              		.loc 1 15 3 is_stmt 1 view .LVU2
-  46              		.loc 1 15 19 is_stmt 0 view .LVU3
-  47 0006 F8EE677A 		vcvt.f32.u32	s15, s15
-  48 000a 17EE900A 		vmov	r0, s15
-  49              	.LVL1:
-  50              		.loc 1 15 19 view .LVU4
-  51 000e FFF7FEFF 		bl	__aeabi_f2d
-  52              	.LVL2:
-  53              		.loc 1 15 36 view .LVU5
-  54 0012 07A3     		adr	r3, .L3
-  55 0014 D3E90023 		ldrd	r2, [r3]
-  56 0018 FFF7FEFF 		bl	__aeabi_dmul
-  57              	.LVL3:
-  58              		.loc 1 15 42 view .LVU6
-  59 001c 06A3     		adr	r3, .L3+8
-  60 001e D3E90023 		ldrd	r2, [r3]
-  61 0022 FFF7FEFF 		bl	__aeabi_ddiv
-  62              	.LVL4:
-  63              		.loc 1 15 9 view .LVU7
-  64 0026 FFF7FEFF 		bl	__aeabi_d2f
-  65              	.LVL5:
-  16:Core/Src/supercap.c ****   return voltage;
-  66              		.loc 1 16 3 is_stmt 1 view .LVU8
-  17:Core/Src/supercap.c **** }
-  67              		.loc 1 17 1 is_stmt 0 view .LVU9
-  68 002a 00EE100A 		vmov	s0, r0
-  69 002e 08BD     		pop	{r3, pc}
-  70              	.L4:
-  71              		.align	3
-  72              	.L3:
-  73 0030 66666666 		.word	1717986918
-  74 0034 66660A40 		.word	1074423398
-  75 0038 00000000 		.word	0
-  76 003c 00FEAF40 		.word	1085275648
-  77              		.cfi_endproc
-  78              	.LFE329:
-  80              		.section	.text.Supercap_Average_ADC_Function,"ax",%progbits
-  81              		.align	1
-  82              		.global	Supercap_Average_ADC_Function
-  83              		.syntax unified
-  84              		.thumb
-  85              		.thumb_func
-  87              	Supercap_Average_ADC_Function:
-  88              	.LVL6:
-  89              	.LFB330:
-  18:Core/Src/supercap.c **** 
-  19:Core/Src/supercap.c **** void Supercap_Average_ADC_Function(_ADC_Sample_t *adc_sample) {
-  90              		.loc 1 19 63 is_stmt 1 view -0
-  91              		.cfi_startproc
-  92              		@ args = 0, pretend = 0, frame = 0
-  93              		@ frame_needed = 0, uses_anonymous_args = 0
-  94              		.loc 1 19 63 is_stmt 0 view .LVU11
-  95 0000 10B5     		push	{r4, lr}
-  96              	.LCFI1:
-  97              		.cfi_def_cfa_offset 8
-  98              		.cfi_offset 4, -8
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s 			page 3
+  15:Core/Src/supercap.c **** }
+  45              		.loc 1 15 1 is_stmt 0 view .LVU6
+  46 0010 9FED030A 		vldr.32	s0, .L2+4
+  47 0014 87EE800A 		vdiv.f32	s0, s15, s0
+  48              	.LVL2:
+  49              		.loc 1 15 1 view .LVU7
+  50 0018 7047     		bx	lr
+  51              	.L3:
+  52 001a 00BF     		.align	2
+  53              	.L2:
+  54 001c 33335340 		.word	1079194419
+  55 0020 00F07F45 		.word	1166012416
+  56              		.cfi_endproc
+  57              	.LFE329:
+  59              		.section	.text.Supercap_Average_ADC_Function,"ax",%progbits
+  60              		.align	1
+  61              		.global	Supercap_Average_ADC_Function
+  62              		.syntax unified
+  63              		.thumb
+  64              		.thumb_func
+  66              	Supercap_Average_ADC_Function:
+  67              	.LVL3:
+  68              	.LFB330:
+  16:Core/Src/supercap.c **** 
+  17:Core/Src/supercap.c **** void Supercap_Average_ADC_Function(_ADC_Sample_t *adc_sample) {
+  69              		.loc 1 17 63 is_stmt 1 view -0
+  70              		.cfi_startproc
+  71              		@ args = 0, pretend = 0, frame = 0
+  72              		@ frame_needed = 0, uses_anonymous_args = 0
+  73              		@ link register save eliminated.
+  18:Core/Src/supercap.c **** 			adc_sample->real_value_12bits = (*(adc_sample->sample)>>2) + (adc_sample->real_value_12bits - (a
+  74              		.loc 1 18 4 view .LVU9
+  75              		.loc 1 18 49 is_stmt 0 view .LVU10
+  76 0000 0368     		ldr	r3, [r0]
+  77              		.loc 1 18 37 view .LVU11
+  78 0002 1A88     		ldrh	r2, [r3]
+  79              		.loc 1 18 76 view .LVU12
+  80 0004 8388     		ldrh	r3, [r0, #4]
+  81              		.loc 1 18 96 view .LVU13
+  82 0006 A3EB9303 		sub	r3, r3, r3, lsr #2
+  83              		.loc 1 18 63 view .LVU14
+  84 000a 9208     		lsrs	r2, r2, #2
+  85 000c 12FA83F3 		uxtah	r3, r2, r3
+  86              		.loc 1 18 34 view .LVU15
+  87 0010 8380     		strh	r3, [r0, #4]	@ movhi
+  19:Core/Src/supercap.c **** }
+  88              		.loc 1 19 1 view .LVU16
+  89 0012 7047     		bx	lr
+  90              		.cfi_endproc
+  91              	.LFE330:
+  93              		.section	.text.Supercap_PID_Controller_Function,"ax",%progbits
+  94              		.align	1
+  95              		.global	Supercap_PID_Controller_Function
+  96              		.syntax unified
+  97              		.thumb
+  98              		.thumb_func
+ 100              	Supercap_PID_Controller_Function:
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s 			page 3
 
 
-  99              		.cfi_offset 14, -4
- 100 0002 0446     		mov	r4, r0
-  20:Core/Src/supercap.c ****     if(adc_sample->count == 0){
- 101              		.loc 1 20 5 is_stmt 1 view .LVU12
- 102              		.loc 1 20 18 is_stmt 0 view .LVU13
- 103 0004 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
- 104              		.loc 1 20 7 view .LVU14
- 105 0006 33B9     		cbnz	r3, .L6
-  21:Core/Src/supercap.c ****       adc_sample->average = *(adc_sample->sample);
- 106              		.loc 1 21 7 is_stmt 1 view .LVU15
- 107              		.loc 1 21 41 is_stmt 0 view .LVU16
- 108 0008 8368     		ldr	r3, [r0, #8]
- 109              		.loc 1 21 29 view .LVU17
- 110 000a 1B88     		ldrh	r3, [r3]
- 111              		.loc 1 21 27 view .LVU18
- 112 000c 4380     		strh	r3, [r0, #2]	@ movhi
-  22:Core/Src/supercap.c ****       //adc_sample->history_sum = adc_sample->average * SAMPLE_SIZE;
-  23:Core/Src/supercap.c ****       adc_sample->history_sum = adc_sample->average << 2;
- 113              		.loc 1 23 7 is_stmt 1 view .LVU19
- 114              		.loc 1 23 53 is_stmt 0 view .LVU20
- 115 000e 9B00     		lsls	r3, r3, #2
- 116              		.loc 1 23 31 view .LVU21
- 117 0010 4360     		str	r3, [r0, #4]
-  24:Core/Src/supercap.c ****       adc_sample->count = 1;
- 118              		.loc 1 24 7 is_stmt 1 view .LVU22
- 119              		.loc 1 24 25 is_stmt 0 view .LVU23
- 120 0012 0123     		movs	r3, #1
- 121 0014 0370     		strb	r3, [r0]
- 122              	.L6:
-  25:Core/Src/supercap.c ****     }
-  26:Core/Src/supercap.c ****     adc_sample->history_sum = adc_sample->history_sum - adc_sample->average + *(adc_sample->sample)
- 123              		.loc 1 26 5 is_stmt 1 view .LVU24
- 124              		.loc 1 26 41 is_stmt 0 view .LVU25
- 125 0016 6068     		ldr	r0, [r4, #4]
- 126              	.LVL7:
- 127              		.loc 1 26 67 view .LVU26
- 128 0018 6388     		ldrh	r3, [r4, #2]
- 129              		.loc 1 26 55 view .LVU27
- 130 001a C01A     		subs	r0, r0, r3
- 131              		.loc 1 26 91 view .LVU28
- 132 001c A368     		ldr	r3, [r4, #8]
- 133              		.loc 1 26 79 view .LVU29
- 134 001e 1B88     		ldrh	r3, [r3]
- 135              		.loc 1 26 77 view .LVU30
- 136 0020 1844     		add	r0, r0, r3
- 137              		.loc 1 26 29 view .LVU31
- 138 0022 6060     		str	r0, [r4, #4]
-  27:Core/Src/supercap.c ****     //adc_sample->average = adc_sample->history_sum / SAMPLE_SIZE;
-  28:Core/Src/supercap.c ****     adc_sample->average = adc_sample->history_sum >> 2; //想看看这个地方能不能快一点
- 139              		.loc 1 28 5 is_stmt 1 view .LVU32
- 140              		.loc 1 28 25 is_stmt 0 view .LVU33
- 141 0024 C0F38F00 		ubfx	r0, r0, #2, #16
- 142 0028 6080     		strh	r0, [r4, #2]	@ movhi
-  29:Core/Src/supercap.c ****     adc_sample->real_value = ADC_to_Voltage_Funtion(adc_sample->average);
- 143              		.loc 1 29 5 is_stmt 1 view .LVU34
- 144              		.loc 1 29 30 is_stmt 0 view .LVU35
- 145 002a FFF7FEFF 		bl	ADC_to_Voltage_Funtion
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s 			page 4
+ 101              	.LVL4:
+ 102              	.LFB331:
+  20:Core/Src/supercap.c **** 
+  21:Core/Src/supercap.c **** void Supercap_PID_Controller_Function(_Supercap_PID_Controller_t *pid_controller, _ADC_Sample_t *ad
+ 103              		.loc 1 21 124 is_stmt 1 view -0
+ 104              		.cfi_startproc
+ 105              		@ args = 0, pretend = 0, frame = 0
+ 106              		@ frame_needed = 0, uses_anonymous_args = 0
+ 107              		@ link register save eliminated.
+  22:Core/Src/supercap.c ****   pid_controller->error = target - adc_sample->real_value_12bits;
+ 108              		.loc 1 22 3 view .LVU18
+ 109              		.loc 1 22 46 is_stmt 0 view .LVU19
+ 110 0000 8B88     		ldrh	r3, [r1, #4]
+ 111 0002 07EE903A 		vmov	s15, r3	@ int
+ 112              		.loc 1 22 34 view .LVU20
+ 113 0006 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 114 000a 30EE670A 		vsub.f32	s0, s0, s15
+ 115              	.LVL5:
+ 116              		.loc 1 22 25 view .LVU21
+ 117 000e BCEEC00A 		vcvt.u32.f32	s0, s0
+ 118 0012 10EE103A 		vmov	r3, s0	@ int
+ 119 0016 9BB2     		uxth	r3, r3
+ 120 0018 C380     		strh	r3, [r0, #6]	@ movhi
+  23:Core/Src/supercap.c ****   pid_controller->error_sum += pid_controller->error;
+ 121              		.loc 1 23 3 is_stmt 1 view .LVU22
+ 122              		.loc 1 23 17 is_stmt 0 view .LVU23
+ 123 001a 4189     		ldrh	r1, [r0, #10]
+ 124              	.LVL6:
+ 125              		.loc 1 23 29 view .LVU24
+ 126 001c 1944     		add	r1, r1, r3
+ 127 001e 89B2     		uxth	r1, r1
+ 128 0020 4181     		strh	r1, [r0, #10]	@ movhi
+  24:Core/Src/supercap.c ****   pid_controller->output = pid_controller->Kp * pid_controller->error + pid_controller->Ki * pid_co
+ 129              		.loc 1 24 3 is_stmt 1 view .LVU25
+ 130              		.loc 1 24 42 is_stmt 0 view .LVU26
+ 131 0022 0288     		ldrh	r2, [r0]
+ 132              		.loc 1 24 47 view .LVU27
+ 133 0024 13FB02F2 		smulbb	r2, r3, r2
+ 134              		.loc 1 24 87 view .LVU28
+ 135 0028 B0F802C0 		ldrh	ip, [r0, #2]
+ 136              		.loc 1 24 92 view .LVU29
+ 137 002c 11FB0CF1 		smulbb	r1, r1, ip
+ 138 0030 89B2     		uxth	r1, r1
+ 139              		.loc 1 24 71 view .LVU30
+ 140 0032 11FA82F2 		uxtah	r2, r1, r2
+ 141              		.loc 1 24 136 view .LVU31
+ 142 0036 B0F804C0 		ldrh	ip, [r0, #4]
+ 143              		.loc 1 24 182 view .LVU32
+ 144 003a 0189     		ldrh	r1, [r0, #8]
+ 145              		.loc 1 24 120 view .LVU33
+ 146 003c 591A     		subs	r1, r3, r1
+ 147 003e 11FB0CF1 		smulbb	r1, r1, ip
+ 148 0042 11FA82F2 		uxtah	r2, r1, r2
+ 149 0046 92B2     		uxth	r2, r2
+ 150              		.loc 1 24 26 view .LVU34
+ 151 0048 8281     		strh	r2, [r0, #12]	@ movhi
+  25:Core/Src/supercap.c ****   pid_controller->error_last = pid_controller->error;
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s 			page 4
 
 
- 146              	.LVL8:
- 147              		.loc 1 29 28 discriminator 1 view .LVU36
- 148 002e 84ED030A 		vstr.32	s0, [r4, #12]
-  30:Core/Src/supercap.c **** }
- 149              		.loc 1 30 1 view .LVU37
- 150 0032 10BD     		pop	{r4, pc}
- 151              		.loc 1 30 1 view .LVU38
- 152              		.cfi_endproc
- 153              	.LFE330:
- 155              		.section	.text.Supercap_PID_Controller_Function,"ax",%progbits
- 156              		.align	1
- 157              		.global	Supercap_PID_Controller_Function
- 158              		.syntax unified
- 159              		.thumb
- 160              		.thumb_func
- 162              	Supercap_PID_Controller_Function:
- 163              	.LVL9:
- 164              	.LFB331:
-  31:Core/Src/supercap.c **** 
-  32:Core/Src/supercap.c **** void Supercap_PID_Controller_Function(_Supercap_PID_Controller_t *pid_controller, _ADC_Sample_t *ad
- 165              		.loc 1 32 124 is_stmt 1 view -0
- 166              		.cfi_startproc
- 167              		@ args = 0, pretend = 0, frame = 0
- 168              		@ frame_needed = 0, uses_anonymous_args = 0
- 169              		@ link register save eliminated.
-  33:Core/Src/supercap.c ****   pid_controller->error = target - adc_sample->real_value;
- 170              		.loc 1 33 3 view .LVU40
- 171              		.loc 1 33 46 is_stmt 0 view .LVU41
- 172 0000 D1ED037A 		vldr.32	s15, [r1, #12]
- 173              		.loc 1 33 34 view .LVU42
- 174 0004 30EE670A 		vsub.f32	s0, s0, s15
- 175              	.LVL10:
- 176              		.loc 1 33 25 view .LVU43
- 177 0008 80ED030A 		vstr.32	s0, [r0, #12]
-  34:Core/Src/supercap.c ****   pid_controller->error_sum += pid_controller->error;
- 178              		.loc 1 34 3 is_stmt 1 view .LVU44
- 179              		.loc 1 34 17 is_stmt 0 view .LVU45
- 180 000c 90ED057A 		vldr.32	s14, [r0, #20]
- 181              		.loc 1 34 29 view .LVU46
- 182 0010 30EE077A 		vadd.f32	s14, s0, s14
- 183 0014 80ED057A 		vstr.32	s14, [r0, #20]
-  35:Core/Src/supercap.c ****   pid_controller->output = pid_controller->Kp * pid_controller->error + pid_controller->Ki * pid_co
- 184              		.loc 1 35 3 is_stmt 1 view .LVU47
- 185              		.loc 1 35 42 is_stmt 0 view .LVU48
- 186 0018 D0ED007A 		vldr.32	s15, [r0]
- 187              		.loc 1 35 47 view .LVU49
- 188 001c 60EE277A 		vmul.f32	s15, s0, s15
- 189              		.loc 1 35 87 view .LVU50
- 190 0020 D0ED016A 		vldr.32	s13, [r0, #4]
- 191              		.loc 1 35 92 view .LVU51
- 192 0024 27EE267A 		vmul.f32	s14, s14, s13
- 193              		.loc 1 35 71 view .LVU52
- 194 0028 77EE877A 		vadd.f32	s15, s15, s14
- 195              		.loc 1 35 136 view .LVU53
- 196 002c 90ED027A 		vldr.32	s14, [r0, #8]
- 197              		.loc 1 35 182 view .LVU54
- 198 0030 D0ED046A 		vldr.32	s13, [r0, #16]
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s 			page 5
+ 152              		.loc 1 25 3 is_stmt 1 view .LVU35
+ 153              		.loc 1 25 30 is_stmt 0 view .LVU36
+ 154 004a 0381     		strh	r3, [r0, #8]	@ movhi
+  26:Core/Src/supercap.c ****   if(pid_controller->output > pid_controller->output_max) {
+ 155              		.loc 1 26 3 is_stmt 1 view .LVU37
+ 156              		.loc 1 26 45 is_stmt 0 view .LVU38
+ 157 004c C389     		ldrh	r3, [r0, #14]
+ 158              		.loc 1 26 5 view .LVU39
+ 159 004e 9A42     		cmp	r2, r3
+ 160 0050 00D9     		bls	.L6
+  27:Core/Src/supercap.c ****     pid_controller->output = pid_controller->output_max;
+ 161              		.loc 1 27 5 is_stmt 1 view .LVU40
+ 162              		.loc 1 27 28 is_stmt 0 view .LVU41
+ 163 0052 8381     		strh	r3, [r0, #12]	@ movhi
+ 164              	.L6:
+  28:Core/Src/supercap.c ****   }
+  29:Core/Src/supercap.c ****   if(pid_controller->output < pid_controller->output_min) {
+ 165              		.loc 1 29 3 is_stmt 1 view .LVU42
+ 166              		.loc 1 29 20 is_stmt 0 view .LVU43
+ 167 0054 8289     		ldrh	r2, [r0, #12]
+ 168              		.loc 1 29 45 view .LVU44
+ 169 0056 038A     		ldrh	r3, [r0, #16]
+ 170              		.loc 1 29 5 view .LVU45
+ 171 0058 9A42     		cmp	r2, r3
+ 172 005a 00D2     		bcs	.L5
+  30:Core/Src/supercap.c ****     pid_controller->output = pid_controller->output_min;
+ 173              		.loc 1 30 5 is_stmt 1 view .LVU46
+ 174              		.loc 1 30 28 is_stmt 0 view .LVU47
+ 175 005c 8381     		strh	r3, [r0, #12]	@ movhi
+ 176              	.L5:
+  31:Core/Src/supercap.c ****   }
+  32:Core/Src/supercap.c **** }
+ 177              		.loc 1 32 1 view .LVU48
+ 178 005e 7047     		bx	lr
+ 179              		.cfi_endproc
+ 180              	.LFE331:
+ 182              		.section	.text.Supercap_PID_Init,"ax",%progbits
+ 183              		.align	1
+ 184              		.global	Supercap_PID_Init
+ 185              		.syntax unified
+ 186              		.thumb
+ 187              		.thumb_func
+ 189              	Supercap_PID_Init:
+ 190              	.LVL7:
+ 191              	.LFB332:
+  33:Core/Src/supercap.c **** 
+  34:Core/Src/supercap.c **** void Supercap_PID_Init(_Supercap_PID_Controller_t *pid_controller, uint16_t Kp, uint16_t Ki, uint16
+ 192              		.loc 1 34 149 is_stmt 1 view -0
+ 193              		.cfi_startproc
+ 194              		@ args = 8, pretend = 0, frame = 0
+ 195              		@ frame_needed = 0, uses_anonymous_args = 0
+ 196              		@ link register save eliminated.
+  35:Core/Src/supercap.c ****   pid_controller->Kp = Kp;
+ 197              		.loc 1 35 3 view .LVU50
+ 198              		.loc 1 35 22 is_stmt 0 view .LVU51
+ 199 0000 0180     		strh	r1, [r0]	@ movhi
+  36:Core/Src/supercap.c ****   pid_controller->Ki = Ki;
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s 			page 5
 
 
- 199              		.loc 1 35 166 view .LVU55
- 200 0034 70EE666A 		vsub.f32	s13, s0, s13
- 201              		.loc 1 35 141 view .LVU56
- 202 0038 27EE267A 		vmul.f32	s14, s14, s13
- 203              		.loc 1 35 120 view .LVU57
- 204 003c 77EE877A 		vadd.f32	s15, s15, s14
- 205              		.loc 1 35 26 view .LVU58
- 206 0040 C0ED067A 		vstr.32	s15, [r0, #24]
-  36:Core/Src/supercap.c ****   pid_controller->error_last = pid_controller->error;
- 207              		.loc 1 36 3 is_stmt 1 view .LVU59
- 208              		.loc 1 36 30 is_stmt 0 view .LVU60
- 209 0044 80ED040A 		vstr.32	s0, [r0, #16]
-  37:Core/Src/supercap.c ****   if(pid_controller->output > pid_controller->output_max) {
- 210              		.loc 1 37 3 is_stmt 1 view .LVU61
- 211              		.loc 1 37 45 is_stmt 0 view .LVU62
- 212 0048 90ED077A 		vldr.32	s14, [r0, #28]
- 213              		.loc 1 37 5 view .LVU63
- 214 004c F4EEC77A 		vcmpe.f32	s15, s14
- 215 0050 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 216 0054 01DD     		ble	.L9
-  38:Core/Src/supercap.c ****     pid_controller->output = pid_controller->output_max;
- 217              		.loc 1 38 5 is_stmt 1 view .LVU64
- 218              		.loc 1 38 28 is_stmt 0 view .LVU65
- 219 0056 80ED067A 		vstr.32	s14, [r0, #24]
- 220              	.L9:
-  39:Core/Src/supercap.c ****   }
-  40:Core/Src/supercap.c ****   if(pid_controller->output < pid_controller->output_min) {
- 221              		.loc 1 40 3 is_stmt 1 view .LVU66
- 222              		.loc 1 40 20 is_stmt 0 view .LVU67
- 223 005a 90ED067A 		vldr.32	s14, [r0, #24]
- 224              		.loc 1 40 45 view .LVU68
- 225 005e D0ED087A 		vldr.32	s15, [r0, #32]
- 226              		.loc 1 40 5 view .LVU69
- 227 0062 B4EEE77A 		vcmpe.f32	s14, s15
- 228 0066 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 229 006a 01D5     		bpl	.L8
-  41:Core/Src/supercap.c ****     pid_controller->output = pid_controller->output_min;
- 230              		.loc 1 41 5 is_stmt 1 view .LVU70
- 231              		.loc 1 41 28 is_stmt 0 view .LVU71
- 232 006c C0ED067A 		vstr.32	s15, [r0, #24]
- 233              	.L8:
-  42:Core/Src/supercap.c ****   }
-  43:Core/Src/supercap.c **** }
- 234              		.loc 1 43 1 view .LVU72
- 235 0070 7047     		bx	lr
- 236              		.cfi_endproc
- 237              	.LFE331:
- 239              		.section	.text.TIM2_NVIC,"ax",%progbits
- 240              		.align	1
- 241              		.global	TIM2_NVIC
- 242              		.syntax unified
- 243              		.thumb
- 244              		.thumb_func
- 246              	TIM2_NVIC:
- 247              	.LFB333:
-  44:Core/Src/supercap.c **** 
-  45:Core/Src/supercap.c **** //帮我在这加入tim2的中断回调函数
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s 			page 6
+ 200              		.loc 1 36 3 is_stmt 1 view .LVU52
+ 201              		.loc 1 36 22 is_stmt 0 view .LVU53
+ 202 0002 4280     		strh	r2, [r0, #2]	@ movhi
+  37:Core/Src/supercap.c ****   pid_controller->Kd = Kd;
+ 203              		.loc 1 37 3 is_stmt 1 view .LVU54
+ 204              		.loc 1 37 22 is_stmt 0 view .LVU55
+ 205 0004 8380     		strh	r3, [r0, #4]	@ movhi
+  38:Core/Src/supercap.c ****   pid_controller->output_max = output_max;
+ 206              		.loc 1 38 3 is_stmt 1 view .LVU56
+ 207              		.loc 1 38 30 is_stmt 0 view .LVU57
+ 208 0006 BDF80030 		ldrh	r3, [sp]
+ 209              	.LVL8:
+ 210              		.loc 1 38 30 view .LVU58
+ 211 000a C381     		strh	r3, [r0, #14]	@ movhi
+  39:Core/Src/supercap.c ****   pid_controller->output_min = output_min;
+ 212              		.loc 1 39 3 is_stmt 1 view .LVU59
+ 213              		.loc 1 39 30 is_stmt 0 view .LVU60
+ 214 000c BDF80430 		ldrh	r3, [sp, #4]
+ 215 0010 0382     		strh	r3, [r0, #16]	@ movhi
+  40:Core/Src/supercap.c **** }
+ 216              		.loc 1 40 1 view .LVU61
+ 217 0012 7047     		bx	lr
+ 218              		.cfi_endproc
+ 219              	.LFE332:
+ 221              		.section	.text.Supercap_PWM_left,"ax",%progbits
+ 222              		.align	1
+ 223              		.global	Supercap_PWM_left
+ 224              		.syntax unified
+ 225              		.thumb
+ 226              		.thumb_func
+ 228              	Supercap_PWM_left:
+ 229              	.LVL9:
+ 230              	.LFB333:
+  41:Core/Src/supercap.c **** 
+  42:Core/Src/supercap.c **** void Supercap_PWM_left(uint32_t pwm_duty_cycle) {
+ 231              		.loc 1 42 49 is_stmt 1 view -0
+ 232              		.cfi_startproc
+ 233              		@ args = 0, pretend = 0, frame = 0
+ 234              		@ frame_needed = 0, uses_anonymous_args = 0
+ 235              		@ link register save eliminated.
+  43:Core/Src/supercap.c ****   __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, pwm_duty_cycle);
+ 236              		.loc 1 43 3 view .LVU63
+ 237 0000 024B     		ldr	r3, .L10
+ 238 0002 1B68     		ldr	r3, [r3]
+ 239 0004 5863     		str	r0, [r3, #52]
+  44:Core/Src/supercap.c ****   __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, 0);
+ 240              		.loc 1 44 3 view .LVU64
+ 241 0006 0022     		movs	r2, #0
+ 242 0008 1A64     		str	r2, [r3, #64]
+  45:Core/Src/supercap.c **** };
+ 243              		.loc 1 45 1 is_stmt 0 view .LVU65
+ 244 000a 7047     		bx	lr
+ 245              	.L11:
+ 246              		.align	2
+ 247              	.L10:
+ 248 000c 00000000 		.word	htim1
+ 249              		.cfi_endproc
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s 			page 6
 
 
-  46:Core/Src/supercap.c **** void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
-  47:Core/Src/supercap.c ****   if(htim->Instance == TIM2) {
-  48:Core/Src/supercap.c ****     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
-  49:Core/Src/supercap.c ****     TIM2_NVIC();
-  50:Core/Src/supercap.c ****     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
-  51:Core/Src/supercap.c ****   }
-  52:Core/Src/supercap.c **** }
-  53:Core/Src/supercap.c **** 
-  54:Core/Src/supercap.c **** void TIM2_NVIC(){
- 248              		.loc 1 54 17 is_stmt 1 view -0
- 249              		.cfi_startproc
- 250              		@ args = 0, pretend = 0, frame = 0
- 251              		@ frame_needed = 0, uses_anonymous_args = 0
- 252 0000 08B5     		push	{r3, lr}
- 253              	.LCFI2:
- 254              		.cfi_def_cfa_offset 8
- 255              		.cfi_offset 3, -8
- 256              		.cfi_offset 14, -4
-  55:Core/Src/supercap.c ****     Supercap_Average_ADC_Function(&C_left);
- 257              		.loc 1 55 5 view .LVU74
- 258 0002 0E48     		ldr	r0, .L17
- 259 0004 FFF7FEFF 		bl	Supercap_Average_ADC_Function
- 260              	.LVL11:
-  56:Core/Src/supercap.c ****     Supercap_Average_ADC_Function(&C_sys);
- 261              		.loc 1 56 5 view .LVU75
- 262 0008 0D48     		ldr	r0, .L17+4
- 263 000a FFF7FEFF 		bl	Supercap_Average_ADC_Function
- 264              	.LVL12:
-  57:Core/Src/supercap.c ****     Supercap_Average_ADC_Function(&C_right);
- 265              		.loc 1 57 5 view .LVU76
- 266 000e 0D48     		ldr	r0, .L17+8
- 267 0010 FFF7FEFF 		bl	Supercap_Average_ADC_Function
- 268              	.LVL13:
-  58:Core/Src/supercap.c ****     Supercap_Average_ADC_Function(&V_sys_op);
- 269              		.loc 1 58 5 view .LVU77
- 270 0014 0C48     		ldr	r0, .L17+12
- 271 0016 FFF7FEFF 		bl	Supercap_Average_ADC_Function
- 272              	.LVL14:
-  59:Core/Src/supercap.c ****     Supercap_Average_ADC_Function(&V_cap_op);
- 273              		.loc 1 59 5 view .LVU78
- 274 001a 0C48     		ldr	r0, .L17+16
- 275 001c FFF7FEFF 		bl	Supercap_Average_ADC_Function
- 276              	.LVL15:
-  60:Core/Src/supercap.c ****     Supercap_Average_ADC_Function(&V_cap);
- 277              		.loc 1 60 5 view .LVU79
- 278 0020 0B48     		ldr	r0, .L17+20
- 279 0022 FFF7FEFF 		bl	Supercap_Average_ADC_Function
- 280              	.LVL16:
-  61:Core/Src/supercap.c ****     Supercap_Average_ADC_Function(&V_bat);
- 281              		.loc 1 61 5 view .LVU80
- 282 0026 0B48     		ldr	r0, .L17+24
- 283 0028 FFF7FEFF 		bl	Supercap_Average_ADC_Function
- 284              	.LVL17:
-  62:Core/Src/supercap.c ****     Supercap_Average_ADC_Function(&V_sys);
- 285              		.loc 1 62 5 view .LVU81
- 286 002c 0A48     		ldr	r0, .L17+28
- 287 002e FFF7FEFF 		bl	Supercap_Average_ADC_Function
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s 			page 7
+ 250              	.LFE333:
+ 252              		.section	.text.TIM2_NVIC,"ax",%progbits
+ 253              		.align	1
+ 254              		.global	TIM2_NVIC
+ 255              		.syntax unified
+ 256              		.thumb
+ 257              		.thumb_func
+ 259              	TIM2_NVIC:
+ 260              	.LFB335:
+  46:Core/Src/supercap.c **** 
+  47:Core/Src/supercap.c **** 
+  48:Core/Src/supercap.c **** //帮我在这加入tim2的中断回调函数
+  49:Core/Src/supercap.c **** void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+  50:Core/Src/supercap.c **** 	if(htim->Instance == TIM5){
+  51:Core/Src/supercap.c **** 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
+  52:Core/Src/supercap.c ****     TIM5_NVIC();
+  53:Core/Src/supercap.c **** 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
+  54:Core/Src/supercap.c **** 	}
+  55:Core/Src/supercap.c ****   else if(htim->Instance == TIM2) {
+  56:Core/Src/supercap.c ****     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
+  57:Core/Src/supercap.c ****     TIM2_NVIC();
+  58:Core/Src/supercap.c ****     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+  59:Core/Src/supercap.c ****   }
+  60:Core/Src/supercap.c **** }
+  61:Core/Src/supercap.c **** 
+  62:Core/Src/supercap.c **** void TIM2_NVIC(){
+ 261              		.loc 1 62 17 is_stmt 1 view -0
+ 262              		.cfi_startproc
+ 263              		@ args = 0, pretend = 0, frame = 0
+ 264              		@ frame_needed = 0, uses_anonymous_args = 0
+ 265 0000 08B5     		push	{r3, lr}
+ 266              	.LCFI0:
+ 267              		.cfi_def_cfa_offset 8
+ 268              		.cfi_offset 3, -8
+ 269              		.cfi_offset 14, -4
+  63:Core/Src/supercap.c ****     Supercap_Average_ADC_Function(&C_left);
+ 270              		.loc 1 63 5 view .LVU67
+ 271 0002 0948     		ldr	r0, .L14
+ 272 0004 FFF7FEFF 		bl	Supercap_Average_ADC_Function
+ 273              	.LVL10:
+  64:Core/Src/supercap.c ****     Supercap_Average_ADC_Function(&C_sys);
+ 274              		.loc 1 64 5 view .LVU68
+ 275 0008 0848     		ldr	r0, .L14+4
+ 276 000a FFF7FEFF 		bl	Supercap_Average_ADC_Function
+ 277              	.LVL11:
+  65:Core/Src/supercap.c ****     Supercap_Average_ADC_Function(&C_right);
+ 278              		.loc 1 65 5 view .LVU69
+ 279 000e 0848     		ldr	r0, .L14+8
+ 280 0010 FFF7FEFF 		bl	Supercap_Average_ADC_Function
+ 281              	.LVL12:
+  66:Core/Src/supercap.c **** //    Supercap_Average_ADC_Function(&V_sys_op);
+  67:Core/Src/supercap.c **** //    Supercap_Average_ADC_Function(&V_cap_op);
+  68:Core/Src/supercap.c ****     Supercap_Average_ADC_Function(&V_cap);
+ 282              		.loc 1 68 5 view .LVU70
+ 283 0014 0748     		ldr	r0, .L14+12
+ 284 0016 FFF7FEFF 		bl	Supercap_Average_ADC_Function
+ 285              	.LVL13:
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s 			page 7
 
 
- 288              	.LVL18:
-  63:Core/Src/supercap.c **** 		
-  64:Core/Src/supercap.c **** 		Supercap_Average_ADC_Function(&V_1V6);
- 289              		.loc 1 64 3 view .LVU82
- 290 0032 0A48     		ldr	r0, .L17+32
- 291 0034 FFF7FEFF 		bl	Supercap_Average_ADC_Function
- 292              	.LVL19:
-  65:Core/Src/supercap.c **** 
-  66:Core/Src/supercap.c **** }...
- 293              		.loc 1 66 1 is_stmt 0 view .LVU83
- 294 0038 08BD     		pop	{r3, pc}
- 295              	.L18:
- 296 003a 00BF     		.align	2
- 297              	.L17:
- 298 003c 00000000 		.word	C_left
- 299 0040 00000000 		.word	C_sys
- 300 0044 00000000 		.word	C_right
- 301 0048 00000000 		.word	V_sys_op
- 302 004c 00000000 		.word	V_cap_op
- 303 0050 00000000 		.word	V_cap
- 304 0054 00000000 		.word	V_bat
- 305 0058 00000000 		.word	V_sys
- 306 005c 00000000 		.word	V_1V6
- 307              		.cfi_endproc
- 308              	.LFE333:
- 310              		.section	.text.HAL_TIM_PeriodElapsedCallback,"ax",%progbits
- 311              		.align	1
- 312              		.global	HAL_TIM_PeriodElapsedCallback
- 313              		.syntax unified
- 314              		.thumb
- 315              		.thumb_func
- 317              	HAL_TIM_PeriodElapsedCallback:
- 318              	.LVL20:
- 319              	.LFB332:
-  46:Core/Src/supercap.c **** void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
- 320              		.loc 1 46 61 is_stmt 1 view -0
- 321              		.cfi_startproc
- 322              		@ args = 0, pretend = 0, frame = 0
- 323              		@ frame_needed = 0, uses_anonymous_args = 0
-  47:Core/Src/supercap.c ****   if(htim->Instance == TIM2) {
- 324              		.loc 1 47 3 view .LVU85
-  47:Core/Src/supercap.c ****   if(htim->Instance == TIM2) {
- 325              		.loc 1 47 10 is_stmt 0 view .LVU86
- 326 0000 0368     		ldr	r3, [r0]
-  47:Core/Src/supercap.c ****   if(htim->Instance == TIM2) {
- 327              		.loc 1 47 5 view .LVU87
- 328 0002 B3F1804F 		cmp	r3, #1073741824
- 329 0006 00D0     		beq	.L25
- 330 0008 7047     		bx	lr
- 331              	.L25:
-  46:Core/Src/supercap.c **** void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
- 332              		.loc 1 46 61 view .LVU88
- 333 000a 10B5     		push	{r4, lr}
- 334              	.LCFI3:
- 335              		.cfi_def_cfa_offset 8
- 336              		.cfi_offset 4, -8
- 337              		.cfi_offset 14, -4
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s 			page 8
+  69:Core/Src/supercap.c ****     Supercap_Average_ADC_Function(&V_bat);
+ 286              		.loc 1 69 5 view .LVU71
+ 287 001a 0748     		ldr	r0, .L14+16
+ 288 001c FFF7FEFF 		bl	Supercap_Average_ADC_Function
+ 289              	.LVL14:
+  70:Core/Src/supercap.c ****     Supercap_Average_ADC_Function(&V_sys);
+ 290              		.loc 1 70 5 view .LVU72
+ 291 0020 0648     		ldr	r0, .L14+20
+ 292 0022 FFF7FEFF 		bl	Supercap_Average_ADC_Function
+ 293              	.LVL15:
+  71:Core/Src/supercap.c **** 		
+  72:Core/Src/supercap.c **** //		Supercap_Average_ADC_Function(&V_1V6);
+  73:Core/Src/supercap.c **** 
+  74:Core/Src/supercap.c **** }
+ 294              		.loc 1 74 1 is_stmt 0 view .LVU73
+ 295 0026 08BD     		pop	{r3, pc}
+ 296              	.L15:
+ 297              		.align	2
+ 298              	.L14:
+ 299 0028 00000000 		.word	C_left
+ 300 002c 00000000 		.word	C_sys
+ 301 0030 00000000 		.word	C_right
+ 302 0034 00000000 		.word	V_cap
+ 303 0038 00000000 		.word	V_bat
+ 304 003c 00000000 		.word	V_sys
+ 305              		.cfi_endproc
+ 306              	.LFE335:
+ 308              		.section	.text.TIM5_NVIC,"ax",%progbits
+ 309              		.align	1
+ 310              		.global	TIM5_NVIC
+ 311              		.syntax unified
+ 312              		.thumb
+ 313              		.thumb_func
+ 315              	TIM5_NVIC:
+ 316              	.LFB336:
+  75:Core/Src/supercap.c **** 
+  76:Core/Src/supercap.c **** //This is the control NVIC
+  77:Core/Src/supercap.c **** void TIM5_NVIC(){
+ 317              		.loc 1 77 17 is_stmt 1 view -0
+ 318              		.cfi_startproc
+ 319              		@ args = 0, pretend = 0, frame = 0
+ 320              		@ frame_needed = 0, uses_anonymous_args = 0
+ 321 0000 10B5     		push	{r4, lr}
+ 322              	.LCFI1:
+ 323              		.cfi_def_cfa_offset 8
+ 324              		.cfi_offset 4, -8
+ 325              		.cfi_offset 14, -4
+  78:Core/Src/supercap.c ****   Supercap_PID_Controller_Function(&Out_loop_PID, &V_sys_op, 1);
+ 326              		.loc 1 78 3 view .LVU75
+ 327 0002 0A4C     		ldr	r4, .L18
+ 328 0004 B7EE000A 		vmov.f32	s0, #1.0e+0
+ 329 0008 0949     		ldr	r1, .L18+4
+ 330 000a 2046     		mov	r0, r4
+ 331 000c FFF7FEFF 		bl	Supercap_PID_Controller_Function
+ 332              	.LVL16:
+  79:Core/Src/supercap.c ****   Supercap_PID_Controller_Function(&In_loop_PID, &V_cap_op, Out_loop_PID.output);
+ 333              		.loc 1 79 3 view .LVU76
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s 			page 8
 
 
-  48:Core/Src/supercap.c ****     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
- 338              		.loc 1 48 5 is_stmt 1 view .LVU89
- 339 000c 074C     		ldr	r4, .L26
- 340 000e 0122     		movs	r2, #1
- 341 0010 4FF48041 		mov	r1, #16384
- 342 0014 2046     		mov	r0, r4
- 343              	.LVL21:
-  48:Core/Src/supercap.c ****     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
- 344              		.loc 1 48 5 is_stmt 0 view .LVU90
- 345 0016 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 346              	.LVL22:
-  49:Core/Src/supercap.c ****     TIM2_NVIC();
- 347              		.loc 1 49 5 is_stmt 1 view .LVU91
- 348 001a FFF7FEFF 		bl	TIM2_NVIC
- 349              	.LVL23:
-  50:Core/Src/supercap.c ****     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
- 350              		.loc 1 50 5 view .LVU92
- 351 001e 0022     		movs	r2, #0
- 352 0020 4FF48041 		mov	r1, #16384
- 353 0024 2046     		mov	r0, r4
- 354 0026 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 355              	.LVL24:
-  52:Core/Src/supercap.c **** }
- 356              		.loc 1 52 1 is_stmt 0 view .LVU93
- 357 002a 10BD     		pop	{r4, pc}
- 358              	.L27:
- 359              		.align	2
- 360              	.L26:
- 361 002c 00040048 		.word	1207960576
- 362              		.cfi_endproc
- 363              	.LFE332:
- 365              		.text
- 366              	.Letext0:
- 367              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/ma
- 368              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/sy
- 369              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
- 370              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
- 371              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h"
- 372              		.file 7 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
- 373              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h"
- 374              		.file 9 "Core/Inc/supercap.h"
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s 			page 9
+ 334              		.loc 1 79 73 is_stmt 0 view .LVU77
+ 335 0010 A389     		ldrh	r3, [r4, #12]
+ 336 0012 00EE103A 		vmov	s0, r3	@ int
+ 337              		.loc 1 79 3 view .LVU78
+ 338 0016 074C     		ldr	r4, .L18+8
+ 339 0018 B8EE400A 		vcvt.f32.u32	s0, s0
+ 340 001c 0649     		ldr	r1, .L18+12
+ 341 001e 2046     		mov	r0, r4
+ 342 0020 FFF7FEFF 		bl	Supercap_PID_Controller_Function
+ 343              	.LVL17:
+  80:Core/Src/supercap.c ****   Supercap_PWM_left(In_loop_PID.output);
+ 344              		.loc 1 80 3 is_stmt 1 view .LVU79
+ 345 0024 A089     		ldrh	r0, [r4, #12]
+ 346 0026 FFF7FEFF 		bl	Supercap_PWM_left
+ 347              	.LVL18:
+  81:Core/Src/supercap.c **** }
+ 348              		.loc 1 81 1 is_stmt 0 view .LVU80
+ 349 002a 10BD     		pop	{r4, pc}
+ 350              	.L19:
+ 351              		.align	2
+ 352              	.L18:
+ 353 002c 00000000 		.word	Out_loop_PID
+ 354 0030 00000000 		.word	V_sys_op
+ 355 0034 00000000 		.word	In_loop_PID
+ 356 0038 00000000 		.word	V_cap_op
+ 357              		.cfi_endproc
+ 358              	.LFE336:
+ 360              		.section	.text.HAL_TIM_PeriodElapsedCallback,"ax",%progbits
+ 361              		.align	1
+ 362              		.global	HAL_TIM_PeriodElapsedCallback
+ 363              		.syntax unified
+ 364              		.thumb
+ 365              		.thumb_func
+ 367              	HAL_TIM_PeriodElapsedCallback:
+ 368              	.LVL19:
+ 369              	.LFB334:
+  49:Core/Src/supercap.c **** 	if(htim->Instance == TIM5){
+ 370              		.loc 1 49 61 is_stmt 1 view -0
+ 371              		.cfi_startproc
+ 372              		@ args = 0, pretend = 0, frame = 0
+ 373              		@ frame_needed = 0, uses_anonymous_args = 0
+  49:Core/Src/supercap.c **** 	if(htim->Instance == TIM5){
+ 374              		.loc 1 49 61 is_stmt 0 view .LVU82
+ 375 0000 10B5     		push	{r4, lr}
+ 376              	.LCFI2:
+ 377              		.cfi_def_cfa_offset 8
+ 378              		.cfi_offset 4, -8
+ 379              		.cfi_offset 14, -4
+  50:Core/Src/supercap.c **** 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
+ 380              		.loc 1 50 2 is_stmt 1 view .LVU83
+  50:Core/Src/supercap.c **** 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
+ 381              		.loc 1 50 9 is_stmt 0 view .LVU84
+ 382 0002 0368     		ldr	r3, [r0]
+  50:Core/Src/supercap.c **** 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
+ 383              		.loc 1 50 4 view .LVU85
+ 384 0004 134A     		ldr	r2, .L26
+ 385 0006 9342     		cmp	r3, r2
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s 			page 9
+
+
+ 386 0008 03D0     		beq	.L24
+  55:Core/Src/supercap.c ****     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
+ 387              		.loc 1 55 8 is_stmt 1 view .LVU86
+  55:Core/Src/supercap.c ****     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
+ 388              		.loc 1 55 10 is_stmt 0 view .LVU87
+ 389 000a B3F1804F 		cmp	r3, #1073741824
+ 390 000e 10D0     		beq	.L25
+ 391              	.LVL20:
+ 392              	.L20:
+  60:Core/Src/supercap.c **** 
+ 393              		.loc 1 60 1 view .LVU88
+ 394 0010 10BD     		pop	{r4, pc}
+ 395              	.LVL21:
+ 396              	.L24:
+ 397              	.LBB2:
+  51:Core/Src/supercap.c ****     TIM5_NVIC();
+ 398              		.loc 1 51 3 is_stmt 1 view .LVU89
+ 399 0012 114C     		ldr	r4, .L26+4
+ 400 0014 0122     		movs	r2, #1
+ 401 0016 4FF40041 		mov	r1, #32768
+ 402 001a 2046     		mov	r0, r4
+ 403              	.LVL22:
+  51:Core/Src/supercap.c ****     TIM5_NVIC();
+ 404              		.loc 1 51 3 is_stmt 0 view .LVU90
+ 405 001c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 406              	.LVL23:
+  52:Core/Src/supercap.c **** 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
+ 407              		.loc 1 52 5 is_stmt 1 view .LVU91
+ 408 0020 FFF7FEFF 		bl	TIM5_NVIC
+ 409              	.LVL24:
+  53:Core/Src/supercap.c **** 	}
+ 410              		.loc 1 53 3 view .LVU92
+ 411 0024 0022     		movs	r2, #0
+ 412 0026 4FF40041 		mov	r1, #32768
+ 413 002a 2046     		mov	r0, r4
+ 414 002c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 415              	.LVL25:
+ 416              	.LBE2:
+ 417 0030 EEE7     		b	.L20
+ 418              	.LVL26:
+ 419              	.L25:
+  56:Core/Src/supercap.c ****     TIM2_NVIC();
+ 420              		.loc 1 56 5 view .LVU93
+ 421 0032 094C     		ldr	r4, .L26+4
+ 422 0034 0122     		movs	r2, #1
+ 423 0036 4FF48041 		mov	r1, #16384
+ 424 003a 2046     		mov	r0, r4
+ 425              	.LVL27:
+  56:Core/Src/supercap.c ****     TIM2_NVIC();
+ 426              		.loc 1 56 5 is_stmt 0 view .LVU94
+ 427 003c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 428              	.LVL28:
+  57:Core/Src/supercap.c ****     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+ 429              		.loc 1 57 5 is_stmt 1 view .LVU95
+ 430 0040 FFF7FEFF 		bl	TIM2_NVIC
+ 431              	.LVL29:
+  58:Core/Src/supercap.c ****   }
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s 			page 10
+
+
+ 432              		.loc 1 58 5 view .LVU96
+ 433 0044 0022     		movs	r2, #0
+ 434 0046 4FF48041 		mov	r1, #16384
+ 435 004a 2046     		mov	r0, r4
+ 436 004c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 437              	.LVL30:
+  60:Core/Src/supercap.c **** 
+ 438              		.loc 1 60 1 is_stmt 0 view .LVU97
+ 439 0050 DEE7     		b	.L20
+ 440              	.L27:
+ 441 0052 00BF     		.align	2
+ 442              	.L26:
+ 443 0054 000C0040 		.word	1073744896
+ 444 0058 00040048 		.word	1207960576
+ 445              		.cfi_endproc
+ 446              	.LFE334:
+ 448              		.text
+ 449              	.Letext0:
+ 450              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/ma
+ 451              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/sy
+ 452              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
+ 453              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
+ 454              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h"
+ 455              		.file 7 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
+ 456              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h"
+ 457              		.file 9 "Core/Inc/supercap.h"
+ 458              		.file 10 "Core/Inc/tim.h"
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 supercap.c
-C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s:25     .text.ADC_to_Voltage_Funtion:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s:31     .text.ADC_to_Voltage_Funtion:00000000 ADC_to_Voltage_Funtion
-C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s:73     .text.ADC_to_Voltage_Funtion:00000030 $d
-C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s:81     .text.Supercap_Average_ADC_Function:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s:87     .text.Supercap_Average_ADC_Function:00000000 Supercap_Average_ADC_Function
-C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s:156    .text.Supercap_PID_Controller_Function:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s:162    .text.Supercap_PID_Controller_Function:00000000 Supercap_PID_Controller_Function
-C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s:240    .text.TIM2_NVIC:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s:246    .text.TIM2_NVIC:00000000 TIM2_NVIC
-C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s:298    .text.TIM2_NVIC:0000003c $d
-C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s:311    .text.HAL_TIM_PeriodElapsedCallback:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s:317    .text.HAL_TIM_PeriodElapsedCallback:00000000 HAL_TIM_PeriodElapsedCallback
-C:\Users\purdu\AppData\Local\Temp\ccdPZSLq.s:361    .text.HAL_TIM_PeriodElapsedCallback:0000002c $d
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:21     .text.ADC_to_Voltage_Funtion:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:27     .text.ADC_to_Voltage_Funtion:00000000 ADC_to_Voltage_Funtion
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:54     .text.ADC_to_Voltage_Funtion:0000001c $d
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:60     .text.Supercap_Average_ADC_Function:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:66     .text.Supercap_Average_ADC_Function:00000000 Supercap_Average_ADC_Function
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:94     .text.Supercap_PID_Controller_Function:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:100    .text.Supercap_PID_Controller_Function:00000000 Supercap_PID_Controller_Function
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:183    .text.Supercap_PID_Init:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:189    .text.Supercap_PID_Init:00000000 Supercap_PID_Init
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:222    .text.Supercap_PWM_left:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:228    .text.Supercap_PWM_left:00000000 Supercap_PWM_left
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:248    .text.Supercap_PWM_left:0000000c $d
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:253    .text.TIM2_NVIC:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:259    .text.TIM2_NVIC:00000000 TIM2_NVIC
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:299    .text.TIM2_NVIC:00000028 $d
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:309    .text.TIM5_NVIC:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:315    .text.TIM5_NVIC:00000000 TIM5_NVIC
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:353    .text.TIM5_NVIC:0000002c $d
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:361    .text.HAL_TIM_PeriodElapsedCallback:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:367    .text.HAL_TIM_PeriodElapsedCallback:00000000 HAL_TIM_PeriodElapsedCallback
+C:\Users\purdu\AppData\Local\Temp\cc2Sv7fu.s:443    .text.HAL_TIM_PeriodElapsedCallback:00000054 $d
 
 UNDEFINED SYMBOLS
-__aeabi_f2d
-__aeabi_dmul
-__aeabi_ddiv
-__aeabi_d2f
+htim1
 C_left
 C_sys
 C_right
-V_sys_op
-V_cap_op
 V_cap
 V_bat
 V_sys
-V_1V6
+Out_loop_PID
+V_sys_op
+In_loop_PID
+V_cap_op
 HAL_GPIO_WritePin

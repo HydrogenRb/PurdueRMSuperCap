@@ -30,6 +30,13 @@
 #include "supercap.h"
 #include <stdio.h>
 #include "Serial.h"
+#include "Kalman_Filter.h"
+
+#define MAX_CAP_VOLTAGE 1353 //3V in 12 bits
+#define MAX_CURRENT 2125 //0.5A in 12 bits
+#define MIN_CURRENT 2047 //0A in 12 bits
+#define MAX_DUTY 300
+#define MIN_DUTY 0
 
 /* USER CODE END Includes */
 
@@ -67,6 +74,13 @@
 	
 	_ADC_Sample_t V_1V6 = {0};
 	_ADC_Sample_t ADC4_3 = {0};
+
+	Kalman_Filter_t C_left_kalman = {.Q=0.5f,.R=1.0f};
+	
+  _Supercap_PID_Controller_t Out_loop_PID;
+  _Supercap_PID_Controller_t In_loop_PID;
+	
+	float temp2;
 
 /* USER CODE END PV */
 
@@ -106,6 +120,8 @@ int main(void)
 	
 	V_1V6.sample = &supercap_ADC4[0];
 	ADC4_3.sample = &supercap_ADC4[1];
+	
+	float temp;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -140,6 +156,7 @@ int main(void)
   MX_ADC5_Init();
   MX_ADC3_Init();
   MX_TIM2_Init();
+  MX_TIM5_Init();
   /* USER CODE BEGIN 2 */
 	HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
 	HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
@@ -164,9 +181,10 @@ int main(void)
 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
 	
 	HAL_TIM_Base_Start_IT(&htim2);
+	HAL_TIM_Base_Start_IT(&htim5);
 
 	//__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 1);
-  //__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, 1);
+  
   HAL_FDCAN_Start(&hfdcan1);
   FDCAN_TxHeaderTypeDef hfdcan1_pHeader;
   uint8_t hfdcan1_pTxData[2] = {0x00, 0x01};
@@ -177,9 +195,14 @@ int main(void)
   hfdcan1_pHeader.FDFormat = FDCAN_CLASSIC_CAN;
   //to do list: 这个地方为什么CAN不行
 	
+  Supercap_PID_Init(&Out_loop_PID, 1.1f, 0.00f, 0.0f, MAX_CAP_VOLTAGE, 0, 300);
+  Supercap_PID_Init(&In_loop_PID, 0.0f, 0.00f, 0.0f, MAX_DUTY, MIN_DUTY, 250);
+	
+	//C_left_kalman.Q = 0.1;
+	//C_left_kalman.R = 1;
   
 
-  HAL_UART_Transmit(&huart1, (uint8_t*)"Hello World\n", 12, 1000);
+  //HAL_UART_Transmit(&huart1, (uint8_t*)"Hello World\n", 12, 1000);
   //to do list: 弄弄这个配合VOFA
   /* USER CODE END 2 */
 
@@ -208,14 +231,23 @@ int main(void)
 		//HAL_UART_Transmit(&huart3, (uint8_t*)C_left.average, 2, 1000);
 
     //printf("%d,%4.2f\n", C_left.average,C_left.real_value);
+		temp = C_left.real_value_float;
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+		temp = C_left.real_value_12bits;
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+		temp = C_right.real_value_12bits;
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+		temp = V_bat.real_value_12bits;
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+		temp = V_cap.real_value_12bits;
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+		temp = V_1V6.real_value_12bits;
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+//		temp = In_loop_PID.output;
+//		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
 		
-		//HAL_UART_Transmit(&huart3, (uint8_t*)&(C_left.real_value), 4, 1000);
-		//HAL_UART_Transmit(&huart3, (uint8_t*)&(C_sys.real_value), 4, 1000);
-		//HAL_UART_Transmit(&huart3, (uint8_t*)&(V_sys_op.real_value), 4, 1000);
-		//HAL_UART_Transmit(&huart3, (uint8_t*)&(V_sys.real_value), 4, 1000);
-		HAL_UART_Transmit(&huart3, (uint8_t*)&(V_1V6.real_value), 4, 1000);
 		HAL_UART_Transmit(&huart3, (uint8_t*)tail, 4, 1000);
-
+	
     
 /*
     for(float i=0; i<100; i=i+1)

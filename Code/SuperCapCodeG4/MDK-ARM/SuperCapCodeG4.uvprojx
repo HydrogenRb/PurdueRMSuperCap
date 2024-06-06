@@ -565,6 +565,11 @@
           <GroupName>supercap</GroupName>
           <Files>
             <File>
+              <FileName>Kalman_Filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\Kalman_Filter.c</FilePath>
+            </File>
+            <File>
               <FileName>supercap.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Core\Src\supercap.c</FilePath>
@@ -578,6 +583,11 @@
               <FileName>Serial.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\Core\Inc\Serial.h</FilePath>
+            </File>
+            <File>
+              <FileName>Kalman_Filter.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\Kalman_Filter.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc9VcskR.s 			page 1
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc9VcskR.s 			page 1
   28:Core/Src/gpio.c **** /*----------------------------------------------------------------------------*/
   29:Core/Src/gpio.c **** /* Configure GPIO                                                             */
   30:Core/Src/gpio.c **** /*----------------------------------------------------------------------------*/
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc9VcskR.s 			page 2
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s 			page 2
 
 
   31:Core/Src/gpio.c **** /* USER CODE BEGIN 1 */
@@ -104,7 +104,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc9VcskR.s 			page 1
   51              	.LBB2:
   52              		.loc 1 48 3 view .LVU4
   53              		.loc 1 48 3 view .LVU5
-  54 0010 294B     		ldr	r3, .L3
+  54 0010 254B     		ldr	r3, .L3
   55 0012 DA6C     		ldr	r2, [r3, #76]
   56 0014 42F01002 		orr	r2, r2, #16
   57 0018 DA64     		str	r2, [r3, #76]
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc9VcskR.s 			page 1
   65              		.loc 1 48 3 view .LVU8
   49:Core/Src/gpio.c ****   __HAL_RCC_GPIOC_CLK_ENABLE();
   66              		.loc 1 49 3 view .LVU9
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc9VcskR.s 			page 3
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s 			page 3
 
 
   67              	.LBB3:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc9VcskR.s 			page 1
  118              		.loc 1 52 3 view .LVU30
  119 0062 DA6C     		ldr	r2, [r3, #76]
  120 0064 02F00202 		and	r2, r2, #2
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc9VcskR.s 			page 4
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s 			page 4
 
 
  121 0068 0592     		str	r2, [sp, #20]
@@ -204,20 +204,20 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc9VcskR.s 			page 1
  140              		.loc 1 53 3 view .LVU38
   54:Core/Src/gpio.c **** 
   55:Core/Src/gpio.c ****   /*Configure GPIO pin Output Level */
-  56:Core/Src/gpio.c ****   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+  56:Core/Src/gpio.c ****   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_RESET);
  141              		.loc 1 56 3 view .LVU39
- 142 007e 0F4D     		ldr	r5, .L3+4
+ 142 007e 0B4D     		ldr	r5, .L3+4
  143 0080 2246     		mov	r2, r4
- 144 0082 4FF48041 		mov	r1, #16384
+ 144 0082 4FF44041 		mov	r1, #49152
  145 0086 2846     		mov	r0, r5
  146 0088 FFF7FEFF 		bl	HAL_GPIO_WritePin
  147              	.LVL0:
   57:Core/Src/gpio.c **** 
-  58:Core/Src/gpio.c ****   /*Configure GPIO pin : PB14 */
-  59:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = GPIO_PIN_14;
+  58:Core/Src/gpio.c ****   /*Configure GPIO pins : PB14 PB15 */
+  59:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = GPIO_PIN_14|GPIO_PIN_15;
  148              		.loc 1 59 3 view .LVU40
  149              		.loc 1 59 23 is_stmt 0 view .LVU41
- 150 008c 4FF48043 		mov	r3, #16384
+ 150 008c 4FF44043 		mov	r3, #49152
  151 0090 0793     		str	r3, [sp, #28]
   60:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
  152              		.loc 1 60 3 is_stmt 1 view .LVU42
@@ -238,59 +238,38 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc9VcskR.s 			page 1
  164 009c 2846     		mov	r0, r5
  165 009e FFF7FEFF 		bl	HAL_GPIO_Init
  166              	.LVL1:
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc9VcskR.s 			page 5
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s 			page 5
 
 
   64:Core/Src/gpio.c **** 
-  65:Core/Src/gpio.c ****   /*Configure GPIO pin : PB15 */
-  66:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = GPIO_PIN_15;
- 167              		.loc 1 66 3 view .LVU49
- 168              		.loc 1 66 23 is_stmt 0 view .LVU50
- 169 00a2 4FF40043 		mov	r3, #32768
- 170 00a6 0793     		str	r3, [sp, #28]
-  67:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
- 171              		.loc 1 67 3 is_stmt 1 view .LVU51
- 172              		.loc 1 67 24 is_stmt 0 view .LVU52
- 173 00a8 0894     		str	r4, [sp, #32]
-  68:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
- 174              		.loc 1 68 3 is_stmt 1 view .LVU53
- 175              		.loc 1 68 24 is_stmt 0 view .LVU54
- 176 00aa 0994     		str	r4, [sp, #36]
-  69:Core/Src/gpio.c ****   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
- 177              		.loc 1 69 3 is_stmt 1 view .LVU55
- 178 00ac 07A9     		add	r1, sp, #28
- 179 00ae 2846     		mov	r0, r5
- 180 00b0 FFF7FEFF 		bl	HAL_GPIO_Init
- 181              	.LVL2:
-  70:Core/Src/gpio.c **** 
-  71:Core/Src/gpio.c **** }
- 182              		.loc 1 71 1 is_stmt 0 view .LVU56
- 183 00b4 0DB0     		add	sp, sp, #52
- 184              	.LCFI2:
- 185              		.cfi_def_cfa_offset 12
- 186              		@ sp needed
- 187 00b6 30BD     		pop	{r4, r5, pc}
- 188              	.L4:
- 189              		.align	2
- 190              	.L3:
- 191 00b8 00100240 		.word	1073876992
- 192 00bc 00040048 		.word	1207960576
- 193              		.cfi_endproc
- 194              	.LFE329:
- 196              		.text
- 197              	.Letext0:
- 198              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/ma
- 199              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/sy
- 200              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
- 201              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h"
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cc9VcskR.s 			page 6
+  65:Core/Src/gpio.c **** }
+ 167              		.loc 1 65 1 is_stmt 0 view .LVU49
+ 168 00a2 0DB0     		add	sp, sp, #52
+ 169              	.LCFI2:
+ 170              		.cfi_def_cfa_offset 12
+ 171              		@ sp needed
+ 172 00a4 30BD     		pop	{r4, r5, pc}
+ 173              	.L4:
+ 174 00a6 00BF     		.align	2
+ 175              	.L3:
+ 176 00a8 00100240 		.word	1073876992
+ 177 00ac 00040048 		.word	1207960576
+ 178              		.cfi_endproc
+ 179              	.LFE329:
+ 181              		.text
+ 182              	.Letext0:
+ 183              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/ma
+ 184              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/sy
+ 185              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
+ 186              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h"
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 gpio.c
-C:\Users\purdu\AppData\Local\Temp\cc9VcskR.s:21     .text.MX_GPIO_Init:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\cc9VcskR.s:27     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
-C:\Users\purdu\AppData\Local\Temp\cc9VcskR.s:191    .text.MX_GPIO_Init:000000b8 $d
+C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s:21     .text.MX_GPIO_Init:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s:27     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\purdu\AppData\Local\Temp\ccI07lKs.s:176    .text.MX_GPIO_Init:000000a8 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin
