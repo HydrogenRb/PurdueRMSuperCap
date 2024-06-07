@@ -32,11 +32,12 @@
 #include "Serial.h"
 #include "Kalman_Filter.h"
 
-#define MAX_CAP_VOLTAGE 1353 //3V in 12 bits
-#define MAX_CURRENT 2125 //0.5A in 12 bits
+#define MAX_CAP_VOLTAGE 2700 //24V in 12 bits
+#define MAX_CURRENT 2202 //1A in 12 bits
 #define MIN_CURRENT 2047 //0A in 12 bits
-#define MAX_DUTY 300
-#define MIN_DUTY 0
+#define MAX_DUTY 278
+#define MIN_DUTY 22
+#define V_1V65 2047 //1.65V in 12 bits
 
 /* USER CODE END Includes */
 
@@ -73,7 +74,7 @@
   _ADC_Sample_t V_sys = {0};
 	
 	_ADC_Sample_t V_1V6 = {0};
-	_ADC_Sample_t ADC4_3 = {0};
+	_ADC_Sample_t ADC4_12 = {0};
 
 	Kalman_Filter_t C_left_kalman = {.Q=0.5f,.R=1.0f};
 	
@@ -81,6 +82,7 @@
   _Supercap_PID_Controller_t In_loop_PID;
 	
 	float temp2;
+	uint16_t temp_counter;
 
 /* USER CODE END PV */
 
@@ -118,7 +120,7 @@ int main(void)
   V_bat.sample = &supercap_ADC3[0];
   V_sys.sample = &supercap_ADC3[1];
 	V_1V6.sample = &supercap_ADC4[0];
-	ADC4_3.sample = &supercap_ADC4[1];
+	ADC4_12.sample = &supercap_ADC4[1];
 	
 	float temp;
   /* USER CODE END 1 */
@@ -179,11 +181,15 @@ int main(void)
 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
 	
+	Supercap_Soft_Start();
+	
 	HAL_TIM_Base_Start_IT(&htim2);
 	HAL_TIM_Base_Start_IT(&htim5);
 	
-  Supercap_PID_Init(&Out_loop_PID, 1.1f, 0.00f, 0.0f, MAX_CAP_VOLTAGE, 0, 300);
-  Supercap_PID_Init(&In_loop_PID, 0.0f, 0.00f, 0.0f, MAX_DUTY, MIN_DUTY, 250);
+//  Supercap_PID_Init(&Out_loop_PID, 6.5f, 0.001f, 0.001f, 0, -MAX_CAP_VOLTAGE, 1500); //Out loop if control C_right
+	Supercap_PID_Init(&Out_loop_PID, 5.5f, 0.01f, 0.1f, MAX_CAP_VOLTAGE, 0, 2500); //Out loop if control C_sys
+  Supercap_PID_Init(&In_loop_PID, 0.0005f, 0.001f, 0.5f, MAX_DUTY, MIN_DUTY, 75);
+	
 	
   /* USER CODE END 2 */
 
@@ -196,16 +202,32 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
     //sending set: all current in A and the 1.65V
-		temp = Supercap_ADC_to_Current_Funtion(C_left.real_value_12bits,V_1V6.real_value_12bits);
+    /*
+		temp = Supercap_ADC_to_Current_Funtion(C_left.real_value_12bits,ADC4_12.real_value_12bits);
 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-		temp = Supercap_ADC_to_Current_Funtion(C_right.real_value_12bits,V_1V6.real_value_12bits);
+		temp = -Supercap_ADC_to_Current_Funtion(C_right.real_value_12bits,ADC4_12.real_value_12bits);
 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-		temp = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits,V_1V6.real_value_12bits);
+		temp = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits,ADC4_12.real_value_12bits);
 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
 		temp = Supercap_ADC_to_Voltage_Funtion_Ref(V_1V6.real_value_12bits);
 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+		temp = Supercap_ADC_to_Voltage_Funtion_Ref(ADC4_12.real_value_12bits);
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);*/
 
-    //sending set: 
+    //sending set: One side DCDC test bench
+    //Current, voltage and duty cycle
+		temp = -Supercap_ADC_to_Current_Funtion(C_right.real_value_12bits,ADC4_12.real_value_12bits);
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+		temp = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits,ADC4_12.real_value_12bits);
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+		temp = Supercap_ADC_to_Voltage_Funtion(V_bat.real_value_12bits);
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+		temp = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+		temp = In_loop_PID.output / 300.0f;
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+		temp = Out_loop_PID.output;
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
 
 		HAL_UART_Transmit(&huart3, (uint8_t*)tail, 4, 1000);
   }

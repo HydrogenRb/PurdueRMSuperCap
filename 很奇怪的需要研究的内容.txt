@@ -1,0 +1,10 @@
+C_sys在轻载(10w)以下有点奇怪，思考看看要不要做拟合？
+
+为什么1v6 (ADC4_3哪怕不开mos管都不准确？)
+
+note:
+for C_right, output is negative
+
+高电阻有奇怪的下降(见ipad图)   -> 下管没空的问题
+  
+

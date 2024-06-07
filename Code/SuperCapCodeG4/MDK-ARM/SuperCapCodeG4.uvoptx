@@ -168,32 +168,22 @@
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>C_sys,0x0A</ItemText>
+          <ItemText>C_right,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
-          <ItemText>V_bat,0x0A</ItemText>
+          <ItemText>C_left</ItemText>
         </Ww>
         <Ww>
           <count>4</count>
           <WinNumber>1</WinNumber>
-          <ItemText>V_cap,0x0A</ItemText>
+          <ItemText>C_sys,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>5</count>
           <WinNumber>1</WinNumber>
-          <ItemText>C_left,0x0A</ItemText>
-        </Ww>
-        <Ww>
-          <count>6</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>temp2</ItemText>
-        </Ww>
-        <Ww>
-          <count>7</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>C_left_kalman,0x0A</ItemText>
+          <ItemText>temp_counter</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
