@@ -170,6 +170,9 @@ int main(void)
   HAL_ADC_Start_DMA(&hadc2, (uint32_t*)supercap_ADC2, 3);
   HAL_ADC_Start_DMA(&hadc3, (uint32_t*)supercap_ADC3, 3);
 	HAL_ADC_Start_DMA(&hadc4, (uint32_t*)supercap_ADC4, 2);
+	//1 整理这个PWM，搞成一个函数，能够一键开关
+	//2 状态机，预备-运行-保护-关机，先进入预备，检查电压ok（这个要如何确定呢？）之后reset pid
+	//3 设置PID的7A和-7A上下限，然后看看能不能让功率跟紧一点
 	
 	HAL_TIM_Base_Start(&htim1);
 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
