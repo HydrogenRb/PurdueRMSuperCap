@@ -1,7 +1,7 @@
 Dependencies for Project 'SuperCapCodeG4', Target 'SuperCapCodeG4': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (startup_stm32g473xx.s)(0x666263C2)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_SuperCapCodeG4-IC:\Users\purdu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\purdu\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include--pd "__UVISION_VERSION SETA 538" --pd "_RTE_ SETA 1" --pd "STM32G473xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32g473xx.lst --xref -o supercapcodeg4\startup_stm32g473xx.o --depend supercapcodeg4\startup_stm32g473xx.d)
-F (../Core/Src/main.c)(0x6663CF7D)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SuperCapCodeG4-IC:\Users\purdu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\purdu\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G473xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G473xx-o supercapcodeg4\main.o --omf_browse supercapcodeg4\main.crf --depend supercapcodeg4\main.d)
+F (startup_stm32g473xx.s)(0x6664F37A)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_SuperCapCodeG4-IC:\Users\purdu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\purdu\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include--pd "__UVISION_VERSION SETA 538" --pd "_RTE_ SETA 1" --pd "STM32G473xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32g473xx.lst --xref -o supercapcodeg4\startup_stm32g473xx.o --depend supercapcodeg4\startup_stm32g473xx.d)
+F (../Core/Src/main.c)(0x66650E9E)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SuperCapCodeG4-IC:\Users\purdu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\purdu\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G473xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G473xx-o supercapcodeg4\main.o --omf_browse supercapcodeg4\main.crf --depend supercapcodeg4\main.d)
 I (../Core/Inc/main.h)(0x665A20E8)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x6633CE8B)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x665A206E)
@@ -44,7 +44,7 @@ I (../Core/Inc/fdcan.h)(0x665A20E7)
 I (../Core/Inc/tim.h)(0x665F80B3)
 I (../Core/Inc/usart.h)(0x665A20E8)
 I (../Core/Inc/gpio.h)(0x665A20E6)
-I (../Core/Inc/supercap.h)(0x6663C9B3)
+I (../Core/Inc/supercap.h)(0x6664F38D)
 I (../Core/Inc/Kalman_Filter.h)(0x6661250E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8ED772)
 I (../Core/Inc/Serial.h)(0x665CDD46)
@@ -200,7 +200,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x6633CE8B)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x6633CE8B)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x6633CE8B)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x6633CE8B)
-F (../Core/Src/tim.c)(0x666201B3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SuperCapCodeG4-IC:\Users\purdu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\purdu\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G473xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G473xx-o supercapcodeg4\tim.o --omf_browse supercapcodeg4\tim.crf --depend supercapcodeg4\tim.d)
+F (../Core/Src/tim.c)(0x6664F378)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SuperCapCodeG4-IC:\Users\purdu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\purdu\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G473xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G473xx-o supercapcodeg4\tim.o --omf_browse supercapcodeg4\tim.crf --depend supercapcodeg4\tim.d)
 I (../Core/Inc/tim.h)(0x665F80B3)
 I (../Core/Inc/main.h)(0x665A20E8)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x6633CE8B)
@@ -238,7 +238,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x6633CE8B)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x6633CE8B)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x6633CE8B)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x6633CE8B)
-F (../Core/Src/usart.c)(0x666263C0)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SuperCapCodeG4-IC:\Users\purdu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\purdu\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G473xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G473xx-o supercapcodeg4\usart.o --omf_browse supercapcodeg4\usart.crf --depend supercapcodeg4\usart.d)
+F (../Core/Src/usart.c)(0x6664F2D4)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SuperCapCodeG4-IC:\Users\purdu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\purdu\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G473xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G473xx-o supercapcodeg4\usart.o --omf_browse supercapcodeg4\usart.crf --depend supercapcodeg4\usart.d)
 I (../Core/Inc/usart.h)(0x665A20E8)
 I (../Core/Inc/main.h)(0x665A20E8)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x6633CE8B)
@@ -1112,8 +1112,8 @@ F (..\Core\Src\Kalman_Filter.c)(0x666125D1)(--c99 -c --cpu Cortex-M4.fp.sp -D__M
 I (../Core/Inc/Kalman_Filter.h)(0x6661250E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8ED772)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8ED772)
-F (..\Core\Src\supercap.c)(0x6663CEDD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SuperCapCodeG4-IC:\Users\purdu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\purdu\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G473xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G473xx-o supercapcodeg4\supercap_1.o --omf_browse supercapcodeg4\supercap_1.crf --depend supercapcodeg4\supercap_1.d)
-I (../Core/Inc/supercap.h)(0x6663C9B3)
+F (..\Core\Src\supercap.c)(0x66650F06)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SuperCapCodeG4-IC:\Users\purdu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\purdu\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G473xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G473xx-o supercapcodeg4\supercap_1.o --omf_browse supercapcodeg4\supercap_1.crf --depend supercapcodeg4\supercap_1.d)
+I (../Core/Inc/supercap.h)(0x6664F38D)
 I (../Core/Inc/main.h)(0x665A20E8)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x6633CE8B)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x665A206E)
@@ -1158,6 +1158,6 @@ I (../Core/Inc/usart.h)(0x665A20E8)
 I (../Core/Inc/gpio.h)(0x665A20E6)
 I (../Core/Inc/Kalman_Filter.h)(0x6661250E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8ED772)
-F (..\Core\Inc\supercap.h)(0x6663C9B3)()
+F (..\Core\Inc\supercap.h)(0x6664F38D)()
 F (..\Core\Inc\Serial.h)(0x665CDD46)()
 F (..\Core\Inc\Kalman_Filter.h)(0x6661250E)()

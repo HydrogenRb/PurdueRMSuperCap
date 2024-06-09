@@ -22,13 +22,30 @@ Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
 C:\Users\purdu\Desktop\Super Cap special folder\PurdueRMSuperCap\Code\SuperCapCodeG4Bi\MDK-ARM\SuperCapCodeG4.uvprojx
-Project File Date:  06/06/2024
+Project File Date:  06/08/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'SuperCapCodeG4'
 Note: source file '..\Core\Src\supercap.c' - object file renamed from 'SuperCapCodeG4\supercap.o' to 'SuperCapCodeG4\supercap_1.o'.
-"SuperCapCodeG4\SuperCapCodeG4.axf" - 0 Error(s), 0 Warning(s).
+compiling supercap.c...
+../Core/Inc/supercap.h(72): warning:  #1295-D: Deprecated declaration TIM2_NVIC - give arg types
+  void TIM2_NVIC();
+../Core/Inc/supercap.h(73): warning:  #1295-D: Deprecated declaration TIM5_NVIC - give arg types
+  void TIM5_NVIC();
+..\Core\Src\supercap.c(138): warning:  #1-D: last line of file ends without a newline
+  };
+..\Core\Src\supercap.c: 3 warnings, 0 errors
+compiling main.c...
+../Core/Inc/supercap.h(72): warning:  #1295-D: Deprecated declaration TIM2_NVIC - give arg types
+  void TIM2_NVIC();
+../Core/Inc/supercap.h(73): warning:  #1295-D: Deprecated declaration TIM5_NVIC - give arg types
+  void TIM5_NVIC();
+../Core/Src/main.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=18984 RO-data=568 RW-data=48 ZI-data=3184  
+FromELF: creating hex file...
+"SuperCapCodeG4\SuperCapCodeG4.axf" - 0 Error(s), 5 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -52,7 +69,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.6.0
       Include file:  CMSIS/Core/Include/tz_context.h
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

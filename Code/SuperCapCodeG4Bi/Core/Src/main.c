@@ -190,14 +190,18 @@ int main(void)
 	Supercap_Function_Init(&ADC4_12);
 	Supercap_Function_Init(&V_bat);
 	Supercap_Function_Init(&V_cap);
-	
-	HAL_TIM_Base_Start_IT(&htim2);
-	HAL_TIM_Base_Start_IT(&htim5);
 
-	Supercap_PID_Init(&PID_45W_loop, 0.001f, 0.0001f, 0.0f, MAX_CAP_VOLTAGE, 0, 2500);
+  Supercap_PID_Init(&PID_45W_loop, 0.001f, 0.0001f, 0.0f, MAX_CAP_VOLTAGE, 0, 2500);
   Supercap_PID_Init(&PID_24V_loop, 1.0f, 0.000f, 0.0f, MAX_CAP_VOLTAGE, 0, 2500);
   Supercap_PID_Init(&PID_7A_loop, 1.0f, 0.000f, 0.0f, MAX_CAP_VOLTAGE, 0, 2500);
-	Supercap_PID_Init(&PID_voltage_loop, 0.0001f, 0.00001f, 0.0f, MAX_DUTY, 0, 150);
+	Supercap_PID_Init(&PID_voltage_loop, 0.00001f, 0.000001f, 0.05f, MAX_DUTY, 0, 30);
+	
+  Supercap_PWM_left(0);
+
+HAL_TIM_Base_Start_IT(&htim2);
+  //while(V_cap.real_value_12bits<11){};
+	HAL_Delay(1000);
+	//HAL_TIM_Base_Start_IT(&htim5);
 
 	
   /* USER CODE END 2 */
@@ -211,6 +215,7 @@ int main(void)
     /* USER CODE BEGIN 3 */
     //sending set: One side DCDC test bench
     //Current, voltage and duty cycle
+    /*
 		temp = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits,2047);
 		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
     temp = PID_45W_loop.output;
@@ -220,6 +225,24 @@ int main(void)
     temp = PID_7A_loop.output;
     HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
     temp = temp2;
+    HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+		temp = PID_voltage_loop.output;
+    HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);*/
+
+    //test set 2: This set test the limitation of C_right
+		temp = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits,2047);
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+		temp = Supercap_ADC_to_Current_Funtion(C_right.real_value_12bits,2047);
+		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+    temp = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
+    HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+    temp = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
+    HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+    temp = Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
+    HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+    temp = Supercap_ADC_to_Voltage_Funtion(temp2); //output PWM
+    HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
+    temp = temp2 * 0.1f;
     HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
 		temp = PID_voltage_loop.output;
     HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);

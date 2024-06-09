@@ -24,12 +24,20 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 void Supercap_Soft_Start(){
 }
 
+//state machine
+//state 1(Begin): begin, if V_cap > 0.1V, go to state 2
+//state 2(Cap in): stay
+
 void TIM2_NVIC(){
   Supercap_First_Order_Filter_ADC_Function_Alpha(&C_sys, 6);
   Supercap_First_Order_Filter_ADC_Function_Alpha(&C_right, 4);
   Supercap_First_Order_Filter_ADC_Function_Alpha(&ADC4_12,2);
   Supercap_First_Order_Filter_ADC_Function_Alpha(&V_bat, 2);
   Supercap_First_Order_Filter_ADC_Function_Alpha(&V_cap, 4);
+	Supercap_First_Order_Filter_ADC_Function_Alpha(&V_sys, 4);
+	Supercap_First_Order_Filter_ADC_Function_Alpha(&V_cap_op, 4);
+	Supercap_First_Order_Filter_ADC_Function_Alpha(&V_sys_op, 4);
+	Supercap_First_Order_Filter_ADC_Function_Alpha(&C_left, 4);
 }
 
 void TIM5_NVIC(){
@@ -40,8 +48,8 @@ void TIM5_NVIC(){
 	PID_24V_loop.output = 2707;
 	//PID_7A_loop.output = 450;
   temp2 = Supercap_Compare(PID_45W_loop.output, PID_24V_loop.output, PID_7A_loop.output);
-	Supercap_PID_Controller_Function(&PID_voltage_loop, &V_cap, temp2, 0.1f*temp2);
-	Supercap_PWM_left(temp2*0.1f);
+	Supercap_PID_Controller_Function(&PID_voltage_loop, &V_cap, temp2, 0.07f*temp2);
+	Supercap_PWM_left(temp2*0.12f);
 }
 
 void Supercap_PID_Controller_Function(_Supercap_PID_Controller_t *pid_controller, _ADC_Sample_t *adc_sample, int16_t target, float offset) {

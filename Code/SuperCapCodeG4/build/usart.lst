@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
   28:Core/Src/usart.c **** UART_HandleTypeDef huart2;
   29:Core/Src/usart.c **** UART_HandleTypeDef huart3;
   30:Core/Src/usart.c **** 
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 2
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 2
 
 
   31:Core/Src/usart.c **** /* USART1 init function */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
   50:Core/Src/usart.c ****   huart1.Init.OverSampling = UART_OVERSAMPLING_16;
   64              		.loc 1 50 3 is_stmt 1 view .LVU15
   65              		.loc 1 50 28 is_stmt 0 view .LVU16
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 3
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 3
 
 
   66 001c C361     		str	r3, [r0, #28]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  104 0040 FFF7FEFF 		bl	HAL_UARTEx_DisableFifoMode
  105              	.LVL3:
  106              		.loc 1 66 6 discriminator 1 view .LVU34
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 4
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 4
 
 
  107 0044 48B9     		cbnz	r0, .L10
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
   77:Core/Src/usart.c **** void MX_USART2_UART_Init(void)
   78:Core/Src/usart.c **** {
  149              		.loc 1 78 1 is_stmt 1 view -0
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 5
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 5
 
 
  150              		.cfi_startproc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  187              		.loc 1 95 3 is_stmt 1 view .LVU58
  188              		.loc 1 95 30 is_stmt 0 view .LVU59
  189 001e 0362     		str	r3, [r0, #32]
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 6
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 6
 
 
   96:Core/Src/usart.c ****   huart2.Init.ClockPrescaler = UART_PRESCALER_DIV1;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  111:Core/Src/usart.c ****   {
  112:Core/Src/usart.c ****     Error_Handler();
  113:Core/Src/usart.c ****   }
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 7
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 7
 
 
  114:Core/Src/usart.c ****   /* USER CODE BEGIN USART2_Init 2 */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  272              		@ frame_needed = 0, uses_anonymous_args = 0
  273 0000 08B5     		push	{r3, lr}
  274              	.LCFI2:
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 8
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 8
 
 
  275              		.cfi_def_cfa_offset 8
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  311              		.loc 1 140 30 is_stmt 0 view .LVU102
  312 001e 4362     		str	r3, [r0, #36]
  141:Core/Src/usart.c ****   huart3.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 9
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 9
 
 
  313              		.loc 1 141 3 is_stmt 1 view .LVU103
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  160:Core/Src/usart.c ****   /* USER CODE END USART3_Init 2 */
  161:Core/Src/usart.c **** 
  162:Core/Src/usart.c **** }
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 10
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 10
 
 
  349              		.loc 1 162 1 view .LVU117
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  398              		.cfi_def_cfa_offset 8
  399              		.cfi_offset 4, -8
  400              		.cfi_offset 14, -4
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 11
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 11
 
 
  401 0002 A0B0     		sub	sp, sp, #128
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  193:Core/Src/usart.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
  194:Core/Src/usart.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
  195:Core/Src/usart.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 12
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 12
 
 
  196:Core/Src/usart.c ****     GPIO_InitStruct.Alternate = GPIO_AF7_USART1;
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  239:Core/Src/usart.c ****   /* USER CODE BEGIN USART3_MspInit 0 */
  240:Core/Src/usart.c **** 
  241:Core/Src/usart.c ****   /* USER CODE END USART3_MspInit 0 */
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 13
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 13
 
 
  242:Core/Src/usart.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  458 0038 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
  459              	.LVL28:
  179:Core/Src/usart.c ****     {
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 14
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 14
 
 
  460              		.loc 1 179 8 discriminator 1 view .LVU143
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  193:Core/Src/usart.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
  499              		.loc 1 193 26 is_stmt 0 view .LVU159
  500 006a 0223     		movs	r3, #2
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 15
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 15
 
 
  501 006c 1C93     		str	r3, [sp, #112]
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  219:Core/Src/usart.c **** 
  540              		.loc 1 219 5 view .LVU175
  219:Core/Src/usart.c **** 
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 16
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 16
 
 
  541              		.loc 1 219 5 view .LVU176
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  580 00c6 1D93     		str	r3, [sp, #116]
  229:Core/Src/usart.c ****     GPIO_InitStruct.Alternate = GPIO_AF7_USART2;
  581              		.loc 1 229 5 is_stmt 1 view .LVU192
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 17
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 17
 
 
  229:Core/Src/usart.c ****     GPIO_InitStruct.Alternate = GPIO_AF7_USART2;
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  621              		.loc 1 253 5 view .LVU207
  622 00f4 9A6D     		ldr	r2, [r3, #88]
  623 00f6 02F48022 		and	r2, r2, #262144
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 18
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 18
 
 
  624 00fa 0492     		str	r2, [sp, #16]
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  660              		.loc 1 264 31 is_stmt 0 view .LVU225
  661 0120 0723     		movs	r3, #7
  662 0122 1F93     		str	r3, [sp, #124]
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 19
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 19
 
 
  265:Core/Src/usart.c **** 
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  712 0006 9342     		cmp	r3, r2
  713 0008 06D0     		beq	.L58
  277:Core/Src/usart.c ****   {
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 20
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 20
 
 
  278:Core/Src/usart.c ****   /* USER CODE BEGIN USART1_MspDeInit 0 */
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  320:Core/Src/usart.c ****     /**USART3 GPIO Configuration
  321:Core/Src/usart.c ****     PC10     ------> USART3_TX
  322:Core/Src/usart.c ****     PC11     ------> USART3_RX
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 21
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 21
 
 
  323:Core/Src/usart.c ****     */
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  324:Core/Src/usart.c **** 
  765              		.loc 1 324 5 view .LVU246
  766 0054 4FF44061 		mov	r1, #3072
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 22
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 22
 
 
  767 0058 0548     		ldr	r0, .L61+16
@@ -1318,37 +1318,37 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 1
  815              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h"
  816              		.file 10 "Core/Inc/usart.h"
  817              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h"
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 23
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 23
 
 
  818              		.file 12 "Core/Inc/main.h"
  819              		.file 13 "<built-in>"
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s 			page 24
+ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usart.c
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:21     .text.MX_USART1_UART_Init:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:27     .text.MX_USART1_UART_Init:00000000 MX_USART1_UART_Init
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:135    .text.MX_USART1_UART_Init:00000060 $d
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:804    .bss.huart1:00000000 huart1
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:141    .text.MX_USART2_UART_Init:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:147    .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:255    .text.MX_USART2_UART_Init:00000060 $d
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:797    .bss.huart2:00000000 huart2
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:261    .text.MX_USART3_UART_Init:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:267    .text.MX_USART3_UART_Init:00000000 MX_USART3_UART_Init
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:375    .text.MX_USART3_UART_Init:00000060 $d
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:790    .bss.huart3:00000000 huart3
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:382    .text.HAL_UART_MspInit:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:388    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:678    .text.HAL_UART_MspInit:00000134 $d
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:688    .text.HAL_UART_MspDeInit:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:694    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:777    .text.HAL_UART_MspDeInit:00000060 $d
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:787    .bss.huart3:00000000 $d
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:794    .bss.huart2:00000000 $d
-C:\Users\HRb\AppData\Local\Temp\cc3w8AH7.s:801    .bss.huart1:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:21     .text.MX_USART1_UART_Init:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:27     .text.MX_USART1_UART_Init:00000000 MX_USART1_UART_Init
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:135    .text.MX_USART1_UART_Init:00000060 $d
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:804    .bss.huart1:00000000 huart1
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:141    .text.MX_USART2_UART_Init:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:147    .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:255    .text.MX_USART2_UART_Init:00000060 $d
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:797    .bss.huart2:00000000 huart2
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:261    .text.MX_USART3_UART_Init:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:267    .text.MX_USART3_UART_Init:00000000 MX_USART3_UART_Init
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:375    .text.MX_USART3_UART_Init:00000060 $d
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:790    .bss.huart3:00000000 huart3
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:382    .text.HAL_UART_MspInit:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:388    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:678    .text.HAL_UART_MspInit:00000134 $d
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:688    .text.HAL_UART_MspDeInit:00000000 $t
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:694    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:777    .text.HAL_UART_MspDeInit:00000060 $d
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:787    .bss.huart3:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:794    .bss.huart2:00000000 $d
+C:\Users\purdu\AppData\Local\Temp\ccdOs1SO.s:801    .bss.huart1:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_UART_Init
