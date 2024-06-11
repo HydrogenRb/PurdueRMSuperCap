@@ -43,6 +43,8 @@ typedef struct{
 	int16_t I_max;
 }_Supercap_PID_Controller_t;
 
+enum _CAP_STATE_T {READY = 1, RUNNING, STOP, FAULT, INIT};
+
 extern uint16_t supercap_ADC1[2];
 extern uint16_t supercap_ADC2[3];
 extern uint16_t supercap_ADC3[3];
@@ -60,12 +62,16 @@ extern _ADC_Sample_t ADC4_12;
 extern Kalman_Filter_t C_left_kalman;
 
 extern _Supercap_PID_Controller_t PID_45W_loop;
-extern _Supercap_PID_Controller_t PID_24V_loop;
+extern _Supercap_PID_Controller_t PID_n7A_loop;
 extern _Supercap_PID_Controller_t PID_7A_loop;
 extern _Supercap_PID_Controller_t PID_voltage_loop;
 
 extern float temp2;
 extern uint16_t temp_counter;
+
+extern uint32_t TIM3_AUTORELOAD_over100;
+extern enum _CAP_STATE_T CAP_STATE;
+
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
 
@@ -82,9 +88,21 @@ float Supercap_ADC_to_Voltage_Funtion_Ref(uint16_t adc_value);
 float Supercap_ADC_to_Current_Funtion(uint16_t adc_value, uint16_t ref_voltage);
 void Supercap_Function_Init(_ADC_Sample_t *adc_sample);
 void Supercap_PID_Init(_Supercap_PID_Controller_t *pid_controller, float Kp, float Ki, float Kd, int16_t output_max, int16_t output_min, int16_t I_max);
+void Supercap_PID_Reset(_Supercap_PID_Controller_t *pid_controller);
 int16_t Supercap_Compare(int16_t Output1, int16_t Output2, int16_t Output3);
+int16_t Supercap_Limit(int16_t input, int16_t max, int16_t min);
+void Supercap_FSM();
 void Supercap_PWM_left(int16_t pwm_duty_cycle);
 void Supercap_PWM_right(int16_t pwm_duty_cycle);
+void Supercap_PWM_GND();
+void Supercap_DCDC_Start();
+void Supercap_DCDC_Stop();
+void Supercap_AUX_Init();
+void Supercap_AUX_RedLED(uint32_t brightness);
+void Supercap_AUX_YellowLED(uint32_t brightness);
+void Supercap_AUX_BlueLED(uint32_t brightness);
+void Supercap_AUX_MachineSpirit(uint32_t brightness);
+void Supercap_AUX_Buzzer(uint32_t volume, int16_t note);
 
 #ifdef __cplusplus
 }

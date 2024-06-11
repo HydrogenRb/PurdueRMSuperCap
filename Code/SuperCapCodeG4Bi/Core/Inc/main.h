@@ -32,6 +32,9 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#define CURRENT_LIMIT 2358.0f //2A in 12 bits
+#define VOLTAGE_LIMIT 395.0f
+
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

@@ -21,7 +21,8 @@
         "stm32g4xx_hal_def.h": "c",
         "supercap_task.h": "c",
         "tim.h": "c",
-        "supercap.h": "c"
+        "supercap.h": "c",
+        "kalman_filter.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

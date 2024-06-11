@@ -39,6 +39,7 @@
 #define MIN_DUTY 22
 #define V_1V65 2047 //1.65V in 12 bits
 
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -79,12 +80,14 @@
 	Kalman_Filter_t C_left_kalman = {.Q=0.5f,.R=1.0f};
 	
   _Supercap_PID_Controller_t PID_45W_loop;
-  _Supercap_PID_Controller_t PID_24V_loop;
+  _Supercap_PID_Controller_t PID_n7A_loop;
   _Supercap_PID_Controller_t PID_7A_loop;
 	_Supercap_PID_Controller_t PID_voltage_loop;
+  enum _CAP_STATE_T CAP_STATE;
 	
 	float temp2;
 	uint16_t temp_counter;
+	uint32_t TIM3_AUTORELOAD_over100;
 
 /* USER CODE END PV */
 
@@ -100,6 +103,15 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+typedef struct {
+    float data[8];   // 5个浮点数
+    char tail[4];    // 尾部字符数组
+} DataPacket;
+
+DataPacket data_packet = {
+    .data = {1.1f, 2.2f, 3.3f, 4.4f, 5.5f, 6.6f, 7.7f, 8.8f},
+    .tail = {0x00, 0x00, 0x80, 0x7f}
+};
 
 /* USER CODE END 0 */
 
@@ -125,6 +137,7 @@ int main(void)
 	ADC4_12.sample = &supercap_ADC4[1];
 	
 	float temp;
+  float data_array[7];
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -165,28 +178,23 @@ int main(void)
 	HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
 	HAL_ADCEx_Calibration_Start(&hadc3, ADC_SINGLE_ENDED);
 	HAL_ADCEx_Calibration_Start(&hadc4, ADC_SINGLE_ENDED);
-
   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)supercap_ADC1, 2);
   HAL_ADC_Start_DMA(&hadc2, (uint32_t*)supercap_ADC2, 3);
   HAL_ADC_Start_DMA(&hadc3, (uint32_t*)supercap_ADC3, 3);
 	HAL_ADC_Start_DMA(&hadc4, (uint32_t*)supercap_ADC4, 2);
-	//1 整理这个PWM，搞成一个函数，能够一键开关
-	//2 状态机，预备-运行-保护-关机，先进入预备，检查电压ok（这个要如何确定呢？）之后reset pid
-	//3 设置PID的7A和-7A上下限，然后看看能不能让功率跟紧一点
-	
+  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&data_packet, 36);
+  CAP_STATE = INIT;
 	HAL_TIM_Base_Start(&htim1);
-	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-  HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
-  HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_4);
-	
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
-	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
-	
-	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
-	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
-	
-	//Supercap_Soft_Start();
+  Supercap_AUX_Init();
+
+  int16_t notes1[] = {11, 11, 6, 5, 5, 1, 2, 3, 3, 2, 1, -6};
+  for(int i = 0; i < 2; i++){
+    Supercap_AUX_Buzzer(90, notes1[i]);
+    HAL_Delay(300);
+    Supercap_AUX_Buzzer(0, 0);
+    HAL_Delay(20);
+  }
+  Supercap_AUX_Buzzer(0, 0);
 	
 	Supercap_Function_Init(&C_sys);
 	Supercap_Function_Init(&C_right);
@@ -194,18 +202,32 @@ int main(void)
 	Supercap_Function_Init(&V_bat);
 	Supercap_Function_Init(&V_cap);
 
-  Supercap_PID_Init(&PID_45W_loop, 0.001f, 0.0001f, 0.0f, MAX_CAP_VOLTAGE, 0, 2500);
-  Supercap_PID_Init(&PID_24V_loop, 1.0f, 0.000f, 0.0f, MAX_CAP_VOLTAGE, 0, 2500);
-  Supercap_PID_Init(&PID_7A_loop, 1.0f, 0.000f, 0.0f, MAX_CAP_VOLTAGE, 0, 2500);
-	Supercap_PID_Init(&PID_voltage_loop, 0.00001f, 0.000001f, 0.05f, MAX_DUTY, 0, 30);
-	
-  Supercap_PWM_left(0);
+  Supercap_PID_Init(&PID_45W_loop, 0.005f, 0.0001f, 0.0f, MAX_CAP_VOLTAGE, 0, 2500);
+  Supercap_PID_Init(&PID_n7A_loop, 0.3f, 0.00001f, 0.001f, MAX_CAP_VOLTAGE, 0, 300);
+  Supercap_PID_Init(&PID_7A_loop, 0.3f, 0.00001f, 0.001f, MAX_CAP_VOLTAGE, 0, 300);
+	Supercap_PID_Init(&PID_voltage_loop, 0.00001f, 0.00001f, 0.08f, MAX_DUTY, 0, 70);
 
-HAL_TIM_Base_Start_IT(&htim2);
-  //while(V_cap.real_value_12bits<11){};
+  uint16_t notes2[] = {6, 5, 5, 1, 2, 3, 3, 2, 1, -6};
+  for(int i = 0; i < 10; i++){
+    Supercap_AUX_Buzzer(90, notes2[i]);
+    HAL_Delay(200);
+    Supercap_AUX_Buzzer(0, 0);
+    HAL_Delay(15);
+  }
+  Supercap_AUX_Buzzer(0, 0);
+
+  HAL_TIM_Base_Start_IT(&htim2);
 	HAL_Delay(1000);
-	//HAL_TIM_Base_Start_IT(&htim5);
 
+  uint16_t notes3[] = {1, 2, 3, 5, 5, 6, 5, 3, 3, 2, 1, 2, 5};
+  for(int i = 0; i < 13; i++){
+    Supercap_AUX_Buzzer(90, notes3[i]);
+    HAL_Delay(200);
+    Supercap_AUX_Buzzer(0, 0);
+    HAL_Delay(15);
+  }
+  Supercap_AUX_Buzzer(0, 0); 
+	HAL_TIM_Base_Start_IT(&htim5);
 	
   /* USER CODE END 2 */
 
@@ -214,43 +236,17 @@ HAL_TIM_Base_Start_IT(&htim2);
   while (1)
   {
     /* USER CODE END WHILE */
-
+    data_packet.data[0] = Supercap_ADC_to_Current_Funtion(C_right.real_value_12bits, 2047);
+    data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
+    data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
+    data_packet.data[3] = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
+    data_packet.data[4] = Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
+    data_packet.data[5] = Supercap_ADC_to_Voltage_Funtion(PID_n7A_loop.output);
+		data_packet.data[6] = (float)PID_voltage_loop.output*0.03f;
+		data_packet.data[7] = (float)temp2*0.1f*0.03f;
+		//bug report: I put data[5], So, the tail be removed
     /* USER CODE BEGIN 3 */
-    //sending set: One side DCDC test bench
-    //Current, voltage and duty cycle
-    /*
-		temp = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits,2047);
-		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-    temp = PID_45W_loop.output;
-    HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-    temp = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
-    HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-    temp = PID_7A_loop.output;
-    HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-    temp = temp2;
-    HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-		temp = PID_voltage_loop.output;
-    HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);*/
-
-    //test set 2: This set test the limitation of C_right
-		temp = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits,2047);
-		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-		temp = Supercap_ADC_to_Current_Funtion(C_right.real_value_12bits,2047);
-		HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-    temp = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
-    HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-    temp = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
-    HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-    temp = Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
-    HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-    temp = Supercap_ADC_to_Voltage_Funtion(temp2); //output PWM
-    HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-    temp = temp2 * 0.1f;
-    HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-		temp = PID_voltage_loop.output;
-    HAL_UART_Transmit(&huart3, (uint8_t*)&(temp), 4, 1000);
-
-		HAL_UART_Transmit(&huart3, (uint8_t*)tail, 4, 1000);
+    
   }
   /* USER CODE END 3 */
 }
