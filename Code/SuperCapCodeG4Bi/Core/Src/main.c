@@ -104,8 +104,8 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 
 typedef struct {
-    float data[8];   // 5个浮点数
-    char tail[4];    // 尾部字符数组
+    float data[8];
+    char tail[4];
 } DataPacket;
 
 DataPacket data_packet = {
@@ -174,6 +174,42 @@ int main(void)
   MX_TIM2_Init();
   MX_TIM5_Init();
   /* USER CODE BEGIN 2 */
+  FDCAN1_RXFilter.IdType = FDCAN_STANDARD_ID;
+  FDCAN1_RXFilter.FilterIndex = 0;
+  FDCAN1_RXFilter.FilterType = FDCAN_FILTER_MASK;
+  FDCAN1_RXFilter.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
+  FDCAN1_RXFilter.FilterID1 = 0x000;
+  FDCAN1_RXFilter.FilterID2 = 0xFFF;
+
+  // Configure FDCAN1 TX header
+  TxHeader.Identifier = 0x166;
+  TxHeader.IdType = FDCAN_STANDARD_ID;
+  TxHeader.TxFrameType = FDCAN_DATA_FRAME;
+  TxHeader.DataLength = FDCAN_DLC_BYTES_1;
+  TxHeader.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
+  TxHeader.BitRateSwitch = FDCAN_BRS_OFF;
+  TxHeader.FDFormat = FDCAN_CLASSIC_CAN;
+  TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
+  TxHeader.MessageMarker = 0;
+
+
+  HAL_FDCAN_ConfigFilter(&hfdcan1, &FDCAN1_RXFilter);
+  HAL_FDCAN_Start(&hfdcan1);
+  while(1){
+    // FDCAN1 message structure
+    uint8_t TxData[1];
+    
+    // Prepare data to be sent
+    TxData[0] = 66;
+
+    // Send data using FDCAN1
+    if (HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData) != HAL_OK) {
+      //Error_Handler();
+      HAL_Delay(1000);
+    }
+    HAL_Delay(100);
+  }
+
 	HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
 	HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
 	HAL_ADCEx_Calibration_Start(&hadc3, ADC_SINGLE_ENDED);
@@ -236,15 +272,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    data_packet.data[0] = Supercap_ADC_to_Current_Funtion(C_right.real_value_12bits, 2047);
-    data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
-    data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
-    data_packet.data[3] = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
-    data_packet.data[4] = Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
-    data_packet.data[5] = Supercap_ADC_to_Voltage_Funtion(PID_n7A_loop.output);
-		data_packet.data[6] = (float)PID_voltage_loop.output*0.03f;
-		data_packet.data[7] = (float)temp2*0.1f*0.03f;
-		//bug report: I put data[5], So, the tail be removed
+
     /* USER CODE BEGIN 3 */
     
   }

@@ -35,6 +35,8 @@ extern "C" {
 extern FDCAN_HandleTypeDef hfdcan1;
 
 /* USER CODE BEGIN Private defines */
+extern FDCAN_TxHeaderTypeDef TxHeader;
+extern FDCAN_FilterTypeDef FDCAN1_RXFilter;
 
 /* USER CODE END Private defines */
 
