@@ -1,0 +1,27 @@
+Hero, Sentry and wheel leg
+1. Check the 3 LEDs in gimbal and 3 LED in chassis -> connector not connect or the referee system cut the channel because of super high power -> Check if short and the wire
+	Reconnect (in 1 min)
+	If the boards strange(DMM said not connect or the short inside boards), Change the slipring boards (in 5 mins)
+	Remove the short channel (no estimation time)
+2. Check the LED in the center boards (If one side of chassis not work, check this first) -> Connector broken
+	If the SMT connector(for CAN) broken (pull the wire gently), use another one (! before the competition, make sure we have window for change) (in 2 mins)
+	If the wire broken, use another one (in 2 mins)
+	If the motor broken, change robot
+3. Check the LED in the motor -> the CAN not work
+4. Check if the CAN wire and connector broken (cut off or broken or connector broken)
+	Before competition, make sure all connector work, so we have backup.
+5. Check if the CAN reverse (double check with the table)
+	Prepare the AUX boards
+6. Check if the UART reverse (the number of reverse connector should be odd)
+	Prepare the AUX boards
+
+Balance and sentry
+1. We can use black center boards to check the power
+
+Super capacitor
+1. Before competition, make sure the Machine Spirit LED is on
+2. At 3 mins, check it is not on fault
+3. At 3 mins, check the temperature of the MOSFET
+4. At 3 mins, check the red LED flashing
+5. Connect in order!:
+    1. 

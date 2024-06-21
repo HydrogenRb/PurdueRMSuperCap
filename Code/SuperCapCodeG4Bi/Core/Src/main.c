@@ -32,7 +32,7 @@
 #include "Serial.h"
 #include "Kalman_Filter.h"
 
-#define MAX_CAP_VOLTAGE 2700 //24V in 12 bits
+#define MAX_CAP_VOLTAGE 2820 //24V in 12 bits
 #define MAX_CURRENT 2202 //1A in 12 bits
 #define MIN_CURRENT 2047 //0A in 12 bits
 #define MAX_DUTY 278
@@ -64,6 +64,9 @@
   uint16_t supercap_ADC2[3];
   uint16_t supercap_ADC3[3];
 	uint16_t supercap_ADC4[2];
+	
+	uint16_t supercap_max_power_current;
+	uint16_t supercap_max_power_STM32;
 
   _ADC_Sample_t C_left = {0};
   _ADC_Sample_t C_sys = {0};
@@ -73,21 +76,27 @@
   _ADC_Sample_t V_cap = {0}; //V_right
   _ADC_Sample_t V_bat = {0}; //V_left
   _ADC_Sample_t V_sys = {0};
-	
 	_ADC_Sample_t V_1V6 = {0};
 	_ADC_Sample_t ADC4_12 = {0};
-
-	Kalman_Filter_t C_left_kalman = {.Q=0.5f,.R=1.0f};
 	
   _Supercap_PID_Controller_t PID_45W_loop;
   _Supercap_PID_Controller_t PID_n7A_loop;
   _Supercap_PID_Controller_t PID_7A_loop;
 	_Supercap_PID_Controller_t PID_voltage_loop;
+	
+	uint8_t FDCAN_Notification_flag;
+	uint8_t FDCAN_R_data;
+	uint8_t TxData[1];
+	
   enum _CAP_STATE_T CAP_STATE;
 	
 	float temp2;
+	float supercap_target_voltage;
 	uint16_t temp_counter;
 	uint32_t TIM3_AUTORELOAD_over100;
+
+	
+	uint32_t debug_counter;
 
 /* USER CODE END PV */
 
@@ -156,60 +165,56 @@ int main(void)
 
   /* USER CODE END SysInit */
 
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_DMA_Init();
-  MX_ADC1_Init();
-  MX_ADC2_Init();
-  MX_TIM1_Init();
-  MX_USART1_UART_Init();
-  MX_USART2_UART_Init();
-  MX_USART3_UART_Init();
-  MX_TIM3_Init();
-  MX_TIM4_Init();
-  MX_ADC4_Init();
-  MX_FDCAN1_Init();
-  MX_ADC5_Init();
-  MX_ADC3_Init();
-  MX_TIM2_Init();
-  MX_TIM5_Init();
-  /* USER CODE BEGIN 2 */
-  FDCAN1_RXFilter.IdType = FDCAN_STANDARD_ID;
-  FDCAN1_RXFilter.FilterIndex = 0;
-  FDCAN1_RXFilter.FilterType = FDCAN_FILTER_MASK;
-  FDCAN1_RXFilter.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
-  FDCAN1_RXFilter.FilterID1 = 0x000;
-  FDCAN1_RXFilter.FilterID2 = 0xFFF;
+		/* Initialize all configured peripherals */
+		MX_GPIO_Init();
+		MX_DMA_Init();
+		MX_ADC1_Init();
+		MX_ADC2_Init();
+		MX_TIM1_Init();
+		MX_USART1_UART_Init();
+		MX_USART2_UART_Init();
+		MX_USART3_UART_Init();
+		MX_TIM3_Init();
+		MX_TIM4_Init();
+		MX_ADC4_Init();
+		MX_FDCAN1_Init();
+		MX_ADC5_Init();
+		MX_ADC3_Init();
+		MX_TIM2_Init();
+		MX_TIM5_Init();
+		MX_TIM6_Init();
+		/* USER CODE BEGIN 2 */
+		supercap_max_power_STM32 = 45;
+		supercap_max_power_current = CURRENT_LIMIT;
+		
+		// Configure FDCAN1 TX header
+		TxHeader.Identifier =	 0x188;
+		TxHeader.IdType = FDCAN_STANDARD_ID;
+		TxHeader.TxFrameType = FDCAN_DATA_FRAME;
+		TxHeader.DataLength = FDCAN_DLC_BYTES_1;
+		TxHeader.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
+		TxHeader.BitRateSwitch = FDCAN_BRS_OFF;
+		TxHeader.FDFormat = FDCAN_CLASSIC_CAN;
+		TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
+		TxHeader.MessageMarker = 0;
+		
+		FDCAN1_RXFilter.IdType = FDCAN_STANDARD_ID;
+		FDCAN1_RXFilter.FilterIndex = 0;
+		//FDCAN1_RXFilter.FilterType = FDCAN_FILTER_RANGE_NO_EIDM;
+		FDCAN1_RXFilter.FilterType = FDCAN_FILTER_MASK;
+		FDCAN1_RXFilter.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
+		//FDCAN1_RXFilter.FilterType = FDCAN_FILTER_DUAL;
+		FDCAN1_RXFilter.FilterID1 = 0x166;
+		FDCAN1_RXFilter.FilterID2 = 0x7FF;
 
-  // Configure FDCAN1 TX header
-  TxHeader.Identifier = 0x166;
-  TxHeader.IdType = FDCAN_STANDARD_ID;
-  TxHeader.TxFrameType = FDCAN_DATA_FRAME;
-  TxHeader.DataLength = FDCAN_DLC_BYTES_1;
-  TxHeader.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
-  TxHeader.BitRateSwitch = FDCAN_BRS_OFF;
-  TxHeader.FDFormat = FDCAN_CLASSIC_CAN;
-  TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
-  TxHeader.MessageMarker = 0;
 
+		HAL_FDCAN_ConfigFilter(&hfdcan1, &FDCAN1_RXFilter);
+		//HAL_FDCAN_ConfigGlobalFilter(&hfdcan1, FDCAN_REJECT, FDCAN_REJECT, ENABLE, ENABLE);
+		HAL_FDCAN_Start(&hfdcan1);
+		
+		HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE,0);
 
-  HAL_FDCAN_ConfigFilter(&hfdcan1, &FDCAN1_RXFilter);
-  HAL_FDCAN_Start(&hfdcan1);
-  while(1){
-    // FDCAN1 message structure
-    uint8_t TxData[1];
-    
-    // Prepare data to be sent
-    TxData[0] = 66;
-
-    // Send data using FDCAN1
-    if (HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData) != HAL_OK) {
-      //Error_Handler();
-      HAL_Delay(1000);
-    }
-    HAL_Delay(100);
-  }
-
+	
 	HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
 	HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
 	HAL_ADCEx_Calibration_Start(&hadc3, ADC_SINGLE_ENDED);
@@ -221,14 +226,15 @@ int main(void)
   HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&data_packet, 36);
   CAP_STATE = INIT;
 	HAL_TIM_Base_Start(&htim1);
+	HAL_TIM_Base_Start_IT(&htim6); //heart beat
   Supercap_AUX_Init();
-
+	
   int16_t notes1[] = {11, 11, 6, 5, 5, 1, 2, 3, 3, 2, 1, -6};
   for(int i = 0; i < 2; i++){
-    Supercap_AUX_Buzzer(90, notes1[i]);
-    HAL_Delay(300);
+    Supercap_AUX_Buzzer(50, notes1[i]);
+    HAL_Delay(50);
     Supercap_AUX_Buzzer(0, 0);
-    HAL_Delay(20);
+    HAL_Delay(5);
   }
   Supercap_AUX_Buzzer(0, 0);
 	
@@ -238,29 +244,29 @@ int main(void)
 	Supercap_Function_Init(&V_bat);
 	Supercap_Function_Init(&V_cap);
 
-  Supercap_PID_Init(&PID_45W_loop, 0.005f, 0.0001f, 0.0f, MAX_CAP_VOLTAGE, 0, 2500);
-  Supercap_PID_Init(&PID_n7A_loop, 0.3f, 0.00001f, 0.001f, MAX_CAP_VOLTAGE, 0, 300);
-  Supercap_PID_Init(&PID_7A_loop, 0.3f, 0.00001f, 0.001f, MAX_CAP_VOLTAGE, 0, 300);
-	Supercap_PID_Init(&PID_voltage_loop, 0.00001f, 0.00001f, 0.08f, MAX_DUTY, 0, 70);
+  Supercap_PID_Init(&PID_45W_loop, 0.005f, 0.0005f, 0.0f, MAX_CAP_VOLTAGE, 0, 2500);
+  Supercap_PID_Init(&PID_n7A_loop, 0.2f, 0.00002f, 0.01f, MAX_CAP_VOLTAGE, 0, 400);
+  Supercap_PID_Init(&PID_7A_loop, 0.3f, 0.00005f, 0.01f, MAX_CAP_VOLTAGE, 0, 600);
+	Supercap_PID_Init(&PID_voltage_loop, 0.00005f, 0.0001f, 0.08f, MAX_DUTY, 65, 50);
 
   uint16_t notes2[] = {6, 5, 5, 1, 2, 3, 3, 2, 1, -6};
   for(int i = 0; i < 10; i++){
-    Supercap_AUX_Buzzer(90, notes2[i]);
-    HAL_Delay(200);
+    Supercap_AUX_Buzzer(50, notes2[i]);
+    HAL_Delay(50);
     Supercap_AUX_Buzzer(0, 0);
-    HAL_Delay(15);
+    HAL_Delay(5);
   }
   Supercap_AUX_Buzzer(0, 0);
 
   HAL_TIM_Base_Start_IT(&htim2);
-	HAL_Delay(1000);
+	HAL_Delay(250);
 
   uint16_t notes3[] = {1, 2, 3, 5, 5, 6, 5, 3, 3, 2, 1, 2, 5};
   for(int i = 0; i < 13; i++){
-    Supercap_AUX_Buzzer(90, notes3[i]);
-    HAL_Delay(200);
+    Supercap_AUX_Buzzer(50, notes3[i]);
+    HAL_Delay(50);
     Supercap_AUX_Buzzer(0, 0);
-    HAL_Delay(15);
+    HAL_Delay(5);
   }
   Supercap_AUX_Buzzer(0, 0); 
 	HAL_TIM_Base_Start_IT(&htim5);
@@ -274,6 +280,39 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+//    data_packet.data[0] = Supercap_ADC_to_Current_Funtion(C_right.real_value_12bits, 2047);
+//    data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
+//    data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
+//		//data_packet.data[2] = supercap_max_power_STM32;
+//		//data_packet.data[2] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
+//    data_packet.data[3] = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
+//    data_packet.data[4] = Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
+//    data_packet.data[5] = Supercap_ADC_to_Voltage_Funtion(PID_n7A_loop.output);
+//		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
+//		data_packet.data[7] = (float)supercap_target_voltage*0.1f*0.03f;
+		//bug report: I put data[5], So, the tail be removed
+
+//    data_packet.data[0] = Supercap_ADC_to_Current_Funtion(C_right.real_value_12bits, 2047) * 24;
+//    data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
+//    data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047) * 24;
+//		//data_packet.data[2] = supercap_max_power_STM32;
+//		//data_packet.data[2] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
+//    data_packet.data[3] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047) * 24;
+//    data_packet.data[4] = (float)supercap_max_power_STM32;
+//    data_packet.data[5] = (float)Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
+//		data_packet.data[6] = (float)temp2;
+//		//data_packet.data[7] = (float)supercap_target_voltage*0.1f*0.03f;
+//		data_packet.data[7] = Supercap_ADC_to_Voltage_Funtion(PID_n7A_loop.output);
+
+    data_packet.data[0] = Supercap_ADC_to_Current_Funtion(C_right.real_value_12bits, 2047);
+    data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
+    data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
+    data_packet.data[3] = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
+    data_packet.data[4] = Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
+    data_packet.data[5] = Supercap_ADC_to_Voltage_Funtion(PID_n7A_loop.output);
+		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
+		data_packet.data[7] = (float)supercap_target_voltage*0.1f*0.03f;
+		//bug report: I put data[5], So, the tail be removed
     
   }
   /* USER CODE END 3 */
@@ -326,7 +365,21 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs){
+	static FDCAN_RxHeaderTypeDef rx_header;
+  uint8_t can_rx_buff[8];
+	HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &rx_header, can_rx_buff);
+	if(*(&rx_header.Identifier) == 0x166){
+    //HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &rx_header, can_rx_buff);
+		if (can_rx_buff[0] >= 30 && can_rx_buff[0]<= 120 && supercap_max_power_STM32 != can_rx_buff[0]){ //Normal
+			Update_Current(supercap_max_power_STM32, can_rx_buff[0]);
+			supercap_max_power_STM32 = can_rx_buff[0];
+		}
+		if (can_rx_buff[0] < 30 && can_rx_buff[0] > 120){ //Out of range
+			//supercap_max_power_current = 45;
+		}
+	}
+}
 /* USER CODE END 4 */
 
 /**

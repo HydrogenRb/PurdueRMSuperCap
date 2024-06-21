@@ -22,61 +22,64 @@ Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
 C:\Users\purdu\Desktop\Super Cap special folder\PurdueRMSuperCap\Code\SuperCapCodeG4Bi\MDK-ARM\SuperCapCodeG4.uvprojx
-Project File Date:  06/11/2024
+Project File Date:  06/14/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'SuperCapCodeG4'
 Note: source file '..\Core\Src\supercap.c' - object file renamed from 'SuperCapCodeG4\supercap.o' to 'SuperCapCodeG4\supercap_1.o'.
-compiling fdcan.c...
 compiling main.c...
-../Core/Inc/supercap.h(78): warning:  #1295-D: Deprecated declaration TIM2_NVIC - give arg types
+../Core/Inc/supercap.h(84): warning:  #1295-D: Deprecated declaration TIM6_NVIC - give arg types
+  void TIM6_NVIC();
+../Core/Inc/supercap.h(85): warning:  #1295-D: Deprecated declaration TIM2_NVIC - give arg types
   void TIM2_NVIC();
-../Core/Inc/supercap.h(79): warning:  #1295-D: Deprecated declaration TIM5_NVIC - give arg types
+../Core/Inc/supercap.h(86): warning:  #1295-D: Deprecated declaration TIM5_NVIC - give arg types
   void TIM5_NVIC();
-../Core/Inc/supercap.h(94): warning:  #1295-D: Deprecated declaration Supercap_FSM - give arg types
+../Core/Inc/supercap.h(102): warning:  #1295-D: Deprecated declaration Supercap_FSM - give arg types
   void Supercap_FSM();
-../Core/Inc/supercap.h(97): warning:  #1295-D: Deprecated declaration Supercap_PWM_GND - give arg types
+../Core/Inc/supercap.h(105): warning:  #1295-D: Deprecated declaration Supercap_PWM_GND - give arg types
   void Supercap_PWM_GND();
-../Core/Inc/supercap.h(98): warning:  #1295-D: Deprecated declaration Supercap_DCDC_Start - give arg types
+../Core/Inc/supercap.h(106): warning:  #1295-D: Deprecated declaration Supercap_DCDC_Start - give arg types
   void Supercap_DCDC_Start();
-../Core/Inc/supercap.h(99): warning:  #1295-D: Deprecated declaration Supercap_DCDC_Stop - give arg types
+../Core/Inc/supercap.h(107): warning:  #1295-D: Deprecated declaration Supercap_DCDC_Stop - give arg types
   void Supercap_DCDC_Stop();
-../Core/Inc/supercap.h(100): warning:  #1295-D: Deprecated declaration Supercap_AUX_Init - give arg types
+../Core/Inc/supercap.h(108): warning:  #1295-D: Deprecated declaration Supercap_AUX_Init - give arg types
   void Supercap_AUX_Init();
-../Core/Src/main.c(220): warning:  #111-D: statement is unreachable
-  	HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
-../Core/Src/main.c(253): warning:  #68-D: integer conversion resulted in a change of sign
+../Core/Src/main.c(252): warning:  #68-D: integer conversion resulted in a change of sign
     uint16_t notes2[] = {6, 5, 5, 1, 2, 3, 3, 2, 1, -6};
-../Core/Src/main.c(126): warning:  #177-D: variable "tail"  was declared but never referenced
+../Core/Src/main.c(135): warning:  #177-D: variable "tail"  was declared but never referenced
     char tail[4] = {0x00, 0x00, 0x80, 0x7f};
-../Core/Src/main.c(139): warning:  #177-D: variable "temp"  was declared but never referenced
+../Core/Src/main.c(148): warning:  #177-D: variable "temp"  was declared but never referenced
   	float temp;
-../Core/Src/main.c(140): warning:  #177-D: variable "data_array"  was declared but never referenced
+../Core/Src/main.c(149): warning:  #177-D: variable "data_array"  was declared but never referenced
     float data_array[7];
 ../Core/Src/main.c: 12 warnings, 0 errors
 compiling supercap.c...
-../Core/Inc/supercap.h(78): warning:  #1295-D: Deprecated declaration TIM2_NVIC - give arg types
+../Core/Inc/supercap.h(84): warning:  #1295-D: Deprecated declaration TIM6_NVIC - give arg types
+  void TIM6_NVIC();
+../Core/Inc/supercap.h(85): warning:  #1295-D: Deprecated declaration TIM2_NVIC - give arg types
   void TIM2_NVIC();
-../Core/Inc/supercap.h(79): warning:  #1295-D: Deprecated declaration TIM5_NVIC - give arg types
+../Core/Inc/supercap.h(86): warning:  #1295-D: Deprecated declaration TIM5_NVIC - give arg types
   void TIM5_NVIC();
-../Core/Inc/supercap.h(94): warning:  #1295-D: Deprecated declaration Supercap_FSM - give arg types
+../Core/Inc/supercap.h(102): warning:  #1295-D: Deprecated declaration Supercap_FSM - give arg types
   void Supercap_FSM();
-../Core/Inc/supercap.h(97): warning:  #1295-D: Deprecated declaration Supercap_PWM_GND - give arg types
+../Core/Inc/supercap.h(105): warning:  #1295-D: Deprecated declaration Supercap_PWM_GND - give arg types
   void Supercap_PWM_GND();
-../Core/Inc/supercap.h(98): warning:  #1295-D: Deprecated declaration Supercap_DCDC_Start - give arg types
+../Core/Inc/supercap.h(106): warning:  #1295-D: Deprecated declaration Supercap_DCDC_Start - give arg types
   void Supercap_DCDC_Start();
-../Core/Inc/supercap.h(99): warning:  #1295-D: Deprecated declaration Supercap_DCDC_Stop - give arg types
+../Core/Inc/supercap.h(107): warning:  #1295-D: Deprecated declaration Supercap_DCDC_Stop - give arg types
   void Supercap_DCDC_Stop();
-../Core/Inc/supercap.h(100): warning:  #1295-D: Deprecated declaration Supercap_AUX_Init - give arg types
+../Core/Inc/supercap.h(108): warning:  #1295-D: Deprecated declaration Supercap_AUX_Init - give arg types
   void Supercap_AUX_Init();
-..\Core\Src\supercap.c(376): warning:  #1-D: last line of file ends without a newline
+..\Core\Src\supercap.c(67): warning:  #940-D: missing return statement at end of non-void function "Update_Current" 
   }
-..\Core\Src\supercap.c: 8 warnings, 0 errors
+..\Core\Src\supercap.c(404): warning:  #1-D: last line of file ends without a newline
+  }
+..\Core\Src\supercap.c: 10 warnings, 0 errors
 linking...
-Program Size: Code=18600 RO-data=584 RW-data=100 ZI-data=3340  
+Program Size: Code=22612 RO-data=656 RW-data=112 ZI-data=3456  
 FromELF: creating hex file...
-"SuperCapCodeG4\SuperCapCodeG4.axf" - 0 Error(s), 20 Warning(s).
+"SuperCapCodeG4\SuperCapCodeG4.axf" - 0 Error(s), 22 Warning(s).
 
 <h2>Software Packages used:</h2>
 

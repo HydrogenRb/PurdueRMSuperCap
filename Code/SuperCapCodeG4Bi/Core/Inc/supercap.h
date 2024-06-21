@@ -49,6 +49,8 @@ extern uint16_t supercap_ADC1[2];
 extern uint16_t supercap_ADC2[3];
 extern uint16_t supercap_ADC3[3];
 extern uint16_t supercap_ADC4[2];
+extern uint16_t supercap_max_power_current;
+extern uint16_t supercap_max_power_STM32;
 extern _ADC_Sample_t C_left;
 extern _ADC_Sample_t C_sys;
 extern _ADC_Sample_t C_right;
@@ -59,24 +61,30 @@ extern _ADC_Sample_t V_bat; //V_left
 extern _ADC_Sample_t V_sys;
 extern _ADC_Sample_t V_1V6;
 extern _ADC_Sample_t ADC4_12;
-extern Kalman_Filter_t C_left_kalman;
 
 extern _Supercap_PID_Controller_t PID_45W_loop;
 extern _Supercap_PID_Controller_t PID_n7A_loop;
 extern _Supercap_PID_Controller_t PID_7A_loop;
 extern _Supercap_PID_Controller_t PID_voltage_loop;
 
+extern uint8_t TxData[1];
+
 extern float temp2;
+extern float supercap_target_voltage;
 extern uint16_t temp_counter;
 
 extern uint32_t TIM3_AUTORELOAD_over100;
 extern enum _CAP_STATE_T CAP_STATE;
 
+extern uint32_t debug_counter;
+
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
 
+void TIM6_NVIC();
 void TIM2_NVIC();
 void TIM5_NVIC();
+uint16_t Update_Current(uint16_t old_current, uint16_t new_current);
 
 void Supercap_PID_Controller_Function(_Supercap_PID_Controller_t *pid_controller, _ADC_Sample_t *adc_sample, int16_t target, float offset);
 void Supercap_Average_ADC_Function(_ADC_Sample_t *adc_sample);

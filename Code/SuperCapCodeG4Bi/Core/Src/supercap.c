@@ -10,20 +10,34 @@
 uint8_t PID_flag = 0;
 uint16_t protection_counter = 0;
 uint16_t fault_counter = 0;
+uint16_t temp_current;
 
 //Timmer
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 	if(htim->Instance == TIM5){
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
     Supercap_FSM();
     TIM5_NVIC();
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
 	}
   else if(htim->Instance == TIM2) {
     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
     TIM2_NVIC();
     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
+		//debug_counter ++;
   }
+	else if(htim->Instance == TIM6){
+		TIM6_NVIC();
+		HAL_GPIO_TogglePin(GPIOE,GPIO_PIN_3); //heart
+	}
+}
+
+void TIM6_NVIC(){ //10 Hz for can and update the parameters
+    TxData[0] = (((100.0f *(V_cap.real_value_12bits-700))/2707.0f));
+		temp2 = TxData[0];
+		// Send data using FDCAN1
+    if (HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData) != HAL_OK) {
+    }
 }
 
 void TIM2_NVIC(){
@@ -36,14 +50,20 @@ void TIM2_NVIC(){
 
 void TIM5_NVIC(){
 	if(PID_flag == 1){
-	Supercap_PID_Controller_Function(&PID_45W_loop, &C_sys, CURRENT_LIMIT, ((CURRENT_LIMIT-C_sys.real_value_12bits)*5.0f+V_cap.real_value_12bits));
-	Supercap_PID_Controller_Function(&PID_n7A_loop, &C_right, 3100, V_cap.real_value_12bits);
-  Supercap_PID_Controller_Function(&PID_7A_loop, &C_right, 1000, V_cap.real_value_12bits);
-  temp2 = Supercap_Compare(PID_45W_loop.output, PID_n7A_loop.output, PID_7A_loop.output);
-	Supercap_PID_Controller_Function(&PID_voltage_loop, &V_cap, temp2, 0.07f*temp2);
-  temp2 = Supercap_Limit(temp2, 2707, 0); //should I have voltage limit?
-	Supercap_PWM_left(temp2*0.1f);
-		}
+		Supercap_PID_Controller_Function(&PID_45W_loop, &C_sys, supercap_max_power_current, ((supercap_max_power_current-C_sys.real_value_12bits)*6.0f+V_cap.real_value_12bits));
+		Supercap_PID_Controller_Function(&PID_n7A_loop, &C_right, 500, V_cap.real_value_12bits-50.0f);
+		Supercap_PID_Controller_Function(&PID_7A_loop, &C_right, 2202, V_cap.real_value_12bits-100.0f);
+		supercap_target_voltage = Supercap_Compare(PID_45W_loop.output, PID_n7A_loop.output, PID_7A_loop.output);
+		supercap_target_voltage = Supercap_Limit(supercap_target_voltage, 2800, 0);
+		Supercap_PWM_left(supercap_target_voltage * 0.1f);
+	}
+}
+
+uint16_t Update_Current(uint16_t old_power, uint16_t new_power){
+	temp_current = (1.65f*4095.0f/3.3f)+(((new_power * 0.92f) / 24.0f)*0.005f)*25.0f*4095.0f/3.3f;
+	if(temp_current >= 2040 && temp_current <= 3000){
+	supercap_max_power_current = temp_current;
+	}
 }
 
 void Supercap_PID_Controller_Function(_Supercap_PID_Controller_t *pid_controller, _ADC_Sample_t *adc_sample, int16_t target, float offset) {
@@ -83,13 +103,14 @@ int16_t Supercap_Limit(int16_t input, int16_t max, int16_t min){
 
 void Supercap_FSM(){
   //Protection
-  if(V_cap.real_value_12bits < VOLTAGE_LIMIT && C_sys.real_value_12bits < CURRENT_LIMIT){
+  if(V_cap.real_value_12bits < VOLTAGE_LIMIT && C_sys.real_value_12bits > CURRENT_LIMIT){
 		fault_counter++;
 		if(fault_counter >= 100){
+			Supercap_DCDC_Stop();
 			Supercap_AUX_BlueLED(60);
 			Supercap_AUX_YellowLED(60);
       Supercap_AUX_MachineSpirit(0);
-			Supercap_DCDC_Stop();
+			//Supercap_AUX_Buzzer(80, 11);
 			CAP_STATE = FAULT;
 			fault_counter = 0;
 		}
@@ -100,32 +121,37 @@ void Supercap_FSM(){
   if(C_right.real_value_12bits > 4063 || C_right.real_value_12bits < 31){
 		fault_counter++;
 		if(fault_counter >= 2){
+			Supercap_DCDC_Stop();
 			Supercap_AUX_BlueLED(60);
 			Supercap_AUX_YellowLED(60);
       Supercap_AUX_MachineSpirit(0);
-			Supercap_DCDC_Stop();
+			//Supercap_AUX_Buzzer(80, -1);
 			CAP_STATE = FAULT;
 			fault_counter = 0;
 		}
   } else{
 		fault_counter--;
 	}
-  if(C_right.real_value_12bits > 3443 || C_right.real_value_12bits < 651){
+  if(C_right.real_value_12bits > 3600 || C_right.real_value_12bits < 496){
 		fault_counter++;
-		if(fault_counter >= 30){
+		if(fault_counter >= 700){
 			Supercap_AUX_BlueLED(60);
 			Supercap_AUX_YellowLED(60);
       Supercap_AUX_MachineSpirit(0);
 			Supercap_DCDC_Stop();
+			//Supercap_AUX_Buzzer(80, 1);
 			CAP_STATE = FAULT;
 			fault_counter = 0;
 		}
-  }	
+  }	else{
+		fault_counter--;
+	}
 
   //State switch
   switch(CAP_STATE){
     case INIT:
-      if(V_cap.real_value_12bits > 1){
+      if(V_cap.real_value_12bits > 30){
+		      //if(1){
         Supercap_AUX_YellowLED(60);
 				Supercap_AUX_BlueLED(0);
         Supercap_AUX_MachineSpirit(0);
@@ -133,6 +159,7 @@ void Supercap_FSM(){
         }
     case READY:
       if(V_cap.real_value_12bits > 50){
+      //if(1){
         CAP_STATE = RUNNING;
 				Supercap_AUX_YellowLED(0);
 				Supercap_AUX_BlueLED(0);
@@ -142,6 +169,7 @@ void Supercap_FSM(){
       break;
     case RUNNING:
       if(V_bat.real_value_12bits < 2256 && C_sys.real_value_12bits < 2047){
+			//if(C_sys.real_value_12bits < 2020){
         CAP_STATE = STOP;
 				Supercap_DCDC_Stop();
         Supercap_AUX_MachineSpirit(0);
@@ -158,7 +186,7 @@ void Supercap_FSM(){
 			}
       break;
     case FAULT:
-			if(protection_counter >= 2000 && C_sys.real_value_12bits < CURRENT_LIMIT){
+			if(protection_counter >= 1000 && C_sys.real_value_12bits < CURRENT_LIMIT){
 				CAP_STATE = READY;
 				Supercap_AUX_BlueLED(0);
 				Supercap_AUX_YellowLED(80);
@@ -250,11 +278,11 @@ void Supercap_PID_Reset(_Supercap_PID_Controller_t *pid_controller){
 //Driver
 void Supercap_PWM_left(int16_t pwm_duty_cycle) {
   __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, pwm_duty_cycle);
-  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, 22);
+  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, 25);
 }
 
 void Supercap_PWM_right(int16_t pwm_duty_cycle) {
-  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 278);
+  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 275);
   __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, pwm_duty_cycle);
 }
 
