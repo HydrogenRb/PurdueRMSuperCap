@@ -43,3 +43,9 @@ the datasheet is not finished yet，以下展示了目前对于本规格书的�
 10/6 (Fall break)
 10/13
 10/20 Finish
+
+## Introduce level video | 从零开始的视频教程
+视频教程正在制作中
+
+## More information | 更多信息
+not yet
