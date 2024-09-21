@@ -9,6 +9,7 @@ This document was created for Super-Capacitor testing and opensource in Purdue R
 ## Preface
 supercapacitor system with 4 MOSFET DC-DC circuits and LM5050 work as a diode. This circuit can charge a capacitor bank with constant power and discharge a capacitor bank with constant voltage. This circuit works with a battery to limit the battery output power. 
 本部分将介绍本项目，同时简单说明作者对于学习超电设计的一些建议
+本开源文件总共
 
 ## Quick application note 
 什么是超电？
@@ -29,8 +30,9 @@ What should I do?
 比赛的时候随着升级，功率将会提升（参考裁判文档xxx页）
 What should I do?
 通过实验记录一个表格，指出不同等级下功率限制多少，同时速度和功率的对应关系如何
-将信息发给超电，如果没有修改过固件，通过CAN bus通讯发送的数据应该如下所示
+同时，如果功率有变，那么将信息发给超电，如果没有修改过固件，通过CAN bus通讯发送的数据应该如下所示
 table
+注意：升级之后如果机器人跑的更加快，那么务必将信息发给超电，要不然超电会在正常运行（比如Y_2 m/s）的时候进入放电状态，从而使得加速状态的时候电容已经没有电量了
 6. 工作情况演示
 待：vofa表格
 
