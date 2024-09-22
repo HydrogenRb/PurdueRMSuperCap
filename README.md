@@ -1,3 +1,11 @@
+LOGO
+<p align="center">
+<a href="PDF"><img src="https://img.shields.io/badge/Datasheet-v0.5-blue" alt="Datasheet" /></a>
+<a href="PDF"><img src="https://img.shields.io/badge/CodeBase-v1.0-red" alt="CodeBase"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-CCZ-orange" alt="License" /></a>
+<a href="contact information"><img src="https://img.shields.io/badge/Contact-Me-orange" alt="Contact Information" /></a>
+</p>
+
 # PurdueRMSuperCap (Current: 1.0 hardware Finish， documenting) 
 This document was created for Super-Capacitor testing and opensource in Purdue Robomaster. This document includes  
 1. Preface | 前言
@@ -6,10 +14,21 @@ This document was created for Super-Capacitor testing and opensource in Purdue R
 4. Introduce level video | 从零开始的视频教程
 5. More information | 更多信息
 
+##Abstract | 摘要
+This device is a supercapacitor controller based on a 4-switch DC-DC converter. It can charge the parallel capacitor bank as much as possible while ensuring that the output on the battery side does not exceed the rated power, and it maintains the voltage measured at the motor around 24V. Additionally, this device can automatically detect the power measured at the motor (load) and provide feedback to the upper computer via CAN, allowing the upper computer to freely control the power of each motor (or load). In special cases, such as when the stored energy in the capacitors is depleted, this controller can automatically disconnect the capacitors and issue a warning to the upper computer through programmable CAN signals or UART signals.
+本设备是一款基于4开关DCDC的超级电容控制器。它能在保证电池侧输出不超过额定功率的前提下，尽可能地给并联的电容组充电，并保证电机测的电压尽可能维持在24V左右；同时，本设备能够自动检测电机（负载）测的功率，通过CAN反馈给上位机，以此能让上位机自由地控制各个电机（或负载）的功率。在特殊情况下，比如在电容储存的能量耗尽之后，这款控制器能够自动断开电容，并且通过可编程CAN信号或者UART信号警告上位机。
+
 ## Preface
-supercapacitor system with 4 MOSFET DC-DC circuits and LM5050 work as a diode. This circuit can charge a capacitor bank with constant power and discharge a capacitor bank with constant voltage. This circuit works with a battery to limit the battery output power. 
+This section will introduce the project and briefly outline the author's suggestions for learning about superconducting design.
+This open-source file consists of three parts: the Quick Start Application Manual, the Specification Document, and the Design Notes.
+If you need to quickly use the superconducting device, please refer to the Quick Start Application Manual.
+If you need a detailed understanding of how the superconducting device works and possibly modify it, you can read the Specification Document.
+If you want to learn about the design of the superconducting device, please read both the Specification Document and the Design Notes.
 本部分将介绍本项目，同时简单说明作者对于学习超电设计的一些建议
-本开源文件总共
+本开源文件有三个部分：速通应用手册、规格文档、设计笔记
+如果你需要快速使用超电，请使用速通应用手册
+如果你需要详细了解超电的工作原理，甚至适当地修改本设备，可以阅读规格文档
+如果你需要学习超电的设计，请阅读规格文档和设计笔记
 
 ## Quick application note 
 什么是超电？
