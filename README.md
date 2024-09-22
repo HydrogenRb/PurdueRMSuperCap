@@ -7,19 +7,19 @@
 <a href="contact information"><img src="https://img.shields.io/badge/Contact-Me-orange" alt="Contact Information" /></a>
 </p>
 
+## Abstract | 摘要
+This device is a supercapacitor controller based on a 4-switch DC-DC converter. It can charge the parallel capacitor bank as much as possible while ensuring that the output on the battery side does not exceed the rated power, and it maintains the voltage measured at the motor around 24V. Additionally, this device can automatically detect the power measured at the motor (load) and provide feedback to the upper computer via CAN, allowing the upper computer to freely control the power of each motor (or load). In special cases, such as when the stored energy in the capacitors is depleted, this controller can automatically disconnect the capacitors and issue a warning to the upper computer through programmable CAN signals or UART signals.
+本设备是一款基于4开关DCDC的超级电容控制器。它能在保证电池侧输出不超过额定功率的前提下，尽可能地给并联的电容组充电，并保证电机测的电压尽可能维持在24V左右；同时，本设备能够自动检测电机（负载）测的功率，通过CAN反馈给上位机，以此能让上位机自由地控制各个电机（或负载）的功率。在特殊情况下，比如在电容储存的能量耗尽之后，这款控制器能够自动断开电容，并且通过可编程CAN信号或者UART信号警告上位机。
+
 # PurdueRMSuperCap (Current: 1.0 hardware Finish， documenting) 
 This document was created for Super-Capacitor testing and opensource in Purdue Robomaster. This document includes  
 1. Preface | 前言
-2. Quick application note | 速通使用方法
+2. Quickstart | 速通教程
 3. Datasheet and design note | 规格书与开源设计笔记
 4. Introduce level video | 从零开始的视频教程
 5. More information | 更多信息
 
-##Abstract | 摘要
-This device is a supercapacitor controller based on a 4-switch DC-DC converter. It can charge the parallel capacitor bank as much as possible while ensuring that the output on the battery side does not exceed the rated power, and it maintains the voltage measured at the motor around 24V. Additionally, this device can automatically detect the power measured at the motor (load) and provide feedback to the upper computer via CAN, allowing the upper computer to freely control the power of each motor (or load). In special cases, such as when the stored energy in the capacitors is depleted, this controller can automatically disconnect the capacitors and issue a warning to the upper computer through programmable CAN signals or UART signals.
-本设备是一款基于4开关DCDC的超级电容控制器。它能在保证电池侧输出不超过额定功率的前提下，尽可能地给并联的电容组充电，并保证电机测的电压尽可能维持在24V左右；同时，本设备能够自动检测电机（负载）测的功率，通过CAN反馈给上位机，以此能让上位机自由地控制各个电机（或负载）的功率。在特殊情况下，比如在电容储存的能量耗尽之后，这款控制器能够自动断开电容，并且通过可编程CAN信号或者UART信号警告上位机。
-
-## Preface
+## Preface | 前言
 This section will introduce the project and briefly outline the author's suggestions for learning about superconducting design.
 This open-source file consists of three parts: the Quick Start Application Manual, the Specification Document, and the Design Notes.
 If you need to quickly use the superconducting device, please refer to the Quick Start Application Manual.
@@ -31,7 +31,7 @@ If you want to learn about the design of the superconducting device, please read
 如果你需要详细了解超电的工作原理，甚至适当地修改本设备，可以阅读规格文档
 如果你需要学习超电的设计，请阅读规格文档和设计笔记
 
-## Quick application note 
+## Quickstart | 速通教程
 什么是超电？
 游戏截图
 1. 机器人功率分析 -> 我应该如何测量底盘功率
@@ -45,7 +45,6 @@ What should I do?
 其中,机器人一开始是充电状态，底盘不用电，超电开始充电，当比赛的时候，底盘一开始正常运行
 What should I do?
 设置一个按键，将机器人的速度提升20%（或者你觉得合适的数字）继续使用上一章节的图将会如下
-
 4. 裁判系统 -> 我应该如何使用裁判系统
 比赛的时候随着升级，功率将会提升（参考裁判文档xxx页）
 What should I do?
