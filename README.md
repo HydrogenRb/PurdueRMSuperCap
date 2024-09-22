@@ -17,8 +17,11 @@
 <div align="center">
 <h2><strong>Cuurent Status | 当前进展</strong></h2>
 </div>
-Datasheet: 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜
-Video: ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+Code v1.0: 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜
+
+Datasheet v1.0: 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜
+
+Video v1.0: ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
 # PurdueRMSuperCap (Current: 1.0 hardware Finish， documenting) 
 This document was created for Super-Capacitor testing and opensource in Purdue Robomaster. This document includes  
