@@ -8,6 +8,10 @@
 </p>
 
 <div align="center">
+<h2><strong>This project is not official published yet</strong></h2>
+</div>
+
+<div align="center">
 <h2><strong>Abstract | 摘要</strong></h2>
 </div>
 This device is a supercapacitor controller based on a 4-switch DC-DC converter. It can charge the parallel capacitor bank as much as possible while ensuring that the output on the battery side does not exceed the rated power, and it maintains the voltage measured at the motor around 24V. Additionally, this device can automatically detect the power measured at the motor (load) and provide feedback to the upper computer via CAN, allowing the upper computer to freely control the power of each motor (or load). In special cases, such as when the stored energy in the capacitors is depleted, this controller can automatically disconnect the capacitors and issue a warning to the upper computer through programmable CAN signals or UART signals.  
@@ -55,10 +59,11 @@ What is Super-Capacitor
 </h3>
 
 the datasheet is not finished yet, this is plan. You can take look of the current version.   
-9/29   
-10/6 (Fall break)   
-10/13   
-10/20 Finish  
+9/29 Finish the Specifications and Typical Application and Usage Guidelines (Not include images)
+10/6 (Fall break) Finish the Installation and Power tree   
+10/13 Finish all testing cases  
+10/20 Subsystem Design Note  
+10/27 Finish datasheets  
 
 ## Introduce level video | 从零开始的视频教程
 In the progress  
