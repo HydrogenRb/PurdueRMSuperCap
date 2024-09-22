@@ -51,6 +51,8 @@ What is Super-Capacitor
 4. Wroking condition
 
 ## Datasheet and design note | 数据手册和开源设计笔记
+<h3 align="center"><img src="Images/PCBA_White_Back.png" alt="SuperCapacitor">
+</h3>
 the datasheet is not finished yet，this is plan. You can take look of the current version.  
 9/29  
 10/6 (Fall break)  
