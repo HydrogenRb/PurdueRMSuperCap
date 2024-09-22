@@ -23,7 +23,7 @@ Datasheet v1.0: ▓▓▓▓░░░░░░
 
 Video v1.0: ░░░░░░░░░░
 
-# PurdueRMSuperCap (Current: 1.0 hardware Finish， documenting) 
+# PurdueRMSuperCap
 This document was created for Super-Capacitor testing and opensource in Purdue Robomaster. This document includes  
 1. Preface | 前言
 2. Quickstart | 速通教程
@@ -32,13 +32,13 @@ This document was created for Super-Capacitor testing and opensource in Purdue R
 5. More information | 更多信息
 
 ## Preface | 前言
-This section will introduce the project and briefly outline the author's suggestions for learning about superconducting design.
-This open-source file consists of three parts: the Quick Start Application Manual, the Specification Document, and the Design Notes.
-If you need to quickly use the superconducting device, please refer to the Quick Start Application Manual.
+This section will introduce the project and briefly outline the author's suggestions for learning about Super-Capacitor design.  
+This open-source file consists of three parts: the Quickstart , the datasheet, and the Design Notes.  
+If you need to quickly use the Super-Capacitor device, please refer to the Quickstart.  
 If you need a detailed understanding of how the superconducting device works and possibly modify it, you can read the Specification Document.
 If you want to learn about the design of the superconducting device, please read both the Specification Document and the Design Notes.
 本部分将介绍本项目，同时简单说明作者对于学习超电设计的一些建议
-本开源文件有三个部分：速通应用手册、规格文档、设计笔记
+本开源文件有三个部分：速通教程、规格文档、设计笔记
 如果你需要快速使用超电，请使用速通应用手册
 如果你需要详细了解超电的工作原理，甚至适当地修改本设备，可以阅读规格文档
 如果你需要学习超电的设计，请阅读规格文档和设计笔记
