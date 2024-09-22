@@ -51,11 +51,11 @@ What is Super-Capacitor
 4. Wroking condition
 
 ## Datasheet and design note | 数据手册和开源设计笔记
-the datasheet is not finished yet，this is plan. You can take look of the current version.
-9/29
-10/6 (Fall break)
-10/13
-10/20 Finish
+the datasheet is not finished yet，this is plan. You can take look of the current version.  
+9/29  
+10/6 (Fall break)  
+10/13  
+10/20 Finish  
 
 ## Introduce level video | 从零开始的视频教程
 In the progress  
