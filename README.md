@@ -1,4 +1,5 @@
-LOGO
+<h3 align="center"><img src="Images/PCBA_White_Back.png" alt="SuperCapacitor"><br>Purdue RM - <i>Boosting your robots!</i></h3>
+
 <p align="center">
 <a href="PDF"><img src="https://img.shields.io/badge/Datasheet-v0.5-blue" alt="Datasheet" /></a>
 <a href="PDF"><img src="https://img.shields.io/badge/CodeBase-v1.0-red" alt="CodeBase"></a>
