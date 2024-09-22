@@ -59,7 +59,7 @@ What is Super-Capacitor
 </h3>
 
 the datasheet is not finished yet, this is plan. You can take look of the current version.   
-9/29 Finish the Specifications and Typical Application and Usage Guidelines (Not include images)
+9/29 Finish the Specifications and Typical Application and Usage Guidelines (Not include images). Prepare the test cases  
 10/6 (Fall break) Finish the Installation and Power tree   
 10/13 Finish all testing cases  
 10/20 Subsystem Design Note  
