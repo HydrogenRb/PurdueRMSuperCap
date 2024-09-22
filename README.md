@@ -7,7 +7,7 @@
 <a href="contact information"><img src="https://img.shields.io/badge/Contact-Me-orange" alt="Contact Information" /></a>
 </p>
 
-<div align="center" style="font-size: 24px; font-weight: bold;">
+<div align="center" style="font-size: 100px; font-weight: bold;">
 Abstract | 摘要
 </div>
 This device is a supercapacitor controller based on a 4-switch DC-DC converter. It can charge the parallel capacitor bank as much as possible while ensuring that the output on the battery side does not exceed the rated power, and it maintains the voltage measured at the motor around 24V. Additionally, this device can automatically detect the power measured at the motor (load) and provide feedback to the upper computer via CAN, allowing the upper computer to freely control the power of each motor (or load). In special cases, such as when the stored energy in the capacitors is depleted, this controller can automatically disconnect the capacitors and issue a warning to the upper computer through programmable CAN signals or UART signals.   
