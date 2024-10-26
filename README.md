@@ -6,6 +6,9 @@
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-CCZ-orange" alt="License" /></a>
 <a href="contact information"><img src="https://img.shields.io/badge/Contact-Me-orange" alt="Contact Information" /></a>
 </p>
+<p align="center">
+Lastest Code: Code/SuperCapCodeG4Bi
+</p>
 
 <div align="center">
 <h2><strong>This project is not official published yet</strong></h2>
@@ -59,11 +62,11 @@ What is Super-Capacitor
 </h3>
 
 the datasheet is not finished yet, this is plan. You can take look of the current version.   
-9/29 Finish the Specifications and Typical Application and Usage Guidelines (Not include images). Prepare the test cases  
-10/6 (Fall break) Finish the Installation and Power tree   
-10/13 Finish all testing cases  
-10/20 Subsystem Design Note  
-10/27 Finish datasheets  
+10/29 Finish the Specifications and Typical Application and Usage Guidelines (Not include images). Prepare the test cases  
+11/6 Finish the Installation and Power tree   
+11/13 Finish all testing cases  
+11/20 Subsystem Design Note  
+12/20 Finish datasheets  
 
 ## Introduce level video | 从零开始的视频教程
 In the progress  
