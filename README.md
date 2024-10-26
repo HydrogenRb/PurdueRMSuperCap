@@ -7,7 +7,7 @@
 <a href="contact information"><img src="https://img.shields.io/badge/Contact-Me-orange" alt="Contact Information" /></a>
 </p>
 <p align="center">
-Lastest Code: Code/SuperCapCodeG4Bi
+<a href="Code"><img src="https://img.shields.io/badge/Code-Lastest-orange" alt="https://github.com/HydrogenRb/PurdueRMSuperCap/tree/main/Code/SuperCapCodeG4Bi" /></a>
 </p>
 
 <div align="center">
