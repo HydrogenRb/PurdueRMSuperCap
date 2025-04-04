@@ -51,8 +51,8 @@ void TIM2_NVIC(){
 void TIM5_NVIC(){
 	if(PID_flag == 1){
 		Supercap_PID_Controller_Function(&PID_45W_loop, &C_sys, supercap_max_power_current, ((supercap_max_power_current-C_sys.real_value_12bits)*6.0f+V_cap.real_value_12bits));
-		Supercap_PID_Controller_Function(&PID_n7A_loop, &C_right, 500, V_cap.real_value_12bits);
-		Supercap_PID_Controller_Function(&PID_7A_loop, &C_right, 2202, V_cap.real_value_12bits);
+		Supercap_PID_Controller_Function(&PID_n7A_loop, &C_right, 900, V_cap.real_value_12bits + 50); //我希望我的n7A充电电压能略高于电池电压，所以是加法
+		Supercap_PID_Controller_Function(&PID_7A_loop, &C_right, 3202, V_cap.real_value_12bits - 100); //我希望供电时，目标电压能略低于电池电压，所以是减法
 		supercap_target_voltage = Supercap_Compare(PID_45W_loop.output, PID_n7A_loop.output, PID_7A_loop.output);
 		supercap_target_voltage = Supercap_Limit(supercap_target_voltage, 2800, 0);
 		Supercap_PWM_left(supercap_target_voltage * 0.1f);
