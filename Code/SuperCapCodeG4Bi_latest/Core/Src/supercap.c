@@ -51,8 +51,8 @@ void TIM2_NVIC(){
 void TIM5_NVIC(){
 	if(PID_flag == 1){
 		Supercap_PID_Controller_Function(&PID_45W_loop, &C_sys, supercap_max_power_current, ((supercap_max_power_current-C_sys.real_value_12bits)*6.0f+V_cap.real_value_12bits));
-		Supercap_PID_Controller_Function(&PID_n7A_loop, &C_right, 500, V_cap.real_value_12bits-50.0f);
-		Supercap_PID_Controller_Function(&PID_7A_loop, &C_right, 2202, V_cap.real_value_12bits-100.0f);
+		Supercap_PID_Controller_Function(&PID_n7A_loop, &C_right, 500, V_cap.real_value_12bits);
+		Supercap_PID_Controller_Function(&PID_7A_loop, &C_right, 2202, V_cap.real_value_12bits);
 		supercap_target_voltage = Supercap_Compare(PID_45W_loop.output, PID_n7A_loop.output, PID_7A_loop.output);
 		supercap_target_voltage = Supercap_Limit(supercap_target_voltage, 2800, 0);
 		Supercap_PWM_left(supercap_target_voltage * 0.1f);
@@ -60,10 +60,11 @@ void TIM5_NVIC(){
 }
 
 uint16_t Update_Current(uint16_t old_power, uint16_t new_power){
-	temp_current = (1.65f*4095.0f/3.3f)+(((new_power * 0.92f) / 24.0f)*0.005f)*25.0f*4095.0f/3.3f;
+	temp_current = (1.65f*4095.0f/3.3f)+(((new_power * 0.95f) / 24.0f)*0.005f)*25.0f*4095.0f/3.3f;
 	if(temp_current >= 2040 && temp_current <= 3000){
 	supercap_max_power_current = temp_current;
 	}
+  return(1);
 }
 
 void Supercap_PID_Controller_Function(_Supercap_PID_Controller_t *pid_controller, _ADC_Sample_t *adc_sample, int16_t target, float offset) {

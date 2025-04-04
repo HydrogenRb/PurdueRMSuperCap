@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.file 1 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c"
-  20              		.section	.text.HAL_EXTI_SetConfigLine,"ax",%progbits
-  21              		.align	1
-  22              		.global	HAL_EXTI_SetConfigLine
-  23              		.syntax unified
-  24              		.thumb
-  25              		.thumb_func
-  27              	HAL_EXTI_SetConfigLine:
-  28              	.LVL0:
-  29              	.LFB329:
+  19              		.section	.text.HAL_EXTI_SetConfigLine,"ax",%progbits
+  20              		.align	1
+  21              		.global	HAL_EXTI_SetConfigLine
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	HAL_EXTI_SetConfigLine:
+  27              	.LVL0:
+  28              	.LFB329:
+  29              		.file 1 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c"
    1:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** /**
    2:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   ******************************************************************************
    3:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   * @file    stm32g4xx_hal_exti.c
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
   27:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   [..]
   28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     (+) Each Exti line can be configured within this driver.
   29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 2
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 2
 
 
   30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     (+) Exti line can be configured in 3 different modes
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
   84:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   */
   85:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
   86:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** /* Includes ------------------------------------------------------------------*/
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 3
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 3
 
 
   87:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** #include "stm32g4xx_hal.h"
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  141:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   * @param  pExtiConfig Pointer on EXTI configuration to be set.
  142:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   * @retval HAL Status.
  143:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   */
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 4
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 4
 
 
  144:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** HAL_StatusTypeDef HAL_EXTI_SetConfigLine(EXTI_HandleTypeDef *hexti, EXTI_ConfigTypeDef *pExtiConfig
@@ -204,10 +204,10 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
   40              		.loc 1 153 3 view .LVU6
   41              		.loc 1 153 6 is_stmt 0 view .LVU7
   42 0000 0028     		cmp	r0, #0
-  43 0002 5ED0     		beq	.L12
+  43 0002 5FD0     		beq	.L12
   44              		.loc 1 153 23 discriminator 1 view .LVU8
   45 0004 0029     		cmp	r1, #0
-  46 0006 5ED0     		beq	.L13
+  46 0006 5FD0     		beq	.L13
  145:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   __IO uint32_t *regaddr;
   47              		.loc 1 145 1 view .LVU9
   48 0008 F0B4     		push	{r4, r5, r6, r7}
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  165:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Compute line register offset */
  166:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   offset = ((pExtiConfig->Line & EXTI_REG_MASK) >> EXTI_REG_SHIFT);
   62              		.loc 1 166 3 is_stmt 1 view .LVU15
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 5
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 5
 
 
   63              		.loc 1 166 10 is_stmt 0 view .LVU16
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
   99              		.loc 1 184 14 is_stmt 0 view .LVU34
  100 0032 0543     		orrs	r5, r5, r0
  101              	.LVL7:
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 6
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 6
 
 
  102              	.L5:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  128              		.loc 1 212 28 is_stmt 0 view .LVU48
  129 004c 0D68     		ldr	r5, [r1]
  130              	.LVL11:
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 7
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 7
 
 
  131              		.loc 1 212 28 view .LVU49
@@ -402,7 +402,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  152              		.loc 1 229 6 is_stmt 0 view .LVU57
  153 0064 4D68     		ldr	r5, [r1, #4]
  154 0066 15F0010F 		tst	r5, #1
- 155 006a 24D0     		beq	.L8
+ 155 006a 25D0     		beq	.L8
  230:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   {
  231:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     regval |= maskline;
  156              		.loc 1 231 5 is_stmt 1 view .LVU58
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  237:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  238:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Store interrupt mode */
  239:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   *regaddr = regval;
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 8
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 8
 
 
  161              		.loc 1 239 3 is_stmt 1 view .LVU60
@@ -445,12 +445,12 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  175              	.LVL20:
  176              		.loc 1 246 6 view .LVU68
  177 0076 11F0020F 		tst	r1, #2
- 178 007a 1FD0     		beq	.L10
+ 178 007a 20D0     		beq	.L10
  247:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   {
  248:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     regval |= maskline;
  179              		.loc 1 248 5 is_stmt 1 view .LVU69
  180              		.loc 1 248 12 is_stmt 0 view .LVU70
- 181 007c 0243     		orrs	r2, r2, r0
+ 181 007c 1043     		orrs	r0, r0, r2
  182              	.LVL21:
  183              	.L11:
  249:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   }
@@ -463,7 +463,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  256:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   *regaddr = regval;
  184              		.loc 1 256 3 is_stmt 1 view .LVU71
  185              		.loc 1 256 12 is_stmt 0 view .LVU72
- 186 007e 1A51     		str	r2, [r3, r4]
+ 186 007e 1851     		str	r0, [r3, r4]
  257:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  258:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   return HAL_OK;
  187              		.loc 1 258 3 is_stmt 1 view .LVU73
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  195              		.cfi_restore 7
  196              		.cfi_restore 6
  197              		.cfi_restore 5
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 9
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 9
 
 
  198              		.cfi_restore 4
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  238              		.loc 1 218 69 view .LVU90
  239 00a0 9200     		lsls	r2, r2, #2
  218:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****       regval |= (pExtiConfig->GPIOSel << (SYSCFG_EXTICR1_EXTI1_Pos * (linepos & 0x03u)));
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 10
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 10
 
 
  240              		.loc 1 218 40 view .LVU91
@@ -555,39 +555,39 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  248 00aa CD68     		ldr	r5, [r1, #12]
  219:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****       SYSCFG->EXTICR[linepos >> 2u] = regval;
  249              		.loc 1 219 39 view .LVU95
- 250 00ac 9540     		lsls	r5, r5, r2
+ 250 00ac 05FA02F2 		lsl	r2, r5, r2
  219:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****       SYSCFG->EXTICR[linepos >> 2u] = regval;
  251              		.loc 1 219 14 view .LVU96
- 252 00ae 3543     		orrs	r5, r5, r6
+ 252 00b0 3243     		orrs	r2, r2, r6
  253              	.LVL33:
  220:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     }
  254              		.loc 1 220 7 is_stmt 1 view .LVU97
  220:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     }
  255              		.loc 1 220 37 is_stmt 0 view .LVU98
- 256 00b0 47F82450 		str	r5, [r7, r4, lsl #2]
- 257 00b4 D0E7     		b	.L3
+ 256 00b2 47F82420 		str	r2, [r7, r4, lsl #2]
+ 257 00b6 CFE7     		b	.L3
  258              	.LVL34:
  259              	.L8:
  235:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   }
  260              		.loc 1 235 5 is_stmt 1 view .LVU99
  235:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   }
  261              		.loc 1 235 12 is_stmt 0 view .LVU100
- 262 00b6 24EA0004 		bic	r4, r4, r0
+ 262 00b8 24EA0004 		bic	r4, r4, r0
  263              	.LVL35:
  235:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   }
  264              		.loc 1 235 12 view .LVU101
- 265 00ba D8E7     		b	.L9
+ 265 00bc D7E7     		b	.L9
  266              	.LVL36:
  267              	.L10:
  252:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   }
  268              		.loc 1 252 5 is_stmt 1 view .LVU102
  252:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   }
  269              		.loc 1 252 12 is_stmt 0 view .LVU103
- 270 00bc 22EA0002 		bic	r2, r2, r0
+ 270 00be 22EA0000 		bic	r0, r2, r0
  271              	.LVL37:
  252:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   }
  272              		.loc 1 252 12 view .LVU104
- 273 00c0 DDE7     		b	.L11
+ 273 00c2 DCE7     		b	.L11
  274              	.LVL38:
  275              	.L12:
  276              	.LCFI3:
@@ -598,24 +598,24 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  281              		.cfi_restore 7
  155:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   }
  282              		.loc 1 155 12 view .LVU105
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 11
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 11
 
 
- 283 00c2 0120     		movs	r0, #1
+ 283 00c4 0120     		movs	r0, #1
  284              	.LVL39:
  155:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   }
  285              		.loc 1 155 12 view .LVU106
- 286 00c4 7047     		bx	lr
+ 286 00c6 7047     		bx	lr
  287              	.LVL40:
  288              	.L13:
  155:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   }
  289              		.loc 1 155 12 view .LVU107
- 290 00c6 0120     		movs	r0, #1
+ 290 00c8 0120     		movs	r0, #1
  291              	.LVL41:
  292              		.loc 1 259 1 view .LVU108
- 293 00c8 7047     		bx	lr
+ 293 00ca 7047     		bx	lr
  294              	.L20:
- 295 00ca 00BF     		.align	2
+ 295              		.align	2
  296              	.L19:
  297 00cc 08040140 		.word	1073808392
  298 00d0 0C040140 		.word	1073808396
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  322              		.loc 1 274 3 view .LVU114
  275:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  276:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Check null pointer */
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 12
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 12
 
 
  277:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   if ((hexti == NULL) || (pExtiConfig == NULL))
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  356              		.loc 1 296 26 is_stmt 0 view .LVU130
  357 001c 4001     		lsls	r0, r0, #5
  358              	.LVL46:
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 13
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 13
 
 
  359              		.loc 1 296 11 view .LVU131
@@ -773,12 +773,12 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  315:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   {
  316:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     pExtiConfig->Mode |= EXTI_MODE_EVENT;
  390              		.loc 1 316 5 is_stmt 1 view .LVU145
- 391              		.loc 1 316 16 is_stmt 0 view .LVU146
+ 391              		.loc 1 316 23 is_stmt 0 view .LVU146
  392 003a 4C68     		ldr	r4, [r1, #4]
  393              	.LVL52:
  394              		.loc 1 316 23 view .LVU147
  395 003c 44F00204 		orr	r4, r4, #2
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 14
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 14
 
 
  396 0040 4C60     		str	r4, [r1, #4]
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  430 005a 164C     		ldr	r4, .L37+8
  431              	.LVL56:
  337:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     regval = *regaddr;
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 15
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 15
 
 
  432              		.loc 1 337 5 is_stmt 1 view .LVU165
@@ -855,7 +855,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  341:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     {
  342:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****       pExtiConfig->Trigger |= EXTI_TRIGGER_FALLING;
  440              		.loc 1 342 7 is_stmt 1 view .LVU169
- 441              		.loc 1 342 18 is_stmt 0 view .LVU170
+ 441              		.loc 1 342 28 is_stmt 0 view .LVU170
  442 0062 8A68     		ldr	r2, [r1, #8]
  443              	.LVL58:
  444              		.loc 1 342 28 view .LVU171
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  465              		.loc 1 306 23 view .LVU179
  466 007a 4C60     		str	r4, [r1, #4]
  467 007c D9E7     		b	.L24
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 16
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 16
 
 
  468              	.LVL62:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  279:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   }
  509              		.loc 1 279 12 view .LVU194
  510 00a2 0120     		movs	r0, #1
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 17
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 17
 
 
  511              	.LVL69:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  369:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   uint32_t maskline;
  553              		.loc 1 369 3 view .LVU202
  370:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   uint32_t offset;
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 18
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 18
 
 
  554              		.loc 1 370 3 view .LVU203
@@ -1028,7 +1028,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  555              		.loc 1 373 3 view .LVU204
  556              		.loc 1 373 6 is_stmt 0 view .LVU205
  557 0000 0028     		cmp	r0, #0
- 558 0002 40D0     		beq	.L41
+ 558 0002 41D0     		beq	.L41
  365:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   __IO uint32_t *regaddr;
  559              		.loc 1 365 1 view .LVU206
  560 0004 30B5     		push	{r4, r5, lr}
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  588 001a 03F18041 		add	r1, r3, #1073741824
  589 001e 01F58231 		add	r1, r1, #66560
  590              	.LVL77:
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 19
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 19
 
 
  390:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   regval = (*regaddr & ~maskline);
@@ -1123,7 +1123,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  620              	.LVL83:
  621              		.loc 1 399 6 view .LVU233
  622 003a 12F0007F 		tst	r2, #33554432
- 623 003e 24D0     		beq	.L42
+ 623 003e 25D0     		beq	.L42
  400:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   {
  401:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     regaddr = (&EXTI->RTSR1 + (EXTI_CONFIG_OFFSET * offset));
  624              		.loc 1 401 5 is_stmt 1 view .LVU234
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  632 0044 2A40     		ands	r2, r2, r5
  633              	.LVL85:
  403:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     *regaddr = regval;
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 20
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 20
 
 
  634              		.loc 1 403 5 is_stmt 1 view .LVU239
@@ -1186,7 +1186,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  420:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   return HAL_OK;
  660              		.loc 1 420 10 view .LVU252
  661 005e 0020     		movs	r0, #0
- 662 0060 14E0     		b	.L40
+ 662 0060 15E0     		b	.L40
  663              	.L48:
  412:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  664              		.loc 1 412 7 is_stmt 1 view .LVU253
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  668              	.LVL90:
  414:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****       regval &= ~(SYSCFG_EXTICR1_EXTI0 << (SYSCFG_EXTICR1_EXTI1_Pos * (linepos & 0x03u)));
  669              		.loc 1 414 14 view .LVU256
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 21
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 21
 
 
  670 0066 0D49     		ldr	r1, .L49+12
@@ -1217,19 +1217,19 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  415:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****       SYSCFG->EXTICR[linepos >> 2u] = regval;
  680              		.loc 1 415 40 view .LVU260
  681 0076 0722     		movs	r2, #7
- 682 0078 A240     		lsls	r2, r2, r4
+ 682 0078 02FA04F4 		lsl	r4, r2, r4
  415:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****       SYSCFG->EXTICR[linepos >> 2u] = regval;
  683              		.loc 1 415 14 view .LVU261
- 684 007a 23EA0203 		bic	r3, r3, r2
+ 684 007c 23EA0404 		bic	r4, r3, r4
  685              	.LVL93:
  416:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     }
  686              		.loc 1 416 7 is_stmt 1 view .LVU262
  416:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     }
  687              		.loc 1 416 37 is_stmt 0 view .LVU263
- 688 007e 41F82E30 		str	r3, [r1, lr, lsl #2]
+ 688 0080 41F82E40 		str	r4, [r1, lr, lsl #2]
  689              		.loc 1 420 10 view .LVU264
- 690 0082 0020     		movs	r0, #0
- 691 0084 02E0     		b	.L40
+ 690 0084 0020     		movs	r0, #0
+ 691 0086 02E0     		b	.L40
  692              	.LVL94:
  693              	.L41:
  694              	.LCFI8:
@@ -1239,11 +1239,11 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  698              		.cfi_restore 14
  375:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   }
  699              		.loc 1 375 12 view .LVU265
- 700 0086 0120     		movs	r0, #1
+ 700 0088 0120     		movs	r0, #1
  701              	.LVL95:
  421:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** }
  702              		.loc 1 421 1 view .LVU266
- 703 0088 7047     		bx	lr
+ 703 008a 7047     		bx	lr
  704              	.LVL96:
  705              	.L42:
  706              	.LCFI9:
@@ -1253,16 +1253,16 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  710              		.cfi_offset 14, -4
  420:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** }
  711              		.loc 1 420 10 view .LVU267
- 712 008a 0020     		movs	r0, #0
+ 712 008c 0020     		movs	r0, #0
  713              	.LVL97:
  714              	.L40:
  715              		.loc 1 421 1 view .LVU268
- 716 008c 30BD     		pop	{r4, r5, pc}
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 22
+ 716 008e 30BD     		pop	{r4, r5, pc}
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 22
 
 
  717              	.L50:
- 718 008e 00BF     		.align	2
+ 718              		.align	2
  719              	.L49:
  720 0090 04040140 		.word	1073808388
  721 0094 08040140 		.word	1073808392
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  434:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  750              		.loc 1 434 21 is_stmt 0 view .LVU276
  751 0004 0846     		mov	r0, r1
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 23
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 23
 
 
  752              	.LVL99:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  787              		@ link register save eliminated.
  465:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Check the parameters */
  466:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   assert_param(IS_EXTI_LINE(ExtiLine));
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 24
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 24
 
 
  788              		.loc 1 466 3 view .LVU286
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  489:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   *
  490:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** @verbatim
  491:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****  ===============================================================================
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 25
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 25
 
 
  492:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****                        ##### IO operation functions #####
@@ -1489,78 +1489,79 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  843 0008 03F01F03 		and	r3, r3, #31
  844              		.loc 1 514 12 view .LVU307
  845 000c 0121     		movs	r1, #1
- 846 000e 9940     		lsls	r1, r1, r3
+ 846 000e 01FA03F3 		lsl	r3, r1, r3
  847              	.LVL109:
  515:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  516:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Get pending bit  */
  517:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   regaddr = (&EXTI->PR1 + (EXTI_CONFIG_OFFSET * offset));
  848              		.loc 1 517 3 is_stmt 1 view .LVU308
  849              		.loc 1 517 25 is_stmt 0 view .LVU309
- 850 0010 5301     		lsls	r3, r2, #5
- 851              		.loc 1 517 11 view .LVU310
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 26
+ 850 0012 5201     		lsls	r2, r2, #5
+ 851              	.LVL110:
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 26
 
 
- 852 0012 044A     		ldr	r2, .L60
- 853              	.LVL110:
+ 852              		.loc 1 517 11 view .LVU310
+ 853 0014 0449     		ldr	r1, .L60
+ 854              	.LVL111:
  518:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   regval = (*regaddr & maskline);
- 854              		.loc 1 518 3 is_stmt 1 view .LVU311
- 855              		.loc 1 518 13 is_stmt 0 view .LVU312
- 856 0014 9C58     		ldr	r4, [r3, r2]
- 857              	.LVL111:
+ 855              		.loc 1 518 3 is_stmt 1 view .LVU311
+ 856              		.loc 1 518 13 is_stmt 0 view .LVU312
+ 857 0016 5458     		ldr	r4, [r2, r1]
+ 858              	.LVL112:
  519:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  520:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   if (regval != 0x00u)
- 858              		.loc 1 520 3 is_stmt 1 view .LVU313
- 859              		.loc 1 520 6 is_stmt 0 view .LVU314
- 860 0016 0C42     		tst	r4, r1
- 861 0018 03D0     		beq	.L57
+ 859              		.loc 1 520 3 is_stmt 1 view .LVU313
+ 860              		.loc 1 520 6 is_stmt 0 view .LVU314
+ 861 0018 1C42     		tst	r4, r3
+ 862 001a 03D0     		beq	.L57
  521:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   {
  522:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     /* Clear pending bit */
  523:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     *regaddr = maskline;
- 862              		.loc 1 523 5 is_stmt 1 view .LVU315
- 863              		.loc 1 523 14 is_stmt 0 view .LVU316
- 864 001a 9950     		str	r1, [r3, r2]
- 865              	.LVL112:
+ 863              		.loc 1 523 5 is_stmt 1 view .LVU315
+ 864              		.loc 1 523 14 is_stmt 0 view .LVU316
+ 865 001c 5350     		str	r3, [r2, r1]
+ 866              	.LVL113:
  524:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  525:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     /* Call pending callback */
  526:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     if (hexti->PendingCallback != NULL)
- 866              		.loc 1 526 5 is_stmt 1 view .LVU317
- 867              		.loc 1 526 14 is_stmt 0 view .LVU318
- 868 001c 4368     		ldr	r3, [r0, #4]
- 869              	.LVL113:
- 870              		.loc 1 526 8 view .LVU319
- 871 001e 03B1     		cbz	r3, .L57
+ 867              		.loc 1 526 5 is_stmt 1 view .LVU317
+ 868              		.loc 1 526 14 is_stmt 0 view .LVU318
+ 869 001e 4368     		ldr	r3, [r0, #4]
+ 870              	.LVL114:
+ 871              		.loc 1 526 8 view .LVU319
+ 872 0020 03B1     		cbz	r3, .L57
  527:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     {
  528:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****       hexti->PendingCallback();
- 872              		.loc 1 528 7 is_stmt 1 view .LVU320
- 873 0020 9847     		blx	r3
- 874              	.LVL114:
- 875              	.L57:
+ 873              		.loc 1 528 7 is_stmt 1 view .LVU320
+ 874 0022 9847     		blx	r3
+ 875              	.LVL115:
+ 876              	.L57:
  529:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     }
  530:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   }
  531:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** }
- 876              		.loc 1 531 1 is_stmt 0 view .LVU321
- 877 0022 10BD     		pop	{r4, pc}
- 878              	.L61:
- 879              		.loc 1 531 1 view .LVU322
- 880              		.align	2
- 881              	.L60:
- 882 0024 14040140 		.word	1073808404
- 883              		.cfi_endproc
- 884              	.LFE334:
- 886              		.section	.text.HAL_EXTI_GetPending,"ax",%progbits
- 887              		.align	1
- 888              		.global	HAL_EXTI_GetPending
- 889              		.syntax unified
- 890              		.thumb
- 891              		.thumb_func
- 893              	HAL_EXTI_GetPending:
- 894              	.LVL115:
- 895              	.LFB335:
+ 877              		.loc 1 531 1 is_stmt 0 view .LVU321
+ 878 0024 10BD     		pop	{r4, pc}
+ 879              	.L61:
+ 880              		.loc 1 531 1 view .LVU322
+ 881 0026 00BF     		.align	2
+ 882              	.L60:
+ 883 0028 14040140 		.word	1073808404
+ 884              		.cfi_endproc
+ 885              	.LFE334:
+ 887              		.section	.text.HAL_EXTI_GetPending,"ax",%progbits
+ 888              		.align	1
+ 889              		.global	HAL_EXTI_GetPending
+ 890              		.syntax unified
+ 891              		.thumb
+ 892              		.thumb_func
+ 894              	HAL_EXTI_GetPending:
+ 895              	.LVL116:
+ 896              	.LFB335:
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 27
+
+
  532:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 27
-
-
  533:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** /**
  534:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   * @brief  Get interrupt pending bit of a dedicated line.
  535:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   * @param  hexti Exti handle.
@@ -1569,97 +1570,99 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  538:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   */
  539:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** uint32_t HAL_EXTI_GetPending(EXTI_HandleTypeDef *hexti, uint32_t Edge)
  540:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** {
- 896              		.loc 1 540 1 is_stmt 1 view -0
- 897              		.cfi_startproc
- 898              		@ args = 0, pretend = 0, frame = 0
- 899              		@ frame_needed = 0, uses_anonymous_args = 0
- 900              		@ link register save eliminated.
+ 897              		.loc 1 540 1 is_stmt 1 view -0
+ 898              		.cfi_startproc
+ 899              		@ args = 0, pretend = 0, frame = 0
+ 900              		@ frame_needed = 0, uses_anonymous_args = 0
+ 901              		@ link register save eliminated.
  541:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   __IO uint32_t *regaddr;
- 901              		.loc 1 541 3 view .LVU324
+ 902              		.loc 1 541 3 view .LVU324
  542:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   uint32_t regval;
- 902              		.loc 1 542 3 view .LVU325
+ 903              		.loc 1 542 3 view .LVU325
  543:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   uint32_t linepos;
- 903              		.loc 1 543 3 view .LVU326
+ 904              		.loc 1 543 3 view .LVU326
  544:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   uint32_t maskline;
- 904              		.loc 1 544 3 view .LVU327
+ 905              		.loc 1 544 3 view .LVU327
  545:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   uint32_t offset;
- 905              		.loc 1 545 3 view .LVU328
+ 906              		.loc 1 545 3 view .LVU328
  546:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  547:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Check parameters */
  548:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   assert_param(IS_EXTI_LINE(hexti->Line));
- 906              		.loc 1 548 3 view .LVU329
+ 907              		.loc 1 548 3 view .LVU329
  549:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   assert_param(IS_EXTI_CONFIG_LINE(hexti->Line));
- 907              		.loc 1 549 3 view .LVU330
+ 908              		.loc 1 549 3 view .LVU330
  550:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   UNUSED(Edge);
- 908              		.loc 1 550 3 view .LVU331
+ 909              		.loc 1 550 3 view .LVU331
  551:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  552:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Compute line register offset */
  553:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   offset = ((hexti->Line & EXTI_REG_MASK) >> EXTI_REG_SHIFT);
- 909              		.loc 1 553 3 view .LVU332
- 910              		.loc 1 553 19 is_stmt 0 view .LVU333
- 911 0000 0368     		ldr	r3, [r0]
- 912              		.loc 1 553 10 view .LVU334
- 913 0002 C3F30041 		ubfx	r1, r3, #16, #1
- 914              	.LVL116:
+ 910              		.loc 1 553 3 view .LVU332
+ 911              		.loc 1 553 19 is_stmt 0 view .LVU333
+ 912 0000 0368     		ldr	r3, [r0]
+ 913              		.loc 1 553 10 view .LVU334
+ 914 0002 C3F30041 		ubfx	r1, r3, #16, #1
+ 915              	.LVL117:
  554:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Compute line position */
  555:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   linepos = (hexti->Line & EXTI_PIN_MASK);
- 915              		.loc 1 555 3 is_stmt 1 view .LVU335
- 916              		.loc 1 555 11 is_stmt 0 view .LVU336
- 917 0006 03F01F03 		and	r3, r3, #31
- 918              	.LVL117:
+ 916              		.loc 1 555 3 is_stmt 1 view .LVU335
+ 917              		.loc 1 555 11 is_stmt 0 view .LVU336
+ 918 0006 03F01F03 		and	r3, r3, #31
+ 919              	.LVL118:
  556:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Compute line mask */
  557:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   maskline = (1uL << linepos);
- 919              		.loc 1 557 3 is_stmt 1 view .LVU337
- 920              		.loc 1 557 12 is_stmt 0 view .LVU338
- 921 000a 0122     		movs	r2, #1
- 922 000c 9A40     		lsls	r2, r2, r3
- 923              	.LVL118:
+ 920              		.loc 1 557 3 is_stmt 1 view .LVU337
+ 921              		.loc 1 557 12 is_stmt 0 view .LVU338
+ 922 000a 0120     		movs	r0, #1
+ 923              	.LVL119:
+ 924              		.loc 1 557 12 view .LVU339
+ 925 000c 00FA03F2 		lsl	r2, r0, r3
+ 926              	.LVL120:
  558:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 28
+
+
  559:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Get pending bit */
  560:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   regaddr = (&EXTI->PR1 + (EXTI_CONFIG_OFFSET * offset));
- 924              		.loc 1 560 3 is_stmt 1 view .LVU339
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 28
-
-
- 925              		.loc 1 560 25 is_stmt 0 view .LVU340
- 926 000e 4901     		lsls	r1, r1, #5
- 927              	.LVL119:
- 928              		.loc 1 560 11 view .LVU341
- 929 0010 0248     		ldr	r0, .L63
- 930              	.LVL120:
+ 927              		.loc 1 560 3 is_stmt 1 view .LVU340
+ 928              		.loc 1 560 25 is_stmt 0 view .LVU341
+ 929 0010 4901     		lsls	r1, r1, #5
+ 930              	.LVL121:
+ 931              		.loc 1 560 11 view .LVU342
+ 932 0012 0248     		ldr	r0, .L63
+ 933              	.LVL122:
  561:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  562:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* return 1 if bit is set else 0 */
  563:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   regval = ((*regaddr & maskline) >> linepos);
- 931              		.loc 1 563 3 is_stmt 1 view .LVU342
- 932              		.loc 1 563 14 is_stmt 0 view .LVU343
- 933 0012 0858     		ldr	r0, [r1, r0]
- 934              	.LVL121:
- 935              		.loc 1 563 23 view .LVU344
- 936 0014 1040     		ands	r0, r0, r2
- 937              	.LVL122:
+ 934              		.loc 1 563 3 is_stmt 1 view .LVU343
+ 935              		.loc 1 563 14 is_stmt 0 view .LVU344
+ 936 0014 0858     		ldr	r0, [r1, r0]
+ 937              	.LVL123:
+ 938              		.loc 1 563 23 view .LVU345
+ 939 0016 1040     		ands	r0, r0, r2
+ 940              	.LVL124:
  564:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   return regval;
- 938              		.loc 1 564 3 is_stmt 1 view .LVU345
+ 941              		.loc 1 564 3 is_stmt 1 view .LVU346
  565:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** }
- 939              		.loc 1 565 1 is_stmt 0 view .LVU346
- 940 0016 D840     		lsrs	r0, r0, r3
- 941              	.LVL123:
- 942              		.loc 1 565 1 view .LVU347
- 943 0018 7047     		bx	lr
- 944              	.L64:
- 945 001a 00BF     		.align	2
- 946              	.L63:
- 947 001c 14040140 		.word	1073808404
- 948              		.cfi_endproc
- 949              	.LFE335:
- 951              		.section	.text.HAL_EXTI_ClearPending,"ax",%progbits
- 952              		.align	1
- 953              		.global	HAL_EXTI_ClearPending
- 954              		.syntax unified
- 955              		.thumb
- 956              		.thumb_func
- 958              	HAL_EXTI_ClearPending:
- 959              	.LVL124:
- 960              	.LFB336:
+ 942              		.loc 1 565 1 is_stmt 0 view .LVU347
+ 943 0018 D840     		lsrs	r0, r0, r3
+ 944              	.LVL125:
+ 945              		.loc 1 565 1 view .LVU348
+ 946 001a 7047     		bx	lr
+ 947              	.L64:
+ 948              		.align	2
+ 949              	.L63:
+ 950 001c 14040140 		.word	1073808404
+ 951              		.cfi_endproc
+ 952              	.LFE335:
+ 954              		.section	.text.HAL_EXTI_ClearPending,"ax",%progbits
+ 955              		.align	1
+ 956              		.global	HAL_EXTI_ClearPending
+ 957              		.syntax unified
+ 958              		.thumb
+ 959              		.thumb_func
+ 961              	HAL_EXTI_ClearPending:
+ 962              	.LVL126:
+ 963              	.LFB336:
  566:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  567:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  568:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** /**
@@ -1670,85 +1673,86 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  573:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   */
  574:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** void HAL_EXTI_ClearPending(EXTI_HandleTypeDef *hexti, uint32_t Edge)
  575:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** {
- 961              		.loc 1 575 1 is_stmt 1 view -0
- 962              		.cfi_startproc
- 963              		@ args = 0, pretend = 0, frame = 0
- 964              		@ frame_needed = 0, uses_anonymous_args = 0
- 965              		@ link register save eliminated.
+ 964              		.loc 1 575 1 is_stmt 1 view -0
+ 965              		.cfi_startproc
+ 966              		@ args = 0, pretend = 0, frame = 0
+ 967              		@ frame_needed = 0, uses_anonymous_args = 0
+ 968              		@ link register save eliminated.
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 29
+
+
  576:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   __IO uint32_t *regaddr;
- 966              		.loc 1 576 3 view .LVU349
+ 969              		.loc 1 576 3 view .LVU350
  577:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   uint32_t maskline;
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 29
-
-
- 967              		.loc 1 577 3 view .LVU350
+ 970              		.loc 1 577 3 view .LVU351
  578:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   uint32_t offset;
- 968              		.loc 1 578 3 view .LVU351
+ 971              		.loc 1 578 3 view .LVU352
  579:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  580:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Check parameters */
  581:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   assert_param(IS_EXTI_LINE(hexti->Line));
- 969              		.loc 1 581 3 view .LVU352
+ 972              		.loc 1 581 3 view .LVU353
  582:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   assert_param(IS_EXTI_CONFIG_LINE(hexti->Line));
- 970              		.loc 1 582 3 view .LVU353
+ 973              		.loc 1 582 3 view .LVU354
  583:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   UNUSED(Edge);
- 971              		.loc 1 583 3 view .LVU354
+ 974              		.loc 1 583 3 view .LVU355
  584:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  585:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Compute line register offset */
  586:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   offset = ((hexti->Line & EXTI_REG_MASK) >> EXTI_REG_SHIFT);
- 972              		.loc 1 586 3 view .LVU355
- 973              		.loc 1 586 19 is_stmt 0 view .LVU356
- 974 0000 0368     		ldr	r3, [r0]
- 975              		.loc 1 586 10 view .LVU357
- 976 0002 C3F30042 		ubfx	r2, r3, #16, #1
- 977              	.LVL125:
+ 975              		.loc 1 586 3 view .LVU356
+ 976              		.loc 1 586 19 is_stmt 0 view .LVU357
+ 977 0000 0368     		ldr	r3, [r0]
+ 978              		.loc 1 586 10 view .LVU358
+ 979 0002 C3F30042 		ubfx	r2, r3, #16, #1
+ 980              	.LVL127:
  587:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Compute line mask */
  588:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   maskline = (1uL << (hexti->Line & EXTI_PIN_MASK));
- 978              		.loc 1 588 3 is_stmt 1 view .LVU358
- 979              		.loc 1 588 35 is_stmt 0 view .LVU359
- 980 0006 03F01F03 		and	r3, r3, #31
- 981              		.loc 1 588 12 view .LVU360
- 982 000a 0121     		movs	r1, #1
- 983              	.LVL126:
+ 981              		.loc 1 588 3 is_stmt 1 view .LVU359
+ 982              		.loc 1 588 35 is_stmt 0 view .LVU360
+ 983 0006 03F01F03 		and	r3, r3, #31
  984              		.loc 1 588 12 view .LVU361
- 985 000c 9940     		lsls	r1, r1, r3
- 986              	.LVL127:
+ 985 000a 0121     		movs	r1, #1
+ 986              	.LVL128:
+ 987              		.loc 1 588 12 view .LVU362
+ 988 000c 01FA03F3 		lsl	r3, r1, r3
+ 989              	.LVL129:
  589:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  590:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Get pending register address */
  591:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   regaddr = (&EXTI->PR1 + (EXTI_CONFIG_OFFSET * offset));
- 987              		.loc 1 591 3 is_stmt 1 view .LVU362
- 988              		.loc 1 591 25 is_stmt 0 view .LVU363
- 989 000e 5301     		lsls	r3, r2, #5
- 990              		.loc 1 591 11 view .LVU364
- 991 0010 014A     		ldr	r2, .L66
- 992              	.LVL128:
+ 990              		.loc 1 591 3 is_stmt 1 view .LVU363
+ 991              		.loc 1 591 25 is_stmt 0 view .LVU364
+ 992 0010 5201     		lsls	r2, r2, #5
+ 993              	.LVL130:
+ 994              		.loc 1 591 11 view .LVU365
+ 995 0012 0149     		ldr	r1, .L66
+ 996              	.LVL131:
  592:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  593:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Clear Pending bit */
  594:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   *regaddr =  maskline;
- 993              		.loc 1 594 3 is_stmt 1 view .LVU365
- 994              		.loc 1 594 12 is_stmt 0 view .LVU366
- 995 0012 9950     		str	r1, [r3, r2]
- 996              	.LVL129:
+ 997              		.loc 1 594 3 is_stmt 1 view .LVU366
+ 998              		.loc 1 594 12 is_stmt 0 view .LVU367
+ 999 0014 5350     		str	r3, [r2, r1]
+ 1000              	.LVL132:
  595:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** }
- 997              		.loc 1 595 1 view .LVU367
- 998 0014 7047     		bx	lr
- 999              	.L67:
- 1000 0016 00BF     		.align	2
- 1001              	.L66:
- 1002 0018 14040140 		.word	1073808404
- 1003              		.cfi_endproc
- 1004              	.LFE336:
- 1006              		.section	.text.HAL_EXTI_GenerateSWI,"ax",%progbits
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 30
+ 1001              		.loc 1 595 1 view .LVU368
+ 1002 0016 7047     		bx	lr
+ 1003              	.L67:
+ 1004              		.align	2
+ 1005              	.L66:
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 30
 
 
- 1007              		.align	1
- 1008              		.global	HAL_EXTI_GenerateSWI
- 1009              		.syntax unified
- 1010              		.thumb
- 1011              		.thumb_func
- 1013              	HAL_EXTI_GenerateSWI:
- 1014              	.LVL130:
- 1015              	.LFB337:
+ 1006 0018 14040140 		.word	1073808404
+ 1007              		.cfi_endproc
+ 1008              	.LFE336:
+ 1010              		.section	.text.HAL_EXTI_GenerateSWI,"ax",%progbits
+ 1011              		.align	1
+ 1012              		.global	HAL_EXTI_GenerateSWI
+ 1013              		.syntax unified
+ 1014              		.thumb
+ 1015              		.thumb_func
+ 1017              	HAL_EXTI_GenerateSWI:
+ 1018              	.LVL133:
+ 1019              	.LFB337:
  596:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  597:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  598:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** /**
@@ -1758,102 +1762,103 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 1
  602:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   */
  603:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** void HAL_EXTI_GenerateSWI(EXTI_HandleTypeDef *hexti)
  604:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** {
- 1016              		.loc 1 604 1 is_stmt 1 view -0
- 1017              		.cfi_startproc
- 1018              		@ args = 0, pretend = 0, frame = 0
- 1019              		@ frame_needed = 0, uses_anonymous_args = 0
- 1020              		@ link register save eliminated.
+ 1020              		.loc 1 604 1 is_stmt 1 view -0
+ 1021              		.cfi_startproc
+ 1022              		@ args = 0, pretend = 0, frame = 0
+ 1023              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1024              		@ link register save eliminated.
  605:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   __IO uint32_t *regaddr;
- 1021              		.loc 1 605 3 view .LVU369
+ 1025              		.loc 1 605 3 view .LVU370
  606:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   uint32_t maskline;
- 1022              		.loc 1 606 3 view .LVU370
+ 1026              		.loc 1 606 3 view .LVU371
  607:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   uint32_t offset;
- 1023              		.loc 1 607 3 view .LVU371
+ 1027              		.loc 1 607 3 view .LVU372
  608:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  609:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Check parameter */
  610:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   assert_param(IS_EXTI_LINE(hexti->Line));
- 1024              		.loc 1 610 3 view .LVU372
+ 1028              		.loc 1 610 3 view .LVU373
  611:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   assert_param(IS_EXTI_CONFIG_LINE(hexti->Line));
- 1025              		.loc 1 611 3 view .LVU373
+ 1029              		.loc 1 611 3 view .LVU374
  612:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  613:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* compute line register offset */
  614:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   offset = ((hexti->Line & EXTI_REG_MASK) >> EXTI_REG_SHIFT);
- 1026              		.loc 1 614 3 view .LVU374
- 1027              		.loc 1 614 19 is_stmt 0 view .LVU375
- 1028 0000 0368     		ldr	r3, [r0]
- 1029              		.loc 1 614 10 view .LVU376
- 1030 0002 C3F30042 		ubfx	r2, r3, #16, #1
- 1031              	.LVL131:
+ 1030              		.loc 1 614 3 view .LVU375
+ 1031              		.loc 1 614 19 is_stmt 0 view .LVU376
+ 1032 0000 0368     		ldr	r3, [r0]
+ 1033              		.loc 1 614 10 view .LVU377
+ 1034 0002 C3F30042 		ubfx	r2, r3, #16, #1
+ 1035              	.LVL134:
  615:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* compute line mask */
  616:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   maskline = (1uL << (hexti->Line & EXTI_PIN_MASK));
- 1032              		.loc 1 616 3 is_stmt 1 view .LVU377
- 1033              		.loc 1 616 35 is_stmt 0 view .LVU378
- 1034 0006 03F01F03 		and	r3, r3, #31
- 1035              		.loc 1 616 12 view .LVU379
- 1036 000a 0121     		movs	r1, #1
- 1037 000c 9940     		lsls	r1, r1, r3
- 1038              	.LVL132:
+ 1036              		.loc 1 616 3 is_stmt 1 view .LVU378
+ 1037              		.loc 1 616 35 is_stmt 0 view .LVU379
+ 1038 0006 03F01F03 		and	r3, r3, #31
+ 1039              		.loc 1 616 12 view .LVU380
+ 1040 000a 0121     		movs	r1, #1
+ 1041 000c 01FA03F3 		lsl	r3, r1, r3
+ 1042              	.LVL135:
  617:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 31
+
+
  618:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   regaddr = (&EXTI->SWIER1 + (EXTI_CONFIG_OFFSET * offset));
- 1039              		.loc 1 618 3 is_stmt 1 view .LVU380
- 1040              		.loc 1 618 28 is_stmt 0 view .LVU381
- 1041 000e 5301     		lsls	r3, r2, #5
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 31
-
-
- 1042              		.loc 1 618 11 view .LVU382
- 1043 0010 014A     		ldr	r2, .L69
- 1044              	.LVL133:
+ 1043              		.loc 1 618 3 is_stmt 1 view .LVU381
+ 1044              		.loc 1 618 28 is_stmt 0 view .LVU382
+ 1045 0010 5201     		lsls	r2, r2, #5
+ 1046              	.LVL136:
+ 1047              		.loc 1 618 11 view .LVU383
+ 1048 0012 0149     		ldr	r1, .L69
+ 1049              	.LVL137:
  619:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   *regaddr = maskline;
- 1045              		.loc 1 619 3 is_stmt 1 view .LVU383
- 1046              		.loc 1 619 12 is_stmt 0 view .LVU384
- 1047 0012 9950     		str	r1, [r3, r2]
- 1048              	.LVL134:
+ 1050              		.loc 1 619 3 is_stmt 1 view .LVU384
+ 1051              		.loc 1 619 12 is_stmt 0 view .LVU385
+ 1052 0014 5350     		str	r3, [r2, r1]
+ 1053              	.LVL138:
  620:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** }
- 1049              		.loc 1 620 1 view .LVU385
- 1050 0014 7047     		bx	lr
- 1051              	.L70:
- 1052 0016 00BF     		.align	2
- 1053              	.L69:
- 1054 0018 10040140 		.word	1073808400
- 1055              		.cfi_endproc
- 1056              	.LFE337:
- 1058              		.text
- 1059              	.Letext0:
- 1060              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/ma
- 1061              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/sy
- 1062              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
- 1063              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
- 1064              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h"
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s 			page 32
+ 1054              		.loc 1 620 1 view .LVU386
+ 1055 0016 7047     		bx	lr
+ 1056              	.L70:
+ 1057              		.align	2
+ 1058              	.L69:
+ 1059 0018 10040140 		.word	1073808400
+ 1060              		.cfi_endproc
+ 1061              	.LFE337:
+ 1063              		.text
+ 1064              	.Letext0:
+ 1065              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 1066              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 1067              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
+ 1068              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
+ 1069              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h"
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s 			page 32
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_hal_exti.c
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:21     .text.HAL_EXTI_SetConfigLine:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:27     .text.HAL_EXTI_SetConfigLine:00000000 HAL_EXTI_SetConfigLine
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:297    .text.HAL_EXTI_SetConfigLine:000000cc $d
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:305    .text.HAL_EXTI_GetConfigLine:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:311    .text.HAL_EXTI_GetConfigLine:00000000 HAL_EXTI_GetConfigLine
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:529    .text.HAL_EXTI_GetConfigLine:000000ac $d
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:537    .text.HAL_EXTI_ClearConfigLine:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:543    .text.HAL_EXTI_ClearConfigLine:00000000 HAL_EXTI_ClearConfigLine
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:720    .text.HAL_EXTI_ClearConfigLine:00000090 $d
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:728    .text.HAL_EXTI_RegisterCallback:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:734    .text.HAL_EXTI_RegisterCallback:00000000 HAL_EXTI_RegisterCallback
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:774    .text.HAL_EXTI_GetHandle:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:780    .text.HAL_EXTI_GetHandle:00000000 HAL_EXTI_GetHandle
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:812    .text.HAL_EXTI_IRQHandler:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:818    .text.HAL_EXTI_IRQHandler:00000000 HAL_EXTI_IRQHandler
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:882    .text.HAL_EXTI_IRQHandler:00000024 $d
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:887    .text.HAL_EXTI_GetPending:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:893    .text.HAL_EXTI_GetPending:00000000 HAL_EXTI_GetPending
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:947    .text.HAL_EXTI_GetPending:0000001c $d
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:952    .text.HAL_EXTI_ClearPending:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:958    .text.HAL_EXTI_ClearPending:00000000 HAL_EXTI_ClearPending
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:1002   .text.HAL_EXTI_ClearPending:00000018 $d
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:1007   .text.HAL_EXTI_GenerateSWI:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:1013   .text.HAL_EXTI_GenerateSWI:00000000 HAL_EXTI_GenerateSWI
-C:\Users\HRb\AppData\Local\Temp\ccGVCgb5.s:1054   .text.HAL_EXTI_GenerateSWI:00000018 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:20     .text.HAL_EXTI_SetConfigLine:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:26     .text.HAL_EXTI_SetConfigLine:00000000 HAL_EXTI_SetConfigLine
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:297    .text.HAL_EXTI_SetConfigLine:000000cc $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:305    .text.HAL_EXTI_GetConfigLine:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:311    .text.HAL_EXTI_GetConfigLine:00000000 HAL_EXTI_GetConfigLine
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:529    .text.HAL_EXTI_GetConfigLine:000000ac $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:537    .text.HAL_EXTI_ClearConfigLine:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:543    .text.HAL_EXTI_ClearConfigLine:00000000 HAL_EXTI_ClearConfigLine
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:720    .text.HAL_EXTI_ClearConfigLine:00000090 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:728    .text.HAL_EXTI_RegisterCallback:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:734    .text.HAL_EXTI_RegisterCallback:00000000 HAL_EXTI_RegisterCallback
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:774    .text.HAL_EXTI_GetHandle:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:780    .text.HAL_EXTI_GetHandle:00000000 HAL_EXTI_GetHandle
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:812    .text.HAL_EXTI_IRQHandler:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:818    .text.HAL_EXTI_IRQHandler:00000000 HAL_EXTI_IRQHandler
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:883    .text.HAL_EXTI_IRQHandler:00000028 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:888    .text.HAL_EXTI_GetPending:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:894    .text.HAL_EXTI_GetPending:00000000 HAL_EXTI_GetPending
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:950    .text.HAL_EXTI_GetPending:0000001c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:955    .text.HAL_EXTI_ClearPending:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:961    .text.HAL_EXTI_ClearPending:00000000 HAL_EXTI_ClearPending
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:1006   .text.HAL_EXTI_ClearPending:00000018 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:1011   .text.HAL_EXTI_GenerateSWI:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:1017   .text.HAL_EXTI_GenerateSWI:00000000 HAL_EXTI_GenerateSWI
+C:\Users\HYDROG~1\AppData\Local\Temp\cceBHTGx.s:1059   .text.HAL_EXTI_GenerateSWI:00000018 $d
 
 NO UNDEFINED SYMBOLS

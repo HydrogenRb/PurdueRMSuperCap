@@ -9,10 +9,8 @@
             "type": "cortex-debug",
             "servertype": "openocd",
             "configFiles": [
-                "C:/Users/HRb/HydrogenRb/Software/Dev/openocd-20231002/OpenOCD-20231002-0.12.0/share/openocd/scripts/interface/stlink-v2.cfg",
-                "C:/Users/HRb/HydrogenRb/Software/Dev/openocd-20231002/OpenOCD-20231002-0.12.0/share/openocd/scripts/target/stm32g4x.cfg",
-                "C:/Users/purdu/Desktop/Robomaster/DevTool/openocd-20231002/OpenOCD-20231002-0.12.0/share/openocd/scripts/interface/stlink-v2.cfg",
-                "C:/Users/purdu/Desktop/Robomaster/DevTool/openocd-20231002/OpenOCD-20231002-0.12.0/share/openocd/scripts/target/stm32g4x.cfg"
+                "C:/Users/HydrogenRb/HydrogenRb/Software/DevTool/OPENOCD/openocd-v0.12.0-i686-w64-mingw32/share/openocd/scripts/interface/cmsis-dap.cfg",
+                "C:/Users/HydrogenRb/HydrogenRb/Software/DevTool/OPENOCD/openocd-v0.12.0-i686-w64-mingw32/share/openocd/scripts/target/stm32g4x.cfg",
             ],
             "liveWatch": {
                 "enabled": true,

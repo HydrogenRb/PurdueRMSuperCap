@@ -45,7 +45,7 @@
         },
         {
             "type": "cppbuild",
-            "label": "C/C++: gcc.exe 生成活动文件",
+            "label": "C/C++: gcc.exe 生成活动文件", 
             "command": "D:\\software\\MinGW\\w64devkit\\bin\\gcc.exe",
             "args": [
                 "-fdiagnostics-color=always",

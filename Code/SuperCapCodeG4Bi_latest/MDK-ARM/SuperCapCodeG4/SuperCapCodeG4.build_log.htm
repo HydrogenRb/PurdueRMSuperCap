@@ -3,107 +3,735 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: µVision V5.38.0.0
-Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: purduerobomaster purduerobomaster, purduerobomaster, LIC=D0D7S-LQ4Q8-30TNC-7ESGH-G89HK-2VFB5
+IDE-Version: ¦ÌVision V5.41.0.0
+Copyright (C) 2024 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Rb Hydrogen, Purdue, LIC=----
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
-Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+Toolchain:       MDK-Lite  Version: 5.41.0.0
+Toolchain Path:  C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
 C Compiler:      Armcc.exe V5.06 update 7 (build 960)
 Assembler:       Armasm.exe V5.06 update 7 (build 960)
 Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
 Library Manager: ArmAr.exe V5.06 update 7 (build 960)
 Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
-CPU DLL:         SARMCM3.DLL V5.38.0.0
+CPU DLL:         SARMCM3.DLL V5.41.0.0
 Dialog DLL:      DCM.DLL V1.17.5.0
-Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Target DLL:      CMSIS_AGDI.dll V1.33.21.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-C:\Users\purdu\Desktop\Super Cap special folder\PurdueRMSuperCap\Code\SuperCapCodeG4Bi\MDK-ARM\SuperCapCodeG4.uvprojx
-Project File Date:  06/14/2024
+C:\Users\HydrogenRb\HydrogenRb\Work\Robomaster\1 SuperCap\Code\SuperCapCodeG4Bi_latest\MDK-ARM\SuperCapCodeG4.uvprojx
+Project File Date:  03/29/2025
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin'
 Build target 'SuperCapCodeG4'
-Note: source file '..\Core\Src\supercap.c' - object file renamed from 'SuperCapCodeG4\supercap.o' to 'SuperCapCodeG4\supercap_1.o'.
 compiling main.c...
-../Core/Inc/supercap.h(84): warning:  #1295-D: Deprecated declaration TIM6_NVIC - give arg types
-  void TIM6_NVIC();
-../Core/Inc/supercap.h(85): warning:  #1295-D: Deprecated declaration TIM2_NVIC - give arg types
-  void TIM2_NVIC();
-../Core/Inc/supercap.h(86): warning:  #1295-D: Deprecated declaration TIM5_NVIC - give arg types
-  void TIM5_NVIC();
-../Core/Inc/supercap.h(102): warning:  #1295-D: Deprecated declaration Supercap_FSM - give arg types
-  void Supercap_FSM();
-../Core/Inc/supercap.h(105): warning:  #1295-D: Deprecated declaration Supercap_PWM_GND - give arg types
-  void Supercap_PWM_GND();
-../Core/Inc/supercap.h(106): warning:  #1295-D: Deprecated declaration Supercap_DCDC_Start - give arg types
-  void Supercap_DCDC_Start();
-../Core/Inc/supercap.h(107): warning:  #1295-D: Deprecated declaration Supercap_DCDC_Stop - give arg types
-  void Supercap_DCDC_Stop();
-../Core/Inc/supercap.h(108): warning:  #1295-D: Deprecated declaration Supercap_AUX_Init - give arg types
-  void Supercap_AUX_Init();
-../Core/Src/main.c(252): warning:  #68-D: integer conversion resulted in a change of sign
-    uint16_t notes2[] = {6, 5, 5, 1, 2, 3, 3, 2, 1, -6};
-../Core/Src/main.c(135): warning:  #177-D: variable "tail"  was declared but never referenced
-    char tail[4] = {0x00, 0x00, 0x80, 0x7f};
-../Core/Src/main.c(148): warning:  #177-D: variable "temp"  was declared but never referenced
-  	float temp;
-../Core/Src/main.c(149): warning:  #177-D: variable "data_array"  was declared but never referenced
-    float data_array[7];
-../Core/Src/main.c: 12 warnings, 0 errors
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+assembling startup_stm32g473xx.s...
+startup_stm32g473xx.s: Error: A9555E: Failed to check out a license.
+startup_stm32g473xx.s: The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+startup_stm32g473xx.s: ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+startup_stm32g473xx.s: Information about this error is available at: http://ds.arm.com/support/lic87/m1
+startup_stm32g473xx.s:  General licensing information is available at: http://ds.arm.com/support/licensing/
+startup_stm32g473xx.s:  If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+startup_stm32g473xx.s:  - ARMLMD_LICENSE_FILE: unset
+startup_stm32g473xx.s:  - LM_LICENSE_FILE: unset
+startup_stm32g473xx.s:  - ARM_TOOL_VARIANT: unset
+startup_stm32g473xx.s:  - ARM_PRODUCT_PATH: unset
+startup_stm32g473xx.s:  - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+startup_stm32g473xx.s:  - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+startup_stm32g473xx.s:  - Selected tool variant: product
+startup_stm32g473xx.s:  - Checkout feature: compiler5
+startup_stm32g473xx.s:  - Feature version: 5.0202006
+startup_stm32g473xx.s:  - Flex error code: -1
+startup_stm32g473xx.s: Product: ARM Compiler 5.06
+startup_stm32g473xx.s: Component: ARM Compiler 5.06 update 7 (build 960)
+startup_stm32g473xx.s: Tool: ArmAsm [4d35fa]
+compiling tim.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling fdcan.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling usart.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_adc.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling dma.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling adc.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_it.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_msp.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_ll_adc.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_adc_ex.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling gpio.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_rcc.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_rcc_ex.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_flash.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_flash_ex.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_flash_ramfunc.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_gpio.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_exti.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_dma.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_dma_ex.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_pwr.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_pwr_ex.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_cortex.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_fdcan.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_tim.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_tim_ex.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_uart.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling stm32g4xx_hal_uart_ex.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling system_stm32g4xx.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+compiling Kalman_Filter.c...
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
 compiling supercap.c...
-../Core/Inc/supercap.h(84): warning:  #1295-D: Deprecated declaration TIM6_NVIC - give arg types
-  void TIM6_NVIC();
-../Core/Inc/supercap.h(85): warning:  #1295-D: Deprecated declaration TIM2_NVIC - give arg types
-  void TIM2_NVIC();
-../Core/Inc/supercap.h(86): warning:  #1295-D: Deprecated declaration TIM5_NVIC - give arg types
-  void TIM5_NVIC();
-../Core/Inc/supercap.h(102): warning:  #1295-D: Deprecated declaration Supercap_FSM - give arg types
-  void Supercap_FSM();
-../Core/Inc/supercap.h(105): warning:  #1295-D: Deprecated declaration Supercap_PWM_GND - give arg types
-  void Supercap_PWM_GND();
-../Core/Inc/supercap.h(106): warning:  #1295-D: Deprecated declaration Supercap_DCDC_Start - give arg types
-  void Supercap_DCDC_Start();
-../Core/Inc/supercap.h(107): warning:  #1295-D: Deprecated declaration Supercap_DCDC_Stop - give arg types
-  void Supercap_DCDC_Stop();
-../Core/Inc/supercap.h(108): warning:  #1295-D: Deprecated declaration Supercap_AUX_Init - give arg types
-  void Supercap_AUX_Init();
-..\Core\Src\supercap.c(67): warning:  #940-D: missing return statement at end of non-void function "Update_Current" 
-  }
-..\Core\Src\supercap.c(404): warning:  #1-D: last line of file ends without a newline
-  }
-..\Core\Src\supercap.c: 10 warnings, 0 errors
-linking...
-Program Size: Code=22612 RO-data=656 RW-data=112 ZI-data=3456  
-FromELF: creating hex file...
-"SuperCapCodeG4\SuperCapCodeG4.axf" - 0 Error(s), 22 Warning(s).
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\sw\mappings
+ - Toolchain location: C:\Users\HydrogenRb\AppData\Local\Keil_v5\ARM_Compiler_5.06u7\Bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: ArmCC [4d365d]
+"SuperCapCodeG4\SuperCapCodeG4.axf" - 34 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
-                ARM.CMSIS.5.9.0
+                https://www.keil.com/pack/ARM.CMSIS.6.1.0.pack
+                ARM::CMSIS@6.1.0
                 CMSIS (Common Microcontroller Software Interface Standard)
-   * Component: CORE Version: 5.6.0
+   * Component: CORE Version: 6.1.0
 
 Package Vendor: Keil
-                https://www.keil.com/pack/Keil.STM32G4xx_DFP.1.5.0.pack
-                Keil.STM32G4xx_DFP.1.5.0
-                STMicroelectronics STM32G4 Series Device Support, Drivers and Examples
+                https://www.keil.com/pack/Keil.STM32G4xx_DFP.2.0.0.pack
+                Keil::STM32G4xx_DFP@2.0.0
+                STMicroelectronics STM32G4 Series Device Support
 
 <h2>Collection of Component include folders:</h2>
   ./RTE/_SuperCapCodeG4
-  C:/Users/purdu/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
-  C:/Users/purdu/AppData/Local/Arm/Packs/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include
+  C:/Users/HydrogenRb/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE:5.6.0
+   * Component: ARM::CMSIS:CORE@6.1.0
       Include file:  CMSIS/Core/Include/tz_context.h
-Build Time Elapsed:  00:00:05
+Target not created.
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

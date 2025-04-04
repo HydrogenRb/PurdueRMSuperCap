@@ -95,6 +95,8 @@
 	uint16_t temp_counter;
 	uint32_t TIM3_AUTORELOAD_over100;
 
+  uint8_t Robot_power_from_REF;
+
 	
 	uint32_t debug_counter;
 
@@ -114,7 +116,7 @@ void SystemClock_Config(void);
 
 typedef struct {
     float data[8];
-    char tail[4];
+    unsigned char tail[4];
 } DataPacket;
 
 DataPacket data_packet = {
@@ -186,9 +188,10 @@ int main(void)
 		/* USER CODE BEGIN 2 */
 		supercap_max_power_STM32 = 45;
 		supercap_max_power_current = CURRENT_LIMIT;
+    Update_Current(supercap_max_power_STM32, 45);
 		
 		// Configure FDCAN1 TX header
-		TxHeader.Identifier =	 0x188;
+		TxHeader.Identifier =	 0x2c7;
 		TxHeader.IdType = FDCAN_STANDARD_ID;
 		TxHeader.TxFrameType = FDCAN_DATA_FRAME;
 		TxHeader.DataLength = FDCAN_DLC_BYTES_1;
@@ -204,7 +207,7 @@ int main(void)
 		FDCAN1_RXFilter.FilterType = FDCAN_FILTER_MASK;
 		FDCAN1_RXFilter.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
 		//FDCAN1_RXFilter.FilterType = FDCAN_FILTER_DUAL;
-		FDCAN1_RXFilter.FilterID1 = 0x166;
+		FDCAN1_RXFilter.FilterID1 = 0x100;
 		FDCAN1_RXFilter.FilterID2 = 0x7FF;
 
 
@@ -244,9 +247,9 @@ int main(void)
 	Supercap_Function_Init(&V_bat);
 	Supercap_Function_Init(&V_cap);
 
-  Supercap_PID_Init(&PID_45W_loop, 0.005f, 0.0005f, 0.0f, MAX_CAP_VOLTAGE, 0, 2500);
+  Supercap_PID_Init(&PID_45W_loop, 0.005f, 0.0008f, 0.01f, MAX_CAP_VOLTAGE, 0, 1500);
   Supercap_PID_Init(&PID_n7A_loop, 0.2f, 0.00002f, 0.01f, MAX_CAP_VOLTAGE, 0, 400);
-  Supercap_PID_Init(&PID_7A_loop, 0.3f, 0.00005f, 0.01f, MAX_CAP_VOLTAGE, 0, 600);
+  Supercap_PID_Init(&PID_7A_loop, 0.25f, 0.00005f, 0.01f, MAX_CAP_VOLTAGE, 0, 600);
 	Supercap_PID_Init(&PID_voltage_loop, 0.00005f, 0.0001f, 0.08f, MAX_DUTY, 65, 50);
 
   uint16_t notes2[] = {6, 5, 5, 1, 2, 3, 3, 2, 1, -6};
@@ -280,30 +283,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-//    data_packet.data[0] = Supercap_ADC_to_Current_Funtion(C_right.real_value_12bits, 2047);
-//    data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
-//    data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
-//		//data_packet.data[2] = supercap_max_power_STM32;
-//		//data_packet.data[2] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
-//    data_packet.data[3] = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
-//    data_packet.data[4] = Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
-//    data_packet.data[5] = Supercap_ADC_to_Voltage_Funtion(PID_n7A_loop.output);
-//		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
-//		data_packet.data[7] = (float)supercap_target_voltage*0.1f*0.03f;
-		//bug report: I put data[5], So, the tail be removed
-
-//    data_packet.data[0] = Supercap_ADC_to_Current_Funtion(C_right.real_value_12bits, 2047) * 24;
-//    data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
-//    data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047) * 24;
-//		//data_packet.data[2] = supercap_max_power_STM32;
-//		//data_packet.data[2] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
-//    data_packet.data[3] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047) * 24;
-//    data_packet.data[4] = (float)supercap_max_power_STM32;
-//    data_packet.data[5] = (float)Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
-//		data_packet.data[6] = (float)temp2;
-//		//data_packet.data[7] = (float)supercap_target_voltage*0.1f*0.03f;
-//		data_packet.data[7] = Supercap_ADC_to_Voltage_Funtion(PID_n7A_loop.output);
-
     data_packet.data[0] = Supercap_ADC_to_Current_Funtion(C_right.real_value_12bits, 2047);
     data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
     data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
@@ -311,9 +290,8 @@ int main(void)
     data_packet.data[4] = Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
     data_packet.data[5] = Supercap_ADC_to_Voltage_Funtion(PID_n7A_loop.output);
 		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
-		data_packet.data[7] = (float)supercap_target_voltage*0.1f*0.03f;
+		data_packet.data[7] = Supercap_ADC_to_Voltage_Funtion(supercap_target_voltage);//(float)supercap_target_voltage*0.1f*0.03f;
 		//bug report: I put data[5], So, the tail be removed
-    
   }
   /* USER CODE END 3 */
 }
@@ -367,17 +345,19 @@ void SystemClock_Config(void)
 /* USER CODE BEGIN 4 */
 void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs){
 	static FDCAN_RxHeaderTypeDef rx_header;
-  uint8_t can_rx_buff[8];
+  uint16_t can_rx_buff[8];
 	HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &rx_header, can_rx_buff);
-	if(*(&rx_header.Identifier) == 0x166){
+	if(*(&rx_header.Identifier) == 0x2c8){
     //HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &rx_header, can_rx_buff);
 		if (can_rx_buff[0] >= 30 && can_rx_buff[0]<= 120 && supercap_max_power_STM32 != can_rx_buff[0]){ //Normal
 			Update_Current(supercap_max_power_STM32, can_rx_buff[0]);
 			supercap_max_power_STM32 = can_rx_buff[0];
 		}
-		if (can_rx_buff[0] < 30 && can_rx_buff[0] > 120){ //Out of range
-			//supercap_max_power_current = 45;
+		if (can_rx_buff[0] < 30 || can_rx_buff[0] > 120){ //Out of range
+			//Update_Current(supercap_max_power_STM32, 45);
+      supercap_max_power_current = 45;
 		}
+    Robot_power_from_REF = can_rx_buff[1];
 	}
 }
 /* USER CODE END 4 */

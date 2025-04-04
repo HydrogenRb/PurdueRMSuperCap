@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,15 +19,15 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.file 1 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c"
-  20              		.section	.text.HAL_PWR_DeInit,"ax",%progbits
-  21              		.align	1
-  22              		.global	HAL_PWR_DeInit
-  23              		.syntax unified
-  24              		.thumb
-  25              		.thumb_func
-  27              	HAL_PWR_DeInit:
-  28              	.LFB329:
+  19              		.section	.text.HAL_PWR_DeInit,"ax",%progbits
+  20              		.align	1
+  21              		.global	HAL_PWR_DeInit
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	HAL_PWR_DeInit:
+  27              	.LFB329:
+  28              		.file 1 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c"
    1:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c **** /**
    2:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****   ******************************************************************************
    3:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****   * @file    stm32g4xx_hal_pwr.c
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
   28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****   * @{
   29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****   */
   30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c **** 
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 2
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 2
 
 
   31:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c **** /** @defgroup PWR PWR
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
   85:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****   */
   86:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c **** void HAL_PWR_DeInit(void)
   87:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c **** {
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 3
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 3
 
 
   29              		.loc 1 87 1 view -0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
   66              		.loc 1 106 3 view .LVU5
   67 0000 024A     		ldr	r2, .L5
   68 0002 1368     		ldr	r3, [r2]
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 4
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 4
 
 
   69 0004 43F48073 		orr	r3, r3, #256
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  116              	.LVL0:
  117              	.LFB332:
  118:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c **** 
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 5
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 5
 
 
  119:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  173:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c **** 
  174:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****    *** Low-power run mode ***
  175:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****    ==========================
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 6
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 6
 
 
  176:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****     [..]
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  230:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c **** 
  231:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****    *** Standby mode ***
  232:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****    ====================
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 7
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 7
 
 
  233:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****      [..]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  287:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****              is necessary to configure the RTC to detect the tamper or time stamp event using the
  288:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****              HAL_RTCEx_SetTimeStamp_IT() or HAL_RTCEx_SetTamper_IT() functions.
  289:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c **** 
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 8
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 8
 
 
  290:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****         (++) To wake up from the Stop mode with an RTC WakeUp event, it is necessary to
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  141              		.loc 1 320 3 view .LVU16
  142 0020 DA68     		ldr	r2, [r3, #12]
  143 0022 22F48032 		bic	r2, r2, #65536
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 9
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 9
 
 
  144 0026 DA60     		str	r2, [r3, #12]
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  180 005c 084A     		ldr	r2, .L15+4
  181 005e 9368     		ldr	r3, [r2, #8]
  182 0060 43F48033 		orr	r3, r3, #65536
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 10
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 10
 
 
  183 0064 9360     		str	r3, [r2, #8]
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  222              		@ args = 0, pretend = 0, frame = 0
  223              		@ frame_needed = 0, uses_anonymous_args = 0
  224              		@ link register save eliminated.
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 11
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 11
 
 
  356:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****   SET_BIT(PWR->CR2, PWR_CR2_PVDE);
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  271              		.thumb
  272              		.thumb_func
  274              	HAL_PWR_EnableWakeUpPin:
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 12
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 12
 
 
  275              	.LVL2:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  400:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c **** }
  296              		.loc 1 400 1 is_stmt 0 view .LVU48
  297 0018 7047     		bx	lr
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 13
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 13
 
 
  298              	.L25:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  341              		.syntax unified
  342              		.thumb
  343              		.thumb_func
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 14
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 14
 
 
  345              	HAL_PWR_EnterSLEEPMode:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  450:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****     /* If in low-power run mode at this point, exit it */
  451:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****     if (HAL_IS_BIT_SET(PWR->SR2, PWR_SR2_REGLPF))
  364              		.loc 1 451 5 is_stmt 1 view .LVU60
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 15
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 15
 
 
  365              		.loc 1 451 9 is_stmt 0 view .LVU61
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  390              	@ 0 "" 2
  481:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****     __WFE();
  391              		.loc 1 481 5 view .LVU68
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 16
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 16
 
 
  392              	@ 481 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c" 1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  434 0040 00700040 		.word	1073770496
  435 0044 00ED00E0 		.word	-536810240
  436              		.cfi_endproc
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 17
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 17
 
 
  437              	.LFE337:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  519:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****   assert_param(IS_PWR_REGULATOR(Regulator));
  459              		.loc 1 519 3 is_stmt 1 view .LVU81
  520:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c **** 
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 18
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 18
 
 
  521:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****   if(Regulator == PWR_LOWPOWERREGULATOR_ON)
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  539:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****   *        to set RRS bit.
  540:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****   *        The BOR is available.
  541:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****   * @note  The I/Os can be configured either with a pull-up or pull-down or can be kept in analog s
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 19
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 19
 
 
  542:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****   *        HAL_PWREx_EnableGPIOPullUp() and HAL_PWREx_EnableGPIOPullDown() respectively enable Pull
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  528              		.section	.text.HAL_PWR_EnableSleepOnExit,"ax",%progbits
  529              		.align	1
  530              		.global	HAL_PWR_EnableSleepOnExit
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 20
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 20
 
 
  531              		.syntax unified
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  587:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****   */
  588:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c **** void HAL_PWR_DisableSleepOnExit(void)
  589:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c **** {
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 21
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 21
 
 
  565              		.loc 1 589 1 is_stmt 1 view -0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  604 000a 7047     		bx	lr
  605              	.L55:
  606              		.align	2
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 22
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 22
 
 
  607              	.L54:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  623:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c **** 
  624:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c **** 
  625:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c **** /**
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 23
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 23
 
 
  626:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c ****   * @brief PWR PVD interrupt callback
@@ -1341,64 +1341,64 @@ ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 1
  657              	.LFE344:
  659              		.text
  660              	.Letext0:
- 661              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/ma
- 662              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/sy
+ 661              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 662              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
  663              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
  664              		.file 5 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
  665              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
  666              		.file 7 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h"
  667              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h"
-ARM GAS  C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s 			page 24
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_hal_pwr.c
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:21     .text.HAL_PWR_DeInit:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:27     .text.HAL_PWR_DeInit:00000000 HAL_PWR_DeInit
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:48     .text.HAL_PWR_DeInit:00000014 $d
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:53     .text.HAL_PWR_EnableBkUpAccess:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:59     .text.HAL_PWR_EnableBkUpAccess:00000000 HAL_PWR_EnableBkUpAccess
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:76     .text.HAL_PWR_EnableBkUpAccess:0000000c $d
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:81     .text.HAL_PWR_DisableBkUpAccess:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:87     .text.HAL_PWR_DisableBkUpAccess:00000000 HAL_PWR_DisableBkUpAccess
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:104    .text.HAL_PWR_DisableBkUpAccess:0000000c $d
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:109    .text.HAL_PWR_ConfigPVD:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:115    .text.HAL_PWR_ConfigPVD:00000000 HAL_PWR_ConfigPVD
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:206    .text.HAL_PWR_ConfigPVD:0000007c $d
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:212    .text.HAL_PWR_EnablePVD:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:218    .text.HAL_PWR_EnablePVD:00000000 HAL_PWR_EnablePVD
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:235    .text.HAL_PWR_EnablePVD:0000000c $d
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:240    .text.HAL_PWR_DisablePVD:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:246    .text.HAL_PWR_DisablePVD:00000000 HAL_PWR_DisablePVD
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:263    .text.HAL_PWR_DisablePVD:0000000c $d
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:268    .text.HAL_PWR_EnableWakeUpPin:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:274    .text.HAL_PWR_EnableWakeUpPin:00000000 HAL_PWR_EnableWakeUpPin
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:301    .text.HAL_PWR_EnableWakeUpPin:0000001c $d
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:306    .text.HAL_PWR_DisableWakeUpPin:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:312    .text.HAL_PWR_DisableWakeUpPin:00000000 HAL_PWR_DisableWakeUpPin
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:334    .text.HAL_PWR_DisableWakeUpPin:00000010 $d
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:339    .text.HAL_PWR_EnterSLEEPMode:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:345    .text.HAL_PWR_EnterSLEEPMode:00000000 HAL_PWR_EnterSLEEPMode
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:434    .text.HAL_PWR_EnterSLEEPMode:00000040 $d
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:440    .text.HAL_PWR_EnterSTOPMode:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:446    .text.HAL_PWR_EnterSTOPMode:00000000 HAL_PWR_EnterSTOPMode
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:487    .text.HAL_PWR_EnterSTANDBYMode:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:493    .text.HAL_PWR_EnterSTANDBYMode:00000000 HAL_PWR_EnterSTANDBYMode
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:523    .text.HAL_PWR_EnterSTANDBYMode:0000001c $d
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:529    .text.HAL_PWR_EnableSleepOnExit:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:535    .text.HAL_PWR_EnableSleepOnExit:00000000 HAL_PWR_EnableSleepOnExit
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:552    .text.HAL_PWR_EnableSleepOnExit:0000000c $d
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:557    .text.HAL_PWR_DisableSleepOnExit:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:563    .text.HAL_PWR_DisableSleepOnExit:00000000 HAL_PWR_DisableSleepOnExit
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:580    .text.HAL_PWR_DisableSleepOnExit:0000000c $d
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:585    .text.HAL_PWR_EnableSEVOnPend:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:591    .text.HAL_PWR_EnableSEVOnPend:00000000 HAL_PWR_EnableSEVOnPend
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:608    .text.HAL_PWR_EnableSEVOnPend:0000000c $d
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:613    .text.HAL_PWR_DisableSEVOnPend:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:619    .text.HAL_PWR_DisableSEVOnPend:00000000 HAL_PWR_DisableSEVOnPend
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:636    .text.HAL_PWR_DisableSEVOnPend:0000000c $d
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:641    .text.HAL_PWR_PVDCallback:00000000 $t
-C:\Users\HRb\AppData\Local\Temp\ccvDmsqw.s:647    .text.HAL_PWR_PVDCallback:00000000 HAL_PWR_PVDCallback
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:20     .text.HAL_PWR_DeInit:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:26     .text.HAL_PWR_DeInit:00000000 HAL_PWR_DeInit
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:48     .text.HAL_PWR_DeInit:00000014 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:53     .text.HAL_PWR_EnableBkUpAccess:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:59     .text.HAL_PWR_EnableBkUpAccess:00000000 HAL_PWR_EnableBkUpAccess
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:76     .text.HAL_PWR_EnableBkUpAccess:0000000c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:81     .text.HAL_PWR_DisableBkUpAccess:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:87     .text.HAL_PWR_DisableBkUpAccess:00000000 HAL_PWR_DisableBkUpAccess
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:104    .text.HAL_PWR_DisableBkUpAccess:0000000c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:109    .text.HAL_PWR_ConfigPVD:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:115    .text.HAL_PWR_ConfigPVD:00000000 HAL_PWR_ConfigPVD
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:206    .text.HAL_PWR_ConfigPVD:0000007c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:212    .text.HAL_PWR_EnablePVD:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:218    .text.HAL_PWR_EnablePVD:00000000 HAL_PWR_EnablePVD
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:235    .text.HAL_PWR_EnablePVD:0000000c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:240    .text.HAL_PWR_DisablePVD:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:246    .text.HAL_PWR_DisablePVD:00000000 HAL_PWR_DisablePVD
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:263    .text.HAL_PWR_DisablePVD:0000000c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:268    .text.HAL_PWR_EnableWakeUpPin:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:274    .text.HAL_PWR_EnableWakeUpPin:00000000 HAL_PWR_EnableWakeUpPin
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:301    .text.HAL_PWR_EnableWakeUpPin:0000001c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:306    .text.HAL_PWR_DisableWakeUpPin:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:312    .text.HAL_PWR_DisableWakeUpPin:00000000 HAL_PWR_DisableWakeUpPin
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:334    .text.HAL_PWR_DisableWakeUpPin:00000010 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:339    .text.HAL_PWR_EnterSLEEPMode:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:345    .text.HAL_PWR_EnterSLEEPMode:00000000 HAL_PWR_EnterSLEEPMode
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:434    .text.HAL_PWR_EnterSLEEPMode:00000040 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:440    .text.HAL_PWR_EnterSTOPMode:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:446    .text.HAL_PWR_EnterSTOPMode:00000000 HAL_PWR_EnterSTOPMode
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:487    .text.HAL_PWR_EnterSTANDBYMode:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:493    .text.HAL_PWR_EnterSTANDBYMode:00000000 HAL_PWR_EnterSTANDBYMode
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:523    .text.HAL_PWR_EnterSTANDBYMode:0000001c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:529    .text.HAL_PWR_EnableSleepOnExit:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:535    .text.HAL_PWR_EnableSleepOnExit:00000000 HAL_PWR_EnableSleepOnExit
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:552    .text.HAL_PWR_EnableSleepOnExit:0000000c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:557    .text.HAL_PWR_DisableSleepOnExit:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:563    .text.HAL_PWR_DisableSleepOnExit:00000000 HAL_PWR_DisableSleepOnExit
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:580    .text.HAL_PWR_DisableSleepOnExit:0000000c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:585    .text.HAL_PWR_EnableSEVOnPend:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:591    .text.HAL_PWR_EnableSEVOnPend:00000000 HAL_PWR_EnableSEVOnPend
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:608    .text.HAL_PWR_EnableSEVOnPend:0000000c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:613    .text.HAL_PWR_DisableSEVOnPend:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:619    .text.HAL_PWR_DisableSEVOnPend:00000000 HAL_PWR_DisableSEVOnPend
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:636    .text.HAL_PWR_DisableSEVOnPend:0000000c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:641    .text.HAL_PWR_PVDCallback:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccOdu7NO.s:647    .text.HAL_PWR_PVDCallback:00000000 HAL_PWR_PVDCallback
 
 UNDEFINED SYMBOLS
 HAL_PWREx_DisableLowPowerRunMode

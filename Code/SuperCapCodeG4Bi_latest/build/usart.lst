@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,15 +19,15 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.file 1 "Core/Src/usart.c"
-  20              		.section	.text.MX_USART1_UART_Init,"ax",%progbits
-  21              		.align	1
-  22              		.global	MX_USART1_UART_Init
-  23              		.syntax unified
-  24              		.thumb
-  25              		.thumb_func
-  27              	MX_USART1_UART_Init:
-  28              	.LFB329:
+  19              		.section	.text.MX_USART1_UART_Init,"ax",%progbits
+  20              		.align	1
+  21              		.global	MX_USART1_UART_Init
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	MX_USART1_UART_Init:
+  27              	.LFB329:
+  28              		.file 1 "Core/Src/usart.c"
    1:Core/Src/usart.c **** /* USER CODE BEGIN Header */
    2:Core/Src/usart.c **** /**
    3:Core/Src/usart.c ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
   28:Core/Src/usart.c **** UART_HandleTypeDef huart2;
   29:Core/Src/usart.c **** UART_HandleTypeDef huart3;
   30:Core/Src/usart.c **** DMA_HandleTypeDef hdma_usart3_tx;
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 2
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 2
 
 
   31:Core/Src/usart.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
   63 001a 8361     		str	r3, [r0, #24]
   51:Core/Src/usart.c ****   huart1.Init.OverSampling = UART_OVERSAMPLING_16;
   64              		.loc 1 51 3 is_stmt 1 view .LVU15
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 3
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 3
 
 
   65              		.loc 1 51 28 is_stmt 0 view .LVU16
@@ -140,7 +140,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
   77              		.loc 1 55 7 is_stmt 0 view .LVU24
   78 0024 FFF7FEFF 		bl	HAL_UART_Init
   79              	.LVL0:
-  80              		.loc 1 55 6 discriminator 1 view .LVU25
+  80              		.loc 1 55 6 view .LVU25
   81 0028 70B9     		cbnz	r0, .L7
   82              	.L2:
   56:Core/Src/usart.c ****   {
@@ -153,7 +153,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
   86 002c 0C48     		ldr	r0, .L11
   87 002e FFF7FEFF 		bl	HAL_UARTEx_SetTxFifoThreshold
   88              	.LVL1:
-  89              		.loc 1 59 6 discriminator 1 view .LVU28
+  89              		.loc 1 59 6 view .LVU28
   90 0032 60B9     		cbnz	r0, .L8
   91              	.L3:
   60:Core/Src/usart.c ****   {
@@ -166,7 +166,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
   95 0036 0A48     		ldr	r0, .L11
   96 0038 FFF7FEFF 		bl	HAL_UARTEx_SetRxFifoThreshold
   97              	.LVL2:
-  98              		.loc 1 63 6 discriminator 1 view .LVU31
+  98              		.loc 1 63 6 view .LVU31
   99 003c 50B9     		cbnz	r0, .L9
  100              	.L4:
   64:Core/Src/usart.c ****   {
@@ -178,10 +178,10 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  103 003e 0848     		ldr	r0, .L11
  104 0040 FFF7FEFF 		bl	HAL_UARTEx_DisableFifoMode
  105              	.LVL3:
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 4
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 4
 
 
- 106              		.loc 1 67 6 discriminator 1 view .LVU34
+ 106              		.loc 1 67 6 view .LVU34
  107 0044 48B9     		cbnz	r0, .L10
  108              	.L1:
   68:Core/Src/usart.c ****   {
@@ -222,7 +222,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  132              	.L12:
  133              		.align	2
  134              	.L11:
- 135 0060 00000000 		.word	huart1
+ 135 0060 00000000 		.word	.LANCHOR0
  136 0064 00380140 		.word	1073821696
  137              		.cfi_endproc
  138              	.LFE329:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
   77:Core/Src/usart.c **** 
   78:Core/Src/usart.c **** void MX_USART2_UART_Init(void)
   79:Core/Src/usart.c **** {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 5
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 5
 
 
  149              		.loc 1 79 1 is_stmt 1 view -0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
   96:Core/Src/usart.c ****   huart2.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
  187              		.loc 1 96 3 is_stmt 1 view .LVU58
  188              		.loc 1 96 30 is_stmt 0 view .LVU59
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 6
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 6
 
 
  189 001e 0362     		str	r3, [r0, #32]
@@ -315,7 +315,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  197              		.loc 1 99 7 is_stmt 0 view .LVU65
  198 0024 FFF7FEFF 		bl	HAL_UART_Init
  199              	.LVL8:
- 200              		.loc 1 99 6 discriminator 1 view .LVU66
+ 200              		.loc 1 99 6 view .LVU66
  201 0028 70B9     		cbnz	r0, .L19
  202              	.L14:
  100:Core/Src/usart.c ****   {
@@ -328,7 +328,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  206 002c 0C48     		ldr	r0, .L23
  207 002e FFF7FEFF 		bl	HAL_UARTEx_SetTxFifoThreshold
  208              	.LVL9:
- 209              		.loc 1 103 6 discriminator 1 view .LVU69
+ 209              		.loc 1 103 6 view .LVU69
  210 0032 60B9     		cbnz	r0, .L20
  211              	.L15:
  104:Core/Src/usart.c ****   {
@@ -341,7 +341,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  215 0036 0A48     		ldr	r0, .L23
  216 0038 FFF7FEFF 		bl	HAL_UARTEx_SetRxFifoThreshold
  217              	.LVL10:
- 218              		.loc 1 107 6 discriminator 1 view .LVU72
+ 218              		.loc 1 107 6 view .LVU72
  219 003c 50B9     		cbnz	r0, .L21
  220              	.L16:
  108:Core/Src/usart.c ****   {
@@ -353,12 +353,12 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  223 003e 0848     		ldr	r0, .L23
  224 0040 FFF7FEFF 		bl	HAL_UARTEx_DisableFifoMode
  225              	.LVL11:
- 226              		.loc 1 111 6 discriminator 1 view .LVU75
+ 226              		.loc 1 111 6 view .LVU75
  227 0044 48B9     		cbnz	r0, .L22
  228              	.L13:
  112:Core/Src/usart.c ****   {
  113:Core/Src/usart.c ****     Error_Handler();
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 7
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 7
 
 
  114:Core/Src/usart.c ****   }
@@ -397,7 +397,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  252              	.L24:
  253              		.align	2
  254              	.L23:
- 255 0060 00000000 		.word	huart2
+ 255 0060 00000000 		.word	.LANCHOR1
  256 0064 00440040 		.word	1073759232
  257              		.cfi_endproc
  258              	.LFE330:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  271              		@ args = 0, pretend = 0, frame = 0
  272              		@ frame_needed = 0, uses_anonymous_args = 0
  273 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 8
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 8
 
 
  274              	.LCFI2:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  310              		.loc 1 141 3 is_stmt 1 view .LVU101
  311              		.loc 1 141 30 is_stmt 0 view .LVU102
  312 0020 4362     		str	r3, [r0, #36]
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 9
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 9
 
 
  142:Core/Src/usart.c ****   huart3.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
@@ -490,7 +490,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  317              		.loc 1 143 7 is_stmt 0 view .LVU106
  318 0024 FFF7FEFF 		bl	HAL_UART_Init
  319              	.LVL16:
- 320              		.loc 1 143 6 discriminator 1 view .LVU107
+ 320              		.loc 1 143 6 view .LVU107
  321 0028 70B9     		cbnz	r0, .L31
  322              	.L26:
  144:Core/Src/usart.c ****   {
@@ -503,7 +503,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  326 002c 0C48     		ldr	r0, .L35
  327 002e FFF7FEFF 		bl	HAL_UARTEx_SetTxFifoThreshold
  328              	.LVL17:
- 329              		.loc 1 147 6 discriminator 1 view .LVU110
+ 329              		.loc 1 147 6 view .LVU110
  330 0032 60B9     		cbnz	r0, .L32
  331              	.L27:
  148:Core/Src/usart.c ****   {
@@ -516,7 +516,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  335 0036 0A48     		ldr	r0, .L35
  336 0038 FFF7FEFF 		bl	HAL_UARTEx_SetRxFifoThreshold
  337              	.LVL18:
- 338              		.loc 1 151 6 discriminator 1 view .LVU113
+ 338              		.loc 1 151 6 view .LVU113
  339 003c 50B9     		cbnz	r0, .L33
  340              	.L28:
  152:Core/Src/usart.c ****   {
@@ -528,7 +528,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  343 003e 0848     		ldr	r0, .L35
  344 0040 FFF7FEFF 		bl	HAL_UARTEx_DisableFifoMode
  345              	.LVL19:
- 346              		.loc 1 155 6 discriminator 1 view .LVU116
+ 346              		.loc 1 155 6 view .LVU116
  347 0044 48B9     		cbnz	r0, .L34
  348              	.L25:
  156:Core/Src/usart.c ****   {
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  160:Core/Src/usart.c **** 
  161:Core/Src/usart.c ****   /* USER CODE END USART3_Init 2 */
  162:Core/Src/usart.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 10
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 10
 
 
  163:Core/Src/usart.c **** }
@@ -572,7 +572,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  372              	.L36:
  373              		.align	2
  374              	.L35:
- 375 0060 00000000 		.word	huart3
+ 375 0060 00000000 		.word	.LANCHOR2
  376 0064 00480040 		.word	1073760256
  377              		.cfi_endproc
  378              	.LFE331:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  397              		.cfi_def_cfa_offset 12
  398              		.cfi_offset 4, -12
  399              		.cfi_offset 5, -8
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 11
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 11
 
 
  400              		.cfi_offset 14, -4
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  193:Core/Src/usart.c ****     GPIO_InitStruct.Pin = GPIO_PIN_9|GPIO_PIN_10;
  194:Core/Src/usart.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
  195:Core/Src/usart.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 12
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 12
 
 
  196:Core/Src/usart.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  239:Core/Src/usart.c ****   {
  240:Core/Src/usart.c ****   /* USER CODE BEGIN USART3_MspInit 0 */
  241:Core/Src/usart.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 13
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 13
 
 
  242:Core/Src/usart.c ****   /* USER CODE END USART3_MspInit 0 */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  444              		@ sp needed
  445 0030 30BD     		pop	{r4, r5, pc}
  446              	.LVL27:
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 14
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 14
 
 
  447              	.L46:
@@ -800,7 +800,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  458 0038 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
  459              	.LVL28:
  180:Core/Src/usart.c ****     {
- 460              		.loc 1 180 8 discriminator 1 view .LVU143
+ 460              		.loc 1 180 8 view .LVU143
  461 003c 10BB     		cbnz	r0, .L49
  462              	.L39:
  186:Core/Src/usart.c **** 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  188:Core/Src/usart.c ****     /**USART1 GPIO Configuration
  486              		.loc 1 188 5 view .LVU153
  487 005a DB6C     		ldr	r3, [r3, #76]
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 15
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 15
 
 
  488 005c 03F00103 		and	r3, r3, #1
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  526              		.loc 1 212 40 is_stmt 0 view .LVU169
  527 008a 0223     		movs	r3, #2
  528 008c 0693     		str	r3, [sp, #24]
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 16
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 16
 
 
  213:Core/Src/usart.c ****     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
@@ -911,7 +911,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  533 0090 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
  534              	.LVL31:
  214:Core/Src/usart.c ****     {
- 535              		.loc 1 214 8 discriminator 1 view .LVU173
+ 535              		.loc 1 214 8 view .LVU173
  536 0094 00BB     		cbnz	r0, .L50
  537              	.L42:
  220:Core/Src/usart.c **** 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  222:Core/Src/usart.c ****     /**USART2 GPIO Configuration
  568              		.loc 1 222 5 view .LVU185
  227:Core/Src/usart.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 17
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 17
 
 
  569              		.loc 1 227 5 view .LVU186
@@ -1018,11 +1018,11 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  607 00e2 06A8     		add	r0, sp, #24
  608 00e4 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
  609              	.LVL34:
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 18
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 18
 
 
  248:Core/Src/usart.c ****     {
- 610              		.loc 1 248 8 discriminator 1 view .LVU203
+ 610              		.loc 1 248 8 view .LVU203
  611 00e8 0028     		cmp	r0, #0
  612 00ea 36D1     		bne	.L51
  613              	.L43:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  262:Core/Src/usart.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
  649              		.loc 1 262 5 is_stmt 1 view .LVU218
  262:Core/Src/usart.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 19
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 19
 
 
  650              		.loc 1 262 26 is_stmt 0 view .LVU219
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  687 013e 8023     		movs	r3, #128
  688 0140 0361     		str	r3, [r0, #16]
  275:Core/Src/usart.c ****     hdma_usart3_tx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 20
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 20
 
 
  689              		.loc 1 275 5 is_stmt 1 view .LVU237
@@ -1168,7 +1168,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  704 014c FFF7FEFF 		bl	HAL_DMA_Init
  705              	.LVL36:
  279:Core/Src/usart.c ****     {
- 706              		.loc 1 279 8 discriminator 1 view .LVU247
+ 706              		.loc 1 279 8 view .LVU247
  707 0150 30B9     		cbnz	r0, .L52
  708              	.L44:
  284:Core/Src/usart.c **** 
@@ -1181,7 +1181,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  713              		.loc 1 284 5 view .LVU250
  714 0156 9C62     		str	r4, [r3, #40]
  284:Core/Src/usart.c **** 
- 715              		.loc 1 284 5 discriminator 1 view .LVU251
+ 715              		.loc 1 284 5 view .LVU251
  716              		.loc 1 290 1 is_stmt 0 view .LVU252
  717 0158 69E7     		b	.L37
  718              	.L51:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  727 0164 F5E7     		b	.L44
  728              	.L54:
  729 0166 00BF     		.align	2
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 21
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 21
 
 
  730              	.L53:
@@ -1208,7 +1208,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  734 0174 00100240 		.word	1073876992
  735 0178 000C0048 		.word	1207962624
  736 017c 00080048 		.word	1207961600
- 737 0180 00000000 		.word	hdma_usart3_tx
+ 737 0180 00000000 		.word	.LANCHOR3
  738 0184 44000240 		.word	1073872964
  739              		.cfi_endproc
  740              	.LFE332:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  307:Core/Src/usart.c ****     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_9|GPIO_PIN_10);
  308:Core/Src/usart.c **** 
  309:Core/Src/usart.c ****   /* USER CODE BEGIN USART1_MspDeInit 1 */
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 22
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 22
 
 
  310:Core/Src/usart.c **** 
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  782              		.loc 1 351 1 view .LVU264
  783 0018 10BD     		pop	{r4, pc}
  784              	.LVL41:
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 23
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 23
 
 
  785              	.L60:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  829 0060 E06F     		ldr	r0, [r4, #124]
  830 0062 FFF7FEFF 		bl	HAL_DMA_DeInit
  831              	.LVL50:
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 24
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 24
 
 
  832              		.loc 1 351 1 is_stmt 0 view .LVU275
@@ -1394,86 +1394,90 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 1
  842              		.cfi_endproc
  843              	.LFE333:
  845              		.global	hdma_usart3_tx
- 846              		.section	.bss.hdma_usart3_tx,"aw",%nobits
- 847              		.align	2
- 850              	hdma_usart3_tx:
- 851 0000 00000000 		.space	96
- 851      00000000 
- 851      00000000 
- 851      00000000 
- 851      00000000 
- 852              		.global	huart3
- 853              		.section	.bss.huart3,"aw",%nobits
- 854              		.align	2
- 857              	huart3:
- 858 0000 00000000 		.space	148
- 858      00000000 
- 858      00000000 
- 858      00000000 
- 858      00000000 
- 859              		.global	huart2
- 860              		.section	.bss.huart2,"aw",%nobits
- 861              		.align	2
- 864              	huart2:
- 865 0000 00000000 		.space	148
- 865      00000000 
- 865      00000000 
- 865      00000000 
- 865      00000000 
- 866              		.global	huart1
- 867              		.section	.bss.huart1,"aw",%nobits
- 868              		.align	2
- 871              	huart1:
- 872 0000 00000000 		.space	148
- 872      00000000 
- 872      00000000 
- 872      00000000 
- 872      00000000 
- 873              		.text
- 874              	.Letext0:
- 875              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/ma
- 876              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/sy
- 877              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
- 878              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
- 879              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h"
- 880              		.file 7 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h"
- 881              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 25
+ 846              		.global	huart3
+ 847              		.global	huart2
+ 848              		.global	huart1
+ 849              		.section	.bss.hdma_usart3_tx,"aw",%nobits
+ 850              		.align	2
+ 851              		.set	.LANCHOR3,. + 0
+ 854              	hdma_usart3_tx:
+ 855 0000 00000000 		.space	96
+ 855      00000000 
+ 855      00000000 
+ 855      00000000 
+ 855      00000000 
+ 856              		.section	.bss.huart1,"aw",%nobits
+ 857              		.align	2
+ 858              		.set	.LANCHOR0,. + 0
+ 861              	huart1:
+ 862 0000 00000000 		.space	148
+ 862      00000000 
+ 862      00000000 
+ 862      00000000 
+ 862      00000000 
+ 863              		.section	.bss.huart2,"aw",%nobits
+ 864              		.align	2
+ 865              		.set	.LANCHOR1,. + 0
+ 868              	huart2:
+ 869 0000 00000000 		.space	148
+ 869      00000000 
+ 869      00000000 
+ 869      00000000 
+ 869      00000000 
+ 870              		.section	.bss.huart3,"aw",%nobits
+ 871              		.align	2
+ 872              		.set	.LANCHOR2,. + 0
+ 875              	huart3:
+ 876 0000 00000000 		.space	148
+ 876      00000000 
+ 876      00000000 
+ 876      00000000 
+ 876      00000000 
+ 877              		.text
+ 878              	.Letext0:
+ 879              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 880              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 881              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 25
 
 
- 882              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h"
- 883              		.file 10 "Core/Inc/usart.h"
- 884              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h"
- 885              		.file 12 "Core/Inc/main.h"
- 886              		.file 13 "<built-in>"
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s 			page 26
+ 882              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
+ 883              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h"
+ 884              		.file 7 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h"
+ 885              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
+ 886              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h"
+ 887              		.file 10 "Core/Inc/usart.h"
+ 888              		.file 11 "Core/Inc/main.h"
+ 889              		.file 12 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h"
+ 890              		.file 13 "<built-in>"
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s 			page 26
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usart.c
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:21     .text.MX_USART1_UART_Init:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:27     .text.MX_USART1_UART_Init:00000000 MX_USART1_UART_Init
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:135    .text.MX_USART1_UART_Init:00000060 $d
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:871    .bss.huart1:00000000 huart1
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:141    .text.MX_USART2_UART_Init:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:147    .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:255    .text.MX_USART2_UART_Init:00000060 $d
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:864    .bss.huart2:00000000 huart2
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:261    .text.MX_USART3_UART_Init:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:267    .text.MX_USART3_UART_Init:00000000 MX_USART3_UART_Init
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:375    .text.MX_USART3_UART_Init:00000060 $d
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:857    .bss.huart3:00000000 huart3
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:381    .text.HAL_UART_MspInit:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:387    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:731    .text.HAL_UART_MspInit:00000168 $d
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:850    .bss.hdma_usart3_tx:00000000 hdma_usart3_tx
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:743    .text.HAL_UART_MspDeInit:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:749    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:837    .text.HAL_UART_MspDeInit:00000068 $d
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:847    .bss.hdma_usart3_tx:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:854    .bss.huart3:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:861    .bss.huart2:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccBqlKPm.s:868    .bss.huart1:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:20     .text.MX_USART1_UART_Init:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:26     .text.MX_USART1_UART_Init:00000000 MX_USART1_UART_Init
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:135    .text.MX_USART1_UART_Init:00000060 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:141    .text.MX_USART2_UART_Init:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:147    .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:255    .text.MX_USART2_UART_Init:00000060 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:261    .text.MX_USART3_UART_Init:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:267    .text.MX_USART3_UART_Init:00000000 MX_USART3_UART_Init
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:375    .text.MX_USART3_UART_Init:00000060 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:381    .text.HAL_UART_MspInit:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:387    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:731    .text.HAL_UART_MspInit:00000168 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:743    .text.HAL_UART_MspDeInit:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:749    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:837    .text.HAL_UART_MspDeInit:00000068 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:854    .bss.hdma_usart3_tx:00000000 hdma_usart3_tx
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:875    .bss.huart3:00000000 huart3
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:868    .bss.huart2:00000000 huart2
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:861    .bss.huart1:00000000 huart1
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:850    .bss.hdma_usart3_tx:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:857    .bss.huart1:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:864    .bss.huart2:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccawYAuQ.s:871    .bss.huart3:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_UART_Init

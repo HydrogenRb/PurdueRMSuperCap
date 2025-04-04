@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 1
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,15 +19,15 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.file 1 "Core/Src/fdcan.c"
-  20              		.section	.text.MX_FDCAN1_Init,"ax",%progbits
-  21              		.align	1
-  22              		.global	MX_FDCAN1_Init
-  23              		.syntax unified
-  24              		.thumb
-  25              		.thumb_func
-  27              	MX_FDCAN1_Init:
-  28              	.LFB329:
+  19              		.section	.text.MX_FDCAN1_Init,"ax",%progbits
+  20              		.align	1
+  21              		.global	MX_FDCAN1_Init
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	MX_FDCAN1_Init:
+  27              	.LFB329:
+  28              		.file 1 "Core/Src/fdcan.c"
    1:Core/Src/fdcan.c **** /* USER CODE BEGIN Header */
    2:Core/Src/fdcan.c **** /**
    3:Core/Src/fdcan.c ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 1
   28:Core/Src/fdcan.c **** 
   29:Core/Src/fdcan.c **** FDCAN_HandleTypeDef hfdcan1;
   30:Core/Src/fdcan.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 2
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s 			page 2
 
 
   31:Core/Src/fdcan.c **** /* FDCAN1 init function */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 1
   64 0016 0A22     		movs	r2, #10
   65 0018 4261     		str	r2, [r0, #20]
   50:Core/Src/fdcan.c ****   hfdcan1.Init.NominalSyncJumpWidth = 1;
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 3
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s 			page 3
 
 
   66              		.loc 1 50 3 is_stmt 1 view .LVU17
@@ -167,7 +167,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 1
   99              		.loc 1 60 7 is_stmt 0 view .LVU38
  100 0032 FFF7FEFF 		bl	HAL_FDCAN_Init
  101              	.LVL0:
- 102              		.loc 1 60 6 discriminator 1 view .LVU39
+ 102              		.loc 1 60 6 view .LVU39
  103 0036 00B9     		cbnz	r0, .L4
  104              	.L1:
   61:Core/Src/fdcan.c ****   {
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 1
   66:Core/Src/fdcan.c ****   /* USER CODE END FDCAN1_Init 2 */
   67:Core/Src/fdcan.c **** 
   68:Core/Src/fdcan.c **** }
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 4
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s 			page 4
 
 
  105              		.loc 1 68 1 view .LVU40
@@ -193,7 +193,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 1
  113              	.L6:
  114              		.align	2
  115              	.L5:
- 116 0040 00000000 		.word	hfdcan1
+ 116 0040 00000000 		.word	.LANCHOR0
  117 0044 00640040 		.word	1073767424
  118              		.cfi_endproc
  119              	.LFE329:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 1
  154              		.loc 1 74 28 is_stmt 0 view .LVU48
  155 0012 5422     		movs	r2, #84
  156 0014 02A8     		add	r0, sp, #8
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 5
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s 			page 5
 
 
  157              	.LVL3:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 1
  173              		.cfi_remember_state
  174              		.cfi_def_cfa_offset 8
  175              		@ sp needed
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 6
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s 			page 6
 
 
  176 0024 10BD     		pop	{r4, pc}
@@ -326,7 +326,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 1
  192 0034 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
  193              	.LVL7:
   85:Core/Src/fdcan.c ****     {
- 194              		.loc 1 85 8 discriminator 1 view .LVU60
+ 194              		.loc 1 85 8 view .LVU60
  195 0038 50BB     		cbnz	r0, .L12
  196              	.L9:
   91:Core/Src/fdcan.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 1
  215              		.loc 1 93 5 view .LVU68
   93:Core/Src/fdcan.c ****     /**FDCAN1 GPIO Configuration
  216              		.loc 1 93 5 view .LVU69
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 7
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s 			page 7
 
 
  217 004e DA6C     		ldr	r2, [r3, #76]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 1
  255 007e 2246     		mov	r2, r4
  256 0080 2146     		mov	r1, r4
  257 0082 1520     		movs	r0, #21
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 8
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s 			page 8
 
 
  258 0084 FFF7FEFF 		bl	HAL_NVIC_SetPriority
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 1
  307              	.LVL15:
  308              	.L15:
  118:Core/Src/fdcan.c ****   {
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 9
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s 			page 9
 
 
  119:Core/Src/fdcan.c ****   /* USER CODE BEGIN FDCAN1_MspDeInit 0 */
@@ -534,69 +534,70 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 1
  336              		.cfi_endproc
  337              	.LFE331:
  339              		.global	hfdcan1
- 340              		.section	.bss.hfdcan1,"aw",%nobits
- 341              		.align	2
- 344              	hfdcan1:
- 345 0000 00000000 		.space	100
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 10
+ 340              		.global	FDCAN1_RXFilter
+ 341              		.global	TxHeader
+ 342              		.section	.bss.FDCAN1_RXFilter,"aw",%nobits
+ 343              		.align	2
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s 			page 10
 
 
- 345      00000000 
- 345      00000000 
- 345      00000000 
- 345      00000000 
- 346              		.global	FDCAN1_RXFilter
- 347              		.section	.bss.FDCAN1_RXFilter,"aw",%nobits
- 348              		.align	2
- 351              	FDCAN1_RXFilter:
- 352 0000 00000000 		.space	24
- 352      00000000 
- 352      00000000 
- 352      00000000 
- 352      00000000 
- 353              		.global	TxHeader
- 354              		.section	.bss.TxHeader,"aw",%nobits
+ 346              	FDCAN1_RXFilter:
+ 347 0000 00000000 		.space	24
+ 347      00000000 
+ 347      00000000 
+ 347      00000000 
+ 347      00000000 
+ 348              		.section	.bss.TxHeader,"aw",%nobits
+ 349              		.align	2
+ 352              	TxHeader:
+ 353 0000 00000000 		.space	36
+ 353      00000000 
+ 353      00000000 
+ 353      00000000 
+ 353      00000000 
+ 354              		.section	.bss.hfdcan1,"aw",%nobits
  355              		.align	2
- 358              	TxHeader:
- 359 0000 00000000 		.space	36
- 359      00000000 
- 359      00000000 
- 359      00000000 
- 359      00000000 
- 360              		.text
- 361              	.Letext0:
- 362              		.file 2 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
- 363              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/ma
- 364              		.file 4 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/sy
- 365              		.file 5 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
- 366              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
- 367              		.file 7 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h"
- 368              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h"
- 369              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h"
- 370              		.file 10 "Core/Inc/fdcan.h"
- 371              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h"
- 372              		.file 12 "Core/Inc/main.h"
- 373              		.file 13 "<built-in>"
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s 			page 11
+ 356              		.set	.LANCHOR0,. + 0
+ 359              	hfdcan1:
+ 360 0000 00000000 		.space	100
+ 360      00000000 
+ 360      00000000 
+ 360      00000000 
+ 360      00000000 
+ 361              		.text
+ 362              	.Letext0:
+ 363              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 364              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 365              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
+ 366              		.file 5 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
+ 367              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
+ 368              		.file 7 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h"
+ 369              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h"
+ 370              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h"
+ 371              		.file 10 "Core/Inc/fdcan.h"
+ 372              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h"
+ 373              		.file 12 "Core/Inc/main.h"
+ 374              		.file 13 "<built-in>"
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 fdcan.c
-C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s:21     .text.MX_FDCAN1_Init:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s:27     .text.MX_FDCAN1_Init:00000000 MX_FDCAN1_Init
-C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s:116    .text.MX_FDCAN1_Init:00000040 $d
-C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s:344    .bss.hfdcan1:00000000 hfdcan1
-C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s:122    .text.HAL_FDCAN_MspInit:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s:128    .text.HAL_FDCAN_MspInit:00000000 HAL_FDCAN_MspInit
-C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s:275    .text.HAL_FDCAN_MspInit:00000098 $d
-C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s:281    .text.HAL_FDCAN_MspDeInit:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s:287    .text.HAL_FDCAN_MspDeInit:00000000 HAL_FDCAN_MspDeInit
-C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s:334    .text.HAL_FDCAN_MspDeInit:0000002c $d
-C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s:341    .bss.hfdcan1:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s:351    .bss.FDCAN1_RXFilter:00000000 FDCAN1_RXFilter
-C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s:348    .bss.FDCAN1_RXFilter:00000000 $d
-C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s:358    .bss.TxHeader:00000000 TxHeader
-C:\Users\purdu\AppData\Local\Temp\ccSwIr7o.s:355    .bss.TxHeader:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s:20     .text.MX_FDCAN1_Init:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s:26     .text.MX_FDCAN1_Init:00000000 MX_FDCAN1_Init
+C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s:116    .text.MX_FDCAN1_Init:00000040 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s:122    .text.HAL_FDCAN_MspInit:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s:128    .text.HAL_FDCAN_MspInit:00000000 HAL_FDCAN_MspInit
+C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s:275    .text.HAL_FDCAN_MspInit:00000098 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s:281    .text.HAL_FDCAN_MspDeInit:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s:287    .text.HAL_FDCAN_MspDeInit:00000000 HAL_FDCAN_MspDeInit
+C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s:334    .text.HAL_FDCAN_MspDeInit:0000002c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s:359    .bss.hfdcan1:00000000 hfdcan1
+C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s:346    .bss.FDCAN1_RXFilter:00000000 FDCAN1_RXFilter
+C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s:352    .bss.TxHeader:00000000 TxHeader
+C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s:343    .bss.FDCAN1_RXFilter:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s:349    .bss.TxHeader:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccSmOX5M.s:355    .bss.hfdcan1:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_FDCAN_Init

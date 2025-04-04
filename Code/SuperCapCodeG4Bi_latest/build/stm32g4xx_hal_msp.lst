@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cckg2Eqa.s 			page 1
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cckXlYBx.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,15 +19,15 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cckg2Eqa.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.file 1 "Core/Src/stm32g4xx_hal_msp.c"
-  20              		.section	.text.HAL_MspInit,"ax",%progbits
-  21              		.align	1
-  22              		.global	HAL_MspInit
-  23              		.syntax unified
-  24              		.thumb
-  25              		.thumb_func
-  27              	HAL_MspInit:
-  28              	.LFB329:
+  19              		.section	.text.HAL_MspInit,"ax",%progbits
+  20              		.align	1
+  21              		.global	HAL_MspInit
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	HAL_MspInit:
+  27              	.LFB329:
+  28              		.file 1 "Core/Src/stm32g4xx_hal_msp.c"
    1:Core/Src/stm32g4xx_hal_msp.c **** /* USER CODE BEGIN Header */
    2:Core/Src/stm32g4xx_hal_msp.c **** /**
    3:Core/Src/stm32g4xx_hal_msp.c ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cckg2Eqa.s 			page 1
   28:Core/Src/stm32g4xx_hal_msp.c **** /* Private typedef -----------------------------------------------------------*/
   29:Core/Src/stm32g4xx_hal_msp.c **** /* USER CODE BEGIN TD */
   30:Core/Src/stm32g4xx_hal_msp.c **** 
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cckg2Eqa.s 			page 2
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cckXlYBx.s 			page 2
 
 
   31:Core/Src/stm32g4xx_hal_msp.c **** /* USER CODE END TD */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cckg2Eqa.s 			page 1
   43              		.loc 1 70 3 view .LVU3
   44 0004 0B4B     		ldr	r3, .L3
   45 0006 1A6E     		ldr	r2, [r3, #96]
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cckg2Eqa.s 			page 3
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cckXlYBx.s 			page 3
 
 
   46 0008 42F00102 		orr	r2, r2, #1
@@ -175,21 +175,21 @@ ARM GAS  C:\Users\purdu\AppData\Local\Temp\cckg2Eqa.s 			page 1
   85              	.LFE329:
   87              		.text
   88              	.Letext0:
-  89              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/ma
-  90              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/sy
+  89              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+  90              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
   91              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cckg2Eqa.s 			page 4
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cckXlYBx.s 			page 4
 
 
   92              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h"
-ARM GAS  C:\Users\purdu\AppData\Local\Temp\cckg2Eqa.s 			page 5
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cckXlYBx.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_hal_msp.c
-C:\Users\purdu\AppData\Local\Temp\cckg2Eqa.s:21     .text.HAL_MspInit:00000000 $t
-C:\Users\purdu\AppData\Local\Temp\cckg2Eqa.s:27     .text.HAL_MspInit:00000000 HAL_MspInit
-C:\Users\purdu\AppData\Local\Temp\cckg2Eqa.s:83     .text.HAL_MspInit:00000034 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cckXlYBx.s:20     .text.HAL_MspInit:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\cckXlYBx.s:26     .text.HAL_MspInit:00000000 HAL_MspInit
+C:\Users\HYDROG~1\AppData\Local\Temp\cckXlYBx.s:83     .text.HAL_MspInit:00000034 $d
 
 UNDEFINED SYMBOLS
 HAL_PWREx_DisableUCPDDeadBattery

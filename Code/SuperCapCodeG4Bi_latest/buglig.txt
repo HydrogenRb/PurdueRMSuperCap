@@ -1,0 +1,7 @@
+3/29
+因为make file中没有clean，所以之前的文件编译过程出现了问题
+
+VOFA的rate
+
+CAN暂停之后就无法发送
+因为mailbox满了

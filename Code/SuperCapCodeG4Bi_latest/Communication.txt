@@ -1,0 +1,15 @@
+CAN
+Cap_Rx: ID 0x2c8
+uint16_t
+DATA[0]: Current power limitation from referee system
+DATA[1]: Current power from referee system x100
+DATA[2]: NA
+DATA[3]: NA
+
+CAN
+Cap_Tx: ID 0x2c7
+uint16_t
+DATA[0]: Cap percentage 0~150
+DATA[1]: NA
+DATA[2]: NA
+DATA[3]: NA
