@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 1
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 1
   36              	.LCFI0:
   37              		.cfi_def_cfa_offset 4
   38              		.cfi_offset 14, -4
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 2
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 2
 
 
   39 0002 83B0     		sub	sp, sp, #12
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 1
   13:Core/Src/main.c ****   * in the root directory of this software component.
   14:Core/Src/main.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
   15:Core/Src/main.c ****   *
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 3
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 3
 
 
   16:Core/Src/main.c ****   ******************************************************************************
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 1
   70:Core/Src/main.c **** 
   71:Core/Src/main.c ****   _ADC_Sample_t C_left = {0};
   72:Core/Src/main.c ****   _ADC_Sample_t C_sys = {0};
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 4
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 4
 
 
   73:Core/Src/main.c ****   _ADC_Sample_t C_right = {0};
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 1
  127:Core/Src/main.c **** /* USER CODE END 0 */
  128:Core/Src/main.c **** 
  129:Core/Src/main.c **** /**
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 5
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 5
 
 
  130:Core/Src/main.c ****   * @brief  The application entry point.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 1
  184:Core/Src/main.c **** 		MX_ADC3_Init();
  185:Core/Src/main.c **** 		MX_TIM2_Init();
  186:Core/Src/main.c **** 		MX_TIM5_Init();
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 6
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 6
 
 
  187:Core/Src/main.c **** 		MX_TIM6_Init();
@@ -358,288 +358,275 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 1
  241:Core/Src/main.c ****   }
  242:Core/Src/main.c ****   Supercap_AUX_Buzzer(0, 0);
  243:Core/Src/main.c **** 	
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 7
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 7
 
 
  244:Core/Src/main.c **** 	Supercap_Function_Init(&C_sys);
  245:Core/Src/main.c **** 	Supercap_Function_Init(&C_right);
  246:Core/Src/main.c **** 	Supercap_Function_Init(&ADC4_12);
- 247:Core/Src/main.c **** 	Supercap_Function_Init(&V_bat);
- 248:Core/Src/main.c **** 	Supercap_Function_Init(&V_cap);
- 249:Core/Src/main.c **** 
- 250:Core/Src/main.c ****   Supercap_PID_Init(&PID_45W_loop, 0.005f, 0.0008f, 0.01f, MAX_CAP_VOLTAGE, 0, 1500);
- 251:Core/Src/main.c ****   Supercap_PID_Init(&PID_n7A_loop, 0.2f, 0.00002f, 0.01f, MAX_CAP_VOLTAGE, 0, 400);
- 252:Core/Src/main.c ****   Supercap_PID_Init(&PID_7A_loop, 0.25f, 0.00005f, 0.01f, MAX_CAP_VOLTAGE, 0, 600);
- 253:Core/Src/main.c **** 	Supercap_PID_Init(&PID_voltage_loop, 0.00005f, 0.0001f, 0.08f, MAX_DUTY, 65, 50);
- 254:Core/Src/main.c **** 
- 255:Core/Src/main.c ****   uint16_t notes2[] = {6, 5, 5, 1, 2, 3, 3, 2, 1, -6};
- 256:Core/Src/main.c ****   for(int i = 0; i < 10; i++){
- 257:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
- 258:Core/Src/main.c ****     HAL_Delay(50);
- 259:Core/Src/main.c ****     Supercap_AUX_Buzzer(0, 0);
- 260:Core/Src/main.c ****     HAL_Delay(5);
- 261:Core/Src/main.c ****   }
- 262:Core/Src/main.c ****   Supercap_AUX_Buzzer(0, 0);
- 263:Core/Src/main.c **** 
- 264:Core/Src/main.c ****   HAL_TIM_Base_Start_IT(&htim2);
- 265:Core/Src/main.c **** 	HAL_Delay(250);
- 266:Core/Src/main.c **** 
- 267:Core/Src/main.c ****   uint16_t notes3[] = {1, 2, 3, 5, 5, 6, 5, 3, 3, 2, 1, 2, 5};
- 268:Core/Src/main.c ****   for(int i = 0; i < 13; i++){
- 269:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
- 270:Core/Src/main.c ****     HAL_Delay(50);
- 271:Core/Src/main.c ****     Supercap_AUX_Buzzer(0, 0);
- 272:Core/Src/main.c ****     HAL_Delay(5);
- 273:Core/Src/main.c ****   }
- 274:Core/Src/main.c ****   Supercap_AUX_Buzzer(0, 0); 
- 275:Core/Src/main.c **** 	HAL_TIM_Base_Start_IT(&htim5);
- 276:Core/Src/main.c **** 	
- 277:Core/Src/main.c ****   /* USER CODE END 2 */
- 278:Core/Src/main.c **** 
- 279:Core/Src/main.c ****   /* Infinite loop */
- 280:Core/Src/main.c ****   /* USER CODE BEGIN WHILE */
- 281:Core/Src/main.c ****   while (1)
- 282:Core/Src/main.c ****   {
- 283:Core/Src/main.c ****     /* USER CODE END WHILE */
- 284:Core/Src/main.c **** 
- 285:Core/Src/main.c ****     /* USER CODE BEGIN 3 */
- 286:Core/Src/main.c ****     data_packet.data[0] = Supercap_ADC_to_Current_Funtion(C_right.real_value_12bits, 2047);
- 287:Core/Src/main.c ****     data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
- 288:Core/Src/main.c ****     data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
- 289:Core/Src/main.c ****     data_packet.data[3] = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
- 290:Core/Src/main.c ****     data_packet.data[4] = Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
- 291:Core/Src/main.c ****     data_packet.data[5] = Supercap_ADC_to_Voltage_Funtion(PID_n7A_loop.output);
- 292:Core/Src/main.c **** 		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
- 293:Core/Src/main.c **** 		data_packet.data[7] = Supercap_ADC_to_Voltage_Funtion(supercap_target_voltage);//(float)supercap_
- 294:Core/Src/main.c **** 		//bug report: I put data[5], So, the tail be removed
- 295:Core/Src/main.c ****   }
- 296:Core/Src/main.c ****   /* USER CODE END 3 */
- 297:Core/Src/main.c **** }
- 298:Core/Src/main.c **** 
- 299:Core/Src/main.c **** /**
- 300:Core/Src/main.c ****   * @brief System Clock Configuration
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 8
+ 247:Core/Src/main.c **** 	Supercap_Function_Init(&C_left);
+ 248:Core/Src/main.c **** 	Supercap_Function_Init(&V_bat);
+ 249:Core/Src/main.c **** 	Supercap_Function_Init(&V_cap);
+ 250:Core/Src/main.c **** 
+ 251:Core/Src/main.c ****   Supercap_PID_Init(&PID_45W_loop, 0.00005f, 0.00005f, 0.00f, MAX_CAP_VOLTAGE, 0, 1000);
+ 252:Core/Src/main.c ****   Supercap_PID_Init(&PID_n7A_loop, -0.0f, -0.00004f, -0.0f, MAX_CAP_VOLTAGE, 0, 150);
+ 253:Core/Src/main.c ****   Supercap_PID_Init(&PID_7A_loop, -0.0f, -0.00004f, -0.0f, MAX_CAP_VOLTAGE, 0, 150);
+ 254:Core/Src/main.c **** 	Supercap_PID_Init(&PID_voltage_loop, 0.00000f, 0.0001f, 0.00f, MAX_DUTY, 65, 50);
+ 255:Core/Src/main.c **** 
+ 256:Core/Src/main.c ****   uint16_t notes2[] = {6, 5, 5, 1, 2, 3, 3, 2, 1, -6};
+ 257:Core/Src/main.c ****   for(int i = 0; i < 10; i++){
+ 258:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
+ 259:Core/Src/main.c ****     HAL_Delay(50);
+ 260:Core/Src/main.c ****     Supercap_AUX_Buzzer(0, 0);
+ 261:Core/Src/main.c ****     HAL_Delay(5);
+ 262:Core/Src/main.c ****   }
+ 263:Core/Src/main.c ****   Supercap_AUX_Buzzer(0, 0);
+ 264:Core/Src/main.c **** 
+ 265:Core/Src/main.c ****   HAL_TIM_Base_Start_IT(&htim2);
+ 266:Core/Src/main.c **** 	HAL_Delay(250);
+ 267:Core/Src/main.c **** 
+ 268:Core/Src/main.c ****   uint16_t notes3[] = {1, 2, 3, 5, 5, 6, 5, 3, 3, 2, 1, 2, 5};
+ 269:Core/Src/main.c ****   for(int i = 0; i < 13; i++){
+ 270:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
+ 271:Core/Src/main.c ****     HAL_Delay(50);
+ 272:Core/Src/main.c ****     Supercap_AUX_Buzzer(0, 0);
+ 273:Core/Src/main.c ****     HAL_Delay(5);
+ 274:Core/Src/main.c ****   }
+ 275:Core/Src/main.c ****   Supercap_AUX_Buzzer(0, 0); 
+ 276:Core/Src/main.c **** 	HAL_TIM_Base_Start_IT(&htim5);
+ 277:Core/Src/main.c **** 	
+ 278:Core/Src/main.c ****   /* USER CODE END 2 */
+ 279:Core/Src/main.c **** 
+ 280:Core/Src/main.c ****   /* Infinite loop */
+ 281:Core/Src/main.c ****   /* USER CODE BEGIN WHILE */
+ 282:Core/Src/main.c ****   while (1)
+ 283:Core/Src/main.c ****   {
+ 284:Core/Src/main.c ****     /* USER CODE END WHILE */
+ 285:Core/Src/main.c **** 
+ 286:Core/Src/main.c ****     /* USER CODE BEGIN 3 */
+ 287:Core/Src/main.c ****     data_packet.data[0] = Supercap_ADC_to_Current_Funtion(C_right.real_value_12bits, 2047);
+ 288:Core/Src/main.c ****     data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
+ 289:Core/Src/main.c ****     data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
+ 290:Core/Src/main.c ****     data_packet.data[3] = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
+ 291:Core/Src/main.c ****     //data_packet.data[3] = Supercap_ADC_to_Current_Funtion(C_left.real_value_12bits, 2047);
+ 292:Core/Src/main.c ****     data_packet.data[4] = Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
+ 293:Core/Src/main.c ****     //Robot_power_from_REF//
+ 294:Core/Src/main.c ****     //data_packet.data[4] = Robot_power_from_REF;
+ 295:Core/Src/main.c ****     //data_packet.data[5] = Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
+ 296:Core/Src/main.c ****     data_packet.data[5] = Supercap_ADC_to_Voltage_Funtion(PID_n7A_loop.output);
+ 297:Core/Src/main.c **** 		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
+ 298:Core/Src/main.c **** 		data_packet.data[7] = Supercap_ADC_to_Voltage_Funtion(supercap_target_voltage);//(float)supercap_
+ 299:Core/Src/main.c **** 		//bug report: I put data[5], So, the tail be removed
+ 300:Core/Src/main.c ****   }
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 8
 
 
- 301:Core/Src/main.c ****   * @retval None
- 302:Core/Src/main.c ****   */
- 303:Core/Src/main.c **** void SystemClock_Config(void)
- 304:Core/Src/main.c **** {
- 305:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
- 306:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 307:Core/Src/main.c **** 
- 308:Core/Src/main.c ****   /** Configure the main internal regulator output voltage
- 309:Core/Src/main.c ****   */
- 310:Core/Src/main.c ****   HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1);
- 311:Core/Src/main.c **** 
- 312:Core/Src/main.c ****   /** Initializes the RCC Oscillators according to the specified parameters
- 313:Core/Src/main.c ****   * in the RCC_OscInitTypeDef structure.
+ 301:Core/Src/main.c ****   /* USER CODE END 3 */
+ 302:Core/Src/main.c **** }
+ 303:Core/Src/main.c **** 
+ 304:Core/Src/main.c **** /**
+ 305:Core/Src/main.c ****   * @brief System Clock Configuration
+ 306:Core/Src/main.c ****   * @retval None
+ 307:Core/Src/main.c ****   */
+ 308:Core/Src/main.c **** void SystemClock_Config(void)
+ 309:Core/Src/main.c **** {
+ 310:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 311:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 312:Core/Src/main.c **** 
+ 313:Core/Src/main.c ****   /** Configure the main internal regulator output voltage
  314:Core/Src/main.c ****   */
- 315:Core/Src/main.c ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
- 316:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
- 317:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
- 318:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
- 319:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
- 320:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
- 321:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLN = 75;
- 322:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
- 323:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
- 324:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
- 325:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
- 326:Core/Src/main.c ****   {
- 327:Core/Src/main.c ****     Error_Handler();
- 328:Core/Src/main.c ****   }
- 329:Core/Src/main.c **** 
- 330:Core/Src/main.c ****   /** Initializes the CPU, AHB and APB buses clocks
- 331:Core/Src/main.c ****   */
- 332:Core/Src/main.c ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
- 333:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
- 334:Core/Src/main.c ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
- 335:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 336:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 337:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 338:Core/Src/main.c **** 
- 339:Core/Src/main.c ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
- 340:Core/Src/main.c ****   {
- 341:Core/Src/main.c ****     Error_Handler();
- 342:Core/Src/main.c ****   }
- 343:Core/Src/main.c **** }
- 344:Core/Src/main.c **** 
- 345:Core/Src/main.c **** /* USER CODE BEGIN 4 */
- 346:Core/Src/main.c **** void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs){
-  80              		.loc 2 346 81 is_stmt 1 view -0
+ 315:Core/Src/main.c ****   HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1);
+ 316:Core/Src/main.c **** 
+ 317:Core/Src/main.c ****   /** Initializes the RCC Oscillators according to the specified parameters
+ 318:Core/Src/main.c ****   * in the RCC_OscInitTypeDef structure.
+ 319:Core/Src/main.c ****   */
+ 320:Core/Src/main.c ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+ 321:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+ 322:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+ 323:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+ 324:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+ 325:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
+ 326:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLN = 75;
+ 327:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+ 328:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
+ 329:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
+ 330:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 331:Core/Src/main.c ****   {
+ 332:Core/Src/main.c ****     Error_Handler();
+ 333:Core/Src/main.c ****   }
+ 334:Core/Src/main.c **** 
+ 335:Core/Src/main.c ****   /** Initializes the CPU, AHB and APB buses clocks
+ 336:Core/Src/main.c ****   */
+ 337:Core/Src/main.c ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+ 338:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 339:Core/Src/main.c ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+ 340:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 341:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 342:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 343:Core/Src/main.c **** 
+ 344:Core/Src/main.c ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
+ 345:Core/Src/main.c ****   {
+ 346:Core/Src/main.c ****     Error_Handler();
+ 347:Core/Src/main.c ****   }
+ 348:Core/Src/main.c **** }
+ 349:Core/Src/main.c **** 
+ 350:Core/Src/main.c **** /* USER CODE BEGIN 4 */
+ 351:Core/Src/main.c **** void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs){
+  80              		.loc 2 351 81 is_stmt 1 view -0
   81              		.cfi_startproc
   82              		@ args = 0, pretend = 0, frame = 16
   83              		@ frame_needed = 0, uses_anonymous_args = 0
-  84              		.loc 2 346 81 is_stmt 0 view .LVU8
+  84              		.loc 2 351 81 is_stmt 0 view .LVU8
   85 0000 10B5     		push	{r4, lr}
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 9
+
+
   86              	.LCFI3:
   87              		.cfi_def_cfa_offset 8
   88              		.cfi_offset 4, -8
   89              		.cfi_offset 14, -4
   90 0002 84B0     		sub	sp, sp, #16
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 9
-
-
   91              	.LCFI4:
   92              		.cfi_def_cfa_offset 24
- 347:Core/Src/main.c **** 	static FDCAN_RxHeaderTypeDef rx_header;
-  93              		.loc 2 347 2 is_stmt 1 view .LVU9
- 348:Core/Src/main.c ****   uint16_t can_rx_buff[8];
-  94              		.loc 2 348 3 view .LVU10
- 349:Core/Src/main.c **** 	HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &rx_header, can_rx_buff);
-  95              		.loc 2 349 2 view .LVU11
-  96 0004 154C     		ldr	r4, .L12
+ 352:Core/Src/main.c **** 	static FDCAN_RxHeaderTypeDef rx_header;
+  93              		.loc 2 352 2 is_stmt 1 view .LVU9
+ 353:Core/Src/main.c ****   uint16_t can_rx_buff[8];
+  94              		.loc 2 353 3 view .LVU10
+ 354:Core/Src/main.c **** 	HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &rx_header, can_rx_buff);
+  95              		.loc 2 354 2 view .LVU11
+  96 0004 114C     		ldr	r4, .L11
   97 0006 6B46     		mov	r3, sp
   98 0008 2246     		mov	r2, r4
   99 000a 4021     		movs	r1, #64
  100              	.LVL5:
- 101              		.loc 2 349 2 is_stmt 0 view .LVU12
+ 101              		.loc 2 354 2 is_stmt 0 view .LVU12
  102 000c FFF7FEFF 		bl	HAL_FDCAN_GetRxMessage
  103              	.LVL6:
- 350:Core/Src/main.c **** 	if(*(&rx_header.Identifier) == 0x2c8){
- 104              		.loc 2 350 2 is_stmt 1 view .LVU13
- 105              		.loc 2 350 5 is_stmt 0 view .LVU14
+ 355:Core/Src/main.c **** 	if(*(&rx_header.Identifier) == 0x2c8){
+ 104              		.loc 2 355 2 is_stmt 1 view .LVU13
+ 105              		.loc 2 355 5 is_stmt 0 view .LVU14
  106 0010 2368     		ldr	r3, [r4]
- 107              		.loc 2 350 4 view .LVU15
+ 107              		.loc 2 355 4 view .LVU15
  108 0012 B3F5327F 		cmp	r3, #712
- 109 0016 01D0     		beq	.L10
+ 109 0016 01D0     		beq	.L9
  110              	.L5:
- 351:Core/Src/main.c ****     //HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &rx_header, can_rx_buff);
- 352:Core/Src/main.c **** 		if (can_rx_buff[0] >= 30 && can_rx_buff[0]<= 120 && supercap_max_power_STM32 != can_rx_buff[0]){ 
- 353:Core/Src/main.c **** 			Update_Current(supercap_max_power_STM32, can_rx_buff[0]);
- 354:Core/Src/main.c **** 			supercap_max_power_STM32 = can_rx_buff[0];
- 355:Core/Src/main.c **** 		}
- 356:Core/Src/main.c **** 		if (can_rx_buff[0] < 30 || can_rx_buff[0] > 120){ //Out of range
- 357:Core/Src/main.c **** 			//Update_Current(supercap_max_power_STM32, 45);
- 358:Core/Src/main.c ****       supercap_max_power_current = 45;
- 359:Core/Src/main.c **** 		}
- 360:Core/Src/main.c ****     Robot_power_from_REF = can_rx_buff[1];
- 361:Core/Src/main.c **** 	}
- 362:Core/Src/main.c **** }
- 111              		.loc 2 362 1 view .LVU16
+ 356:Core/Src/main.c ****     //HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &rx_header, can_rx_buff);
+ 357:Core/Src/main.c **** 		if (can_rx_buff[0] >= 30 && can_rx_buff[0]<= 120 && supercap_max_power_STM32 != can_rx_buff[0]){ 
+ 358:Core/Src/main.c **** 			Update_Current(supercap_max_power_STM32, can_rx_buff[0]);
+ 359:Core/Src/main.c **** 			supercap_max_power_STM32 = can_rx_buff[0];
+ 360:Core/Src/main.c **** 		}
+ 361:Core/Src/main.c **** 		if (can_rx_buff[0] < 30 || can_rx_buff[0] > 120){ //Out of range
+ 362:Core/Src/main.c **** 			//Update_Current(supercap_max_power_STM32, 45);
+ 363:Core/Src/main.c ****       //supercap_max_power_current = 45;
+ 364:Core/Src/main.c **** 		}
+ 365:Core/Src/main.c ****     Robot_power_from_REF = can_rx_buff[1];
+ 366:Core/Src/main.c **** 	}
+ 367:Core/Src/main.c **** }
+ 111              		.loc 2 367 1 view .LVU16
  112 0018 04B0     		add	sp, sp, #16
  113              	.LCFI5:
  114              		.cfi_remember_state
  115              		.cfi_def_cfa_offset 8
  116              		@ sp needed
  117 001a 10BD     		pop	{r4, pc}
- 118              	.L10:
+ 118              	.L9:
  119              	.LCFI6:
  120              		.cfi_restore_state
- 352:Core/Src/main.c **** 			Update_Current(supercap_max_power_STM32, can_rx_buff[0]);
- 121              		.loc 2 352 3 is_stmt 1 view .LVU17
- 352:Core/Src/main.c **** 			Update_Current(supercap_max_power_STM32, can_rx_buff[0]);
- 122              		.loc 2 352 18 is_stmt 0 view .LVU18
+ 357:Core/Src/main.c **** 			Update_Current(supercap_max_power_STM32, can_rx_buff[0]);
+ 121              		.loc 2 357 3 is_stmt 1 view .LVU17
+ 357:Core/Src/main.c **** 			Update_Current(supercap_max_power_STM32, can_rx_buff[0]);
+ 122              		.loc 2 357 18 is_stmt 0 view .LVU18
  123 001c BDF80010 		ldrh	r1, [sp]
- 352:Core/Src/main.c **** 			Update_Current(supercap_max_power_STM32, can_rx_buff[0]);
- 124              		.loc 2 352 28 view .LVU19
+ 357:Core/Src/main.c **** 			Update_Current(supercap_max_power_STM32, can_rx_buff[0]);
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 10
+
+
+ 124              		.loc 2 357 28 view .LVU19
  125 0020 A1F11E03 		sub	r3, r1, #30
  126 0024 9BB2     		uxth	r3, r3
- 352:Core/Src/main.c **** 			Update_Current(supercap_max_power_STM32, can_rx_buff[0]);
- 127              		.loc 2 352 6 view .LVU20
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 10
-
-
+ 357:Core/Src/main.c **** 			Update_Current(supercap_max_power_STM32, can_rx_buff[0]);
+ 127              		.loc 2 357 6 view .LVU20
  128 0026 5A2B     		cmp	r3, #90
  129 0028 03D8     		bhi	.L7
- 352:Core/Src/main.c **** 			Update_Current(supercap_max_power_STM32, can_rx_buff[0]);
- 130              		.loc 2 352 80 discriminator 1 view .LVU21
- 131 002a 0D4B     		ldr	r3, .L12+4
+ 357:Core/Src/main.c **** 			Update_Current(supercap_max_power_STM32, can_rx_buff[0]);
+ 130              		.loc 2 357 80 discriminator 1 view .LVU21
+ 131 002a 094B     		ldr	r3, .L11+4
  132 002c 1888     		ldrh	r0, [r3]
- 352:Core/Src/main.c **** 			Update_Current(supercap_max_power_STM32, can_rx_buff[0]);
- 133              		.loc 2 352 52 discriminator 1 view .LVU22
+ 357:Core/Src/main.c **** 			Update_Current(supercap_max_power_STM32, can_rx_buff[0]);
+ 133              		.loc 2 357 52 discriminator 1 view .LVU22
  134 002e 8142     		cmp	r1, r0
- 135 0030 0DD1     		bne	.L11
+ 135 0030 04D1     		bne	.L10
  136              	.L7:
- 356:Core/Src/main.c **** 			//Update_Current(supercap_max_power_STM32, 45);
- 137              		.loc 2 356 3 is_stmt 1 view .LVU23
- 356:Core/Src/main.c **** 			//Update_Current(supercap_max_power_STM32, 45);
- 138              		.loc 2 356 18 is_stmt 0 view .LVU24
- 139 0032 BDF80030 		ldrh	r3, [sp]
- 356:Core/Src/main.c **** 			//Update_Current(supercap_max_power_STM32, 45);
- 140              		.loc 2 356 27 view .LVU25
- 141 0036 1E3B     		subs	r3, r3, #30
- 142 0038 9BB2     		uxth	r3, r3
- 356:Core/Src/main.c **** 			//Update_Current(supercap_max_power_STM32, 45);
- 143              		.loc 2 356 6 view .LVU26
- 144 003a 5A2B     		cmp	r3, #90
- 145 003c 02D9     		bls	.L8
- 358:Core/Src/main.c **** 		}
- 146              		.loc 2 358 7 is_stmt 1 view .LVU27
- 358:Core/Src/main.c **** 		}
- 147              		.loc 2 358 34 is_stmt 0 view .LVU28
- 148 003e 094B     		ldr	r3, .L12+8
- 149 0040 2D22     		movs	r2, #45
- 150 0042 1A80     		strh	r2, [r3]	@ movhi
- 151              	.L8:
- 360:Core/Src/main.c **** 	}
- 152              		.loc 2 360 5 is_stmt 1 view .LVU29
- 360:Core/Src/main.c **** 	}
- 153              		.loc 2 360 39 is_stmt 0 view .LVU30
- 154 0044 BDF80220 		ldrh	r2, [sp, #2]
- 360:Core/Src/main.c **** 	}
- 155              		.loc 2 360 26 view .LVU31
- 156 0048 074B     		ldr	r3, .L12+12
- 157 004a 1A70     		strb	r2, [r3]
- 158              		.loc 2 362 1 view .LVU32
- 159 004c E4E7     		b	.L5
+ 361:Core/Src/main.c **** 			//Update_Current(supercap_max_power_STM32, 45);
+ 137              		.loc 2 361 3 is_stmt 1 view .LVU23
+ 364:Core/Src/main.c ****     Robot_power_from_REF = can_rx_buff[1];
+ 138              		.loc 2 364 3 view .LVU24
+ 365:Core/Src/main.c **** 	}
+ 139              		.loc 2 365 5 view .LVU25
+ 365:Core/Src/main.c **** 	}
+ 140              		.loc 2 365 39 is_stmt 0 view .LVU26
+ 141 0032 BDF80220 		ldrh	r2, [sp, #2]
+ 365:Core/Src/main.c **** 	}
+ 142              		.loc 2 365 26 view .LVU27
+ 143 0036 074B     		ldr	r3, .L11+8
+ 144 0038 1A70     		strb	r2, [r3]
+ 145              		.loc 2 367 1 view .LVU28
+ 146 003a EDE7     		b	.L5
+ 147              	.L10:
+ 358:Core/Src/main.c **** 			supercap_max_power_STM32 = can_rx_buff[0];
+ 148              		.loc 2 358 4 is_stmt 1 view .LVU29
+ 149 003c FFF7FEFF 		bl	Update_Current
+ 150              	.LVL7:
+ 359:Core/Src/main.c **** 		}
+ 151              		.loc 2 359 4 view .LVU30
+ 359:Core/Src/main.c **** 		}
+ 152              		.loc 2 359 42 is_stmt 0 view .LVU31
+ 153 0040 BDF80020 		ldrh	r2, [sp]
+ 359:Core/Src/main.c **** 		}
+ 154              		.loc 2 359 29 view .LVU32
+ 155 0044 024B     		ldr	r3, .L11+4
+ 156 0046 1A80     		strh	r2, [r3]	@ movhi
+ 157 0048 F3E7     		b	.L7
+ 158              	.L12:
+ 159 004a 00BF     		.align	2
  160              	.L11:
- 353:Core/Src/main.c **** 			supercap_max_power_STM32 = can_rx_buff[0];
- 161              		.loc 2 353 4 is_stmt 1 view .LVU33
- 162 004e FFF7FEFF 		bl	Update_Current
- 163              	.LVL7:
- 354:Core/Src/main.c **** 		}
- 164              		.loc 2 354 4 view .LVU34
- 354:Core/Src/main.c **** 		}
- 165              		.loc 2 354 42 is_stmt 0 view .LVU35
- 166 0052 BDF80020 		ldrh	r2, [sp]
- 354:Core/Src/main.c **** 		}
- 167              		.loc 2 354 29 view .LVU36
- 168 0056 024B     		ldr	r3, .L12+4
- 169 0058 1A80     		strh	r2, [r3]	@ movhi
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 11
+ 161 004c 00000000 		.word	.LANCHOR0
+ 162 0050 00000000 		.word	.LANCHOR1
+ 163 0054 00000000 		.word	.LANCHOR2
+ 164              		.cfi_endproc
+ 165              	.LFE335:
+ 167              		.section	.text.Error_Handler,"ax",%progbits
+ 168              		.align	1
+ 169              		.global	Error_Handler
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 11
 
 
- 170 005a EAE7     		b	.L7
- 171              	.L13:
- 172              		.align	2
- 173              	.L12:
- 174 005c 00000000 		.word	.LANCHOR0
- 175 0060 00000000 		.word	.LANCHOR1
- 176 0064 00000000 		.word	.LANCHOR2
- 177 0068 00000000 		.word	.LANCHOR3
- 178              		.cfi_endproc
- 179              	.LFE335:
- 181              		.section	.text.Error_Handler,"ax",%progbits
- 182              		.align	1
- 183              		.global	Error_Handler
- 184              		.syntax unified
- 185              		.thumb
- 186              		.thumb_func
- 188              	Error_Handler:
- 189              	.LFB336:
- 363:Core/Src/main.c **** /* USER CODE END 4 */
- 364:Core/Src/main.c **** 
- 365:Core/Src/main.c **** /**
- 366:Core/Src/main.c ****   * @brief  This function is executed in case of error occurrence.
- 367:Core/Src/main.c ****   * @retval None
- 368:Core/Src/main.c ****   */
- 369:Core/Src/main.c **** void Error_Handler(void)
- 370:Core/Src/main.c **** {
- 190              		.loc 2 370 1 is_stmt 1 view -0
- 191              		.cfi_startproc
- 192              		@ Volatile: function does not return.
- 193              		@ args = 0, pretend = 0, frame = 0
- 194              		@ frame_needed = 0, uses_anonymous_args = 0
- 195              		@ link register save eliminated.
- 371:Core/Src/main.c ****   /* USER CODE BEGIN Error_Handler_Debug */
- 372:Core/Src/main.c ****   /* User can add his own implementation to report the HAL error return state */
- 373:Core/Src/main.c ****   __disable_irq();
- 196              		.loc 2 373 3 view .LVU38
- 197              	.LBB4:
- 198              	.LBI4:
- 199              		.file 3 "Drivers/CMSIS/Include/cmsis_gcc.h"
+ 170              		.syntax unified
+ 171              		.thumb
+ 172              		.thumb_func
+ 174              	Error_Handler:
+ 175              	.LFB336:
+ 368:Core/Src/main.c **** /* USER CODE END 4 */
+ 369:Core/Src/main.c **** 
+ 370:Core/Src/main.c **** /**
+ 371:Core/Src/main.c ****   * @brief  This function is executed in case of error occurrence.
+ 372:Core/Src/main.c ****   * @retval None
+ 373:Core/Src/main.c ****   */
+ 374:Core/Src/main.c **** void Error_Handler(void)
+ 375:Core/Src/main.c **** {
+ 176              		.loc 2 375 1 is_stmt 1 view -0
+ 177              		.cfi_startproc
+ 178              		@ Volatile: function does not return.
+ 179              		@ args = 0, pretend = 0, frame = 0
+ 180              		@ frame_needed = 0, uses_anonymous_args = 0
+ 181              		@ link register save eliminated.
+ 376:Core/Src/main.c ****   /* USER CODE BEGIN Error_Handler_Debug */
+ 377:Core/Src/main.c ****   /* User can add his own implementation to report the HAL error return state */
+ 378:Core/Src/main.c ****   __disable_irq();
+ 182              		.loc 2 378 3 view .LVU34
+ 183              	.LBB4:
+ 184              	.LBI4:
+ 185              		.file 3 "Drivers/CMSIS/Include/cmsis_gcc.h"
    1:Drivers/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
    2:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
    3:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
@@ -658,9 +645,6 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 1
   16:Drivers/CMSIS/Include/cmsis_gcc.h ****  * www.apache.org/licenses/LICENSE-2.0
   17:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
   18:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Unless required by applicable law or agreed to in writing, software
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 12
-
-
   19:Drivers/CMSIS/Include/cmsis_gcc.h ****  * distributed under the License is distributed on an AS IS BASIS, WITHOUT
   20:Drivers/CMSIS/Include/cmsis_gcc.h ****  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   21:Drivers/CMSIS/Include/cmsis_gcc.h ****  * See the License for the specific language governing permissions and
@@ -674,6 +658,9 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 1
   29:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic push
   30:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wsign-conversion"
   31:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 12
+
+
   32:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wunused-parameter"
   33:Drivers/CMSIS/Include/cmsis_gcc.h **** 
   34:Drivers/CMSIS/Include/cmsis_gcc.h **** /* Fallback for __has_builtin */
@@ -718,9 +705,6 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 1
   73:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
   74:Drivers/CMSIS/Include/cmsis_gcc.h ****   struct __attribute__((packed)) T_UINT32 { uint32_t v; };
   75:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 13
-
-
   76:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32(x)                  (((struct T_UINT32 *)(x))->v)
   77:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   78:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_WRITE
@@ -734,6 +718,9 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 1
   86:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_READ
   87:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
   88:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 13
+
+
   89:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
   90:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_READ { uint16_t v; };
   91:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
@@ -778,9 +765,6 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 1
  130:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  131:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE __NO_RETURN void __cmsis_start(void)
  132:Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 14
-
-
  133:Drivers/CMSIS/Include/cmsis_gcc.h ****   extern void _start(void) __NO_RETURN;
  134:Drivers/CMSIS/Include/cmsis_gcc.h ****   
  135:Drivers/CMSIS/Include/cmsis_gcc.h ****   typedef struct {
@@ -794,6 +778,9 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 1
  143:Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t  wlen;
  144:Drivers/CMSIS/Include/cmsis_gcc.h ****   } __zero_table_t;
  145:Drivers/CMSIS/Include/cmsis_gcc.h ****   
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 14
+
+
  146:Drivers/CMSIS/Include/cmsis_gcc.h ****   extern const __copy_table_t __copy_table_start__;
  147:Drivers/CMSIS/Include/cmsis_gcc.h ****   extern const __copy_table_t __copy_table_end__;
  148:Drivers/CMSIS/Include/cmsis_gcc.h ****   extern const __zero_table_t __zero_table_start__;
@@ -838,9 +825,6 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 1
  187:Drivers/CMSIS/Include/cmsis_gcc.h ****     \defgroup CMSIS_Core_RegAccFunctions CMSIS Core Register Access Functions
  188:Drivers/CMSIS/Include/cmsis_gcc.h ****   @{
  189:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 15
-
-
  190:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  191:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  192:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
@@ -854,1550 +838,1558 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 1
  200:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  201:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  202:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 15
+
+
  203:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
  204:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Disables IRQ interrupts by setting the I-bit in the CPSR.
  205:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
  206:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  207:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
- 200              		.loc 3 207 27 view .LVU39
- 201              	.LBB5:
+ 186              		.loc 3 207 27 view .LVU35
+ 187              	.LBB5:
  208:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  209:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
- 202              		.loc 3 209 3 view .LVU40
- 203              		.syntax unified
- 204              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 205 0000 72B6     		cpsid i
- 206              	@ 0 "" 2
- 207              		.thumb
+ 188              		.loc 3 209 3 view .LVU36
+ 189              		.syntax unified
+ 190              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 191 0000 72B6     		cpsid i
+ 192              	@ 0 "" 2
+ 193              		.thumb
+ 194              		.syntax unified
+ 195              	.L14:
+ 196              	.LBE5:
+ 197              	.LBE4:
+ 379:Core/Src/main.c ****   while (1)
+ 198              		.loc 2 379 3 discriminator 1 view .LVU37
+ 380:Core/Src/main.c ****   {
+ 381:Core/Src/main.c ****   }
+ 199              		.loc 2 381 3 discriminator 1 view .LVU38
+ 379:Core/Src/main.c ****   while (1)
+ 200              		.loc 2 379 9 discriminator 1 view .LVU39
+ 201 0002 FEE7     		b	.L14
+ 202              		.cfi_endproc
+ 203              	.LFE336:
+ 205              		.section	.text.SystemClock_Config,"ax",%progbits
+ 206              		.align	1
+ 207              		.global	SystemClock_Config
  208              		.syntax unified
- 209              	.L15:
- 210              	.LBE5:
- 211              	.LBE4:
- 374:Core/Src/main.c ****   while (1)
- 212              		.loc 2 374 3 discriminator 1 view .LVU41
- 375:Core/Src/main.c ****   {
- 376:Core/Src/main.c ****   }
- 213              		.loc 2 376 3 discriminator 1 view .LVU42
- 374:Core/Src/main.c ****   while (1)
- 214              		.loc 2 374 9 discriminator 1 view .LVU43
- 215 0002 FEE7     		b	.L15
- 216              		.cfi_endproc
- 217              	.LFE336:
- 219              		.section	.text.SystemClock_Config,"ax",%progbits
- 220              		.align	1
- 221              		.global	SystemClock_Config
- 222              		.syntax unified
- 223              		.thumb
- 224              		.thumb_func
- 226              	SystemClock_Config:
- 227              	.LFB334:
- 304:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
- 228              		.loc 2 304 1 view -0
- 229              		.cfi_startproc
- 230              		@ args = 0, pretend = 0, frame = 80
- 231              		@ frame_needed = 0, uses_anonymous_args = 0
- 232 0000 00B5     		push	{lr}
- 233              	.LCFI7:
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 16
+ 209              		.thumb
+ 210              		.thumb_func
+ 212              	SystemClock_Config:
+ 213              	.LFB334:
+ 309:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 214              		.loc 2 309 1 view -0
+ 215              		.cfi_startproc
+ 216              		@ args = 0, pretend = 0, frame = 80
+ 217              		@ frame_needed = 0, uses_anonymous_args = 0
+ 218 0000 00B5     		push	{lr}
+ 219              	.LCFI7:
+ 220              		.cfi_def_cfa_offset 4
+ 221              		.cfi_offset 14, -4
+ 222 0002 95B0     		sub	sp, sp, #84
+ 223              	.LCFI8:
+ 224              		.cfi_def_cfa_offset 88
+ 310:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 225              		.loc 2 310 3 view .LVU41
+ 310:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 226              		.loc 2 310 22 is_stmt 0 view .LVU42
+ 227 0004 3822     		movs	r2, #56
+ 228 0006 0021     		movs	r1, #0
+ 229 0008 06A8     		add	r0, sp, #24
+ 230 000a FFF7FEFF 		bl	memset
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 16
 
 
- 234              		.cfi_def_cfa_offset 4
- 235              		.cfi_offset 14, -4
- 236 0002 95B0     		sub	sp, sp, #84
- 237              	.LCFI8:
- 238              		.cfi_def_cfa_offset 88
- 305:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 239              		.loc 2 305 3 view .LVU45
- 305:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 240              		.loc 2 305 22 is_stmt 0 view .LVU46
- 241 0004 3822     		movs	r2, #56
- 242 0006 0021     		movs	r1, #0
- 243 0008 06A8     		add	r0, sp, #24
- 244 000a FFF7FEFF 		bl	memset
- 245              	.LVL8:
- 306:Core/Src/main.c **** 
- 246              		.loc 2 306 3 is_stmt 1 view .LVU47
- 306:Core/Src/main.c **** 
- 247              		.loc 2 306 22 is_stmt 0 view .LVU48
- 248 000e 0023     		movs	r3, #0
- 249 0010 0193     		str	r3, [sp, #4]
- 250 0012 0293     		str	r3, [sp, #8]
- 251 0014 0393     		str	r3, [sp, #12]
- 252 0016 0493     		str	r3, [sp, #16]
- 253 0018 0593     		str	r3, [sp, #20]
- 310:Core/Src/main.c **** 
- 254              		.loc 2 310 3 is_stmt 1 view .LVU49
- 255 001a 4FF40070 		mov	r0, #512
- 256 001e FFF7FEFF 		bl	HAL_PWREx_ControlVoltageScaling
- 257              	.LVL9:
- 315:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
- 258              		.loc 2 315 3 view .LVU50
- 315:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
- 259              		.loc 2 315 36 is_stmt 0 view .LVU51
- 260 0022 0223     		movs	r3, #2
- 261 0024 0693     		str	r3, [sp, #24]
- 316:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
- 262              		.loc 2 316 3 is_stmt 1 view .LVU52
- 316:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
- 263              		.loc 2 316 30 is_stmt 0 view .LVU53
- 264 0026 4FF48072 		mov	r2, #256
- 265 002a 0992     		str	r2, [sp, #36]
- 317:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
- 266              		.loc 2 317 3 is_stmt 1 view .LVU54
- 317:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
- 267              		.loc 2 317 41 is_stmt 0 view .LVU55
- 268 002c 4022     		movs	r2, #64
- 269 002e 0A92     		str	r2, [sp, #40]
- 318:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
- 270              		.loc 2 318 3 is_stmt 1 view .LVU56
- 318:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
- 271              		.loc 2 318 34 is_stmt 0 view .LVU57
- 272 0030 0D93     		str	r3, [sp, #52]
- 319:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
- 273              		.loc 2 319 3 is_stmt 1 view .LVU58
- 319:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
- 274              		.loc 2 319 35 is_stmt 0 view .LVU59
- 275 0032 0E93     		str	r3, [sp, #56]
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 17
+ 231              	.LVL8:
+ 311:Core/Src/main.c **** 
+ 232              		.loc 2 311 3 is_stmt 1 view .LVU43
+ 311:Core/Src/main.c **** 
+ 233              		.loc 2 311 22 is_stmt 0 view .LVU44
+ 234 000e 0023     		movs	r3, #0
+ 235 0010 0193     		str	r3, [sp, #4]
+ 236 0012 0293     		str	r3, [sp, #8]
+ 237 0014 0393     		str	r3, [sp, #12]
+ 238 0016 0493     		str	r3, [sp, #16]
+ 239 0018 0593     		str	r3, [sp, #20]
+ 315:Core/Src/main.c **** 
+ 240              		.loc 2 315 3 is_stmt 1 view .LVU45
+ 241 001a 4FF40070 		mov	r0, #512
+ 242 001e FFF7FEFF 		bl	HAL_PWREx_ControlVoltageScaling
+ 243              	.LVL9:
+ 320:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+ 244              		.loc 2 320 3 view .LVU46
+ 320:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+ 245              		.loc 2 320 36 is_stmt 0 view .LVU47
+ 246 0022 0223     		movs	r3, #2
+ 247 0024 0693     		str	r3, [sp, #24]
+ 321:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+ 248              		.loc 2 321 3 is_stmt 1 view .LVU48
+ 321:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+ 249              		.loc 2 321 30 is_stmt 0 view .LVU49
+ 250 0026 4FF48072 		mov	r2, #256
+ 251 002a 0992     		str	r2, [sp, #36]
+ 322:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+ 252              		.loc 2 322 3 is_stmt 1 view .LVU50
+ 322:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+ 253              		.loc 2 322 41 is_stmt 0 view .LVU51
+ 254 002c 4022     		movs	r2, #64
+ 255 002e 0A92     		str	r2, [sp, #40]
+ 323:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+ 256              		.loc 2 323 3 is_stmt 1 view .LVU52
+ 323:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+ 257              		.loc 2 323 34 is_stmt 0 view .LVU53
+ 258 0030 0D93     		str	r3, [sp, #52]
+ 324:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
+ 259              		.loc 2 324 3 is_stmt 1 view .LVU54
+ 324:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
+ 260              		.loc 2 324 35 is_stmt 0 view .LVU55
+ 261 0032 0E93     		str	r3, [sp, #56]
+ 325:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLN = 75;
+ 262              		.loc 2 325 3 is_stmt 1 view .LVU56
+ 325:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLN = 75;
+ 263              		.loc 2 325 30 is_stmt 0 view .LVU57
+ 264 0034 0422     		movs	r2, #4
+ 265 0036 0F92     		str	r2, [sp, #60]
+ 326:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+ 266              		.loc 2 326 3 is_stmt 1 view .LVU58
+ 326:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+ 267              		.loc 2 326 30 is_stmt 0 view .LVU59
+ 268 0038 4B22     		movs	r2, #75
+ 269 003a 1092     		str	r2, [sp, #64]
+ 327:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 17
 
 
- 320:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLN = 75;
- 276              		.loc 2 320 3 is_stmt 1 view .LVU60
- 320:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLN = 75;
- 277              		.loc 2 320 30 is_stmt 0 view .LVU61
- 278 0034 0422     		movs	r2, #4
- 279 0036 0F92     		str	r2, [sp, #60]
- 321:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
- 280              		.loc 2 321 3 is_stmt 1 view .LVU62
- 321:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
- 281              		.loc 2 321 30 is_stmt 0 view .LVU63
- 282 0038 4B22     		movs	r2, #75
- 283 003a 1092     		str	r2, [sp, #64]
- 322:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
- 284              		.loc 2 322 3 is_stmt 1 view .LVU64
- 322:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
- 285              		.loc 2 322 30 is_stmt 0 view .LVU65
- 286 003c 1193     		str	r3, [sp, #68]
- 323:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
- 287              		.loc 2 323 3 is_stmt 1 view .LVU66
- 323:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
- 288              		.loc 2 323 30 is_stmt 0 view .LVU67
- 289 003e 1293     		str	r3, [sp, #72]
- 324:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
- 290              		.loc 2 324 3 is_stmt 1 view .LVU68
- 324:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
- 291              		.loc 2 324 30 is_stmt 0 view .LVU69
- 292 0040 1393     		str	r3, [sp, #76]
- 325:Core/Src/main.c ****   {
- 293              		.loc 2 325 3 is_stmt 1 view .LVU70
- 325:Core/Src/main.c ****   {
- 294              		.loc 2 325 7 is_stmt 0 view .LVU71
- 295 0042 06A8     		add	r0, sp, #24
- 296 0044 FFF7FEFF 		bl	HAL_RCC_OscConfig
- 297              	.LVL10:
- 325:Core/Src/main.c ****   {
- 298              		.loc 2 325 6 view .LVU72
- 299 0048 80B9     		cbnz	r0, .L20
- 332:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
- 300              		.loc 2 332 3 is_stmt 1 view .LVU73
- 332:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
- 301              		.loc 2 332 31 is_stmt 0 view .LVU74
- 302 004a 0F23     		movs	r3, #15
- 303 004c 0193     		str	r3, [sp, #4]
- 334:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 304              		.loc 2 334 3 is_stmt 1 view .LVU75
- 334:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 305              		.loc 2 334 34 is_stmt 0 view .LVU76
- 306 004e 0323     		movs	r3, #3
- 307 0050 0293     		str	r3, [sp, #8]
- 335:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 308              		.loc 2 335 3 is_stmt 1 view .LVU77
- 335:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 309              		.loc 2 335 35 is_stmt 0 view .LVU78
- 310 0052 0023     		movs	r3, #0
- 311 0054 0393     		str	r3, [sp, #12]
- 336:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 312              		.loc 2 336 3 is_stmt 1 view .LVU79
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 18
+ 270              		.loc 2 327 3 is_stmt 1 view .LVU60
+ 327:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
+ 271              		.loc 2 327 30 is_stmt 0 view .LVU61
+ 272 003c 1193     		str	r3, [sp, #68]
+ 328:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
+ 273              		.loc 2 328 3 is_stmt 1 view .LVU62
+ 328:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
+ 274              		.loc 2 328 30 is_stmt 0 view .LVU63
+ 275 003e 1293     		str	r3, [sp, #72]
+ 329:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 276              		.loc 2 329 3 is_stmt 1 view .LVU64
+ 329:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 277              		.loc 2 329 30 is_stmt 0 view .LVU65
+ 278 0040 1393     		str	r3, [sp, #76]
+ 330:Core/Src/main.c ****   {
+ 279              		.loc 2 330 3 is_stmt 1 view .LVU66
+ 330:Core/Src/main.c ****   {
+ 280              		.loc 2 330 7 is_stmt 0 view .LVU67
+ 281 0042 06A8     		add	r0, sp, #24
+ 282 0044 FFF7FEFF 		bl	HAL_RCC_OscConfig
+ 283              	.LVL10:
+ 330:Core/Src/main.c ****   {
+ 284              		.loc 2 330 6 view .LVU68
+ 285 0048 80B9     		cbnz	r0, .L19
+ 337:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 286              		.loc 2 337 3 is_stmt 1 view .LVU69
+ 337:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 287              		.loc 2 337 31 is_stmt 0 view .LVU70
+ 288 004a 0F23     		movs	r3, #15
+ 289 004c 0193     		str	r3, [sp, #4]
+ 339:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 290              		.loc 2 339 3 is_stmt 1 view .LVU71
+ 339:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 291              		.loc 2 339 34 is_stmt 0 view .LVU72
+ 292 004e 0323     		movs	r3, #3
+ 293 0050 0293     		str	r3, [sp, #8]
+ 340:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 294              		.loc 2 340 3 is_stmt 1 view .LVU73
+ 340:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 295              		.loc 2 340 35 is_stmt 0 view .LVU74
+ 296 0052 0023     		movs	r3, #0
+ 297 0054 0393     		str	r3, [sp, #12]
+ 341:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 298              		.loc 2 341 3 is_stmt 1 view .LVU75
+ 341:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 299              		.loc 2 341 36 is_stmt 0 view .LVU76
+ 300 0056 0493     		str	r3, [sp, #16]
+ 342:Core/Src/main.c **** 
+ 301              		.loc 2 342 3 is_stmt 1 view .LVU77
+ 342:Core/Src/main.c **** 
+ 302              		.loc 2 342 36 is_stmt 0 view .LVU78
+ 303 0058 0593     		str	r3, [sp, #20]
+ 344:Core/Src/main.c ****   {
+ 304              		.loc 2 344 3 is_stmt 1 view .LVU79
+ 344:Core/Src/main.c ****   {
+ 305              		.loc 2 344 7 is_stmt 0 view .LVU80
+ 306 005a 0421     		movs	r1, #4
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 18
 
 
- 336:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 313              		.loc 2 336 36 is_stmt 0 view .LVU80
- 314 0056 0493     		str	r3, [sp, #16]
- 337:Core/Src/main.c **** 
- 315              		.loc 2 337 3 is_stmt 1 view .LVU81
- 337:Core/Src/main.c **** 
- 316              		.loc 2 337 36 is_stmt 0 view .LVU82
- 317 0058 0593     		str	r3, [sp, #20]
- 339:Core/Src/main.c ****   {
- 318              		.loc 2 339 3 is_stmt 1 view .LVU83
- 339:Core/Src/main.c ****   {
- 319              		.loc 2 339 7 is_stmt 0 view .LVU84
- 320 005a 0421     		movs	r1, #4
- 321 005c 0DEB0100 		add	r0, sp, r1
- 322 0060 FFF7FEFF 		bl	HAL_RCC_ClockConfig
- 323              	.LVL11:
- 339:Core/Src/main.c ****   {
- 324              		.loc 2 339 6 view .LVU85
- 325 0064 20B9     		cbnz	r0, .L21
- 343:Core/Src/main.c **** 
- 326              		.loc 2 343 1 view .LVU86
- 327 0066 15B0     		add	sp, sp, #84
- 328              	.LCFI9:
- 329              		.cfi_remember_state
- 330              		.cfi_def_cfa_offset 4
- 331              		@ sp needed
- 332 0068 5DF804FB 		ldr	pc, [sp], #4
- 333              	.L20:
- 334              	.LCFI10:
- 335              		.cfi_restore_state
- 327:Core/Src/main.c ****   }
- 336              		.loc 2 327 5 is_stmt 1 view .LVU87
- 337 006c FFF7FEFF 		bl	Error_Handler
- 338              	.LVL12:
- 339              	.L21:
- 341:Core/Src/main.c ****   }
- 340              		.loc 2 341 5 view .LVU88
- 341 0070 FFF7FEFF 		bl	Error_Handler
- 342              	.LVL13:
- 343              		.cfi_endproc
- 344              	.LFE334:
- 346              		.section	.text.main,"ax",%progbits
- 347              		.align	1
- 348              		.global	main
- 349              		.syntax unified
- 350              		.thumb
- 351              		.thumb_func
- 353              	main:
- 354              	.LFB333:
+ 307 005c 0DEB0100 		add	r0, sp, r1
+ 308 0060 FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 309              	.LVL11:
+ 344:Core/Src/main.c ****   {
+ 310              		.loc 2 344 6 view .LVU81
+ 311 0064 20B9     		cbnz	r0, .L20
+ 348:Core/Src/main.c **** 
+ 312              		.loc 2 348 1 view .LVU82
+ 313 0066 15B0     		add	sp, sp, #84
+ 314              	.LCFI9:
+ 315              		.cfi_remember_state
+ 316              		.cfi_def_cfa_offset 4
+ 317              		@ sp needed
+ 318 0068 5DF804FB 		ldr	pc, [sp], #4
+ 319              	.L19:
+ 320              	.LCFI10:
+ 321              		.cfi_restore_state
+ 332:Core/Src/main.c ****   }
+ 322              		.loc 2 332 5 is_stmt 1 view .LVU83
+ 323 006c FFF7FEFF 		bl	Error_Handler
+ 324              	.LVL12:
+ 325              	.L20:
+ 346:Core/Src/main.c ****   }
+ 326              		.loc 2 346 5 view .LVU84
+ 327 0070 FFF7FEFF 		bl	Error_Handler
+ 328              	.LVL13:
+ 329              		.cfi_endproc
+ 330              	.LFE334:
+ 332              		.section	.text.main,"ax",%progbits
+ 333              		.align	1
+ 334              		.global	main
+ 335              		.syntax unified
+ 336              		.thumb
+ 337              		.thumb_func
+ 339              	main:
+ 340              	.LFB333:
  134:Core/Src/main.c ****   /* USER CODE BEGIN 1 */
- 355              		.loc 2 134 1 view -0
- 356              		.cfi_startproc
- 357              		@ args = 0, pretend = 0, frame = 80
- 358              		@ frame_needed = 0, uses_anonymous_args = 0
- 359 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
- 360              	.LCFI11:
- 361              		.cfi_def_cfa_offset 36
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 19
+ 341              		.loc 2 134 1 view -0
+ 342              		.cfi_startproc
+ 343              		@ args = 0, pretend = 0, frame = 80
+ 344              		@ frame_needed = 0, uses_anonymous_args = 0
+ 345 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 346              	.LCFI11:
+ 347              		.cfi_def_cfa_offset 36
+ 348              		.cfi_offset 4, -36
+ 349              		.cfi_offset 5, -32
+ 350              		.cfi_offset 6, -28
+ 351              		.cfi_offset 7, -24
+ 352              		.cfi_offset 8, -20
+ 353              		.cfi_offset 9, -16
+ 354              		.cfi_offset 10, -12
+ 355              		.cfi_offset 11, -8
+ 356              		.cfi_offset 14, -4
+ 357 0004 2DED048B 		vpush.64	{d8, d9}
+ 358              	.LCFI12:
+ 359              		.cfi_def_cfa_offset 52
+ 360              		.cfi_offset 80, -52
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 19
 
 
- 362              		.cfi_offset 4, -36
- 363              		.cfi_offset 5, -32
- 364              		.cfi_offset 6, -28
- 365              		.cfi_offset 7, -24
- 366              		.cfi_offset 8, -20
- 367              		.cfi_offset 9, -16
- 368              		.cfi_offset 10, -12
- 369              		.cfi_offset 11, -8
- 370              		.cfi_offset 14, -4
- 371 0004 2DED028B 		vpush.64	{d8}
- 372              	.LCFI12:
- 373              		.cfi_def_cfa_offset 44
- 374              		.cfi_offset 80, -44
- 375              		.cfi_offset 81, -40
- 376 0008 95B0     		sub	sp, sp, #84
- 377              	.LCFI13:
- 378              		.cfi_def_cfa_offset 128
+ 361              		.cfi_offset 81, -48
+ 362              		.cfi_offset 82, -44
+ 363              		.cfi_offset 83, -40
+ 364 0008 95B0     		sub	sp, sp, #84
+ 365              	.LCFI13:
+ 366              		.cfi_def_cfa_offset 136
  137:Core/Src/main.c **** 
- 379              		.loc 2 137 3 view .LVU90
+ 367              		.loc 2 137 3 view .LVU86
  137:Core/Src/main.c **** 
- 380              		.loc 2 137 8 is_stmt 0 view .LVU91
- 381 000a 4FF0FF43 		mov	r3, #2139095040
- 382 000e 1393     		str	r3, [sp, #76]
+ 368              		.loc 2 137 8 is_stmt 0 view .LVU87
+ 369 000a 4FF0FF43 		mov	r3, #2139095040
+ 370 000e 1393     		str	r3, [sp, #76]
  139:Core/Src/main.c ****   C_sys.sample = &supercap_ADC1[1];
- 383              		.loc 2 139 3 is_stmt 1 view .LVU92
+ 371              		.loc 2 139 3 is_stmt 1 view .LVU88
  139:Core/Src/main.c ****   C_sys.sample = &supercap_ADC1[1];
- 384              		.loc 2 139 17 is_stmt 0 view .LVU93
- 385 0010 DFF84093 		ldr	r9, .L31+160
- 386 0014 A74B     		ldr	r3, .L31
- 387 0016 C3F80090 		str	r9, [r3]
+ 372              		.loc 2 139 17 is_stmt 0 view .LVU89
+ 373 0010 DFF83C93 		ldr	r9, .L30+148
+ 374 0014 A94B     		ldr	r3, .L30
+ 375 0016 C3F80090 		str	r9, [r3]
  140:Core/Src/main.c ****   C_right.sample = &supercap_ADC3[2];
- 388              		.loc 2 140 3 is_stmt 1 view .LVU94
+ 376              		.loc 2 140 3 is_stmt 1 view .LVU90
  140:Core/Src/main.c ****   C_right.sample = &supercap_ADC3[2];
- 389              		.loc 2 140 16 is_stmt 0 view .LVU95
- 390 001a 09F10202 		add	r2, r9, #2
- 391 001e A64B     		ldr	r3, .L31+4
- 392 0020 1A60     		str	r2, [r3]
+ 377              		.loc 2 140 16 is_stmt 0 view .LVU91
+ 378 001a 09F10202 		add	r2, r9, #2
+ 379 001e A84B     		ldr	r3, .L30+4
+ 380 0020 1A60     		str	r2, [r3]
  141:Core/Src/main.c ****   V_sys_op.sample = &supercap_ADC2[0];
- 393              		.loc 2 141 3 is_stmt 1 view .LVU96
+ 381              		.loc 2 141 3 is_stmt 1 view .LVU92
  141:Core/Src/main.c ****   V_sys_op.sample = &supercap_ADC2[0];
- 394              		.loc 2 141 18 is_stmt 0 view .LVU97
- 395 0022 A64D     		ldr	r5, .L31+8
- 396 0024 2A1D     		adds	r2, r5, #4
- 397 0026 A64B     		ldr	r3, .L31+12
- 398 0028 1A60     		str	r2, [r3]
+ 382              		.loc 2 141 18 is_stmt 0 view .LVU93
+ 383 0022 A84D     		ldr	r5, .L30+8
+ 384 0024 2A1D     		adds	r2, r5, #4
+ 385 0026 A84B     		ldr	r3, .L30+12
+ 386 0028 1A60     		str	r2, [r3]
  142:Core/Src/main.c ****   V_cap_op.sample = &supercap_ADC2[1];
- 399              		.loc 2 142 3 is_stmt 1 view .LVU98
+ 387              		.loc 2 142 3 is_stmt 1 view .LVU94
  142:Core/Src/main.c ****   V_cap_op.sample = &supercap_ADC2[1];
- 400              		.loc 2 142 19 is_stmt 0 view .LVU99
- 401 002a A64E     		ldr	r6, .L31+16
- 402 002c A64B     		ldr	r3, .L31+20
- 403 002e 1E60     		str	r6, [r3]
+ 388              		.loc 2 142 19 is_stmt 0 view .LVU95
+ 389 002a A84E     		ldr	r6, .L30+16
+ 390 002c A84B     		ldr	r3, .L30+20
+ 391 002e 1E60     		str	r6, [r3]
  143:Core/Src/main.c ****   V_cap.sample = &supercap_ADC2[2];
- 404              		.loc 2 143 3 is_stmt 1 view .LVU100
+ 392              		.loc 2 143 3 is_stmt 1 view .LVU96
  143:Core/Src/main.c ****   V_cap.sample = &supercap_ADC2[2];
- 405              		.loc 2 143 19 is_stmt 0 view .LVU101
- 406 0030 B21C     		adds	r2, r6, #2
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 20
+ 393              		.loc 2 143 19 is_stmt 0 view .LVU97
+ 394 0030 B21C     		adds	r2, r6, #2
+ 395 0032 A84B     		ldr	r3, .L30+24
+ 396 0034 1A60     		str	r2, [r3]
+ 144:Core/Src/main.c ****   V_bat.sample = &supercap_ADC3[0];
+ 397              		.loc 2 144 3 is_stmt 1 view .LVU98
+ 144:Core/Src/main.c ****   V_bat.sample = &supercap_ADC3[0];
+ 398              		.loc 2 144 16 is_stmt 0 view .LVU99
+ 399 0036 321D     		adds	r2, r6, #4
+ 400 0038 A74B     		ldr	r3, .L30+28
+ 401 003a 1A60     		str	r2, [r3]
+ 145:Core/Src/main.c ****   V_sys.sample = &supercap_ADC3[1];
+ 402              		.loc 2 145 3 is_stmt 1 view .LVU100
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 20
 
 
- 407 0032 A64B     		ldr	r3, .L31+24
- 408 0034 1A60     		str	r2, [r3]
- 144:Core/Src/main.c ****   V_bat.sample = &supercap_ADC3[0];
- 409              		.loc 2 144 3 is_stmt 1 view .LVU102
- 144:Core/Src/main.c ****   V_bat.sample = &supercap_ADC3[0];
- 410              		.loc 2 144 16 is_stmt 0 view .LVU103
- 411 0036 321D     		adds	r2, r6, #4
- 412 0038 A54B     		ldr	r3, .L31+28
- 413 003a 1A60     		str	r2, [r3]
  145:Core/Src/main.c ****   V_sys.sample = &supercap_ADC3[1];
- 414              		.loc 2 145 3 is_stmt 1 view .LVU104
- 145:Core/Src/main.c ****   V_sys.sample = &supercap_ADC3[1];
- 415              		.loc 2 145 16 is_stmt 0 view .LVU105
- 416 003c A54B     		ldr	r3, .L31+32
- 417 003e 1D60     		str	r5, [r3]
+ 403              		.loc 2 145 16 is_stmt 0 view .LVU101
+ 404 003c A74B     		ldr	r3, .L30+32
+ 405 003e 1D60     		str	r5, [r3]
  146:Core/Src/main.c **** 	V_1V6.sample = &supercap_ADC4[0];
- 418              		.loc 2 146 3 is_stmt 1 view .LVU106
+ 406              		.loc 2 146 3 is_stmt 1 view .LVU102
  146:Core/Src/main.c **** 	V_1V6.sample = &supercap_ADC4[0];
- 419              		.loc 2 146 16 is_stmt 0 view .LVU107
- 420 0040 AA1C     		adds	r2, r5, #2
- 421 0042 A54B     		ldr	r3, .L31+36
- 422 0044 1A60     		str	r2, [r3]
+ 407              		.loc 2 146 16 is_stmt 0 view .LVU103
+ 408 0040 AA1C     		adds	r2, r5, #2
+ 409 0042 A74B     		ldr	r3, .L30+36
+ 410 0044 1A60     		str	r2, [r3]
  147:Core/Src/main.c **** 	ADC4_12.sample = &supercap_ADC4[1];
- 423              		.loc 2 147 2 is_stmt 1 view .LVU108
+ 411              		.loc 2 147 2 is_stmt 1 view .LVU104
  147:Core/Src/main.c **** 	ADC4_12.sample = &supercap_ADC4[1];
- 424              		.loc 2 147 15 is_stmt 0 view .LVU109
- 425 0046 A54F     		ldr	r7, .L31+40
- 426 0048 A54B     		ldr	r3, .L31+44
- 427 004a 1F60     		str	r7, [r3]
+ 412              		.loc 2 147 15 is_stmt 0 view .LVU105
+ 413 0046 A74F     		ldr	r7, .L30+40
+ 414 0048 A74B     		ldr	r3, .L30+44
+ 415 004a 1F60     		str	r7, [r3]
  148:Core/Src/main.c **** 	
- 428              		.loc 2 148 2 is_stmt 1 view .LVU110
+ 416              		.loc 2 148 2 is_stmt 1 view .LVU106
  148:Core/Src/main.c **** 	
- 429              		.loc 2 148 17 is_stmt 0 view .LVU111
- 430 004c BA1C     		adds	r2, r7, #2
- 431 004e A54B     		ldr	r3, .L31+48
- 432 0050 1A60     		str	r2, [r3]
+ 417              		.loc 2 148 17 is_stmt 0 view .LVU107
+ 418 004c BA1C     		adds	r2, r7, #2
+ 419 004e A74B     		ldr	r3, .L30+48
+ 420 0050 1A60     		str	r2, [r3]
  150:Core/Src/main.c ****   float data_array[7];
- 433              		.loc 2 150 2 is_stmt 1 view .LVU112
+ 421              		.loc 2 150 2 is_stmt 1 view .LVU108
  151:Core/Src/main.c ****   /* USER CODE END 1 */
- 434              		.loc 2 151 3 view .LVU113
+ 422              		.loc 2 151 3 view .LVU109
  157:Core/Src/main.c **** 
- 435              		.loc 2 157 3 view .LVU114
- 436 0052 FFF7FEFF 		bl	HAL_Init
- 437              	.LVL14:
+ 423              		.loc 2 157 3 view .LVU110
+ 424 0052 FFF7FEFF 		bl	HAL_Init
+ 425              	.LVL14:
  164:Core/Src/main.c **** 
- 438              		.loc 2 164 3 view .LVU115
- 439 0056 FFF7FEFF 		bl	SystemClock_Config
- 440              	.LVL15:
+ 426              		.loc 2 164 3 view .LVU111
+ 427 0056 FFF7FEFF 		bl	SystemClock_Config
+ 428              	.LVL15:
  171:Core/Src/main.c **** 		MX_DMA_Init();
- 441              		.loc 2 171 3 view .LVU116
- 442 005a FFF7FEFF 		bl	MX_GPIO_Init
- 443              	.LVL16:
+ 429              		.loc 2 171 3 view .LVU112
+ 430 005a FFF7FEFF 		bl	MX_GPIO_Init
+ 431              	.LVL16:
  172:Core/Src/main.c **** 		MX_ADC1_Init();
- 444              		.loc 2 172 3 view .LVU117
- 445 005e FFF7FEFF 		bl	MX_DMA_Init
- 446              	.LVL17:
+ 432              		.loc 2 172 3 view .LVU113
+ 433 005e FFF7FEFF 		bl	MX_DMA_Init
+ 434              	.LVL17:
  173:Core/Src/main.c **** 		MX_ADC2_Init();
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 21
-
-
- 447              		.loc 2 173 3 view .LVU118
- 448 0062 FFF7FEFF 		bl	MX_ADC1_Init
- 449              	.LVL18:
+ 435              		.loc 2 173 3 view .LVU114
+ 436 0062 FFF7FEFF 		bl	MX_ADC1_Init
+ 437              	.LVL18:
  174:Core/Src/main.c **** 		MX_TIM1_Init();
- 450              		.loc 2 174 3 view .LVU119
- 451 0066 FFF7FEFF 		bl	MX_ADC2_Init
- 452              	.LVL19:
+ 438              		.loc 2 174 3 view .LVU115
+ 439 0066 FFF7FEFF 		bl	MX_ADC2_Init
+ 440              	.LVL19:
  175:Core/Src/main.c **** 		MX_USART1_UART_Init();
- 453              		.loc 2 175 3 view .LVU120
- 454 006a FFF7FEFF 		bl	MX_TIM1_Init
- 455              	.LVL20:
+ 441              		.loc 2 175 3 view .LVU116
+ 442 006a FFF7FEFF 		bl	MX_TIM1_Init
+ 443              	.LVL20:
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 21
+
+
  176:Core/Src/main.c **** 		MX_USART2_UART_Init();
- 456              		.loc 2 176 3 view .LVU121
- 457 006e FFF7FEFF 		bl	MX_USART1_UART_Init
- 458              	.LVL21:
+ 444              		.loc 2 176 3 view .LVU117
+ 445 006e FFF7FEFF 		bl	MX_USART1_UART_Init
+ 446              	.LVL21:
  177:Core/Src/main.c **** 		MX_USART3_UART_Init();
- 459              		.loc 2 177 3 view .LVU122
- 460 0072 FFF7FEFF 		bl	MX_USART2_UART_Init
- 461              	.LVL22:
+ 447              		.loc 2 177 3 view .LVU118
+ 448 0072 FFF7FEFF 		bl	MX_USART2_UART_Init
+ 449              	.LVL22:
  178:Core/Src/main.c **** 		MX_TIM3_Init();
- 462              		.loc 2 178 3 view .LVU123
- 463 0076 FFF7FEFF 		bl	MX_USART3_UART_Init
- 464              	.LVL23:
+ 450              		.loc 2 178 3 view .LVU119
+ 451 0076 FFF7FEFF 		bl	MX_USART3_UART_Init
+ 452              	.LVL23:
  179:Core/Src/main.c **** 		MX_TIM4_Init();
- 465              		.loc 2 179 3 view .LVU124
- 466 007a FFF7FEFF 		bl	MX_TIM3_Init
- 467              	.LVL24:
+ 453              		.loc 2 179 3 view .LVU120
+ 454 007a FFF7FEFF 		bl	MX_TIM3_Init
+ 455              	.LVL24:
  180:Core/Src/main.c **** 		MX_ADC4_Init();
- 468              		.loc 2 180 3 view .LVU125
- 469 007e FFF7FEFF 		bl	MX_TIM4_Init
- 470              	.LVL25:
+ 456              		.loc 2 180 3 view .LVU121
+ 457 007e FFF7FEFF 		bl	MX_TIM4_Init
+ 458              	.LVL25:
  181:Core/Src/main.c **** 		MX_FDCAN1_Init();
- 471              		.loc 2 181 3 view .LVU126
- 472 0082 FFF7FEFF 		bl	MX_ADC4_Init
- 473              	.LVL26:
+ 459              		.loc 2 181 3 view .LVU122
+ 460 0082 FFF7FEFF 		bl	MX_ADC4_Init
+ 461              	.LVL26:
  182:Core/Src/main.c **** 		MX_ADC5_Init();
- 474              		.loc 2 182 3 view .LVU127
- 475 0086 FFF7FEFF 		bl	MX_FDCAN1_Init
- 476              	.LVL27:
+ 462              		.loc 2 182 3 view .LVU123
+ 463 0086 FFF7FEFF 		bl	MX_FDCAN1_Init
+ 464              	.LVL27:
  183:Core/Src/main.c **** 		MX_ADC3_Init();
- 477              		.loc 2 183 3 view .LVU128
- 478 008a FFF7FEFF 		bl	MX_ADC5_Init
- 479              	.LVL28:
+ 465              		.loc 2 183 3 view .LVU124
+ 466 008a FFF7FEFF 		bl	MX_ADC5_Init
+ 467              	.LVL28:
  184:Core/Src/main.c **** 		MX_TIM2_Init();
- 480              		.loc 2 184 3 view .LVU129
- 481 008e FFF7FEFF 		bl	MX_ADC3_Init
- 482              	.LVL29:
+ 468              		.loc 2 184 3 view .LVU125
+ 469 008e FFF7FEFF 		bl	MX_ADC3_Init
+ 470              	.LVL29:
  185:Core/Src/main.c **** 		MX_TIM5_Init();
- 483              		.loc 2 185 3 view .LVU130
- 484 0092 FFF7FEFF 		bl	MX_TIM2_Init
- 485              	.LVL30:
+ 471              		.loc 2 185 3 view .LVU126
+ 472 0092 FFF7FEFF 		bl	MX_TIM2_Init
+ 473              	.LVL30:
  186:Core/Src/main.c **** 		MX_TIM6_Init();
- 486              		.loc 2 186 3 view .LVU131
- 487 0096 FFF7FEFF 		bl	MX_TIM5_Init
- 488              	.LVL31:
+ 474              		.loc 2 186 3 view .LVU127
+ 475 0096 FFF7FEFF 		bl	MX_TIM5_Init
+ 476              	.LVL31:
  187:Core/Src/main.c **** 		/* USER CODE BEGIN 2 */
- 489              		.loc 2 187 3 view .LVU132
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 22
+ 477              		.loc 2 187 3 view .LVU128
+ 478 009a FFF7FEFF 		bl	MX_TIM6_Init
+ 479              	.LVL32:
+ 189:Core/Src/main.c **** 		supercap_max_power_current = CURRENT_LIMIT;
+ 480              		.loc 2 189 3 view .LVU129
+ 189:Core/Src/main.c **** 		supercap_max_power_current = CURRENT_LIMIT;
+ 481              		.loc 2 189 28 is_stmt 0 view .LVU130
+ 482 009e 2D20     		movs	r0, #45
+ 483 00a0 934B     		ldr	r3, .L30+52
+ 484 00a2 1880     		strh	r0, [r3]	@ movhi
+ 190:Core/Src/main.c ****     Update_Current(supercap_max_power_STM32, 45);
+ 485              		.loc 2 190 3 is_stmt 1 view .LVU131
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 22
 
 
- 490 009a FFF7FEFF 		bl	MX_TIM6_Init
- 491              	.LVL32:
- 189:Core/Src/main.c **** 		supercap_max_power_current = CURRENT_LIMIT;
- 492              		.loc 2 189 3 view .LVU133
- 189:Core/Src/main.c **** 		supercap_max_power_current = CURRENT_LIMIT;
- 493              		.loc 2 189 28 is_stmt 0 view .LVU134
- 494 009e 2D20     		movs	r0, #45
- 495 00a0 914B     		ldr	r3, .L31+52
- 496 00a2 1880     		strh	r0, [r3]	@ movhi
  190:Core/Src/main.c ****     Update_Current(supercap_max_power_STM32, 45);
- 497              		.loc 2 190 3 is_stmt 1 view .LVU135
- 190:Core/Src/main.c ****     Update_Current(supercap_max_power_STM32, 45);
- 498              		.loc 2 190 30 is_stmt 0 view .LVU136
- 499 00a4 914B     		ldr	r3, .L31+56
- 500 00a6 40F66B22 		movw	r2, #2667
- 501 00aa 1A80     		strh	r2, [r3]	@ movhi
+ 486              		.loc 2 190 30 is_stmt 0 view .LVU132
+ 487 00a4 934B     		ldr	r3, .L30+56
+ 488 00a6 40F66B22 		movw	r2, #2667
+ 489 00aa 1A80     		strh	r2, [r3]	@ movhi
  191:Core/Src/main.c **** 		
- 502              		.loc 2 191 5 is_stmt 1 view .LVU137
- 503 00ac 0146     		mov	r1, r0
- 504 00ae FFF7FEFF 		bl	Update_Current
- 505              	.LVL33:
+ 490              		.loc 2 191 5 is_stmt 1 view .LVU133
+ 491 00ac 0146     		mov	r1, r0
+ 492 00ae FFF7FEFF 		bl	Update_Current
+ 493              	.LVL33:
  194:Core/Src/main.c **** 		TxHeader.IdType = FDCAN_STANDARD_ID;
- 506              		.loc 2 194 3 view .LVU138
+ 494              		.loc 2 194 3 view .LVU134
  194:Core/Src/main.c **** 		TxHeader.IdType = FDCAN_STANDARD_ID;
- 507              		.loc 2 194 23 is_stmt 0 view .LVU139
- 508 00b2 8F4B     		ldr	r3, .L31+60
- 509 00b4 40F2C722 		movw	r2, #711
- 510 00b8 1A60     		str	r2, [r3]
+ 495              		.loc 2 194 23 is_stmt 0 view .LVU135
+ 496 00b2 914B     		ldr	r3, .L30+60
+ 497 00b4 40F2C722 		movw	r2, #711
+ 498 00b8 1A60     		str	r2, [r3]
  195:Core/Src/main.c **** 		TxHeader.TxFrameType = FDCAN_DATA_FRAME;
- 511              		.loc 2 195 3 is_stmt 1 view .LVU140
+ 499              		.loc 2 195 3 is_stmt 1 view .LVU136
  195:Core/Src/main.c **** 		TxHeader.TxFrameType = FDCAN_DATA_FRAME;
- 512              		.loc 2 195 19 is_stmt 0 view .LVU141
- 513 00ba 0024     		movs	r4, #0
- 514 00bc 5C60     		str	r4, [r3, #4]
+ 500              		.loc 2 195 19 is_stmt 0 view .LVU137
+ 501 00ba 0024     		movs	r4, #0
+ 502 00bc 5C60     		str	r4, [r3, #4]
  196:Core/Src/main.c **** 		TxHeader.DataLength = FDCAN_DLC_BYTES_1;
- 515              		.loc 2 196 3 is_stmt 1 view .LVU142
+ 503              		.loc 2 196 3 is_stmt 1 view .LVU138
  196:Core/Src/main.c **** 		TxHeader.DataLength = FDCAN_DLC_BYTES_1;
- 516              		.loc 2 196 24 is_stmt 0 view .LVU143
- 517 00be 9C60     		str	r4, [r3, #8]
+ 504              		.loc 2 196 24 is_stmt 0 view .LVU139
+ 505 00be 9C60     		str	r4, [r3, #8]
  197:Core/Src/main.c **** 		TxHeader.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
- 518              		.loc 2 197 3 is_stmt 1 view .LVU144
+ 506              		.loc 2 197 3 is_stmt 1 view .LVU140
  197:Core/Src/main.c **** 		TxHeader.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
- 519              		.loc 2 197 23 is_stmt 0 view .LVU145
- 520 00c0 4FF0010A 		mov	r10, #1
- 521 00c4 C3F80CA0 		str	r10, [r3, #12]
+ 507              		.loc 2 197 23 is_stmt 0 view .LVU141
+ 508 00c0 4FF0010A 		mov	r10, #1
+ 509 00c4 C3F80CA0 		str	r10, [r3, #12]
  198:Core/Src/main.c **** 		TxHeader.BitRateSwitch = FDCAN_BRS_OFF;
- 522              		.loc 2 198 3 is_stmt 1 view .LVU146
+ 510              		.loc 2 198 3 is_stmt 1 view .LVU142
  198:Core/Src/main.c **** 		TxHeader.BitRateSwitch = FDCAN_BRS_OFF;
- 523              		.loc 2 198 32 is_stmt 0 view .LVU147
- 524 00c8 1C61     		str	r4, [r3, #16]
+ 511              		.loc 2 198 32 is_stmt 0 view .LVU143
+ 512 00c8 1C61     		str	r4, [r3, #16]
  199:Core/Src/main.c **** 		TxHeader.FDFormat = FDCAN_CLASSIC_CAN;
- 525              		.loc 2 199 3 is_stmt 1 view .LVU148
+ 513              		.loc 2 199 3 is_stmt 1 view .LVU144
  199:Core/Src/main.c **** 		TxHeader.FDFormat = FDCAN_CLASSIC_CAN;
- 526              		.loc 2 199 26 is_stmt 0 view .LVU149
- 527 00ca 5C61     		str	r4, [r3, #20]
+ 514              		.loc 2 199 26 is_stmt 0 view .LVU145
+ 515 00ca 5C61     		str	r4, [r3, #20]
  200:Core/Src/main.c **** 		TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
- 528              		.loc 2 200 3 is_stmt 1 view .LVU150
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 23
+ 516              		.loc 2 200 3 is_stmt 1 view .LVU146
+ 200:Core/Src/main.c **** 		TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
+ 517              		.loc 2 200 21 is_stmt 0 view .LVU147
+ 518 00cc 9C61     		str	r4, [r3, #24]
+ 201:Core/Src/main.c **** 		TxHeader.MessageMarker = 0;
+ 519              		.loc 2 201 3 is_stmt 1 view .LVU148
+ 201:Core/Src/main.c **** 		TxHeader.MessageMarker = 0;
+ 520              		.loc 2 201 31 is_stmt 0 view .LVU149
+ 521 00ce DC61     		str	r4, [r3, #28]
+ 202:Core/Src/main.c **** 		
+ 522              		.loc 2 202 3 is_stmt 1 view .LVU150
+ 202:Core/Src/main.c **** 		
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 23
 
 
- 200:Core/Src/main.c **** 		TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
- 529              		.loc 2 200 21 is_stmt 0 view .LVU151
- 530 00cc 9C61     		str	r4, [r3, #24]
- 201:Core/Src/main.c **** 		TxHeader.MessageMarker = 0;
- 531              		.loc 2 201 3 is_stmt 1 view .LVU152
- 201:Core/Src/main.c **** 		TxHeader.MessageMarker = 0;
- 532              		.loc 2 201 31 is_stmt 0 view .LVU153
- 533 00ce DC61     		str	r4, [r3, #28]
- 202:Core/Src/main.c **** 		
- 534              		.loc 2 202 3 is_stmt 1 view .LVU154
- 202:Core/Src/main.c **** 		
- 535              		.loc 2 202 26 is_stmt 0 view .LVU155
- 536 00d0 1C62     		str	r4, [r3, #32]
+ 523              		.loc 2 202 26 is_stmt 0 view .LVU151
+ 524 00d0 1C62     		str	r4, [r3, #32]
  204:Core/Src/main.c **** 		FDCAN1_RXFilter.FilterIndex = 0;
- 537              		.loc 2 204 3 is_stmt 1 view .LVU156
+ 525              		.loc 2 204 3 is_stmt 1 view .LVU152
  204:Core/Src/main.c **** 		FDCAN1_RXFilter.FilterIndex = 0;
- 538              		.loc 2 204 26 is_stmt 0 view .LVU157
- 539 00d2 8849     		ldr	r1, .L31+64
- 540 00d4 0C60     		str	r4, [r1]
+ 526              		.loc 2 204 26 is_stmt 0 view .LVU153
+ 527 00d2 8A49     		ldr	r1, .L30+64
+ 528 00d4 0C60     		str	r4, [r1]
  205:Core/Src/main.c **** 		//FDCAN1_RXFilter.FilterType = FDCAN_FILTER_RANGE_NO_EIDM;
- 541              		.loc 2 205 3 is_stmt 1 view .LVU158
+ 529              		.loc 2 205 3 is_stmt 1 view .LVU154
  205:Core/Src/main.c **** 		//FDCAN1_RXFilter.FilterType = FDCAN_FILTER_RANGE_NO_EIDM;
- 542              		.loc 2 205 31 is_stmt 0 view .LVU159
- 543 00d6 4C60     		str	r4, [r1, #4]
+ 530              		.loc 2 205 31 is_stmt 0 view .LVU155
+ 531 00d6 4C60     		str	r4, [r1, #4]
  207:Core/Src/main.c **** 		FDCAN1_RXFilter.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
- 544              		.loc 2 207 3 is_stmt 1 view .LVU160
+ 532              		.loc 2 207 3 is_stmt 1 view .LVU156
  207:Core/Src/main.c **** 		FDCAN1_RXFilter.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
- 545              		.loc 2 207 30 is_stmt 0 view .LVU161
- 546 00d8 4FF00208 		mov	r8, #2
- 547 00dc C1F80880 		str	r8, [r1, #8]
+ 533              		.loc 2 207 30 is_stmt 0 view .LVU157
+ 534 00d8 4FF00208 		mov	r8, #2
+ 535 00dc C1F80880 		str	r8, [r1, #8]
  208:Core/Src/main.c **** 		//FDCAN1_RXFilter.FilterType = FDCAN_FILTER_DUAL;
- 548              		.loc 2 208 3 is_stmt 1 view .LVU162
+ 536              		.loc 2 208 3 is_stmt 1 view .LVU158
  208:Core/Src/main.c **** 		//FDCAN1_RXFilter.FilterType = FDCAN_FILTER_DUAL;
- 549              		.loc 2 208 32 is_stmt 0 view .LVU163
- 550 00e0 C1F80CA0 		str	r10, [r1, #12]
+ 537              		.loc 2 208 32 is_stmt 0 view .LVU159
+ 538 00e0 C1F80CA0 		str	r10, [r1, #12]
  210:Core/Src/main.c **** 		FDCAN1_RXFilter.FilterID2 = 0x7FF;
- 551              		.loc 2 210 3 is_stmt 1 view .LVU164
+ 539              		.loc 2 210 3 is_stmt 1 view .LVU160
  210:Core/Src/main.c **** 		FDCAN1_RXFilter.FilterID2 = 0x7FF;
- 552              		.loc 2 210 29 is_stmt 0 view .LVU165
- 553 00e4 4FF48073 		mov	r3, #256
- 554 00e8 0B61     		str	r3, [r1, #16]
+ 540              		.loc 2 210 29 is_stmt 0 view .LVU161
+ 541 00e4 4FF48073 		mov	r3, #256
+ 542 00e8 0B61     		str	r3, [r1, #16]
  211:Core/Src/main.c **** 
- 555              		.loc 2 211 3 is_stmt 1 view .LVU166
+ 543              		.loc 2 211 3 is_stmt 1 view .LVU162
  211:Core/Src/main.c **** 
- 556              		.loc 2 211 29 is_stmt 0 view .LVU167
- 557 00ea 40F2FF73 		movw	r3, #2047
- 558 00ee 4B61     		str	r3, [r1, #20]
+ 544              		.loc 2 211 29 is_stmt 0 view .LVU163
+ 545 00ea 40F2FF73 		movw	r3, #2047
+ 546 00ee 4B61     		str	r3, [r1, #20]
  214:Core/Src/main.c **** 		//HAL_FDCAN_ConfigGlobalFilter(&hfdcan1, FDCAN_REJECT, FDCAN_REJECT, ENABLE, ENABLE);
- 559              		.loc 2 214 3 is_stmt 1 view .LVU168
- 560 00f0 DFF864B2 		ldr	fp, .L31+164
- 561 00f4 5846     		mov	r0, fp
- 562 00f6 FFF7FEFF 		bl	HAL_FDCAN_ConfigFilter
- 563              	.LVL34:
+ 547              		.loc 2 214 3 is_stmt 1 view .LVU164
+ 548 00f0 DFF860B2 		ldr	fp, .L30+152
+ 549 00f4 5846     		mov	r0, fp
+ 550 00f6 FFF7FEFF 		bl	HAL_FDCAN_ConfigFilter
+ 551              	.LVL34:
  216:Core/Src/main.c **** 		
- 564              		.loc 2 216 3 view .LVU169
- 565 00fa 5846     		mov	r0, fp
- 566 00fc FFF7FEFF 		bl	HAL_FDCAN_Start
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 24
-
-
- 567              	.LVL35:
+ 552              		.loc 2 216 3 view .LVU165
+ 553 00fa 5846     		mov	r0, fp
+ 554 00fc FFF7FEFF 		bl	HAL_FDCAN_Start
+ 555              	.LVL35:
  218:Core/Src/main.c **** 
- 568              		.loc 2 218 3 view .LVU170
- 569 0100 2246     		mov	r2, r4
- 570 0102 5146     		mov	r1, r10
- 571 0104 5846     		mov	r0, fp
- 572 0106 FFF7FEFF 		bl	HAL_FDCAN_ActivateNotification
- 573              	.LVL36:
+ 556              		.loc 2 218 3 view .LVU166
+ 557 0100 2246     		mov	r2, r4
+ 558 0102 5146     		mov	r1, r10
+ 559 0104 5846     		mov	r0, fp
+ 560 0106 FFF7FEFF 		bl	HAL_FDCAN_ActivateNotification
+ 561              	.LVL36:
  221:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
- 574              		.loc 2 221 2 view .LVU171
- 575 010a DFF850B2 		ldr	fp, .L31+168
- 576 010e 7F21     		movs	r1, #127
- 577 0110 5846     		mov	r0, fp
- 578 0112 FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
- 579              	.LVL37:
+ 562              		.loc 2 221 2 view .LVU167
+ 563 010a DFF84CB2 		ldr	fp, .L30+156
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 24
+
+
+ 564 010e 7F21     		movs	r1, #127
+ 565 0110 5846     		mov	r0, fp
+ 566 0112 FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
+ 567              	.LVL37:
  222:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc3, ADC_SINGLE_ENDED);
- 580              		.loc 2 222 2 view .LVU172
- 581 0116 DFF848A2 		ldr	r10, .L31+172
- 582 011a 7F21     		movs	r1, #127
- 583 011c 5046     		mov	r0, r10
- 584 011e FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
- 585              	.LVL38:
+ 568              		.loc 2 222 2 view .LVU168
+ 569 0116 DFF844A2 		ldr	r10, .L30+160
+ 570 011a 7F21     		movs	r1, #127
+ 571 011c 5046     		mov	r0, r10
+ 572 011e FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
+ 573              	.LVL38:
  223:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc4, ADC_SINGLE_ENDED);
- 586              		.loc 2 223 2 view .LVU173
- 587 0122 7F21     		movs	r1, #127
- 588 0124 7448     		ldr	r0, .L31+68
- 589 0126 FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
- 590              	.LVL39:
+ 574              		.loc 2 223 2 view .LVU169
+ 575 0122 7F21     		movs	r1, #127
+ 576 0124 7648     		ldr	r0, .L30+68
+ 577 0126 FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
+ 578              	.LVL39:
  224:Core/Src/main.c ****   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)supercap_ADC1, 2);
- 591              		.loc 2 224 2 view .LVU174
- 592 012a 7F21     		movs	r1, #127
- 593 012c 7348     		ldr	r0, .L31+72
- 594 012e FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
- 595              	.LVL40:
+ 579              		.loc 2 224 2 view .LVU170
+ 580 012a 7F21     		movs	r1, #127
+ 581 012c 7548     		ldr	r0, .L30+72
+ 582 012e FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
+ 583              	.LVL40:
  225:Core/Src/main.c ****   HAL_ADC_Start_DMA(&hadc2, (uint32_t*)supercap_ADC2, 3);
- 596              		.loc 2 225 3 view .LVU175
- 597 0132 4246     		mov	r2, r8
- 598 0134 4946     		mov	r1, r9
- 599 0136 5846     		mov	r0, fp
- 600 0138 FFF7FEFF 		bl	HAL_ADC_Start_DMA
- 601              	.LVL41:
+ 584              		.loc 2 225 3 view .LVU171
+ 585 0132 4246     		mov	r2, r8
+ 586 0134 4946     		mov	r1, r9
+ 587 0136 5846     		mov	r0, fp
+ 588 0138 FFF7FEFF 		bl	HAL_ADC_Start_DMA
+ 589              	.LVL41:
  226:Core/Src/main.c ****   HAL_ADC_Start_DMA(&hadc3, (uint32_t*)supercap_ADC3, 3);
- 602              		.loc 2 226 3 view .LVU176
- 603 013c 0322     		movs	r2, #3
- 604 013e 3146     		mov	r1, r6
- 605 0140 5046     		mov	r0, r10
- 606 0142 FFF7FEFF 		bl	HAL_ADC_Start_DMA
- 607              	.LVL42:
+ 590              		.loc 2 226 3 view .LVU172
+ 591 013c 0322     		movs	r2, #3
+ 592 013e 3146     		mov	r1, r6
+ 593 0140 5046     		mov	r0, r10
+ 594 0142 FFF7FEFF 		bl	HAL_ADC_Start_DMA
+ 595              	.LVL42:
  227:Core/Src/main.c **** 	HAL_ADC_Start_DMA(&hadc4, (uint32_t*)supercap_ADC4, 2);
- 608              		.loc 2 227 3 view .LVU177
- 609 0146 0322     		movs	r2, #3
- 610 0148 2946     		mov	r1, r5
- 611 014a 6B48     		ldr	r0, .L31+68
- 612 014c FFF7FEFF 		bl	HAL_ADC_Start_DMA
- 613              	.LVL43:
+ 596              		.loc 2 227 3 view .LVU173
+ 597 0146 0322     		movs	r2, #3
+ 598 0148 2946     		mov	r1, r5
+ 599 014a 6D48     		ldr	r0, .L30+68
+ 600 014c FFF7FEFF 		bl	HAL_ADC_Start_DMA
+ 601              	.LVL43:
  228:Core/Src/main.c ****   HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&data_packet, 36);
- 614              		.loc 2 228 2 view .LVU178
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 25
-
-
- 615 0150 4246     		mov	r2, r8
- 616 0152 3946     		mov	r1, r7
- 617 0154 6948     		ldr	r0, .L31+72
- 618 0156 FFF7FEFF 		bl	HAL_ADC_Start_DMA
- 619              	.LVL44:
+ 602              		.loc 2 228 2 view .LVU174
+ 603 0150 4246     		mov	r2, r8
+ 604 0152 3946     		mov	r1, r7
+ 605 0154 6B48     		ldr	r0, .L30+72
+ 606 0156 FFF7FEFF 		bl	HAL_ADC_Start_DMA
+ 607              	.LVL44:
  229:Core/Src/main.c ****   CAP_STATE = INIT;
- 620              		.loc 2 229 3 view .LVU179
- 621 015a 2422     		movs	r2, #36
- 622 015c 6849     		ldr	r1, .L31+76
- 623 015e 6948     		ldr	r0, .L31+80
- 624 0160 FFF7FEFF 		bl	HAL_UART_Transmit_DMA
- 625              	.LVL45:
+ 608              		.loc 2 229 3 view .LVU175
+ 609 015a 2422     		movs	r2, #36
+ 610 015c 6A49     		ldr	r1, .L30+76
+ 611 015e 6B48     		ldr	r0, .L30+80
+ 612 0160 FFF7FEFF 		bl	HAL_UART_Transmit_DMA
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 25
+
+
+ 613              	.LVL45:
  230:Core/Src/main.c **** 	HAL_TIM_Base_Start(&htim1);
- 626              		.loc 2 230 3 view .LVU180
+ 614              		.loc 2 230 3 view .LVU176
  230:Core/Src/main.c **** 	HAL_TIM_Base_Start(&htim1);
- 627              		.loc 2 230 13 is_stmt 0 view .LVU181
- 628 0164 684B     		ldr	r3, .L31+84
- 629 0166 0522     		movs	r2, #5
- 630 0168 1A70     		strb	r2, [r3]
+ 615              		.loc 2 230 13 is_stmt 0 view .LVU177
+ 616 0164 6A4B     		ldr	r3, .L30+84
+ 617 0166 0522     		movs	r2, #5
+ 618 0168 1A70     		strb	r2, [r3]
  231:Core/Src/main.c **** 	HAL_TIM_Base_Start_IT(&htim6); //heart beat
- 631              		.loc 2 231 2 is_stmt 1 view .LVU182
- 632 016a 6848     		ldr	r0, .L31+88
- 633 016c FFF7FEFF 		bl	HAL_TIM_Base_Start
- 634              	.LVL46:
+ 619              		.loc 2 231 2 is_stmt 1 view .LVU178
+ 620 016a 6A48     		ldr	r0, .L30+88
+ 621 016c FFF7FEFF 		bl	HAL_TIM_Base_Start
+ 622              	.LVL46:
  232:Core/Src/main.c ****   Supercap_AUX_Init();
- 635              		.loc 2 232 2 view .LVU183
- 636 0170 6748     		ldr	r0, .L31+92
- 637 0172 FFF7FEFF 		bl	HAL_TIM_Base_Start_IT
- 638              	.LVL47:
+ 623              		.loc 2 232 2 view .LVU179
+ 624 0170 6948     		ldr	r0, .L30+92
+ 625 0172 FFF7FEFF 		bl	HAL_TIM_Base_Start_IT
+ 626              	.LVL47:
  233:Core/Src/main.c **** 	
- 639              		.loc 2 233 3 view .LVU184
- 640 0176 FFF7FEFF 		bl	Supercap_AUX_Init
- 641              	.LVL48:
+ 627              		.loc 2 233 3 view .LVU180
+ 628 0176 FFF7FEFF 		bl	Supercap_AUX_Init
+ 629              	.LVL48:
  235:Core/Src/main.c ****   for(int i = 0; i < 2; i++){
- 642              		.loc 2 235 3 view .LVU185
+ 630              		.loc 2 235 3 view .LVU181
  235:Core/Src/main.c ****   for(int i = 0; i < 2; i++){
- 643              		.loc 2 235 11 is_stmt 0 view .LVU186
- 644 017a 0DAD     		add	r5, sp, #52
- 645 017c 654E     		ldr	r6, .L31+96
- 646 017e 0FCE     		ldmia	r6!, {r0, r1, r2, r3}
- 647 0180 0FC5     		stmia	r5!, {r0, r1, r2, r3}
- 648 0182 96E80300 		ldm	r6, {r0, r1}
- 649 0186 85E80300 		stm	r5, {r0, r1}
+ 631              		.loc 2 235 11 is_stmt 0 view .LVU182
+ 632 017a 0DAD     		add	r5, sp, #52
+ 633 017c 674E     		ldr	r6, .L30+96
+ 634 017e 0FCE     		ldmia	r6!, {r0, r1, r2, r3}
+ 635 0180 0FC5     		stmia	r5!, {r0, r1, r2, r3}
+ 636 0182 96E80300 		ldm	r6, {r0, r1}
+ 637 0186 85E80300 		stm	r5, {r0, r1}
  236:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes1[i]);
- 650              		.loc 2 236 3 is_stmt 1 view .LVU187
- 651              	.LBB6:
+ 638              		.loc 2 236 3 is_stmt 1 view .LVU183
+ 639              	.LBB6:
  236:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes1[i]);
- 652              		.loc 2 236 7 view .LVU188
- 653              	.LVL49:
+ 640              		.loc 2 236 7 view .LVU184
+ 641              	.LVL49:
  236:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes1[i]);
- 654              		.loc 2 236 3 is_stmt 0 view .LVU189
- 655 018a 12E0     		b	.L23
- 656              	.LVL50:
- 657              	.L24:
+ 642              		.loc 2 236 3 is_stmt 0 view .LVU185
+ 643 018a 12E0     		b	.L22
+ 644              	.LVL50:
+ 645              	.L23:
  237:Core/Src/main.c ****     HAL_Delay(50);
- 658              		.loc 2 237 5 is_stmt 1 discriminator 3 view .LVU190
- 659 018c 14AB     		add	r3, sp, #80
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 26
-
-
- 660 018e 03EB4403 		add	r3, r3, r4, lsl #1
- 661 0192 33F91C1C 		ldrsh	r1, [r3, #-28]
- 662 0196 3220     		movs	r0, #50
- 663 0198 FFF7FEFF 		bl	Supercap_AUX_Buzzer
- 664              	.LVL51:
+ 646              		.loc 2 237 5 is_stmt 1 discriminator 3 view .LVU186
+ 647 018c 14AB     		add	r3, sp, #80
+ 648 018e 03EB4403 		add	r3, r3, r4, lsl #1
+ 649 0192 33F91C1C 		ldrsh	r1, [r3, #-28]
+ 650 0196 3220     		movs	r0, #50
+ 651 0198 FFF7FEFF 		bl	Supercap_AUX_Buzzer
+ 652              	.LVL51:
  238:Core/Src/main.c ****     Supercap_AUX_Buzzer(0, 0);
- 665              		.loc 2 238 5 discriminator 3 view .LVU191
- 666 019c 3220     		movs	r0, #50
- 667 019e FFF7FEFF 		bl	HAL_Delay
- 668              	.LVL52:
+ 653              		.loc 2 238 5 discriminator 3 view .LVU187
+ 654 019c 3220     		movs	r0, #50
+ 655 019e FFF7FEFF 		bl	HAL_Delay
+ 656              	.LVL52:
  239:Core/Src/main.c ****     HAL_Delay(5);
- 669              		.loc 2 239 5 discriminator 3 view .LVU192
- 670 01a2 0021     		movs	r1, #0
- 671 01a4 0846     		mov	r0, r1
- 672 01a6 FFF7FEFF 		bl	Supercap_AUX_Buzzer
- 673              	.LVL53:
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 26
+
+
+ 657              		.loc 2 239 5 discriminator 3 view .LVU188
+ 658 01a2 0021     		movs	r1, #0
+ 659 01a4 0846     		mov	r0, r1
+ 660 01a6 FFF7FEFF 		bl	Supercap_AUX_Buzzer
+ 661              	.LVL53:
  240:Core/Src/main.c ****   }
- 674              		.loc 2 240 5 discriminator 3 view .LVU193
- 675 01aa 0520     		movs	r0, #5
- 676 01ac FFF7FEFF 		bl	HAL_Delay
- 677              	.LVL54:
+ 662              		.loc 2 240 5 discriminator 3 view .LVU189
+ 663 01aa 0520     		movs	r0, #5
+ 664 01ac FFF7FEFF 		bl	HAL_Delay
+ 665              	.LVL54:
  236:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes1[i]);
- 678              		.loc 2 236 25 discriminator 3 view .LVU194
+ 666              		.loc 2 236 25 discriminator 3 view .LVU190
  236:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes1[i]);
- 679              		.loc 2 236 26 is_stmt 0 discriminator 3 view .LVU195
- 680 01b0 0134     		adds	r4, r4, #1
- 681              	.LVL55:
- 682              	.L23:
+ 667              		.loc 2 236 26 is_stmt 0 discriminator 3 view .LVU191
+ 668 01b0 0134     		adds	r4, r4, #1
+ 669              	.LVL55:
+ 670              	.L22:
  236:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes1[i]);
- 683              		.loc 2 236 18 is_stmt 1 discriminator 1 view .LVU196
+ 671              		.loc 2 236 18 is_stmt 1 discriminator 1 view .LVU192
  236:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes1[i]);
- 684              		.loc 2 236 3 is_stmt 0 discriminator 1 view .LVU197
- 685 01b2 012C     		cmp	r4, #1
- 686 01b4 EADD     		ble	.L24
- 687              	.LBE6:
+ 672              		.loc 2 236 3 is_stmt 0 discriminator 1 view .LVU193
+ 673 01b2 012C     		cmp	r4, #1
+ 674 01b4 EADD     		ble	.L23
+ 675              	.LBE6:
  242:Core/Src/main.c **** 	
- 688              		.loc 2 242 3 is_stmt 1 view .LVU198
- 689 01b6 0021     		movs	r1, #0
- 690 01b8 0846     		mov	r0, r1
- 691 01ba FFF7FEFF 		bl	Supercap_AUX_Buzzer
- 692              	.LVL56:
+ 676              		.loc 2 242 3 is_stmt 1 view .LVU194
+ 677 01b6 0021     		movs	r1, #0
+ 678 01b8 0846     		mov	r0, r1
+ 679 01ba FFF7FEFF 		bl	Supercap_AUX_Buzzer
+ 680              	.LVL56:
  244:Core/Src/main.c **** 	Supercap_Function_Init(&C_right);
- 693              		.loc 2 244 2 view .LVU199
- 694 01be 3E48     		ldr	r0, .L31+4
- 695 01c0 FFF7FEFF 		bl	Supercap_Function_Init
- 696              	.LVL57:
+ 681              		.loc 2 244 2 view .LVU195
+ 682 01be 4048     		ldr	r0, .L30+4
+ 683 01c0 FFF7FEFF 		bl	Supercap_Function_Init
+ 684              	.LVL57:
  245:Core/Src/main.c **** 	Supercap_Function_Init(&ADC4_12);
- 697              		.loc 2 245 2 view .LVU200
- 698 01c4 3E48     		ldr	r0, .L31+12
- 699 01c6 FFF7FEFF 		bl	Supercap_Function_Init
- 700              	.LVL58:
- 246:Core/Src/main.c **** 	Supercap_Function_Init(&V_bat);
- 701              		.loc 2 246 2 view .LVU201
- 702 01ca 4648     		ldr	r0, .L31+48
- 703 01cc FFF7FEFF 		bl	Supercap_Function_Init
- 704              	.LVL59:
- 247:Core/Src/main.c **** 	Supercap_Function_Init(&V_cap);
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 27
+ 685              		.loc 2 245 2 view .LVU196
+ 686 01c4 4048     		ldr	r0, .L30+12
+ 687 01c6 FFF7FEFF 		bl	Supercap_Function_Init
+ 688              	.LVL58:
+ 246:Core/Src/main.c **** 	Supercap_Function_Init(&C_left);
+ 689              		.loc 2 246 2 view .LVU197
+ 690 01ca 4848     		ldr	r0, .L30+48
+ 691 01cc FFF7FEFF 		bl	Supercap_Function_Init
+ 692              	.LVL59:
+ 247:Core/Src/main.c **** 	Supercap_Function_Init(&V_bat);
+ 693              		.loc 2 247 2 view .LVU198
+ 694 01d0 3A48     		ldr	r0, .L30
+ 695 01d2 FFF7FEFF 		bl	Supercap_Function_Init
+ 696              	.LVL60:
+ 248:Core/Src/main.c **** 	Supercap_Function_Init(&V_cap);
+ 697              		.loc 2 248 2 view .LVU199
+ 698 01d6 4148     		ldr	r0, .L30+32
+ 699 01d8 FFF7FEFF 		bl	Supercap_Function_Init
+ 700              	.LVL61:
+ 249:Core/Src/main.c **** 
+ 701              		.loc 2 249 2 view .LVU200
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 27
 
 
- 705              		.loc 2 247 2 view .LVU202
- 706 01d0 4048     		ldr	r0, .L31+32
- 707 01d2 FFF7FEFF 		bl	Supercap_Function_Init
- 708              	.LVL60:
- 248:Core/Src/main.c **** 
- 709              		.loc 2 248 2 view .LVU203
- 710 01d6 3E48     		ldr	r0, .L31+28
- 711 01d8 FFF7FEFF 		bl	Supercap_Function_Init
- 712              	.LVL61:
- 250:Core/Src/main.c ****   Supercap_PID_Init(&PID_n7A_loop, 0.2f, 0.00002f, 0.01f, MAX_CAP_VOLTAGE, 0, 400);
- 713              		.loc 2 250 3 view .LVU204
- 714 01dc 9FED4E8A 		vldr.32	s16, .L31+100
- 715 01e0 40F2DC53 		movw	r3, #1500
- 716 01e4 0022     		movs	r2, #0
- 717 01e6 40F60431 		movw	r1, #2820
- 718 01ea B0EE481A 		vmov.f32	s2, s16
- 719 01ee DFED4B0A 		vldr.32	s1, .L31+104
- 720 01f2 9FED4B0A 		vldr.32	s0, .L31+108
- 721 01f6 4B48     		ldr	r0, .L31+112
- 722 01f8 FFF7FEFF 		bl	Supercap_PID_Init
- 723              	.LVL62:
- 251:Core/Src/main.c ****   Supercap_PID_Init(&PID_7A_loop, 0.25f, 0.00005f, 0.01f, MAX_CAP_VOLTAGE, 0, 600);
- 724              		.loc 2 251 3 view .LVU205
- 725 01fc 4FF4C873 		mov	r3, #400
- 726 0200 0022     		movs	r2, #0
- 727 0202 40F60431 		movw	r1, #2820
- 728 0206 B0EE481A 		vmov.f32	s2, s16
- 729 020a DFED470A 		vldr.32	s1, .L31+116
- 730 020e 9FED470A 		vldr.32	s0, .L31+120
- 731 0212 4748     		ldr	r0, .L31+124
- 732 0214 FFF7FEFF 		bl	Supercap_PID_Init
- 733              	.LVL63:
- 252:Core/Src/main.c **** 	Supercap_PID_Init(&PID_voltage_loop, 0.00005f, 0.0001f, 0.08f, MAX_DUTY, 65, 50);
- 734              		.loc 2 252 3 view .LVU206
- 735 0218 DFED468A 		vldr.32	s17, .L31+128
- 736 021c 4FF41673 		mov	r3, #600
- 737 0220 0022     		movs	r2, #0
- 738 0222 40F60431 		movw	r1, #2820
- 739 0226 B0EE481A 		vmov.f32	s2, s16
- 740 022a F0EE680A 		vmov.f32	s1, s17
- 741 022e B5EE000A 		vmov.f32	s0, #2.5e-1
- 742 0232 4148     		ldr	r0, .L31+132
- 743 0234 FFF7FEFF 		bl	Supercap_PID_Init
- 744              	.LVL64:
- 253:Core/Src/main.c **** 
- 745              		.loc 2 253 2 view .LVU207
- 746 0238 3223     		movs	r3, #50
- 747 023a 4122     		movs	r2, #65
- 748 023c 4FF48B71 		mov	r1, #278
- 749 0240 9FED3E1A 		vldr.32	s2, .L31+136
- 750 0244 DFED3E0A 		vldr.32	s1, .L31+140
- 751 0248 B0EE680A 		vmov.f32	s0, s17
- 752 024c 3D48     		ldr	r0, .L31+144
- 753 024e FFF7FEFF 		bl	Supercap_PID_Init
- 754              	.LVL65:
- 255:Core/Src/main.c ****   for(int i = 0; i < 10; i++){
- 755              		.loc 2 255 3 view .LVU208
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 28
+ 702 01dc 3E48     		ldr	r0, .L30+28
+ 703 01de FFF7FEFF 		bl	Supercap_Function_Init
+ 704              	.LVL62:
+ 251:Core/Src/main.c ****   Supercap_PID_Init(&PID_n7A_loop, -0.0f, -0.00004f, -0.0f, MAX_CAP_VOLTAGE, 0, 150);
+ 705              		.loc 2 251 3 view .LVU201
+ 706 01e2 DFED4F8A 		vldr.32	s17, .L30+100
+ 707 01e6 9FED4F0A 		vldr.32	s0, .L30+104
+ 708 01ea 4FF47A73 		mov	r3, #1000
+ 709 01ee 0022     		movs	r2, #0
+ 710 01f0 40F60431 		movw	r1, #2820
+ 711 01f4 B0EE681A 		vmov.f32	s2, s17
+ 712 01f8 F0EE400A 		vmov.f32	s1, s0
+ 713 01fc 4A48     		ldr	r0, .L30+108
+ 714 01fe FFF7FEFF 		bl	Supercap_PID_Init
+ 715              	.LVL63:
+ 252:Core/Src/main.c ****   Supercap_PID_Init(&PID_7A_loop, -0.0f, -0.00004f, -0.0f, MAX_CAP_VOLTAGE, 0, 150);
+ 716              		.loc 2 252 3 view .LVU202
+ 717 0202 9FED4A8A 		vldr.32	s16, .L30+112
+ 718 0206 9FED4A9A 		vldr.32	s18, .L30+116
+ 719 020a 9623     		movs	r3, #150
+ 720 020c 0022     		movs	r2, #0
+ 721 020e 40F60431 		movw	r1, #2820
+ 722 0212 B0EE481A 		vmov.f32	s2, s16
+ 723 0216 F0EE490A 		vmov.f32	s1, s18
+ 724 021a B0EE480A 		vmov.f32	s0, s16
+ 725 021e 4548     		ldr	r0, .L30+120
+ 726 0220 FFF7FEFF 		bl	Supercap_PID_Init
+ 727              	.LVL64:
+ 253:Core/Src/main.c **** 	Supercap_PID_Init(&PID_voltage_loop, 0.00000f, 0.0001f, 0.00f, MAX_DUTY, 65, 50);
+ 728              		.loc 2 253 3 view .LVU203
+ 729 0224 9623     		movs	r3, #150
+ 730 0226 0022     		movs	r2, #0
+ 731 0228 40F60431 		movw	r1, #2820
+ 732 022c B0EE481A 		vmov.f32	s2, s16
+ 733 0230 F0EE490A 		vmov.f32	s1, s18
+ 734 0234 B0EE480A 		vmov.f32	s0, s16
+ 735 0238 3F48     		ldr	r0, .L30+124
+ 736 023a FFF7FEFF 		bl	Supercap_PID_Init
+ 737              	.LVL65:
+ 254:Core/Src/main.c **** 
+ 738              		.loc 2 254 2 view .LVU204
+ 739 023e 3223     		movs	r3, #50
+ 740 0240 4122     		movs	r2, #65
+ 741 0242 4FF48B71 		mov	r1, #278
+ 742 0246 B0EE681A 		vmov.f32	s2, s17
+ 743 024a DFED3C0A 		vldr.32	s1, .L30+128
+ 744 024e B0EE680A 		vmov.f32	s0, s17
+ 745 0252 3B48     		ldr	r0, .L30+132
+ 746 0254 FFF7FEFF 		bl	Supercap_PID_Init
+ 747              	.LVL66:
+ 256:Core/Src/main.c ****   for(int i = 0; i < 10; i++){
+ 748              		.loc 2 256 3 view .LVU205
+ 256:Core/Src/main.c ****   for(int i = 0; i < 10; i++){
+ 749              		.loc 2 256 12 is_stmt 0 view .LVU206
+ 750 0258 08AC     		add	r4, sp, #32
+ 751              	.LVL67:
+ 256:Core/Src/main.c ****   for(int i = 0; i < 10; i++){
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 28
 
 
- 255:Core/Src/main.c ****   for(int i = 0; i < 10; i++){
- 756              		.loc 2 255 12 is_stmt 0 view .LVU209
- 757 0252 08AC     		add	r4, sp, #32
- 758              	.LVL66:
- 255:Core/Src/main.c ****   for(int i = 0; i < 10; i++){
- 759              		.loc 2 255 12 view .LVU210
- 760 0254 3C4D     		ldr	r5, .L31+148
- 761 0256 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
- 762 0258 0FC4     		stmia	r4!, {r0, r1, r2, r3}
- 763 025a 2B68     		ldr	r3, [r5]
- 764 025c 2360     		str	r3, [r4]
- 256:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
- 765              		.loc 2 256 3 is_stmt 1 view .LVU211
- 766              	.LBB7:
- 256:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
- 767              		.loc 2 256 7 view .LVU212
- 768              	.LVL67:
- 256:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
- 769              		.loc 2 256 11 is_stmt 0 view .LVU213
- 770 025e 0024     		movs	r4, #0
- 256:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
- 771              		.loc 2 256 3 view .LVU214
- 772 0260 12E0     		b	.L25
- 773              	.LVL68:
- 774              	.L26:
- 257:Core/Src/main.c ****     HAL_Delay(50);
- 775              		.loc 2 257 5 is_stmt 1 discriminator 3 view .LVU215
- 257:Core/Src/main.c ****     HAL_Delay(50);
- 776              		.loc 2 257 35 is_stmt 0 discriminator 3 view .LVU216
- 777 0262 14AB     		add	r3, sp, #80
- 778 0264 03EB4403 		add	r3, r3, r4, lsl #1
- 257:Core/Src/main.c ****     HAL_Delay(50);
- 779              		.loc 2 257 5 discriminator 3 view .LVU217
- 780 0268 33F9301C 		ldrsh	r1, [r3, #-48]
- 781 026c 3220     		movs	r0, #50
- 782 026e FFF7FEFF 		bl	Supercap_AUX_Buzzer
- 783              	.LVL69:
- 258:Core/Src/main.c ****     Supercap_AUX_Buzzer(0, 0);
- 784              		.loc 2 258 5 is_stmt 1 discriminator 3 view .LVU218
- 785 0272 3220     		movs	r0, #50
- 786 0274 FFF7FEFF 		bl	HAL_Delay
- 787              	.LVL70:
- 259:Core/Src/main.c ****     HAL_Delay(5);
- 788              		.loc 2 259 5 discriminator 3 view .LVU219
- 789 0278 0021     		movs	r1, #0
- 790 027a 0846     		mov	r0, r1
- 791 027c FFF7FEFF 		bl	Supercap_AUX_Buzzer
- 792              	.LVL71:
- 260:Core/Src/main.c ****   }
- 793              		.loc 2 260 5 discriminator 3 view .LVU220
- 794 0280 0520     		movs	r0, #5
- 795 0282 FFF7FEFF 		bl	HAL_Delay
- 796              	.LVL72:
- 256:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
- 797              		.loc 2 256 26 discriminator 3 view .LVU221
- 256:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
- 798              		.loc 2 256 27 is_stmt 0 discriminator 3 view .LVU222
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 29
+ 752              		.loc 2 256 12 view .LVU207
+ 753 025a 3A4D     		ldr	r5, .L30+136
+ 754 025c 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 755 025e 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 756 0260 2B68     		ldr	r3, [r5]
+ 757 0262 2360     		str	r3, [r4]
+ 257:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
+ 758              		.loc 2 257 3 is_stmt 1 view .LVU208
+ 759              	.LBB7:
+ 257:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
+ 760              		.loc 2 257 7 view .LVU209
+ 761              	.LVL68:
+ 257:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
+ 762              		.loc 2 257 11 is_stmt 0 view .LVU210
+ 763 0264 0024     		movs	r4, #0
+ 257:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
+ 764              		.loc 2 257 3 view .LVU211
+ 765 0266 12E0     		b	.L24
+ 766              	.LVL69:
+ 767              	.L25:
+ 258:Core/Src/main.c ****     HAL_Delay(50);
+ 768              		.loc 2 258 5 is_stmt 1 discriminator 3 view .LVU212
+ 258:Core/Src/main.c ****     HAL_Delay(50);
+ 769              		.loc 2 258 35 is_stmt 0 discriminator 3 view .LVU213
+ 770 0268 14AB     		add	r3, sp, #80
+ 771 026a 03EB4403 		add	r3, r3, r4, lsl #1
+ 258:Core/Src/main.c ****     HAL_Delay(50);
+ 772              		.loc 2 258 5 discriminator 3 view .LVU214
+ 773 026e 33F9301C 		ldrsh	r1, [r3, #-48]
+ 774 0272 3220     		movs	r0, #50
+ 775 0274 FFF7FEFF 		bl	Supercap_AUX_Buzzer
+ 776              	.LVL70:
+ 259:Core/Src/main.c ****     Supercap_AUX_Buzzer(0, 0);
+ 777              		.loc 2 259 5 is_stmt 1 discriminator 3 view .LVU215
+ 778 0278 3220     		movs	r0, #50
+ 779 027a FFF7FEFF 		bl	HAL_Delay
+ 780              	.LVL71:
+ 260:Core/Src/main.c ****     HAL_Delay(5);
+ 781              		.loc 2 260 5 discriminator 3 view .LVU216
+ 782 027e 0021     		movs	r1, #0
+ 783 0280 0846     		mov	r0, r1
+ 784 0282 FFF7FEFF 		bl	Supercap_AUX_Buzzer
+ 785              	.LVL72:
+ 261:Core/Src/main.c ****   }
+ 786              		.loc 2 261 5 discriminator 3 view .LVU217
+ 787 0286 0520     		movs	r0, #5
+ 788 0288 FFF7FEFF 		bl	HAL_Delay
+ 789              	.LVL73:
+ 257:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
+ 790              		.loc 2 257 26 discriminator 3 view .LVU218
+ 257:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
+ 791              		.loc 2 257 27 is_stmt 0 discriminator 3 view .LVU219
+ 792 028c 0134     		adds	r4, r4, #1
+ 793              	.LVL74:
+ 794              	.L24:
+ 257:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
+ 795              		.loc 2 257 18 is_stmt 1 discriminator 1 view .LVU220
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 29
 
 
- 799 0286 0134     		adds	r4, r4, #1
- 800              	.LVL73:
- 801              	.L25:
- 256:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
- 802              		.loc 2 256 18 is_stmt 1 discriminator 1 view .LVU223
- 256:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
- 803              		.loc 2 256 3 is_stmt 0 discriminator 1 view .LVU224
- 804 0288 092C     		cmp	r4, #9
- 805 028a EADD     		ble	.L26
- 806              	.LBE7:
- 262:Core/Src/main.c **** 
- 807              		.loc 2 262 3 is_stmt 1 view .LVU225
- 808 028c 0021     		movs	r1, #0
- 809 028e 0846     		mov	r0, r1
- 810 0290 FFF7FEFF 		bl	Supercap_AUX_Buzzer
- 811              	.LVL74:
- 264:Core/Src/main.c **** 	HAL_Delay(250);
- 812              		.loc 2 264 3 view .LVU226
- 813 0294 2D48     		ldr	r0, .L31+152
- 814 0296 FFF7FEFF 		bl	HAL_TIM_Base_Start_IT
- 815              	.LVL75:
- 265:Core/Src/main.c **** 
- 816              		.loc 2 265 2 view .LVU227
- 817 029a FA20     		movs	r0, #250
- 818 029c FFF7FEFF 		bl	HAL_Delay
- 819              	.LVL76:
- 267:Core/Src/main.c ****   for(int i = 0; i < 13; i++){
- 820              		.loc 2 267 3 view .LVU228
- 267:Core/Src/main.c ****   for(int i = 0; i < 13; i++){
- 821              		.loc 2 267 12 is_stmt 0 view .LVU229
- 822 02a0 01AC     		add	r4, sp, #4
- 823              	.LVL77:
- 267:Core/Src/main.c ****   for(int i = 0; i < 13; i++){
- 824              		.loc 2 267 12 view .LVU230
- 825 02a2 2B4D     		ldr	r5, .L31+156
- 826 02a4 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
- 827 02a6 0FC4     		stmia	r4!, {r0, r1, r2, r3}
- 828 02a8 95E80700 		ldm	r5, {r0, r1, r2}
- 829 02ac 03C4     		stmia	r4!, {r0, r1}
- 830 02ae 2280     		strh	r2, [r4]	@ movhi
- 268:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
- 831              		.loc 2 268 3 is_stmt 1 view .LVU231
- 832              	.LBB8:
- 268:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
- 833              		.loc 2 268 7 view .LVU232
- 834              	.LVL78:
- 268:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
- 835              		.loc 2 268 11 is_stmt 0 view .LVU233
- 836 02b0 0024     		movs	r4, #0
- 268:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
- 837              		.loc 2 268 3 view .LVU234
- 838 02b2 6AE0     		b	.L27
- 839              	.L32:
- 840              		.align	2
- 841              	.L31:
- 842 02b4 00000000 		.word	.LANCHOR4
- 843 02b8 00000000 		.word	.LANCHOR6
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 30
+ 257:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
+ 796              		.loc 2 257 3 is_stmt 0 discriminator 1 view .LVU221
+ 797 028e 092C     		cmp	r4, #9
+ 798 0290 EADD     		ble	.L25
+ 799              	.LBE7:
+ 263:Core/Src/main.c **** 
+ 800              		.loc 2 263 3 is_stmt 1 view .LVU222
+ 801 0292 0021     		movs	r1, #0
+ 802 0294 0846     		mov	r0, r1
+ 803 0296 FFF7FEFF 		bl	Supercap_AUX_Buzzer
+ 804              	.LVL75:
+ 265:Core/Src/main.c **** 	HAL_Delay(250);
+ 805              		.loc 2 265 3 view .LVU223
+ 806 029a 2B48     		ldr	r0, .L30+140
+ 807 029c FFF7FEFF 		bl	HAL_TIM_Base_Start_IT
+ 808              	.LVL76:
+ 266:Core/Src/main.c **** 
+ 809              		.loc 2 266 2 view .LVU224
+ 810 02a0 FA20     		movs	r0, #250
+ 811 02a2 FFF7FEFF 		bl	HAL_Delay
+ 812              	.LVL77:
+ 268:Core/Src/main.c ****   for(int i = 0; i < 13; i++){
+ 813              		.loc 2 268 3 view .LVU225
+ 268:Core/Src/main.c ****   for(int i = 0; i < 13; i++){
+ 814              		.loc 2 268 12 is_stmt 0 view .LVU226
+ 815 02a6 01AC     		add	r4, sp, #4
+ 816              	.LVL78:
+ 268:Core/Src/main.c ****   for(int i = 0; i < 13; i++){
+ 817              		.loc 2 268 12 view .LVU227
+ 818 02a8 284D     		ldr	r5, .L30+144
+ 819 02aa 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 820 02ac 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 821 02ae 95E80700 		ldm	r5, {r0, r1, r2}
+ 822 02b2 03C4     		stmia	r4!, {r0, r1}
+ 823 02b4 2280     		strh	r2, [r4]	@ movhi
+ 269:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
+ 824              		.loc 2 269 3 is_stmt 1 view .LVU228
+ 825              	.LBB8:
+ 269:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
+ 826              		.loc 2 269 7 view .LVU229
+ 827              	.LVL79:
+ 269:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
+ 828              		.loc 2 269 11 is_stmt 0 view .LVU230
+ 829 02b6 0024     		movs	r4, #0
+ 269:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
+ 830              		.loc 2 269 3 view .LVU231
+ 831 02b8 65E0     		b	.L26
+ 832              	.L31:
+ 833 02ba 00BF     		.align	2
+ 834              	.L30:
+ 835 02bc 00000000 		.word	.LANCHOR3
+ 836 02c0 00000000 		.word	.LANCHOR5
+ 837 02c4 00000000 		.word	.LANCHOR7
+ 838 02c8 00000000 		.word	.LANCHOR6
+ 839 02cc 00000000 		.word	.LANCHOR9
+ 840 02d0 00000000 		.word	.LANCHOR8
+ 841 02d4 00000000 		.word	.LANCHOR10
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 30
 
 
- 844 02bc 00000000 		.word	.LANCHOR8
- 845 02c0 00000000 		.word	.LANCHOR7
- 846 02c4 00000000 		.word	.LANCHOR10
- 847 02c8 00000000 		.word	.LANCHOR9
- 848 02cc 00000000 		.word	.LANCHOR11
- 849 02d0 00000000 		.word	.LANCHOR12
- 850 02d4 00000000 		.word	.LANCHOR13
- 851 02d8 00000000 		.word	.LANCHOR14
- 852 02dc 00000000 		.word	.LANCHOR16
- 853 02e0 00000000 		.word	.LANCHOR15
- 854 02e4 00000000 		.word	.LANCHOR17
- 855 02e8 00000000 		.word	.LANCHOR1
- 856 02ec 00000000 		.word	.LANCHOR2
- 857 02f0 00000000 		.word	TxHeader
- 858 02f4 00000000 		.word	FDCAN1_RXFilter
- 859 02f8 00000000 		.word	hadc3
- 860 02fc 00000000 		.word	hadc4
- 861 0300 00000000 		.word	.LANCHOR18
- 862 0304 00000000 		.word	huart3
- 863 0308 00000000 		.word	.LANCHOR19
- 864 030c 00000000 		.word	htim1
- 865 0310 00000000 		.word	htim6
- 866 0314 00000000 		.word	.LANCHOR20
- 867 0318 0AD7233C 		.word	1008981770
- 868 031c 17B7513A 		.word	978433815
- 869 0320 0AD7A33B 		.word	1000593162
- 870 0324 00000000 		.word	.LANCHOR21
- 871 0328 ACC5A737 		.word	933741996
- 872 032c CDCC4C3E 		.word	1045220557
- 873 0330 00000000 		.word	.LANCHOR22
- 874 0334 17B75138 		.word	944879383
- 875 0338 00000000 		.word	.LANCHOR23
- 876 033c 0AD7A33D 		.word	1034147594
- 877 0340 17B7D138 		.word	953267991
- 878 0344 00000000 		.word	.LANCHOR24
- 879 0348 18000000 		.word	.LANCHOR20+24
- 880 034c 00000000 		.word	htim2
- 881 0350 2C000000 		.word	.LANCHOR20+44
- 882 0354 00000000 		.word	.LANCHOR5
- 883 0358 00000000 		.word	hfdcan1
- 884 035c 00000000 		.word	hadc1
- 885 0360 00000000 		.word	hadc2
- 886              	.LVL79:
- 887              	.L28:
- 269:Core/Src/main.c ****     HAL_Delay(50);
- 888              		.loc 2 269 5 is_stmt 1 discriminator 3 view .LVU235
- 269:Core/Src/main.c ****     HAL_Delay(50);
- 889              		.loc 2 269 35 is_stmt 0 discriminator 3 view .LVU236
- 890 0364 14AB     		add	r3, sp, #80
- 891 0366 03EB4403 		add	r3, r3, r4, lsl #1
- 269:Core/Src/main.c ****     HAL_Delay(50);
- 892              		.loc 2 269 5 discriminator 3 view .LVU237
- 893 036a 33F94C1C 		ldrsh	r1, [r3, #-76]
- 894 036e 3220     		movs	r0, #50
- 895 0370 FFF7FEFF 		bl	Supercap_AUX_Buzzer
- 896              	.LVL80:
- 270:Core/Src/main.c ****     Supercap_AUX_Buzzer(0, 0);
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 31
+ 842 02d8 00000000 		.word	.LANCHOR11
+ 843 02dc 00000000 		.word	.LANCHOR12
+ 844 02e0 00000000 		.word	.LANCHOR13
+ 845 02e4 00000000 		.word	.LANCHOR15
+ 846 02e8 00000000 		.word	.LANCHOR14
+ 847 02ec 00000000 		.word	.LANCHOR16
+ 848 02f0 00000000 		.word	.LANCHOR1
+ 849 02f4 00000000 		.word	.LANCHOR17
+ 850 02f8 00000000 		.word	TxHeader
+ 851 02fc 00000000 		.word	FDCAN1_RXFilter
+ 852 0300 00000000 		.word	hadc3
+ 853 0304 00000000 		.word	hadc4
+ 854 0308 00000000 		.word	.LANCHOR18
+ 855 030c 00000000 		.word	huart3
+ 856 0310 00000000 		.word	.LANCHOR19
+ 857 0314 00000000 		.word	htim1
+ 858 0318 00000000 		.word	htim6
+ 859 031c 00000000 		.word	.LANCHOR20
+ 860 0320 00000000 		.word	0
+ 861 0324 17B75138 		.word	944879383
+ 862 0328 00000000 		.word	.LANCHOR21
+ 863 032c 00000080 		.word	-2147483648
+ 864 0330 ACC527B8 		.word	-1205353044
+ 865 0334 00000000 		.word	.LANCHOR22
+ 866 0338 00000000 		.word	.LANCHOR23
+ 867 033c 17B7D138 		.word	953267991
+ 868 0340 00000000 		.word	.LANCHOR24
+ 869 0344 18000000 		.word	.LANCHOR20+24
+ 870 0348 00000000 		.word	htim2
+ 871 034c 2C000000 		.word	.LANCHOR20+44
+ 872 0350 00000000 		.word	.LANCHOR4
+ 873 0354 00000000 		.word	hfdcan1
+ 874 0358 00000000 		.word	hadc1
+ 875 035c 00000000 		.word	hadc2
+ 876              	.LVL80:
+ 877              	.L27:
+ 270:Core/Src/main.c ****     HAL_Delay(50);
+ 878              		.loc 2 270 5 is_stmt 1 discriminator 3 view .LVU232
+ 270:Core/Src/main.c ****     HAL_Delay(50);
+ 879              		.loc 2 270 35 is_stmt 0 discriminator 3 view .LVU233
+ 880 0360 14AB     		add	r3, sp, #80
+ 881 0362 03EB4403 		add	r3, r3, r4, lsl #1
+ 270:Core/Src/main.c ****     HAL_Delay(50);
+ 882              		.loc 2 270 5 discriminator 3 view .LVU234
+ 883 0366 33F94C1C 		ldrsh	r1, [r3, #-76]
+ 884 036a 3220     		movs	r0, #50
+ 885 036c FFF7FEFF 		bl	Supercap_AUX_Buzzer
+ 886              	.LVL81:
+ 271:Core/Src/main.c ****     Supercap_AUX_Buzzer(0, 0);
+ 887              		.loc 2 271 5 is_stmt 1 discriminator 3 view .LVU235
+ 888 0370 3220     		movs	r0, #50
+ 889 0372 FFF7FEFF 		bl	HAL_Delay
+ 890              	.LVL82:
+ 272:Core/Src/main.c ****     HAL_Delay(5);
+ 891              		.loc 2 272 5 discriminator 3 view .LVU236
+ 892 0376 0021     		movs	r1, #0
+ 893 0378 0846     		mov	r0, r1
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 31
 
 
- 897              		.loc 2 270 5 is_stmt 1 discriminator 3 view .LVU238
- 898 0374 3220     		movs	r0, #50
- 899 0376 FFF7FEFF 		bl	HAL_Delay
- 900              	.LVL81:
- 271:Core/Src/main.c ****     HAL_Delay(5);
- 901              		.loc 2 271 5 discriminator 3 view .LVU239
- 902 037a 0021     		movs	r1, #0
- 903 037c 0846     		mov	r0, r1
- 904 037e FFF7FEFF 		bl	Supercap_AUX_Buzzer
- 905              	.LVL82:
- 272:Core/Src/main.c ****   }
- 906              		.loc 2 272 5 discriminator 3 view .LVU240
- 907 0382 0520     		movs	r0, #5
- 908 0384 FFF7FEFF 		bl	HAL_Delay
- 909              	.LVL83:
- 268:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
- 910              		.loc 2 268 26 discriminator 3 view .LVU241
- 268:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
- 911              		.loc 2 268 27 is_stmt 0 discriminator 3 view .LVU242
- 912 0388 0134     		adds	r4, r4, #1
- 913              	.LVL84:
- 914              	.L27:
- 268:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
- 915              		.loc 2 268 18 is_stmt 1 discriminator 1 view .LVU243
- 268:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
- 916              		.loc 2 268 3 is_stmt 0 discriminator 1 view .LVU244
- 917 038a 0C2C     		cmp	r4, #12
- 918 038c EADD     		ble	.L28
- 919              	.LBE8:
- 274:Core/Src/main.c **** 	HAL_TIM_Base_Start_IT(&htim5);
- 920              		.loc 2 274 3 is_stmt 1 view .LVU245
- 921 038e 0021     		movs	r1, #0
- 922 0390 0846     		mov	r0, r1
- 923 0392 FFF7FEFF 		bl	Supercap_AUX_Buzzer
- 924              	.LVL85:
- 275:Core/Src/main.c **** 	
- 925              		.loc 2 275 2 view .LVU246
- 926 0396 2348     		ldr	r0, .L33
- 927 0398 FFF7FEFF 		bl	HAL_TIM_Base_Start_IT
- 928              	.LVL86:
- 929              	.L29:
- 281:Core/Src/main.c ****   {
- 930              		.loc 2 281 3 discriminator 1 view .LVU247
- 286:Core/Src/main.c ****     data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
- 931              		.loc 2 286 5 discriminator 1 view .LVU248
- 286:Core/Src/main.c ****     data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
- 932              		.loc 2 286 27 is_stmt 0 discriminator 1 view .LVU249
- 933 039c 40F2FF71 		movw	r1, #2047
- 934 03a0 214B     		ldr	r3, .L33+4
- 935 03a2 9889     		ldrh	r0, [r3, #12]
- 936 03a4 FFF7FEFF 		bl	Supercap_ADC_to_Current_Funtion
- 937              	.LVL87:
- 286:Core/Src/main.c ****     data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
- 938              		.loc 2 286 25 discriminator 1 view .LVU250
- 939 03a8 204C     		ldr	r4, .L33+8
- 940 03aa 84ED000A 		vstr.32	s0, [r4]
- 287:Core/Src/main.c ****     data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 32
+ 894 037a FFF7FEFF 		bl	Supercap_AUX_Buzzer
+ 895              	.LVL83:
+ 273:Core/Src/main.c ****   }
+ 896              		.loc 2 273 5 discriminator 3 view .LVU237
+ 897 037e 0520     		movs	r0, #5
+ 898 0380 FFF7FEFF 		bl	HAL_Delay
+ 899              	.LVL84:
+ 269:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
+ 900              		.loc 2 269 26 discriminator 3 view .LVU238
+ 269:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
+ 901              		.loc 2 269 27 is_stmt 0 discriminator 3 view .LVU239
+ 902 0384 0134     		adds	r4, r4, #1
+ 903              	.LVL85:
+ 904              	.L26:
+ 269:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
+ 905              		.loc 2 269 18 is_stmt 1 discriminator 1 view .LVU240
+ 269:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
+ 906              		.loc 2 269 3 is_stmt 0 discriminator 1 view .LVU241
+ 907 0386 0C2C     		cmp	r4, #12
+ 908 0388 EADD     		ble	.L27
+ 909              	.LBE8:
+ 275:Core/Src/main.c **** 	HAL_TIM_Base_Start_IT(&htim5);
+ 910              		.loc 2 275 3 is_stmt 1 view .LVU242
+ 911 038a 0021     		movs	r1, #0
+ 912 038c 0846     		mov	r0, r1
+ 913 038e FFF7FEFF 		bl	Supercap_AUX_Buzzer
+ 914              	.LVL86:
+ 276:Core/Src/main.c **** 	
+ 915              		.loc 2 276 2 view .LVU243
+ 916 0392 2348     		ldr	r0, .L32
+ 917 0394 FFF7FEFF 		bl	HAL_TIM_Base_Start_IT
+ 918              	.LVL87:
+ 919              	.L28:
+ 282:Core/Src/main.c ****   {
+ 920              		.loc 2 282 3 discriminator 1 view .LVU244
+ 287:Core/Src/main.c ****     data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
+ 921              		.loc 2 287 5 discriminator 1 view .LVU245
+ 287:Core/Src/main.c ****     data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
+ 922              		.loc 2 287 27 is_stmt 0 discriminator 1 view .LVU246
+ 923 0398 40F2FF71 		movw	r1, #2047
+ 924 039c 214B     		ldr	r3, .L32+4
+ 925 039e 9889     		ldrh	r0, [r3, #12]
+ 926 03a0 FFF7FEFF 		bl	Supercap_ADC_to_Current_Funtion
+ 927              	.LVL88:
+ 287:Core/Src/main.c ****     data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
+ 928              		.loc 2 287 25 discriminator 1 view .LVU247
+ 929 03a4 204C     		ldr	r4, .L32+8
+ 930 03a6 84ED000A 		vstr.32	s0, [r4]
+ 288:Core/Src/main.c ****     data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
+ 931              		.loc 2 288 5 is_stmt 1 discriminator 1 view .LVU248
+ 288:Core/Src/main.c ****     data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
+ 932              		.loc 2 288 27 is_stmt 0 discriminator 1 view .LVU249
+ 933 03aa 204B     		ldr	r3, .L32+12
+ 934 03ac 9889     		ldrh	r0, [r3, #12]
+ 935 03ae FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
+ 936              	.LVL89:
+ 288:Core/Src/main.c ****     data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 32
 
 
- 941              		.loc 2 287 5 is_stmt 1 discriminator 1 view .LVU251
- 287:Core/Src/main.c ****     data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
- 942              		.loc 2 287 27 is_stmt 0 discriminator 1 view .LVU252
- 943 03ae 204B     		ldr	r3, .L33+12
- 944 03b0 9889     		ldrh	r0, [r3, #12]
- 945 03b2 FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
- 946              	.LVL88:
- 287:Core/Src/main.c ****     data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
- 947              		.loc 2 287 25 discriminator 1 view .LVU253
- 948 03b6 84ED010A 		vstr.32	s0, [r4, #4]
- 288:Core/Src/main.c ****     data_packet.data[3] = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
- 949              		.loc 2 288 5 is_stmt 1 discriminator 1 view .LVU254
- 288:Core/Src/main.c ****     data_packet.data[3] = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
- 950              		.loc 2 288 27 is_stmt 0 discriminator 1 view .LVU255
- 951 03ba 40F2FF71 		movw	r1, #2047
- 952 03be 1D4B     		ldr	r3, .L33+16
- 953 03c0 9889     		ldrh	r0, [r3, #12]
- 954 03c2 FFF7FEFF 		bl	Supercap_ADC_to_Current_Funtion
- 955              	.LVL89:
- 288:Core/Src/main.c ****     data_packet.data[3] = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
- 956              		.loc 2 288 25 discriminator 1 view .LVU256
- 957 03c6 84ED020A 		vstr.32	s0, [r4, #8]
- 289:Core/Src/main.c ****     data_packet.data[4] = Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
- 958              		.loc 2 289 5 is_stmt 1 discriminator 1 view .LVU257
- 289:Core/Src/main.c ****     data_packet.data[4] = Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
- 959              		.loc 2 289 70 is_stmt 0 discriminator 1 view .LVU258
- 960 03ca 1B4B     		ldr	r3, .L33+20
- 961 03cc B3F91400 		ldrsh	r0, [r3, #20]
- 289:Core/Src/main.c ****     data_packet.data[4] = Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
- 962              		.loc 2 289 27 discriminator 1 view .LVU259
- 963 03d0 80B2     		uxth	r0, r0
- 964 03d2 FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
- 965              	.LVL90:
- 289:Core/Src/main.c ****     data_packet.data[4] = Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
- 966              		.loc 2 289 25 discriminator 1 view .LVU260
- 967 03d6 84ED030A 		vstr.32	s0, [r4, #12]
- 290:Core/Src/main.c ****     data_packet.data[5] = Supercap_ADC_to_Voltage_Funtion(PID_n7A_loop.output);
- 968              		.loc 2 290 5 is_stmt 1 discriminator 1 view .LVU261
- 290:Core/Src/main.c ****     data_packet.data[5] = Supercap_ADC_to_Voltage_Funtion(PID_n7A_loop.output);
- 969              		.loc 2 290 71 is_stmt 0 discriminator 1 view .LVU262
- 970 03da 184B     		ldr	r3, .L33+24
- 971 03dc B3F91400 		ldrsh	r0, [r3, #20]
- 290:Core/Src/main.c ****     data_packet.data[5] = Supercap_ADC_to_Voltage_Funtion(PID_n7A_loop.output);
- 972              		.loc 2 290 27 discriminator 1 view .LVU263
- 973 03e0 80B2     		uxth	r0, r0
- 974 03e2 FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
- 975              	.LVL91:
- 290:Core/Src/main.c ****     data_packet.data[5] = Supercap_ADC_to_Voltage_Funtion(PID_n7A_loop.output);
- 976              		.loc 2 290 25 discriminator 1 view .LVU264
- 977 03e6 84ED040A 		vstr.32	s0, [r4, #16]
- 291:Core/Src/main.c **** 		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
- 978              		.loc 2 291 5 is_stmt 1 discriminator 1 view .LVU265
- 291:Core/Src/main.c **** 		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
- 979              		.loc 2 291 71 is_stmt 0 discriminator 1 view .LVU266
- 980 03ea 154B     		ldr	r3, .L33+28
- 981 03ec B3F91400 		ldrsh	r0, [r3, #20]
- 291:Core/Src/main.c **** 		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 33
+ 937              		.loc 2 288 25 discriminator 1 view .LVU250
+ 938 03b2 84ED010A 		vstr.32	s0, [r4, #4]
+ 289:Core/Src/main.c ****     data_packet.data[3] = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
+ 939              		.loc 2 289 5 is_stmt 1 discriminator 1 view .LVU251
+ 289:Core/Src/main.c ****     data_packet.data[3] = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
+ 940              		.loc 2 289 27 is_stmt 0 discriminator 1 view .LVU252
+ 941 03b6 40F2FF71 		movw	r1, #2047
+ 942 03ba 1D4B     		ldr	r3, .L32+16
+ 943 03bc 9889     		ldrh	r0, [r3, #12]
+ 944 03be FFF7FEFF 		bl	Supercap_ADC_to_Current_Funtion
+ 945              	.LVL90:
+ 289:Core/Src/main.c ****     data_packet.data[3] = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
+ 946              		.loc 2 289 25 discriminator 1 view .LVU253
+ 947 03c2 84ED020A 		vstr.32	s0, [r4, #8]
+ 290:Core/Src/main.c ****     //data_packet.data[3] = Supercap_ADC_to_Current_Funtion(C_left.real_value_12bits, 2047);
+ 948              		.loc 2 290 5 is_stmt 1 discriminator 1 view .LVU254
+ 290:Core/Src/main.c ****     //data_packet.data[3] = Supercap_ADC_to_Current_Funtion(C_left.real_value_12bits, 2047);
+ 949              		.loc 2 290 70 is_stmt 0 discriminator 1 view .LVU255
+ 950 03c6 1B4B     		ldr	r3, .L32+20
+ 951 03c8 B3F91400 		ldrsh	r0, [r3, #20]
+ 290:Core/Src/main.c ****     //data_packet.data[3] = Supercap_ADC_to_Current_Funtion(C_left.real_value_12bits, 2047);
+ 952              		.loc 2 290 27 discriminator 1 view .LVU256
+ 953 03cc 80B2     		uxth	r0, r0
+ 954 03ce FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
+ 955              	.LVL91:
+ 290:Core/Src/main.c ****     //data_packet.data[3] = Supercap_ADC_to_Current_Funtion(C_left.real_value_12bits, 2047);
+ 956              		.loc 2 290 25 discriminator 1 view .LVU257
+ 957 03d2 84ED030A 		vstr.32	s0, [r4, #12]
+ 292:Core/Src/main.c ****     //Robot_power_from_REF//
+ 958              		.loc 2 292 5 is_stmt 1 discriminator 1 view .LVU258
+ 292:Core/Src/main.c ****     //Robot_power_from_REF//
+ 959              		.loc 2 292 71 is_stmt 0 discriminator 1 view .LVU259
+ 960 03d6 184B     		ldr	r3, .L32+24
+ 961 03d8 B3F91400 		ldrsh	r0, [r3, #20]
+ 292:Core/Src/main.c ****     //Robot_power_from_REF//
+ 962              		.loc 2 292 27 discriminator 1 view .LVU260
+ 963 03dc 80B2     		uxth	r0, r0
+ 964 03de FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
+ 965              	.LVL92:
+ 292:Core/Src/main.c ****     //Robot_power_from_REF//
+ 966              		.loc 2 292 25 discriminator 1 view .LVU261
+ 967 03e2 84ED040A 		vstr.32	s0, [r4, #16]
+ 296:Core/Src/main.c **** 		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
+ 968              		.loc 2 296 5 is_stmt 1 discriminator 1 view .LVU262
+ 296:Core/Src/main.c **** 		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
+ 969              		.loc 2 296 71 is_stmt 0 discriminator 1 view .LVU263
+ 970 03e6 154B     		ldr	r3, .L32+28
+ 971 03e8 B3F91400 		ldrsh	r0, [r3, #20]
+ 296:Core/Src/main.c **** 		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
+ 972              		.loc 2 296 27 discriminator 1 view .LVU264
+ 973 03ec 80B2     		uxth	r0, r0
+ 974 03ee FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
+ 975              	.LVL93:
+ 296:Core/Src/main.c **** 		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
+ 976              		.loc 2 296 25 discriminator 1 view .LVU265
+ 977 03f2 84ED050A 		vstr.32	s0, [r4, #20]
+ 297:Core/Src/main.c **** 		data_packet.data[7] = Supercap_ADC_to_Voltage_Funtion(supercap_target_voltage);//(float)supercap_
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 33
 
 
- 982              		.loc 2 291 27 discriminator 1 view .LVU267
- 983 03f0 80B2     		uxth	r0, r0
- 984 03f2 FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
- 985              	.LVL92:
- 291:Core/Src/main.c **** 		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
- 986              		.loc 2 291 25 discriminator 1 view .LVU268
- 987 03f6 84ED050A 		vstr.32	s0, [r4, #20]
- 292:Core/Src/main.c **** 		data_packet.data[7] = Supercap_ADC_to_Voltage_Funtion(supercap_target_voltage);//(float)supercap_
- 988              		.loc 2 292 3 is_stmt 1 discriminator 1 view .LVU269
- 292:Core/Src/main.c **** 		data_packet.data[7] = Supercap_ADC_to_Voltage_Funtion(supercap_target_voltage);//(float)supercap_
- 989              		.loc 2 292 25 is_stmt 0 discriminator 1 view .LVU270
- 990 03fa 40F2FF71 		movw	r1, #2047
- 991 03fe 114B     		ldr	r3, .L33+32
- 992 0400 1888     		ldrh	r0, [r3]
- 993 0402 FFF7FEFF 		bl	Supercap_ADC_to_Current_Funtion
- 994              	.LVL93:
- 292:Core/Src/main.c **** 		data_packet.data[7] = Supercap_ADC_to_Voltage_Funtion(supercap_target_voltage);//(float)supercap_
- 995              		.loc 2 292 23 discriminator 1 view .LVU271
- 996 0406 84ED060A 		vstr.32	s0, [r4, #24]
- 293:Core/Src/main.c **** 		//bug report: I put data[5], So, the tail be removed
- 997              		.loc 2 293 3 is_stmt 1 discriminator 1 view .LVU272
- 293:Core/Src/main.c **** 		//bug report: I put data[5], So, the tail be removed
- 998              		.loc 2 293 25 is_stmt 0 discriminator 1 view .LVU273
- 999 040a 0F4B     		ldr	r3, .L33+36
- 1000 040c D3ED007A 		vldr.32	s15, [r3]
- 1001 0410 FCEEE77A 		vcvt.u32.f32	s15, s15
- 1002 0414 17EE903A 		vmov	r3, s15	@ int
- 1003 0418 98B2     		uxth	r0, r3
- 1004 041a FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
- 1005              	.LVL94:
- 293:Core/Src/main.c **** 		//bug report: I put data[5], So, the tail be removed
- 1006              		.loc 2 293 23 discriminator 1 view .LVU274
- 1007 041e 84ED070A 		vstr.32	s0, [r4, #28]
- 281:Core/Src/main.c ****   {
- 1008              		.loc 2 281 9 is_stmt 1 discriminator 1 view .LVU275
- 1009 0422 BBE7     		b	.L29
- 1010              	.L34:
- 1011              		.align	2
- 1012              	.L33:
- 1013 0424 00000000 		.word	htim5
- 1014 0428 00000000 		.word	.LANCHOR7
- 1015 042c 00000000 		.word	.LANCHOR18
- 1016 0430 00000000 		.word	.LANCHOR12
- 1017 0434 00000000 		.word	.LANCHOR6
- 1018 0438 00000000 		.word	.LANCHOR23
- 1019 043c 00000000 		.word	.LANCHOR21
- 1020 0440 00000000 		.word	.LANCHOR22
- 1021 0444 00000000 		.word	.LANCHOR2
- 1022 0448 00000000 		.word	.LANCHOR25
- 1023              		.cfi_endproc
- 1024              	.LFE333:
- 1026              		.global	data_packet
- 1027              		.global	debug_counter
- 1028              		.global	Robot_power_from_REF
- 1029              		.global	TIM3_AUTORELOAD_over100
- 1030              		.global	temp_counter
- 1031              		.global	supercap_target_voltage
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 34
+ 978              		.loc 2 297 3 is_stmt 1 discriminator 1 view .LVU266
+ 297:Core/Src/main.c **** 		data_packet.data[7] = Supercap_ADC_to_Voltage_Funtion(supercap_target_voltage);//(float)supercap_
+ 979              		.loc 2 297 25 is_stmt 0 discriminator 1 view .LVU267
+ 980 03f6 40F2FF71 		movw	r1, #2047
+ 981 03fa 114B     		ldr	r3, .L32+32
+ 982 03fc 1888     		ldrh	r0, [r3]
+ 983 03fe FFF7FEFF 		bl	Supercap_ADC_to_Current_Funtion
+ 984              	.LVL94:
+ 297:Core/Src/main.c **** 		data_packet.data[7] = Supercap_ADC_to_Voltage_Funtion(supercap_target_voltage);//(float)supercap_
+ 985              		.loc 2 297 23 discriminator 1 view .LVU268
+ 986 0402 84ED060A 		vstr.32	s0, [r4, #24]
+ 298:Core/Src/main.c **** 		//bug report: I put data[5], So, the tail be removed
+ 987              		.loc 2 298 3 is_stmt 1 discriminator 1 view .LVU269
+ 298:Core/Src/main.c **** 		//bug report: I put data[5], So, the tail be removed
+ 988              		.loc 2 298 25 is_stmt 0 discriminator 1 view .LVU270
+ 989 0406 0F4B     		ldr	r3, .L32+36
+ 990 0408 D3ED007A 		vldr.32	s15, [r3]
+ 991 040c FCEEE77A 		vcvt.u32.f32	s15, s15
+ 992 0410 17EE903A 		vmov	r3, s15	@ int
+ 993 0414 98B2     		uxth	r0, r3
+ 994 0416 FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
+ 995              	.LVL95:
+ 298:Core/Src/main.c **** 		//bug report: I put data[5], So, the tail be removed
+ 996              		.loc 2 298 23 discriminator 1 view .LVU271
+ 997 041a 84ED070A 		vstr.32	s0, [r4, #28]
+ 282:Core/Src/main.c ****   {
+ 998              		.loc 2 282 9 is_stmt 1 discriminator 1 view .LVU272
+ 999 041e BBE7     		b	.L28
+ 1000              	.L33:
+ 1001              		.align	2
+ 1002              	.L32:
+ 1003 0420 00000000 		.word	htim5
+ 1004 0424 00000000 		.word	.LANCHOR6
+ 1005 0428 00000000 		.word	.LANCHOR18
+ 1006 042c 00000000 		.word	.LANCHOR11
+ 1007 0430 00000000 		.word	.LANCHOR5
+ 1008 0434 00000000 		.word	.LANCHOR23
+ 1009 0438 00000000 		.word	.LANCHOR21
+ 1010 043c 00000000 		.word	.LANCHOR22
+ 1011 0440 00000000 		.word	.LANCHOR17
+ 1012 0444 00000000 		.word	.LANCHOR25
+ 1013              		.cfi_endproc
+ 1014              	.LFE333:
+ 1016              		.global	data_packet
+ 1017              		.global	debug_counter
+ 1018              		.global	Robot_power_from_REF
+ 1019              		.global	TIM3_AUTORELOAD_over100
+ 1020              		.global	temp_counter
+ 1021              		.global	supercap_target_voltage
+ 1022              		.global	temp2
+ 1023              		.global	CAP_STATE
+ 1024              		.global	TxData
+ 1025              		.global	FDCAN_R_data
+ 1026              		.global	FDCAN_Notification_flag
+ 1027              		.global	PID_voltage_loop
+ 1028              		.global	PID_7A_loop
+ 1029              		.global	PID_n7A_loop
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 34
 
 
- 1032              		.global	temp2
- 1033              		.global	CAP_STATE
- 1034              		.global	TxData
- 1035              		.global	FDCAN_R_data
- 1036              		.global	FDCAN_Notification_flag
- 1037              		.global	PID_voltage_loop
- 1038              		.global	PID_7A_loop
- 1039              		.global	PID_n7A_loop
- 1040              		.global	PID_45W_loop
- 1041              		.global	ADC4_12
- 1042              		.global	V_1V6
- 1043              		.global	V_sys
- 1044              		.global	V_bat
- 1045              		.global	V_cap
- 1046              		.global	V_cap_op
- 1047              		.global	V_sys_op
- 1048              		.global	C_right
- 1049              		.global	C_sys
- 1050              		.global	C_left
- 1051              		.global	supercap_max_power_STM32
- 1052              		.global	supercap_max_power_current
- 1053              		.global	supercap_ADC4
- 1054              		.global	supercap_ADC3
- 1055              		.global	supercap_ADC2
- 1056              		.global	supercap_ADC1
- 1057              		.section	.rodata
- 1058              		.align	2
- 1059              		.set	.LANCHOR20,. + 0
- 1060              	.LC0:
- 1061 0000 0B00     		.short	11
- 1062 0002 0B00     		.short	11
- 1063 0004 0600     		.short	6
- 1064 0006 0500     		.short	5
- 1065 0008 0500     		.short	5
- 1066 000a 0100     		.short	1
- 1067 000c 0200     		.short	2
- 1068 000e 0300     		.short	3
- 1069 0010 0300     		.short	3
- 1070 0012 0200     		.short	2
- 1071 0014 0100     		.short	1
- 1072 0016 FAFF     		.short	-6
- 1073              	.LC1:
- 1074 0018 0600     		.short	6
- 1075 001a 0500     		.short	5
- 1076 001c 0500     		.short	5
- 1077 001e 0100     		.short	1
- 1078 0020 0200     		.short	2
- 1079 0022 0300     		.short	3
- 1080 0024 0300     		.short	3
- 1081 0026 0200     		.short	2
- 1082 0028 0100     		.short	1
- 1083 002a FAFF     		.short	-6
- 1084              	.LC2:
- 1085 002c 0100     		.short	1
- 1086 002e 0200     		.short	2
- 1087 0030 0300     		.short	3
- 1088 0032 0500     		.short	5
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 35
+ 1030              		.global	PID_45W_loop
+ 1031              		.global	ADC4_12
+ 1032              		.global	V_1V6
+ 1033              		.global	V_sys
+ 1034              		.global	V_bat
+ 1035              		.global	V_cap
+ 1036              		.global	V_cap_op
+ 1037              		.global	V_sys_op
+ 1038              		.global	C_right
+ 1039              		.global	C_sys
+ 1040              		.global	C_left
+ 1041              		.global	supercap_max_power_STM32
+ 1042              		.global	supercap_max_power_current
+ 1043              		.global	supercap_ADC4
+ 1044              		.global	supercap_ADC3
+ 1045              		.global	supercap_ADC2
+ 1046              		.global	supercap_ADC1
+ 1047              		.section	.rodata
+ 1048              		.align	2
+ 1049              		.set	.LANCHOR20,. + 0
+ 1050              	.LC0:
+ 1051 0000 0B00     		.short	11
+ 1052 0002 0B00     		.short	11
+ 1053 0004 0600     		.short	6
+ 1054 0006 0500     		.short	5
+ 1055 0008 0500     		.short	5
+ 1056 000a 0100     		.short	1
+ 1057 000c 0200     		.short	2
+ 1058 000e 0300     		.short	3
+ 1059 0010 0300     		.short	3
+ 1060 0012 0200     		.short	2
+ 1061 0014 0100     		.short	1
+ 1062 0016 FAFF     		.short	-6
+ 1063              	.LC1:
+ 1064 0018 0600     		.short	6
+ 1065 001a 0500     		.short	5
+ 1066 001c 0500     		.short	5
+ 1067 001e 0100     		.short	1
+ 1068 0020 0200     		.short	2
+ 1069 0022 0300     		.short	3
+ 1070 0024 0300     		.short	3
+ 1071 0026 0200     		.short	2
+ 1072 0028 0100     		.short	1
+ 1073 002a FAFF     		.short	-6
+ 1074              	.LC2:
+ 1075 002c 0100     		.short	1
+ 1076 002e 0200     		.short	2
+ 1077 0030 0300     		.short	3
+ 1078 0032 0500     		.short	5
+ 1079 0034 0500     		.short	5
+ 1080 0036 0600     		.short	6
+ 1081 0038 0500     		.short	5
+ 1082 003a 0300     		.short	3
+ 1083 003c 0300     		.short	3
+ 1084 003e 0200     		.short	2
+ 1085 0040 0100     		.short	1
+ 1086 0042 0200     		.short	2
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 35
 
 
- 1089 0034 0500     		.short	5
- 1090 0036 0600     		.short	6
- 1091 0038 0500     		.short	5
- 1092 003a 0300     		.short	3
- 1093 003c 0300     		.short	3
- 1094 003e 0200     		.short	2
- 1095 0040 0100     		.short	1
- 1096 0042 0200     		.short	2
- 1097 0044 0500     		.short	5
- 1098              		.section	.bss.ADC4_12,"aw",%nobits
- 1099              		.align	2
- 1100              		.set	.LANCHOR17,. + 0
- 1103              	ADC4_12:
- 1104 0000 00000000 		.space	20
- 1104      00000000 
- 1104      00000000 
- 1104      00000000 
- 1104      00000000 
- 1105              		.section	.bss.CAP_STATE,"aw",%nobits
- 1106              		.set	.LANCHOR19,. + 0
- 1109              	CAP_STATE:
- 1110 0000 00       		.space	1
- 1111              		.section	.bss.C_left,"aw",%nobits
- 1112              		.align	2
- 1113              		.set	.LANCHOR4,. + 0
- 1116              	C_left:
- 1117 0000 00000000 		.space	20
- 1117      00000000 
- 1117      00000000 
- 1117      00000000 
- 1117      00000000 
- 1118              		.section	.bss.C_right,"aw",%nobits
- 1119              		.align	2
- 1120              		.set	.LANCHOR7,. + 0
- 1123              	C_right:
- 1124 0000 00000000 		.space	20
- 1124      00000000 
- 1124      00000000 
- 1124      00000000 
- 1124      00000000 
- 1125              		.section	.bss.C_sys,"aw",%nobits
- 1126              		.align	2
- 1127              		.set	.LANCHOR6,. + 0
- 1130              	C_sys:
- 1131 0000 00000000 		.space	20
- 1131      00000000 
- 1131      00000000 
- 1131      00000000 
- 1131      00000000 
- 1132              		.section	.bss.FDCAN_Notification_flag,"aw",%nobits
- 1135              	FDCAN_Notification_flag:
- 1136 0000 00       		.space	1
- 1137              		.section	.bss.FDCAN_R_data,"aw",%nobits
- 1140              	FDCAN_R_data:
- 1141 0000 00       		.space	1
- 1142              		.section	.bss.PID_45W_loop,"aw",%nobits
- 1143              		.align	2
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 36
+ 1087 0044 0500     		.short	5
+ 1088              		.section	.bss.ADC4_12,"aw",%nobits
+ 1089              		.align	2
+ 1090              		.set	.LANCHOR16,. + 0
+ 1093              	ADC4_12:
+ 1094 0000 00000000 		.space	20
+ 1094      00000000 
+ 1094      00000000 
+ 1094      00000000 
+ 1094      00000000 
+ 1095              		.section	.bss.CAP_STATE,"aw",%nobits
+ 1096              		.set	.LANCHOR19,. + 0
+ 1099              	CAP_STATE:
+ 1100 0000 00       		.space	1
+ 1101              		.section	.bss.C_left,"aw",%nobits
+ 1102              		.align	2
+ 1103              		.set	.LANCHOR3,. + 0
+ 1106              	C_left:
+ 1107 0000 00000000 		.space	20
+ 1107      00000000 
+ 1107      00000000 
+ 1107      00000000 
+ 1107      00000000 
+ 1108              		.section	.bss.C_right,"aw",%nobits
+ 1109              		.align	2
+ 1110              		.set	.LANCHOR6,. + 0
+ 1113              	C_right:
+ 1114 0000 00000000 		.space	20
+ 1114      00000000 
+ 1114      00000000 
+ 1114      00000000 
+ 1114      00000000 
+ 1115              		.section	.bss.C_sys,"aw",%nobits
+ 1116              		.align	2
+ 1117              		.set	.LANCHOR5,. + 0
+ 1120              	C_sys:
+ 1121 0000 00000000 		.space	20
+ 1121      00000000 
+ 1121      00000000 
+ 1121      00000000 
+ 1121      00000000 
+ 1122              		.section	.bss.FDCAN_Notification_flag,"aw",%nobits
+ 1125              	FDCAN_Notification_flag:
+ 1126 0000 00       		.space	1
+ 1127              		.section	.bss.FDCAN_R_data,"aw",%nobits
+ 1130              	FDCAN_R_data:
+ 1131 0000 00       		.space	1
+ 1132              		.section	.bss.PID_45W_loop,"aw",%nobits
+ 1133              		.align	2
+ 1134              		.set	.LANCHOR21,. + 0
+ 1137              	PID_45W_loop:
+ 1138 0000 00000000 		.space	28
+ 1138      00000000 
+ 1138      00000000 
+ 1138      00000000 
+ 1138      00000000 
+ 1139              		.section	.bss.PID_7A_loop,"aw",%nobits
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 36
 
 
- 1144              		.set	.LANCHOR21,. + 0
- 1147              	PID_45W_loop:
- 1148 0000 00000000 		.space	28
- 1148      00000000 
- 1148      00000000 
- 1148      00000000 
- 1148      00000000 
- 1149              		.section	.bss.PID_7A_loop,"aw",%nobits
- 1150              		.align	2
- 1151              		.set	.LANCHOR23,. + 0
- 1154              	PID_7A_loop:
- 1155 0000 00000000 		.space	28
- 1155      00000000 
- 1155      00000000 
- 1155      00000000 
- 1155      00000000 
- 1156              		.section	.bss.PID_n7A_loop,"aw",%nobits
- 1157              		.align	2
- 1158              		.set	.LANCHOR22,. + 0
- 1161              	PID_n7A_loop:
- 1162 0000 00000000 		.space	28
- 1162      00000000 
- 1162      00000000 
- 1162      00000000 
- 1162      00000000 
- 1163              		.section	.bss.PID_voltage_loop,"aw",%nobits
- 1164              		.align	2
- 1165              		.set	.LANCHOR24,. + 0
- 1168              	PID_voltage_loop:
- 1169 0000 00000000 		.space	28
- 1169      00000000 
- 1169      00000000 
- 1169      00000000 
- 1169      00000000 
- 1170              		.section	.bss.Robot_power_from_REF,"aw",%nobits
- 1171              		.set	.LANCHOR3,. + 0
- 1174              	Robot_power_from_REF:
- 1175 0000 00       		.space	1
- 1176              		.section	.bss.TIM3_AUTORELOAD_over100,"aw",%nobits
- 1177              		.align	2
- 1180              	TIM3_AUTORELOAD_over100:
- 1181 0000 00000000 		.space	4
- 1182              		.section	.bss.TxData,"aw",%nobits
- 1183              		.align	2
- 1186              	TxData:
- 1187 0000 00       		.space	1
- 1188              		.section	.bss.V_1V6,"aw",%nobits
- 1189              		.align	2
- 1190              		.set	.LANCHOR15,. + 0
- 1193              	V_1V6:
- 1194 0000 00000000 		.space	20
- 1194      00000000 
- 1194      00000000 
- 1194      00000000 
- 1194      00000000 
- 1195              		.section	.bss.V_bat,"aw",%nobits
- 1196              		.align	2
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 37
+ 1140              		.align	2
+ 1141              		.set	.LANCHOR23,. + 0
+ 1144              	PID_7A_loop:
+ 1145 0000 00000000 		.space	28
+ 1145      00000000 
+ 1145      00000000 
+ 1145      00000000 
+ 1145      00000000 
+ 1146              		.section	.bss.PID_n7A_loop,"aw",%nobits
+ 1147              		.align	2
+ 1148              		.set	.LANCHOR22,. + 0
+ 1151              	PID_n7A_loop:
+ 1152 0000 00000000 		.space	28
+ 1152      00000000 
+ 1152      00000000 
+ 1152      00000000 
+ 1152      00000000 
+ 1153              		.section	.bss.PID_voltage_loop,"aw",%nobits
+ 1154              		.align	2
+ 1155              		.set	.LANCHOR24,. + 0
+ 1158              	PID_voltage_loop:
+ 1159 0000 00000000 		.space	28
+ 1159      00000000 
+ 1159      00000000 
+ 1159      00000000 
+ 1159      00000000 
+ 1160              		.section	.bss.Robot_power_from_REF,"aw",%nobits
+ 1161              		.set	.LANCHOR2,. + 0
+ 1164              	Robot_power_from_REF:
+ 1165 0000 00       		.space	1
+ 1166              		.section	.bss.TIM3_AUTORELOAD_over100,"aw",%nobits
+ 1167              		.align	2
+ 1170              	TIM3_AUTORELOAD_over100:
+ 1171 0000 00000000 		.space	4
+ 1172              		.section	.bss.TxData,"aw",%nobits
+ 1173              		.align	2
+ 1176              	TxData:
+ 1177 0000 00       		.space	1
+ 1178              		.section	.bss.V_1V6,"aw",%nobits
+ 1179              		.align	2
+ 1180              		.set	.LANCHOR14,. + 0
+ 1183              	V_1V6:
+ 1184 0000 00000000 		.space	20
+ 1184      00000000 
+ 1184      00000000 
+ 1184      00000000 
+ 1184      00000000 
+ 1185              		.section	.bss.V_bat,"aw",%nobits
+ 1186              		.align	2
+ 1187              		.set	.LANCHOR12,. + 0
+ 1190              	V_bat:
+ 1191 0000 00000000 		.space	20
+ 1191      00000000 
+ 1191      00000000 
+ 1191      00000000 
+ 1191      00000000 
+ 1192              		.section	.bss.V_cap,"aw",%nobits
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 37
 
 
- 1197              		.set	.LANCHOR13,. + 0
- 1200              	V_bat:
- 1201 0000 00000000 		.space	20
- 1201      00000000 
- 1201      00000000 
- 1201      00000000 
- 1201      00000000 
- 1202              		.section	.bss.V_cap,"aw",%nobits
- 1203              		.align	2
- 1204              		.set	.LANCHOR12,. + 0
- 1207              	V_cap:
- 1208 0000 00000000 		.space	20
- 1208      00000000 
- 1208      00000000 
- 1208      00000000 
- 1208      00000000 
- 1209              		.section	.bss.V_cap_op,"aw",%nobits
- 1210              		.align	2
- 1211              		.set	.LANCHOR11,. + 0
- 1214              	V_cap_op:
- 1215 0000 00000000 		.space	20
- 1215      00000000 
- 1215      00000000 
- 1215      00000000 
- 1215      00000000 
- 1216              		.section	.bss.V_sys,"aw",%nobits
- 1217              		.align	2
- 1218              		.set	.LANCHOR14,. + 0
- 1221              	V_sys:
- 1222 0000 00000000 		.space	20
- 1222      00000000 
- 1222      00000000 
- 1222      00000000 
- 1222      00000000 
- 1223              		.section	.bss.V_sys_op,"aw",%nobits
- 1224              		.align	2
- 1225              		.set	.LANCHOR9,. + 0
- 1228              	V_sys_op:
- 1229 0000 00000000 		.space	20
- 1229      00000000 
- 1229      00000000 
- 1229      00000000 
- 1229      00000000 
- 1230              		.section	.bss.debug_counter,"aw",%nobits
- 1231              		.align	2
- 1234              	debug_counter:
- 1235 0000 00000000 		.space	4
- 1236              		.section	.bss.rx_header.0,"aw",%nobits
- 1237              		.align	2
- 1238              		.set	.LANCHOR0,. + 0
- 1241              	rx_header.0:
- 1242 0000 00000000 		.space	40
- 1242      00000000 
- 1242      00000000 
- 1242      00000000 
- 1242      00000000 
- 1243              		.section	.bss.supercap_ADC1,"aw",%nobits
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 38
+ 1193              		.align	2
+ 1194              		.set	.LANCHOR11,. + 0
+ 1197              	V_cap:
+ 1198 0000 00000000 		.space	20
+ 1198      00000000 
+ 1198      00000000 
+ 1198      00000000 
+ 1198      00000000 
+ 1199              		.section	.bss.V_cap_op,"aw",%nobits
+ 1200              		.align	2
+ 1201              		.set	.LANCHOR10,. + 0
+ 1204              	V_cap_op:
+ 1205 0000 00000000 		.space	20
+ 1205      00000000 
+ 1205      00000000 
+ 1205      00000000 
+ 1205      00000000 
+ 1206              		.section	.bss.V_sys,"aw",%nobits
+ 1207              		.align	2
+ 1208              		.set	.LANCHOR13,. + 0
+ 1211              	V_sys:
+ 1212 0000 00000000 		.space	20
+ 1212      00000000 
+ 1212      00000000 
+ 1212      00000000 
+ 1212      00000000 
+ 1213              		.section	.bss.V_sys_op,"aw",%nobits
+ 1214              		.align	2
+ 1215              		.set	.LANCHOR8,. + 0
+ 1218              	V_sys_op:
+ 1219 0000 00000000 		.space	20
+ 1219      00000000 
+ 1219      00000000 
+ 1219      00000000 
+ 1219      00000000 
+ 1220              		.section	.bss.debug_counter,"aw",%nobits
+ 1221              		.align	2
+ 1224              	debug_counter:
+ 1225 0000 00000000 		.space	4
+ 1226              		.section	.bss.rx_header.0,"aw",%nobits
+ 1227              		.align	2
+ 1228              		.set	.LANCHOR0,. + 0
+ 1231              	rx_header.0:
+ 1232 0000 00000000 		.space	40
+ 1232      00000000 
+ 1232      00000000 
+ 1232      00000000 
+ 1232      00000000 
+ 1233              		.section	.bss.supercap_ADC1,"aw",%nobits
+ 1234              		.align	2
+ 1235              		.set	.LANCHOR4,. + 0
+ 1238              	supercap_ADC1:
+ 1239 0000 00000000 		.space	4
+ 1240              		.section	.bss.supercap_ADC2,"aw",%nobits
+ 1241              		.align	2
+ 1242              		.set	.LANCHOR9,. + 0
+ 1245              	supercap_ADC2:
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 38
 
 
- 1244              		.align	2
- 1245              		.set	.LANCHOR5,. + 0
- 1248              	supercap_ADC1:
- 1249 0000 00000000 		.space	4
- 1250              		.section	.bss.supercap_ADC2,"aw",%nobits
- 1251              		.align	2
- 1252              		.set	.LANCHOR10,. + 0
- 1255              	supercap_ADC2:
- 1256 0000 00000000 		.space	6
- 1256      0000
- 1257              		.section	.bss.supercap_ADC3,"aw",%nobits
- 1258              		.align	2
- 1259              		.set	.LANCHOR8,. + 0
- 1262              	supercap_ADC3:
- 1263 0000 00000000 		.space	6
- 1263      0000
- 1264              		.section	.bss.supercap_ADC4,"aw",%nobits
- 1265              		.align	2
- 1266              		.set	.LANCHOR16,. + 0
- 1269              	supercap_ADC4:
- 1270 0000 00000000 		.space	4
- 1271              		.section	.bss.supercap_max_power_STM32,"aw",%nobits
- 1272              		.align	1
- 1273              		.set	.LANCHOR1,. + 0
- 1276              	supercap_max_power_STM32:
- 1277 0000 0000     		.space	2
- 1278              		.section	.bss.supercap_max_power_current,"aw",%nobits
- 1279              		.align	1
- 1280              		.set	.LANCHOR2,. + 0
- 1283              	supercap_max_power_current:
- 1284 0000 0000     		.space	2
- 1285              		.section	.bss.supercap_target_voltage,"aw",%nobits
- 1286              		.align	2
- 1287              		.set	.LANCHOR25,. + 0
- 1290              	supercap_target_voltage:
- 1291 0000 00000000 		.space	4
- 1292              		.section	.bss.temp2,"aw",%nobits
- 1293              		.align	2
- 1296              	temp2:
- 1297 0000 00000000 		.space	4
- 1298              		.section	.bss.temp_counter,"aw",%nobits
- 1299              		.align	1
- 1302              	temp_counter:
- 1303 0000 0000     		.space	2
- 1304              		.section	.data.data_packet,"aw"
- 1305              		.align	2
- 1306              		.set	.LANCHOR18,. + 0
- 1309              	data_packet:
- 1310 0000 CDCC8C3F 		.word	1066192077
- 1311 0004 CDCC0C40 		.word	1074580685
- 1312 0008 33335340 		.word	1079194419
- 1313 000c CDCC8C40 		.word	1082969293
- 1314 0010 0000B040 		.word	1085276160
- 1315 0014 3333D340 		.word	1087583027
- 1316 0018 6666F640 		.word	1089889894
- 1317 001c CDCC0C41 		.word	1091357901
- 1318 0020 0000807F 		.ascii	"\000\000\200\177"
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 39
+ 1246 0000 00000000 		.space	6
+ 1246      0000
+ 1247              		.section	.bss.supercap_ADC3,"aw",%nobits
+ 1248              		.align	2
+ 1249              		.set	.LANCHOR7,. + 0
+ 1252              	supercap_ADC3:
+ 1253 0000 00000000 		.space	6
+ 1253      0000
+ 1254              		.section	.bss.supercap_ADC4,"aw",%nobits
+ 1255              		.align	2
+ 1256              		.set	.LANCHOR15,. + 0
+ 1259              	supercap_ADC4:
+ 1260 0000 00000000 		.space	4
+ 1261              		.section	.bss.supercap_max_power_STM32,"aw",%nobits
+ 1262              		.align	1
+ 1263              		.set	.LANCHOR1,. + 0
+ 1266              	supercap_max_power_STM32:
+ 1267 0000 0000     		.space	2
+ 1268              		.section	.bss.supercap_max_power_current,"aw",%nobits
+ 1269              		.align	1
+ 1270              		.set	.LANCHOR17,. + 0
+ 1273              	supercap_max_power_current:
+ 1274 0000 0000     		.space	2
+ 1275              		.section	.bss.supercap_target_voltage,"aw",%nobits
+ 1276              		.align	2
+ 1277              		.set	.LANCHOR25,. + 0
+ 1280              	supercap_target_voltage:
+ 1281 0000 00000000 		.space	4
+ 1282              		.section	.bss.temp2,"aw",%nobits
+ 1283              		.align	2
+ 1286              	temp2:
+ 1287 0000 00000000 		.space	4
+ 1288              		.section	.bss.temp_counter,"aw",%nobits
+ 1289              		.align	1
+ 1292              	temp_counter:
+ 1293 0000 0000     		.space	2
+ 1294              		.section	.data.data_packet,"aw"
+ 1295              		.align	2
+ 1296              		.set	.LANCHOR18,. + 0
+ 1299              	data_packet:
+ 1300 0000 CDCC8C3F 		.word	1066192077
+ 1301 0004 CDCC0C40 		.word	1074580685
+ 1302 0008 33335340 		.word	1079194419
+ 1303 000c CDCC8C40 		.word	1082969293
+ 1304 0010 0000B040 		.word	1085276160
+ 1305 0014 3333D340 		.word	1087583027
+ 1306 0018 6666F640 		.word	1089889894
+ 1307 001c CDCC0C41 		.word	1091357901
+ 1308 0020 0000807F 		.ascii	"\000\000\200\177"
+ 1309              		.text
+ 1310              	.Letext0:
+ 1311              		.file 4 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 1312              		.file 5 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 1313              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
+ 1314              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
+ 1315              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
+ 1316              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h"
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 39
 
 
- 1319              		.text
- 1320              	.Letext0:
- 1321              		.file 4 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
- 1322              		.file 5 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
- 1323              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
- 1324              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
- 1325              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
- 1326              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h"
- 1327              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
- 1328              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h"
- 1329              		.file 12 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h"
- 1330              		.file 13 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h"
- 1331              		.file 14 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h"
- 1332              		.file 15 "Core/Inc/adc.h"
- 1333              		.file 16 "Core/Inc/fdcan.h"
- 1334              		.file 17 "Core/Inc/tim.h"
- 1335              		.file 18 "Core/Inc/usart.h"
- 1336              		.file 19 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\lib\\gcc\\arm-none-eabi
- 1337              		.file 20 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\
- 1338              		.file 21 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\
- 1339              		.file 22 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\
- 1340              		.file 23 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\
- 1341              		.file 24 "Core/Inc/supercap.h"
- 1342              		.file 25 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h"
- 1343              		.file 26 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h"
- 1344              		.file 27 "Core/Inc/gpio.h"
- 1345              		.file 28 "Core/Inc/dma.h"
- 1346              		.file 29 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h"
- 1347              		.file 30 "<built-in>"
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 40
+ 1317              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
+ 1318              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h"
+ 1319              		.file 12 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h"
+ 1320              		.file 13 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h"
+ 1321              		.file 14 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h"
+ 1322              		.file 15 "Core/Inc/adc.h"
+ 1323              		.file 16 "Core/Inc/fdcan.h"
+ 1324              		.file 17 "Core/Inc/tim.h"
+ 1325              		.file 18 "Core/Inc/usart.h"
+ 1326              		.file 19 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\lib\\gcc\\arm-none-eabi
+ 1327              		.file 20 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\
+ 1328              		.file 21 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\
+ 1329              		.file 22 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\
+ 1330              		.file 23 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\
+ 1331              		.file 24 "Core/Inc/supercap.h"
+ 1332              		.file 25 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h"
+ 1333              		.file 26 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h"
+ 1334              		.file 27 "Core/Inc/gpio.h"
+ 1335              		.file 28 "Core/Inc/dma.h"
+ 1336              		.file 29 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h"
+ 1337              		.file 30 "<built-in>"
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 40
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:20     .text.fputc:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:26     .text.fputc:00000000 fputc
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:65     .text.fputc:0000001c $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:70     .text.HAL_FDCAN_RxFifo0Callback:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:76     .text.HAL_FDCAN_RxFifo0Callback:00000000 HAL_FDCAN_RxFifo0Callback
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:174    .text.HAL_FDCAN_RxFifo0Callback:0000005c $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:182    .text.Error_Handler:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:188    .text.Error_Handler:00000000 Error_Handler
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:220    .text.SystemClock_Config:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:226    .text.SystemClock_Config:00000000 SystemClock_Config
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:347    .text.main:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:353    .text.main:00000000 main
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:842    .text.main:000002b4 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:890    .text.main:00000364 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1013   .text.main:00000424 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1309   .data.data_packet:00000000 data_packet
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1234   .bss.debug_counter:00000000 debug_counter
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1174   .bss.Robot_power_from_REF:00000000 Robot_power_from_REF
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1180   .bss.TIM3_AUTORELOAD_over100:00000000 TIM3_AUTORELOAD_over100
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1302   .bss.temp_counter:00000000 temp_counter
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1290   .bss.supercap_target_voltage:00000000 supercap_target_voltage
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1296   .bss.temp2:00000000 temp2
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1109   .bss.CAP_STATE:00000000 CAP_STATE
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1186   .bss.TxData:00000000 TxData
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1140   .bss.FDCAN_R_data:00000000 FDCAN_R_data
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1135   .bss.FDCAN_Notification_flag:00000000 FDCAN_Notification_flag
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1168   .bss.PID_voltage_loop:00000000 PID_voltage_loop
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1154   .bss.PID_7A_loop:00000000 PID_7A_loop
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1161   .bss.PID_n7A_loop:00000000 PID_n7A_loop
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1147   .bss.PID_45W_loop:00000000 PID_45W_loop
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1103   .bss.ADC4_12:00000000 ADC4_12
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1193   .bss.V_1V6:00000000 V_1V6
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1221   .bss.V_sys:00000000 V_sys
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1200   .bss.V_bat:00000000 V_bat
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1207   .bss.V_cap:00000000 V_cap
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1214   .bss.V_cap_op:00000000 V_cap_op
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1228   .bss.V_sys_op:00000000 V_sys_op
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1123   .bss.C_right:00000000 C_right
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1130   .bss.C_sys:00000000 C_sys
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1116   .bss.C_left:00000000 C_left
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1276   .bss.supercap_max_power_STM32:00000000 supercap_max_power_STM32
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1283   .bss.supercap_max_power_current:00000000 supercap_max_power_current
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1269   .bss.supercap_ADC4:00000000 supercap_ADC4
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1262   .bss.supercap_ADC3:00000000 supercap_ADC3
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1255   .bss.supercap_ADC2:00000000 supercap_ADC2
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1248   .bss.supercap_ADC1:00000000 supercap_ADC1
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1058   .rodata:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1099   .bss.ADC4_12:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1110   .bss.CAP_STATE:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1112   .bss.C_left:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1119   .bss.C_right:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1126   .bss.C_sys:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1136   .bss.FDCAN_Notification_flag:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1141   .bss.FDCAN_R_data:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1143   .bss.PID_45W_loop:00000000 $d
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 41
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:20     .text.fputc:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:26     .text.fputc:00000000 fputc
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:65     .text.fputc:0000001c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:70     .text.HAL_FDCAN_RxFifo0Callback:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:76     .text.HAL_FDCAN_RxFifo0Callback:00000000 HAL_FDCAN_RxFifo0Callback
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:161    .text.HAL_FDCAN_RxFifo0Callback:0000004c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:168    .text.Error_Handler:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:174    .text.Error_Handler:00000000 Error_Handler
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:206    .text.SystemClock_Config:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:212    .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:333    .text.main:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:339    .text.main:00000000 main
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:835    .text.main:000002bc $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:880    .text.main:00000360 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1003   .text.main:00000420 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1299   .data.data_packet:00000000 data_packet
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1224   .bss.debug_counter:00000000 debug_counter
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1164   .bss.Robot_power_from_REF:00000000 Robot_power_from_REF
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1170   .bss.TIM3_AUTORELOAD_over100:00000000 TIM3_AUTORELOAD_over100
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1292   .bss.temp_counter:00000000 temp_counter
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1280   .bss.supercap_target_voltage:00000000 supercap_target_voltage
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1286   .bss.temp2:00000000 temp2
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1099   .bss.CAP_STATE:00000000 CAP_STATE
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1176   .bss.TxData:00000000 TxData
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1130   .bss.FDCAN_R_data:00000000 FDCAN_R_data
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1125   .bss.FDCAN_Notification_flag:00000000 FDCAN_Notification_flag
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1158   .bss.PID_voltage_loop:00000000 PID_voltage_loop
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1144   .bss.PID_7A_loop:00000000 PID_7A_loop
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1151   .bss.PID_n7A_loop:00000000 PID_n7A_loop
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1137   .bss.PID_45W_loop:00000000 PID_45W_loop
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1093   .bss.ADC4_12:00000000 ADC4_12
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1183   .bss.V_1V6:00000000 V_1V6
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1211   .bss.V_sys:00000000 V_sys
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1190   .bss.V_bat:00000000 V_bat
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1197   .bss.V_cap:00000000 V_cap
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1204   .bss.V_cap_op:00000000 V_cap_op
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1218   .bss.V_sys_op:00000000 V_sys_op
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1113   .bss.C_right:00000000 C_right
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1120   .bss.C_sys:00000000 C_sys
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1106   .bss.C_left:00000000 C_left
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1266   .bss.supercap_max_power_STM32:00000000 supercap_max_power_STM32
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1273   .bss.supercap_max_power_current:00000000 supercap_max_power_current
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1259   .bss.supercap_ADC4:00000000 supercap_ADC4
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1252   .bss.supercap_ADC3:00000000 supercap_ADC3
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1245   .bss.supercap_ADC2:00000000 supercap_ADC2
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1238   .bss.supercap_ADC1:00000000 supercap_ADC1
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1048   .rodata:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1089   .bss.ADC4_12:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1100   .bss.CAP_STATE:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1102   .bss.C_left:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1109   .bss.C_right:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1116   .bss.C_sys:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1126   .bss.FDCAN_Notification_flag:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1131   .bss.FDCAN_R_data:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1133   .bss.PID_45W_loop:00000000 $d
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 41
 
 
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1150   .bss.PID_7A_loop:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1157   .bss.PID_n7A_loop:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1164   .bss.PID_voltage_loop:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1175   .bss.Robot_power_from_REF:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1177   .bss.TIM3_AUTORELOAD_over100:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1183   .bss.TxData:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1189   .bss.V_1V6:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1196   .bss.V_bat:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1203   .bss.V_cap:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1210   .bss.V_cap_op:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1217   .bss.V_sys:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1224   .bss.V_sys_op:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1231   .bss.debug_counter:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1237   .bss.rx_header.0:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1241   .bss.rx_header.0:00000000 rx_header.0
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1244   .bss.supercap_ADC1:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1251   .bss.supercap_ADC2:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1258   .bss.supercap_ADC3:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1265   .bss.supercap_ADC4:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1272   .bss.supercap_max_power_STM32:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1279   .bss.supercap_max_power_current:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1286   .bss.supercap_target_voltage:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1293   .bss.temp2:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1299   .bss.temp_counter:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s:1305   .data.data_packet:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1140   .bss.PID_7A_loop:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1147   .bss.PID_n7A_loop:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1154   .bss.PID_voltage_loop:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1165   .bss.Robot_power_from_REF:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1167   .bss.TIM3_AUTORELOAD_over100:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1173   .bss.TxData:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1179   .bss.V_1V6:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1186   .bss.V_bat:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1193   .bss.V_cap:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1200   .bss.V_cap_op:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1207   .bss.V_sys:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1214   .bss.V_sys_op:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1221   .bss.debug_counter:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1227   .bss.rx_header.0:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1231   .bss.rx_header.0:00000000 rx_header.0
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1234   .bss.supercap_ADC1:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1241   .bss.supercap_ADC2:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1248   .bss.supercap_ADC3:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1255   .bss.supercap_ADC4:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1262   .bss.supercap_max_power_STM32:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1269   .bss.supercap_max_power_current:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1276   .bss.supercap_target_voltage:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1283   .bss.temp2:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1289   .bss.temp_counter:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1295   .data.data_packet:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_UART_Transmit
@@ -2430,7 +2422,7 @@ HAL_FDCAN_ConfigFilter
 HAL_FDCAN_Start
 HAL_FDCAN_ActivateNotification
 HAL_ADCEx_Calibration_Start
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cciPQiPo.s 			page 42
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 42
 
 
 HAL_ADC_Start_DMA

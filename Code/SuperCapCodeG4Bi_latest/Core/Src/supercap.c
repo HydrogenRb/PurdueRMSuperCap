@@ -15,15 +15,15 @@ uint16_t temp_current;
 //Timmer
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 	if(htim->Instance == TIM5){
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
+		//HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
     Supercap_FSM();
     TIM5_NVIC();
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
+		//HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
 	}
   else if(htim->Instance == TIM2) {
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
+    //HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
     TIM2_NVIC();
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
+    //HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
 		//debug_counter ++;
   }
 	else if(htim->Instance == TIM6){
@@ -42,20 +42,23 @@ void TIM6_NVIC(){ //10 Hz for can and update the parameters
 
 void TIM2_NVIC(){
   Supercap_First_Order_Filter_ADC_Function_Alpha(&C_sys, 6);
-  Supercap_First_Order_Filter_ADC_Function_Alpha(&C_right, 4);
-  Supercap_First_Order_Filter_ADC_Function_Alpha(&ADC4_12,2);
+  Supercap_First_Order_Filter_ADC_Function_Alpha(&C_right, 6);
+  Supercap_First_Order_Filter_ADC_Function_Alpha(&C_left, 4);
+  //Supercap_First_Order_Filter_ADC_Function_Alpha(&ADC4_12,2);
   Supercap_First_Order_Filter_ADC_Function_Alpha(&V_bat, 2);
   Supercap_First_Order_Filter_ADC_Function_Alpha(&V_cap, 4);
 }
 
 void TIM5_NVIC(){
 	if(PID_flag == 1){
-		Supercap_PID_Controller_Function(&PID_45W_loop, &C_sys, supercap_max_power_current, ((supercap_max_power_current-C_sys.real_value_12bits)*6.0f+V_cap.real_value_12bits));
-		Supercap_PID_Controller_Function(&PID_n7A_loop, &C_right, 900, V_cap.real_value_12bits + 50); //我希望我的n7A充电电压能略高于电池电压，所以是加法
-		Supercap_PID_Controller_Function(&PID_7A_loop, &C_right, 3202, V_cap.real_value_12bits - 100); //我希望供电时，目标电压能略低于电池电压，所以是减法
-		supercap_target_voltage = Supercap_Compare(PID_45W_loop.output, PID_n7A_loop.output, PID_7A_loop.output);
-		supercap_target_voltage = Supercap_Limit(supercap_target_voltage, 2800, 0);
-		Supercap_PWM_left(supercap_target_voltage * 0.1f);
+		Supercap_PID_Controller_Function(&PID_45W_loop, &C_sys, supercap_max_power_current, ((supercap_max_power_current-C_sys.real_value_12bits)*2.0f+V_cap.real_value_12bits), 0);
+		Supercap_PID_Controller_Function(&PID_n7A_loop, &C_right, 500, V_cap.real_value_12bits + 400.0f, 0); //我希望我的n7A充电电压能略高于电池电压，所以是加法 
+		Supercap_PID_Controller_Function(&PID_7A_loop, &C_right, 3500, V_cap.real_value_12bits - 400.0f, 0); //我希望供电时，目标电压能略低于电池电压，所以是减法
+    supercap_target_voltage = Supercap_Compare(PID_45W_loop.output, PID_n7A_loop.output, PID_7A_loop.output);
+    //supercap_target_voltage = PID_45W_loop.output;
+    supercap_target_voltage = Supercap_Limit(supercap_target_voltage, 2800, 0);
+		Supercap_PID_Controller_Function(&PID_voltage_loop, &V_cap, supercap_target_voltage, supercap_target_voltage * 0.1f, 0);
+		Supercap_PWM_left(PID_voltage_loop.output);
 	}
 }
 
@@ -67,8 +70,8 @@ uint16_t Update_Current(uint16_t old_power, uint16_t new_power){
   return(1);
 }
 
-void Supercap_PID_Controller_Function(_Supercap_PID_Controller_t *pid_controller, _ADC_Sample_t *adc_sample, int16_t target, float offset) {
-	pid_controller->error = target - adc_sample->real_value_12bits;
+void Supercap_PID_Controller_Function(_Supercap_PID_Controller_t *pid_controller, _ADC_Sample_t *adc_sample, int16_t target, float offset, uint16_t input_offset) {
+	pid_controller->error = target - adc_sample->real_value_12bits + input_offset;
   pid_controller->error_sum += pid_controller->error * pid_controller->Ki;
   if(pid_controller->error_sum > pid_controller->I_max)
   {pid_controller->error_sum = pid_controller->I_max;}
@@ -152,7 +155,7 @@ void Supercap_FSM(){
   switch(CAP_STATE){
     case INIT:
       if(V_cap.real_value_12bits > 30){
-		      //if(1){
+		    //  if(1){
         Supercap_AUX_YellowLED(60);
 				Supercap_AUX_BlueLED(0);
         Supercap_AUX_MachineSpirit(0);

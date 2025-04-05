@@ -244,13 +244,14 @@ int main(void)
 	Supercap_Function_Init(&C_sys);
 	Supercap_Function_Init(&C_right);
 	Supercap_Function_Init(&ADC4_12);
+	Supercap_Function_Init(&C_left);
 	Supercap_Function_Init(&V_bat);
 	Supercap_Function_Init(&V_cap);
 
-  Supercap_PID_Init(&PID_45W_loop, 0.005f, 0.0008f, 0.01f, MAX_CAP_VOLTAGE, 0, 1500);
-  Supercap_PID_Init(&PID_n7A_loop, 0.2f, 0.00002f, 0.01f, MAX_CAP_VOLTAGE, 0, 400);
-  Supercap_PID_Init(&PID_7A_loop, 0.25f, 0.00005f, 0.01f, MAX_CAP_VOLTAGE, 0, 600);
-	Supercap_PID_Init(&PID_voltage_loop, 0.00005f, 0.0001f, 0.08f, MAX_DUTY, 65, 50);
+  Supercap_PID_Init(&PID_45W_loop, 0.00005f, 0.00005f, 0.00f, MAX_CAP_VOLTAGE, 0, 1000);
+  Supercap_PID_Init(&PID_n7A_loop, -0.0f, -0.00004f, -0.0f, MAX_CAP_VOLTAGE, 0, 150);
+  Supercap_PID_Init(&PID_7A_loop, -0.0f, -0.00004f, -0.0f, MAX_CAP_VOLTAGE, 0, 150);
+	Supercap_PID_Init(&PID_voltage_loop, 0.00000f, 0.0001f, 0.00f, MAX_DUTY, 65, 50);
 
   uint16_t notes2[] = {6, 5, 5, 1, 2, 3, 3, 2, 1, -6};
   for(int i = 0; i < 10; i++){
@@ -287,7 +288,11 @@ int main(void)
     data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
     data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
     data_packet.data[3] = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
+    //data_packet.data[3] = Supercap_ADC_to_Current_Funtion(C_left.real_value_12bits, 2047);
     data_packet.data[4] = Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
+    //Robot_power_from_REF//
+    //data_packet.data[4] = Robot_power_from_REF;
+    //data_packet.data[5] = Supercap_ADC_to_Voltage_Funtion(PID_45W_loop.output);
     data_packet.data[5] = Supercap_ADC_to_Voltage_Funtion(PID_n7A_loop.output);
 		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
 		data_packet.data[7] = Supercap_ADC_to_Voltage_Funtion(supercap_target_voltage);//(float)supercap_target_voltage*0.1f*0.03f;
@@ -355,7 +360,7 @@ void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
 		}
 		if (can_rx_buff[0] < 30 || can_rx_buff[0] > 120){ //Out of range
 			//Update_Current(supercap_max_power_STM32, 45);
-      supercap_max_power_current = 45;
+      //supercap_max_power_current = 45;
 		}
     Robot_power_from_REF = can_rx_buff[1];
 	}

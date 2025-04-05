@@ -86,7 +86,7 @@ void TIM2_NVIC();
 void TIM5_NVIC();
 uint16_t Update_Current(uint16_t old_current, uint16_t new_current);
 
-void Supercap_PID_Controller_Function(_Supercap_PID_Controller_t *pid_controller, _ADC_Sample_t *adc_sample, int16_t target, float offset);
+void Supercap_PID_Controller_Function(_Supercap_PID_Controller_t *pid_controller, _ADC_Sample_t *adc_sample, int16_t target, float offset, uint16_t input_offset);
 void Supercap_Average_ADC_Function(_ADC_Sample_t *adc_sample);
 void Supercap_Soft_Start(void);
 void Supercap_First_Order_Filter_ADC_Function(_ADC_Sample_t *adc_sample);
