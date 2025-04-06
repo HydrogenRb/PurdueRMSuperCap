@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
   28:Core/Src/supercap.c ****   }
   29:Core/Src/supercap.c **** 	else if(htim->Instance == TIM6){
   30:Core/Src/supercap.c **** 		TIM6_NVIC();
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 2
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 2
 
 
   31:Core/Src/supercap.c **** 		HAL_GPIO_TogglePin(GPIOE,GPIO_PIN_3); //heart
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
   41:Core/Src/supercap.c **** }
   73              		.loc 1 41 1 is_stmt 0 view .LVU12
   74 004a 03B0     		add	sp, sp, #12
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 3
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 3
 
 
   75              	.LCFI2:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  107              		.loc 1 65 64 is_stmt 0 view .LVU14
  108 0000 07EE901A 		vmov	s15, r1	@ int
   66:Core/Src/supercap.c **** 	temp_current = (1.65f*4095.0f/3.3f)+(((new_power * 0.95f) / 24.0f)*0.005f)*25.0f*4095.0f/3.3f;
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 4
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 4
 
 
  109              		.loc 1 66 2 is_stmt 1 view .LVU15
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  158              	.L7:
  159 0064 3333733F 		.word	1064514355
  160 0068 0AD7A33B 		.word	1000593162
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 5
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 5
 
 
  161 006c 00F07F45 		.word	1166012416
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  212              		.loc 1 76 32 view .LVU45
  213 002c 06EE903A 		vmov	s13, r3	@ int
  214 0030 F8EEE66A 		vcvt.f32.s32	s13, s13
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 6
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 6
 
 
  215              		.loc 1 76 5 view .LVU46
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  262              		.loc 1 83 27 is_stmt 0 view .LVU67
  263 0086 8282     		strh	r2, [r0, #20]	@ movhi
  264 0088 7047     		bx	lr
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 7
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 7
 
 
  265              	.LVL8:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  310              		@ args = 0, pretend = 0, frame = 0
  311              		@ frame_needed = 0, uses_anonymous_args = 0
  312              		@ link register save eliminated.
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 8
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 8
 
 
   89:Core/Src/supercap.c ****   if ((Output1 >= Output2 && Output1 <= Output3) || (Output1 <= Output2 && Output1 >= Output3)) {
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  359              		.loc 1 94 12 view .LVU96
  360 002a 7047     		bx	lr
  361              	.LVL16:
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 9
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 9
 
 
  362              	.L28:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  105:Core/Src/supercap.c ****   }
  106:Core/Src/supercap.c **** }
  406              		.loc 1 106 1 view .LVU107
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 10
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 10
 
 
  407 000e 7047     		bx	lr
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  149:Core/Src/supercap.c **** 		}
  150:Core/Src/supercap.c ****   }	else{
  151:Core/Src/supercap.c **** 		fault_counter--;
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 11
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 11
 
 
  152:Core/Src/supercap.c **** 	}
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  206:Core/Src/supercap.c ****       protection_counter = 0;
  207:Core/Src/supercap.c **** 			break;
  208:Core/Src/supercap.c ****     case READY:
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 12
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 12
 
 
  209:Core/Src/supercap.c ****       PID_flag = 0;
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  448              		.loc 1 235 5 is_stmt 1 view .LVU121
  449              		.loc 1 235 41 is_stmt 0 view .LVU122
  450 0012 8368     		ldr	r3, [r0, #8]
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 13
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 13
 
 
  451              		.loc 1 235 67 view .LVU123
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  501 000c 12FA83F3 		uxtah	r3, r2, r3
  502              		.loc 1 241 34 view .LVU141
  503 0010 8381     		strh	r3, [r0, #12]	@ movhi
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 14
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 14
 
 
  242:Core/Src/supercap.c **** }
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  556              		.loc 1 43 17 is_stmt 1 view -0
  557              		.cfi_startproc
  558              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 15
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 15
 
 
  559              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  608              		.thumb_func
  610              	Supercap_Function_Init:
  611              	.LVL31:
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 16
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 16
 
 
  612              	.LFB344:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  659 0018 F2EE067A 		vmov.f32	s15, #1.1e+1
  660 001c 20EE270A 		vmul.f32	s0, s0, s15
  661              	.LVL34:
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 17
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 17
 
 
  662              		.loc 1 255 1 view .LVU175
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  714              		.syntax unified
  715              		.thumb
  716              		.thumb_func
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 18
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 18
 
 
  718              	Supercap_ADC_to_Current_Funtion:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  764              		.loc 1 270 22 is_stmt 0 view .LVU193
  765 0000 80ED000A 		vstr.32	s0, [r0]
  271:Core/Src/supercap.c ****   pid_controller->Ki = Ki;
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 19
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 19
 
 
  766              		.loc 1 271 3 is_stmt 1 view .LVU194
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  814              		.thumb
  815              		.thumb_func
  817              	Supercap_PWM_left:
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 20
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 20
 
 
  818              	.LVL44:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  863              		.loc 1 52 17 view .LVU217
  864 000a 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
  865              	.LCFI4:
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 21
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 21
 
 
  866              		.cfi_def_cfa_offset 24
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  911 0056 294E     		ldr	r6, .L63+24
  912 0058 0023     		movs	r3, #0
  913 005a 30EE080A 		vadd.f32	s0, s0, s16
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 22
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 22
 
 
  914 005e 4FF4FA72 		mov	r2, #500
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  958 00c0 0023     		movs	r3, #0
  959 00c2 9FED120A 		vldr.32	s0, .L63+40
  960 00c6 27EE800A 		vmul.f32	s0, s15, s0
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 23
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 23
 
 
  961 00ca 2146     		mov	r1, r4
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1012 0004 40F21312 		movw	r2, #275
  1013 0008 5A63     		str	r2, [r3, #52]
  290:Core/Src/supercap.c ****   __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, pwm_duty_cycle);
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 24
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 24
 
 
  1014              		.loc 1 290 3 view .LVU241
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  298:Core/Src/supercap.c **** void Supercap_DCDC_Start(){
  1065              		.loc 1 298 27 is_stmt 1 view -0
  1066              		.cfi_startproc
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 25
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 25
 
 
  1067              		@ args = 0, pretend = 0, frame = 0
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1116              		@ frame_needed = 0, uses_anonymous_args = 0
  1117 0000 10B5     		push	{r4, lr}
  1118              	.LCFI8:
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 26
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 26
 
 
  1119              		.cfi_def_cfa_offset 8
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1168              		.cfi_offset 3, -16
  1169              		.cfi_offset 4, -12
  1170              		.cfi_offset 5, -8
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 27
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 27
 
 
  1171              		.cfi_offset 14, -4
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1216              		.cfi_endproc
  1217              	.LFE355:
  1219              		.section	.text.Supercap_AUX_RedLED,"ax",%progbits
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 28
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 28
 
 
  1220              		.align	1
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1270 0002 1B68     		ldr	r3, [r3]
  1271 0004 034A     		ldr	r2, .L87+4
  1272 0006 1268     		ldr	r2, [r2]
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 29
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 29
 
 
  1273 0008 02FB00F0 		mul	r0, r2, r0
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1326              	Supercap_AUX_MachineSpirit:
  1327              	.LVL72:
  1328              	.LFB359:
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 30
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 30
 
 
  334:Core/Src/supercap.c **** 
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1376              		.loc 1 110 5 view .LVU289
  1377 000e 9FED937A 		vldr.32	s14, .L125+4
  1378 0012 F4EEC77A 		vcmpe.f32	s15, s14
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 31
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 31
 
 
  1379 0016 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1419 0056 0133     		adds	r3, r3, #1
  1420 0058 9BB2     		uxth	r3, r3
  1421 005a 1380     		strh	r3, [r2]	@ movhi
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 32
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 32
 
 
  127:Core/Src/supercap.c **** 			Supercap_DCDC_Stop();
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1463              	.LVL80:
  116:Core/Src/supercap.c **** 			//Supercap_AUX_Buzzer(80, 11);
  1464              		.loc 1 116 7 view .LVU317
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 33
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 33
 
 
  1465 0094 0020     		movs	r0, #0
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1505              		.loc 1 141 5 is_stmt 0 view .LVU331
  1506 00ca B3F52F7F 		cmp	r3, #700
  1507 00ce 15D3     		bcc	.L102
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 34
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 34
 
 
  142:Core/Src/supercap.c **** 			Supercap_AUX_YellowLED(60);
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1551 010b 31       		.byte	(.L108-.L105)/2
  1552 010c 4B       		.byte	(.L107-.L105)/2
  1553 010d 62       		.byte	(.L106-.L105)/2
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 35
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 35
 
 
  1554 010e 03       		.byte	(.L104-.L105)/2
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1598 0142 FFF7FEFF 		bl	Supercap_AUX_MachineSpirit
  1599              	.LVL88:
  162:Core/Src/supercap.c ****         }
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 36
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 36
 
 
  1600              		.loc 1 162 9 view .LVU353
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1642 0180 CED8     		bhi	.L103
  177:Core/Src/supercap.c **** 				Supercap_DCDC_Stop();
  1643              		.loc 1 177 9 is_stmt 1 view .LVU366
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 37
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 37
 
 
  177:Core/Src/supercap.c **** 				Supercap_DCDC_Stop();
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1685 01bc FFF7FEFF 		bl	Supercap_AUX_BlueLED
  1686              	.LVL97:
  188:Core/Src/supercap.c ****         Supercap_AUX_MachineSpirit(0);
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 38
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 38
 
 
  1687              		.loc 1 188 5 view .LVU380
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1729 0204 0020     		movs	r0, #0
  1730 0206 FFF7FEFF 		bl	Supercap_AUX_MachineSpirit
  1731              	.LVL102:
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 39
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 39
 
 
  1732 020a 89E7     		b	.L103
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1770 022c 134B     		ldr	r3, .L125+36
  1771 022e 0022     		movs	r2, #0
  1772 0230 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 40
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 40
 
 
  217:Core/Src/supercap.c ****     case FAULT:
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1818              		.cfi_endproc
  1819              	.LFE340:
  1821              		.section	.text.HAL_TIM_PeriodElapsedCallback,"ax",%progbits
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 41
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 41
 
 
  1822              		.align	1
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
   20:Core/Src/supercap.c **** 		//HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
  1866              		.loc 1 20 5 view .LVU429
  1867 001c FFF7FEFF 		bl	TIM5_NVIC
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 42
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 42
 
 
  1868              	.LVL111:
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  1916 0004 44D0     		beq	.L160
  341:Core/Src/supercap.c ****   __HAL_TIM_SET_AUTORELOAD(&htim3, 11538);
  342:Core/Src/supercap.c ****   TIM3_AUTORELOAD_over100 = 115;
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 43
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 43
 
 
  343:Core/Src/supercap.c **** } else if (note == -2) {
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  365:Core/Src/supercap.c ****   __HAL_TIM_SET_AUTORELOAD(&htim3, 5119);
  366:Core/Src/supercap.c ****   TIM3_AUTORELOAD_over100 = 51;
  367:Core/Src/supercap.c **** } else if (note == 3) {
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 44
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 44
 
 
  1949              		.loc 1 367 8 is_stmt 1 view .LVU454
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  390:Core/Src/supercap.c ****   TIM3_AUTORELOAD_over100 = 23;
  391:Core/Src/supercap.c **** } else if (note == 14) {
  1981              		.loc 1 391 8 is_stmt 1 view .LVU470
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 45
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 45
 
 
  1982              		.loc 1 391 11 is_stmt 0 view .LVU471
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  2020              	.LVL120:
  341:Core/Src/supercap.c ****   TIM3_AUTORELOAD_over100 = 115;
  2021              		.loc 1 341 3 is_stmt 0 view .LVU487
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 46
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 46
 
 
  2022 0094 42F61252 		movw	r2, #11538
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  2062 00c4 EDE7     		b	.L139
  2063              	.LVL124:
  2064              	.L162:
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 47
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 47
 
 
  347:Core/Src/supercap.c ****   __HAL_TIM_SET_AUTORELOAD(&htim3, 9146);
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  353:Core/Src/supercap.c ****   __HAL_TIM_SET_AUTORELOAD(&htim3, 7692);
  2104              		.loc 1 353 3 view .LVU517
  2105 00ee 554B     		ldr	r3, .L181
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 48
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 48
 
 
  2106 00f0 1968     		ldr	r1, [r3]
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  359:Core/Src/supercap.c ****   __HAL_TIM_SET_AUTORELOAD(&htim3, 6097);
  2146              		.loc 1 359 3 is_stmt 0 view .LVU532
  2147 011a 41F2D172 		movw	r2, #6097
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 49
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 49
 
 
  2148 011e CA62     		str	r2, [r1, #44]
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  2187              		.loc 1 365 3 is_stmt 1 view .LVU547
  2188 0148 DA60     		str	r2, [r3, #12]
  365:Core/Src/supercap.c ****   __HAL_TIM_SET_AUTORELOAD(&htim3, 5119);
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 50
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 50
 
 
  2189              		.loc 1 365 3 view .LVU548
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  2228              		.loc 1 372 3 view .LVU563
  372:Core/Src/supercap.c ****   TIM3_AUTORELOAD_over100 = 43;
  2229              		.loc 1 372 27 is_stmt 0 view .LVU564
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 51
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 51
 
 
  2230 0172 354B     		ldr	r3, .L181+4
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  2270 019e 1A60     		str	r2, [r3]
  2271 01a0 7FE7     		b	.L139
  2272              	.LVL146:
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 52
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 52
 
 
  2273              	.L173:
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  2312              		.loc 1 386 3 is_stmt 1 view .LVU593
  386:Core/Src/supercap.c ****   __HAL_TIM_SET_AUTORELOAD(&htim3, 2555);
  2313              		.loc 1 386 3 view .LVU594
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 53
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 53
 
 
  2314 01ca 1E4B     		ldr	r3, .L181
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  2354              	.LVL155:
  392:Core/Src/supercap.c ****   __HAL_TIM_SET_AUTORELOAD(&htim3, 2148);
  2355              		.loc 1 392 3 is_stmt 0 view .LVU609
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 54
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 54
 
 
  2356 01f6 40F66402 		movw	r2, #2148
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  398:Core/Src/supercap.c ****   __HAL_TIM_SET_AUTORELOAD(&htim3, 1704);
  2396              		.loc 1 398 3 is_stmt 1 view .LVU624
  2397 0224 DA60     		str	r2, [r3, #12]
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 55
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 55
 
 
  398:Core/Src/supercap.c ****   __HAL_TIM_SET_AUTORELOAD(&htim3, 1704);
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  2447              	fault_counter:
  2448 0000 0000     		.space	2
  2449              		.section	.bss.protection_counter,"aw",%nobits
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 56
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 56
 
 
  2450              		.align	1
@@ -3325,106 +3325,106 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 1
  2475              		.file 12 "Core/Inc/supercap.h"
  2476              		.file 13 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h"
  2477              		.file 14 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h"
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 57
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 57
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 supercap.c
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:20     .text.TIM6_NVIC:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:26     .text.TIM6_NVIC:00000000 TIM6_NVIC
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:82     .text.TIM6_NVIC:00000050 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:93     .text.Update_Current:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:99     .text.Update_Current:00000000 Update_Current
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:159    .text.Update_Current:00000064 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:170    .text.Supercap_PID_Controller_Function:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:176    .text.Supercap_PID_Controller_Function:00000000 Supercap_PID_Controller_Function
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:299    .text.Supercap_Compare:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:305    .text.Supercap_Compare:00000000 Supercap_Compare
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:373    .text.Supercap_Limit:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:379    .text.Supercap_Limit:00000000 Supercap_Limit
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:412    .text.Supercap_Average_ADC_Function:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:418    .text.Supercap_Average_ADC_Function:00000000 Supercap_Average_ADC_Function
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:476    .text.Supercap_First_Order_Filter_ADC_Function:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:482    .text.Supercap_First_Order_Filter_ADC_Function:00000000 Supercap_First_Order_Filter_ADC_Function
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:510    .text.Supercap_First_Order_Filter_ADC_Function_Alpha:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:516    .text.Supercap_First_Order_Filter_ADC_Function_Alpha:00000000 Supercap_First_Order_Filter_ADC_Function_Alpha
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:548    .text.TIM2_NVIC:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:554    .text.TIM2_NVIC:00000000 TIM2_NVIC
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:595    .text.TIM2_NVIC:0000002c $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:604    .text.Supercap_Function_Init:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:610    .text.Supercap_Function_Init:00000000 Supercap_Function_Init
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:631    .text.Supercap_ADC_to_Voltage_Funtion:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:637    .text.Supercap_ADC_to_Voltage_Funtion:00000000 Supercap_ADC_to_Voltage_Funtion
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:667    .text.Supercap_ADC_to_Voltage_Funtion:00000024 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:673    .text.Supercap_ADC_to_Voltage_Funtion_Ref:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:679    .text.Supercap_ADC_to_Voltage_Funtion_Ref:00000000 Supercap_ADC_to_Voltage_Funtion_Ref
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:706    .text.Supercap_ADC_to_Voltage_Funtion_Ref:0000001c $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:712    .text.Supercap_ADC_to_Current_Funtion:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:718    .text.Supercap_ADC_to_Current_Funtion:00000000 Supercap_ADC_to_Current_Funtion
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:744    .text.Supercap_ADC_to_Current_Funtion:00000014 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:749    .text.Supercap_PID_Init:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:755    .text.Supercap_PID_Init:00000000 Supercap_PID_Init
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:787    .text.Supercap_PID_Reset:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:793    .text.Supercap_PID_Reset:00000000 Supercap_PID_Reset
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:811    .text.Supercap_PWM_left:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:817    .text.Supercap_PWM_left:00000000 Supercap_PWM_left
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:837    .text.Supercap_PWM_left:0000000c $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:842    .text.TIM5_NVIC:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:848    .text.TIM5_NVIC:00000000 TIM5_NVIC
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:979    .text.TIM5_NVIC:000000e4 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:995    .text.Supercap_PWM_right:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1001   .text.Supercap_PWM_right:00000000 Supercap_PWM_right
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1021   .text.Supercap_PWM_right:00000010 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1026   .text.Supercap_PWM_GND:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1032   .text.Supercap_PWM_GND:00000000 Supercap_PWM_GND
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1052   .text.Supercap_PWM_GND:00000010 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1057   .text.Supercap_DCDC_Start:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1063   .text.Supercap_DCDC_Start:00000000 Supercap_DCDC_Start
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1100   .text.Supercap_DCDC_Start:00000028 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1105   .text.Supercap_DCDC_Stop:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1111   .text.Supercap_DCDC_Stop:00000000 Supercap_DCDC_Stop
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1148   .text.Supercap_DCDC_Stop:00000028 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1153   .text.Supercap_AUX_Init:00000000 $t
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 58
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:20     .text.TIM6_NVIC:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:26     .text.TIM6_NVIC:00000000 TIM6_NVIC
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:82     .text.TIM6_NVIC:00000050 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:93     .text.Update_Current:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:99     .text.Update_Current:00000000 Update_Current
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:159    .text.Update_Current:00000064 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:170    .text.Supercap_PID_Controller_Function:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:176    .text.Supercap_PID_Controller_Function:00000000 Supercap_PID_Controller_Function
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:299    .text.Supercap_Compare:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:305    .text.Supercap_Compare:00000000 Supercap_Compare
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:373    .text.Supercap_Limit:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:379    .text.Supercap_Limit:00000000 Supercap_Limit
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:412    .text.Supercap_Average_ADC_Function:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:418    .text.Supercap_Average_ADC_Function:00000000 Supercap_Average_ADC_Function
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:476    .text.Supercap_First_Order_Filter_ADC_Function:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:482    .text.Supercap_First_Order_Filter_ADC_Function:00000000 Supercap_First_Order_Filter_ADC_Function
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:510    .text.Supercap_First_Order_Filter_ADC_Function_Alpha:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:516    .text.Supercap_First_Order_Filter_ADC_Function_Alpha:00000000 Supercap_First_Order_Filter_ADC_Function_Alpha
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:548    .text.TIM2_NVIC:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:554    .text.TIM2_NVIC:00000000 TIM2_NVIC
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:595    .text.TIM2_NVIC:0000002c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:604    .text.Supercap_Function_Init:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:610    .text.Supercap_Function_Init:00000000 Supercap_Function_Init
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:631    .text.Supercap_ADC_to_Voltage_Funtion:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:637    .text.Supercap_ADC_to_Voltage_Funtion:00000000 Supercap_ADC_to_Voltage_Funtion
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:667    .text.Supercap_ADC_to_Voltage_Funtion:00000024 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:673    .text.Supercap_ADC_to_Voltage_Funtion_Ref:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:679    .text.Supercap_ADC_to_Voltage_Funtion_Ref:00000000 Supercap_ADC_to_Voltage_Funtion_Ref
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:706    .text.Supercap_ADC_to_Voltage_Funtion_Ref:0000001c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:712    .text.Supercap_ADC_to_Current_Funtion:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:718    .text.Supercap_ADC_to_Current_Funtion:00000000 Supercap_ADC_to_Current_Funtion
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:744    .text.Supercap_ADC_to_Current_Funtion:00000014 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:749    .text.Supercap_PID_Init:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:755    .text.Supercap_PID_Init:00000000 Supercap_PID_Init
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:787    .text.Supercap_PID_Reset:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:793    .text.Supercap_PID_Reset:00000000 Supercap_PID_Reset
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:811    .text.Supercap_PWM_left:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:817    .text.Supercap_PWM_left:00000000 Supercap_PWM_left
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:837    .text.Supercap_PWM_left:0000000c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:842    .text.TIM5_NVIC:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:848    .text.TIM5_NVIC:00000000 TIM5_NVIC
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:979    .text.TIM5_NVIC:000000e4 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:995    .text.Supercap_PWM_right:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1001   .text.Supercap_PWM_right:00000000 Supercap_PWM_right
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1021   .text.Supercap_PWM_right:00000010 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1026   .text.Supercap_PWM_GND:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1032   .text.Supercap_PWM_GND:00000000 Supercap_PWM_GND
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1052   .text.Supercap_PWM_GND:00000010 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1057   .text.Supercap_DCDC_Start:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1063   .text.Supercap_DCDC_Start:00000000 Supercap_DCDC_Start
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1100   .text.Supercap_DCDC_Start:00000028 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1105   .text.Supercap_DCDC_Stop:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1111   .text.Supercap_DCDC_Stop:00000000 Supercap_DCDC_Stop
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1148   .text.Supercap_DCDC_Stop:00000028 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1153   .text.Supercap_AUX_Init:00000000 $t
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 58
 
 
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1159   .text.Supercap_AUX_Init:00000000 Supercap_AUX_Init
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1213   .text.Supercap_AUX_Init:00000040 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1220   .text.Supercap_AUX_RedLED:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1226   .text.Supercap_AUX_RedLED:00000000 Supercap_AUX_RedLED
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1248   .text.Supercap_AUX_RedLED:00000010 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1254   .text.Supercap_AUX_YellowLED:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1260   .text.Supercap_AUX_YellowLED:00000000 Supercap_AUX_YellowLED
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1282   .text.Supercap_AUX_YellowLED:00000010 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1288   .text.Supercap_AUX_BlueLED:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1294   .text.Supercap_AUX_BlueLED:00000000 Supercap_AUX_BlueLED
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1315   .text.Supercap_AUX_BlueLED:00000010 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1320   .text.Supercap_AUX_MachineSpirit:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1326   .text.Supercap_AUX_MachineSpirit:00000000 Supercap_AUX_MachineSpirit
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1347   .text.Supercap_AUX_MachineSpirit:00000010 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1352   .text.Supercap_FSM:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1358   .text.Supercap_FSM:00000000 Supercap_FSM
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1550   .text.Supercap_FSM:0000010a $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1581   .text.Supercap_FSM:0000012e $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1804   .text.Supercap_FSM:00000258 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1822   .text.HAL_TIM_PeriodElapsedCallback:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1828   .text.HAL_TIM_PeriodElapsedCallback:00000000 HAL_TIM_PeriodElapsedCallback
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1892   .text.HAL_TIM_PeriodElapsedCallback:00000038 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1899   .text.Supercap_AUX_Buzzer:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1905   .text.Supercap_AUX_Buzzer:00000000 Supercap_AUX_Buzzer
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:2427   .text.Supercap_AUX_Buzzer:00000244 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:2461   .bss.temp_current:00000000 temp_current
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:2447   .bss.fault_counter:00000000 fault_counter
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:2454   .bss.protection_counter:00000000 protection_counter
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:2440   .bss.PID_flag:00000000 PID_flag
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:2441   .bss.PID_flag:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:2443   .bss.fault_counter:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:2450   .bss.protection_counter:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:2457   .bss.temp_current:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1555   .text.Supercap_FSM:0000010f $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1555   .text.Supercap_FSM:00000110 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1586   .text.Supercap_FSM:00000133 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s:1586   .text.Supercap_FSM:00000134 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1159   .text.Supercap_AUX_Init:00000000 Supercap_AUX_Init
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1213   .text.Supercap_AUX_Init:00000040 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1220   .text.Supercap_AUX_RedLED:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1226   .text.Supercap_AUX_RedLED:00000000 Supercap_AUX_RedLED
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1248   .text.Supercap_AUX_RedLED:00000010 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1254   .text.Supercap_AUX_YellowLED:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1260   .text.Supercap_AUX_YellowLED:00000000 Supercap_AUX_YellowLED
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1282   .text.Supercap_AUX_YellowLED:00000010 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1288   .text.Supercap_AUX_BlueLED:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1294   .text.Supercap_AUX_BlueLED:00000000 Supercap_AUX_BlueLED
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1315   .text.Supercap_AUX_BlueLED:00000010 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1320   .text.Supercap_AUX_MachineSpirit:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1326   .text.Supercap_AUX_MachineSpirit:00000000 Supercap_AUX_MachineSpirit
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1347   .text.Supercap_AUX_MachineSpirit:00000010 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1352   .text.Supercap_FSM:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1358   .text.Supercap_FSM:00000000 Supercap_FSM
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1550   .text.Supercap_FSM:0000010a $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1581   .text.Supercap_FSM:0000012e $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1804   .text.Supercap_FSM:00000258 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1822   .text.HAL_TIM_PeriodElapsedCallback:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1828   .text.HAL_TIM_PeriodElapsedCallback:00000000 HAL_TIM_PeriodElapsedCallback
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1892   .text.HAL_TIM_PeriodElapsedCallback:00000038 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1899   .text.Supercap_AUX_Buzzer:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1905   .text.Supercap_AUX_Buzzer:00000000 Supercap_AUX_Buzzer
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:2427   .text.Supercap_AUX_Buzzer:00000244 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:2461   .bss.temp_current:00000000 temp_current
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:2447   .bss.fault_counter:00000000 fault_counter
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:2454   .bss.protection_counter:00000000 protection_counter
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:2440   .bss.PID_flag:00000000 PID_flag
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:2441   .bss.PID_flag:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:2443   .bss.fault_counter:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:2450   .bss.protection_counter:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:2457   .bss.temp_current:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1555   .text.Supercap_FSM:0000010f $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1555   .text.Supercap_FSM:00000110 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1586   .text.Supercap_FSM:00000133 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s:1586   .text.Supercap_FSM:00000134 $t
 
 UNDEFINED SYMBOLS
 HAL_FDCAN_AddMessageToTxFifoQ
@@ -3445,7 +3445,7 @@ PID_7A_loop
 supercap_target_voltage
 PID_voltage_loop
 HAL_TIM_PWM_Start
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccueL0jL.s 			page 59
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccksZwla.s 			page 59
 
 
 HAL_TIMEx_PWMN_Start

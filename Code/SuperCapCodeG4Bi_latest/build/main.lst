@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
   36              	.LCFI0:
   37              		.cfi_def_cfa_offset 4
   38              		.cfi_offset 14, -4
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 2
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 2
 
 
   39 0002 83B0     		sub	sp, sp, #12
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
   13:Core/Src/main.c ****   * in the root directory of this software component.
   14:Core/Src/main.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
   15:Core/Src/main.c ****   *
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 3
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 3
 
 
   16:Core/Src/main.c ****   ******************************************************************************
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
   70:Core/Src/main.c **** 
   71:Core/Src/main.c ****   _ADC_Sample_t C_left = {0};
   72:Core/Src/main.c ****   _ADC_Sample_t C_sys = {0};
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 4
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 4
 
 
   73:Core/Src/main.c ****   _ADC_Sample_t C_right = {0};
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  127:Core/Src/main.c **** /* USER CODE END 0 */
  128:Core/Src/main.c **** 
  129:Core/Src/main.c **** /**
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 5
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 5
 
 
  130:Core/Src/main.c ****   * @brief  The application entry point.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  184:Core/Src/main.c **** 		MX_ADC3_Init();
  185:Core/Src/main.c **** 		MX_TIM2_Init();
  186:Core/Src/main.c **** 		MX_TIM5_Init();
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 6
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 6
 
 
  187:Core/Src/main.c **** 		MX_TIM6_Init();
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  241:Core/Src/main.c ****   }
  242:Core/Src/main.c ****   Supercap_AUX_Buzzer(0, 0);
  243:Core/Src/main.c **** 	
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 7
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 7
 
 
  244:Core/Src/main.c **** 	Supercap_Function_Init(&C_sys);
@@ -369,9 +369,9 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  249:Core/Src/main.c **** 	Supercap_Function_Init(&V_cap);
  250:Core/Src/main.c **** 
  251:Core/Src/main.c ****   Supercap_PID_Init(&PID_45W_loop, 0.00005f, 0.00005f, 0.00f, MAX_CAP_VOLTAGE, 0, 1000);
- 252:Core/Src/main.c ****   Supercap_PID_Init(&PID_n7A_loop, -0.0f, -0.00004f, -0.0f, MAX_CAP_VOLTAGE, 0, 150);
- 253:Core/Src/main.c ****   Supercap_PID_Init(&PID_7A_loop, -0.0f, -0.00004f, -0.0f, MAX_CAP_VOLTAGE, 0, 150);
- 254:Core/Src/main.c **** 	Supercap_PID_Init(&PID_voltage_loop, 0.00000f, 0.0001f, 0.00f, MAX_DUTY, 65, 50);
+ 252:Core/Src/main.c ****   Supercap_PID_Init(&PID_n7A_loop, -0.0f, -0.000004f, -0.0f, MAX_CAP_VOLTAGE, 0, 100);
+ 253:Core/Src/main.c ****   Supercap_PID_Init(&PID_7A_loop, -0.0f, -0.000004f, -0.0f, MAX_CAP_VOLTAGE, 0, 100);
+ 254:Core/Src/main.c **** 	Supercap_PID_Init(&PID_voltage_loop, 0.0001f, 0.000001f, 0.00f, MAX_DUTY, 65, 50);
  255:Core/Src/main.c **** 
  256:Core/Src/main.c ****   uint16_t notes2[] = {6, 5, 5, 1, 2, 3, 3, 2, 1, -6};
  257:Core/Src/main.c ****   for(int i = 0; i < 10; i++){
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  298:Core/Src/main.c **** 		data_packet.data[7] = Supercap_ADC_to_Voltage_Funtion(supercap_target_voltage);//(float)supercap_
  299:Core/Src/main.c **** 		//bug report: I put data[5], So, the tail be removed
  300:Core/Src/main.c ****   }
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 8
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 8
 
 
  301:Core/Src/main.c ****   /* USER CODE END 3 */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
   83              		@ frame_needed = 0, uses_anonymous_args = 0
   84              		.loc 2 351 81 is_stmt 0 view .LVU8
   85 0000 10B5     		push	{r4, lr}
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 9
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 9
 
 
   86              	.LCFI3:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  122              		.loc 2 357 18 is_stmt 0 view .LVU18
  123 001c BDF80010 		ldrh	r1, [sp]
  357:Core/Src/main.c **** 			Update_Current(supercap_max_power_STM32, can_rx_buff[0]);
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 10
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 10
 
 
  124              		.loc 2 357 28 view .LVU19
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  167              		.section	.text.Error_Handler,"ax",%progbits
  168              		.align	1
  169              		.global	Error_Handler
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 11
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 11
 
 
  170              		.syntax unified
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
   29:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic push
   30:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wsign-conversion"
   31:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 12
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 12
 
 
   32:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wunused-parameter"
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
   86:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_READ
   87:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
   88:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 13
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 13
 
 
   89:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  143:Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t  wlen;
  144:Drivers/CMSIS/Include/cmsis_gcc.h ****   } __zero_table_t;
  145:Drivers/CMSIS/Include/cmsis_gcc.h ****   
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 14
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 14
 
 
  146:Drivers/CMSIS/Include/cmsis_gcc.h ****   extern const __copy_table_t __copy_table_start__;
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  200:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  201:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  202:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 15
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 15
 
 
  203:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  228 0006 0021     		movs	r1, #0
  229 0008 06A8     		add	r0, sp, #24
  230 000a FFF7FEFF 		bl	memset
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 16
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 16
 
 
  231              	.LVL8:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  268 0038 4B22     		movs	r2, #75
  269 003a 1092     		str	r2, [sp, #64]
  327:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 17
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 17
 
 
  270              		.loc 2 327 3 is_stmt 1 view .LVU60
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  344:Core/Src/main.c ****   {
  305              		.loc 2 344 7 is_stmt 0 view .LVU80
  306 005a 0421     		movs	r1, #4
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 18
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 18
 
 
  307 005c 0DEB0100 		add	r0, sp, r1
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  358              	.LCFI12:
  359              		.cfi_def_cfa_offset 52
  360              		.cfi_offset 80, -52
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 19
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 19
 
 
  361              		.cfi_offset 81, -48
@@ -1097,7 +1097,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  371              		.loc 2 139 3 is_stmt 1 view .LVU88
  139:Core/Src/main.c ****   C_sys.sample = &supercap_ADC1[1];
  372              		.loc 2 139 17 is_stmt 0 view .LVU89
- 373 0010 DFF83C93 		ldr	r9, .L30+148
+ 373 0010 DFF84093 		ldr	r9, .L30+152
  374 0014 A94B     		ldr	r3, .L30
  375 0016 C3F80090 		str	r9, [r3]
  140:Core/Src/main.c ****   C_right.sample = &supercap_ADC3[2];
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  401 003a 1A60     		str	r2, [r3]
  145:Core/Src/main.c ****   V_sys.sample = &supercap_ADC3[1];
  402              		.loc 2 145 3 is_stmt 1 view .LVU100
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 20
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 20
 
 
  145:Core/Src/main.c ****   V_sys.sample = &supercap_ADC3[1];
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  441              		.loc 2 175 3 view .LVU116
  442 006a FFF7FEFF 		bl	MX_TIM1_Init
  443              	.LVL20:
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 21
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 21
 
 
  176:Core/Src/main.c **** 		MX_USART2_UART_Init();
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  484 00a2 1880     		strh	r0, [r3]	@ movhi
  190:Core/Src/main.c ****     Update_Current(supercap_max_power_STM32, 45);
  485              		.loc 2 190 3 is_stmt 1 view .LVU131
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 22
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 22
 
 
  190:Core/Src/main.c ****     Update_Current(supercap_max_power_STM32, 45);
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  202:Core/Src/main.c **** 		
  522              		.loc 2 202 3 is_stmt 1 view .LVU150
  202:Core/Src/main.c **** 		
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 23
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 23
 
 
  523              		.loc 2 202 26 is_stmt 0 view .LVU151
@@ -1359,7 +1359,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  546 00ee 4B61     		str	r3, [r1, #20]
  214:Core/Src/main.c **** 		//HAL_FDCAN_ConfigGlobalFilter(&hfdcan1, FDCAN_REJECT, FDCAN_REJECT, ENABLE, ENABLE);
  547              		.loc 2 214 3 is_stmt 1 view .LVU164
- 548 00f0 DFF860B2 		ldr	fp, .L30+152
+ 548 00f0 DFF864B2 		ldr	fp, .L30+156
  549 00f4 5846     		mov	r0, fp
  550 00f6 FFF7FEFF 		bl	HAL_FDCAN_ConfigFilter
  551              	.LVL34:
@@ -1377,8 +1377,8 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  561              	.LVL36:
  221:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
  562              		.loc 2 221 2 view .LVU167
- 563 010a DFF84CB2 		ldr	fp, .L30+156
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 24
+ 563 010a DFF850B2 		ldr	fp, .L30+160
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 24
 
 
  564 010e 7F21     		movs	r1, #127
@@ -1387,7 +1387,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  567              	.LVL37:
  222:Core/Src/main.c **** 	HAL_ADCEx_Calibration_Start(&hadc3, ADC_SINGLE_ENDED);
  568              		.loc 2 222 2 view .LVU168
- 569 0116 DFF844A2 		ldr	r10, .L30+160
+ 569 0116 DFF848A2 		ldr	r10, .L30+164
  570 011a 7F21     		movs	r1, #127
  571 011c 5046     		mov	r0, r10
  572 011e FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  610 015c 6A49     		ldr	r1, .L30+76
  611 015e 6B48     		ldr	r0, .L30+80
  612 0160 FFF7FEFF 		bl	HAL_UART_Transmit_DMA
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 25
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 25
 
 
  613              	.LVL45:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  655 019e FFF7FEFF 		bl	HAL_Delay
  656              	.LVL52:
  239:Core/Src/main.c ****     HAL_Delay(5);
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 26
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 26
 
 
  657              		.loc 2 239 5 discriminator 3 view .LVU188
@@ -1558,13 +1558,13 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  700              	.LVL61:
  249:Core/Src/main.c **** 
  701              		.loc 2 249 2 view .LVU200
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 27
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 27
 
 
  702 01dc 3E48     		ldr	r0, .L30+28
  703 01de FFF7FEFF 		bl	Supercap_Function_Init
  704              	.LVL62:
- 251:Core/Src/main.c ****   Supercap_PID_Init(&PID_n7A_loop, -0.0f, -0.00004f, -0.0f, MAX_CAP_VOLTAGE, 0, 150);
+ 251:Core/Src/main.c ****   Supercap_PID_Init(&PID_n7A_loop, -0.0f, -0.000004f, -0.0f, MAX_CAP_VOLTAGE, 0, 100);
  705              		.loc 2 251 3 view .LVU201
  706 01e2 DFED4F8A 		vldr.32	s17, .L30+100
  707 01e6 9FED4F0A 		vldr.32	s0, .L30+104
@@ -1576,11 +1576,11 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  713 01fc 4A48     		ldr	r0, .L30+108
  714 01fe FFF7FEFF 		bl	Supercap_PID_Init
  715              	.LVL63:
- 252:Core/Src/main.c ****   Supercap_PID_Init(&PID_7A_loop, -0.0f, -0.00004f, -0.0f, MAX_CAP_VOLTAGE, 0, 150);
+ 252:Core/Src/main.c ****   Supercap_PID_Init(&PID_7A_loop, -0.0f, -0.000004f, -0.0f, MAX_CAP_VOLTAGE, 0, 100);
  716              		.loc 2 252 3 view .LVU202
  717 0202 9FED4A8A 		vldr.32	s16, .L30+112
  718 0206 9FED4A9A 		vldr.32	s18, .L30+116
- 719 020a 9623     		movs	r3, #150
+ 719 020a 6423     		movs	r3, #100
  720 020c 0022     		movs	r2, #0
  721 020e 40F60431 		movw	r1, #2820
  722 0212 B0EE481A 		vmov.f32	s2, s16
@@ -1589,9 +1589,9 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  725 021e 4548     		ldr	r0, .L30+120
  726 0220 FFF7FEFF 		bl	Supercap_PID_Init
  727              	.LVL64:
- 253:Core/Src/main.c **** 	Supercap_PID_Init(&PID_voltage_loop, 0.00000f, 0.0001f, 0.00f, MAX_DUTY, 65, 50);
+ 253:Core/Src/main.c **** 	Supercap_PID_Init(&PID_voltage_loop, 0.0001f, 0.000001f, 0.00f, MAX_DUTY, 65, 50);
  728              		.loc 2 253 3 view .LVU203
- 729 0224 9623     		movs	r3, #150
+ 729 0224 6423     		movs	r3, #100
  730 0226 0022     		movs	r2, #0
  731 0228 40F60431 		movw	r1, #2820
  732 022c B0EE481A 		vmov.f32	s2, s16
@@ -1607,8 +1607,8 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  741 0242 4FF48B71 		mov	r1, #278
  742 0246 B0EE681A 		vmov.f32	s2, s17
  743 024a DFED3C0A 		vldr.32	s1, .L30+128
- 744 024e B0EE680A 		vmov.f32	s0, s17
- 745 0252 3B48     		ldr	r0, .L30+132
+ 744 024e 9FED3C0A 		vldr.32	s0, .L30+132
+ 745 0252 3C48     		ldr	r0, .L30+136
  746 0254 FFF7FEFF 		bl	Supercap_PID_Init
  747              	.LVL66:
  256:Core/Src/main.c ****   for(int i = 0; i < 10; i++){
@@ -1618,11 +1618,11 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  750 0258 08AC     		add	r4, sp, #32
  751              	.LVL67:
  256:Core/Src/main.c ****   for(int i = 0; i < 10; i++){
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 28
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 28
 
 
  752              		.loc 2 256 12 view .LVU207
- 753 025a 3A4D     		ldr	r5, .L30+136
+ 753 025a 3B4D     		ldr	r5, .L30+140
  754 025c 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
  755 025e 0FC4     		stmia	r4!, {r0, r1, r2, r3}
  756 0260 2B68     		ldr	r3, [r5]
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  794              	.L24:
  257:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
  795              		.loc 2 257 18 is_stmt 1 discriminator 1 view .LVU220
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 29
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 29
 
 
  257:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes2[i]);
@@ -1694,7 +1694,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  804              	.LVL75:
  265:Core/Src/main.c **** 	HAL_Delay(250);
  805              		.loc 2 265 3 view .LVU223
- 806 029a 2B48     		ldr	r0, .L30+140
+ 806 029a 2C48     		ldr	r0, .L30+144
  807 029c FFF7FEFF 		bl	HAL_TIM_Base_Start_IT
  808              	.LVL76:
  266:Core/Src/main.c **** 
@@ -1710,7 +1710,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  816              	.LVL78:
  268:Core/Src/main.c ****   for(int i = 0; i < 13; i++){
  817              		.loc 2 268 12 view .LVU227
- 818 02a8 284D     		ldr	r5, .L30+144
+ 818 02a8 294D     		ldr	r5, .L30+148
  819 02aa 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
  820 02ac 0FC4     		stmia	r4!, {r0, r1, r2, r3}
  821 02ae 95E80700 		ldm	r5, {r0, r1, r2}
@@ -1727,7 +1727,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  829 02b6 0024     		movs	r4, #0
  269:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
  830              		.loc 2 269 3 view .LVU231
- 831 02b8 65E0     		b	.L26
+ 831 02b8 67E0     		b	.L26
  832              	.L31:
  833 02ba 00BF     		.align	2
  834              	.L30:
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  839 02cc 00000000 		.word	.LANCHOR9
  840 02d0 00000000 		.word	.LANCHOR8
  841 02d4 00000000 		.word	.LANCHOR10
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 30
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 30
 
 
  842 02d8 00000000 		.word	.LANCHOR11
@@ -1763,633 +1763,634 @@ ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 1
  861 0324 17B75138 		.word	944879383
  862 0328 00000000 		.word	.LANCHOR21
  863 032c 00000080 		.word	-2147483648
- 864 0330 ACC527B8 		.word	-1205353044
+ 864 0330 BD3786B6 		.word	-1232717891
  865 0334 00000000 		.word	.LANCHOR22
  866 0338 00000000 		.word	.LANCHOR23
- 867 033c 17B7D138 		.word	953267991
- 868 0340 00000000 		.word	.LANCHOR24
- 869 0344 18000000 		.word	.LANCHOR20+24
- 870 0348 00000000 		.word	htim2
- 871 034c 2C000000 		.word	.LANCHOR20+44
- 872 0350 00000000 		.word	.LANCHOR4
- 873 0354 00000000 		.word	hfdcan1
- 874 0358 00000000 		.word	hadc1
- 875 035c 00000000 		.word	hadc2
- 876              	.LVL80:
- 877              	.L27:
+ 867 033c BD378635 		.word	897988541
+ 868 0340 17B7D138 		.word	953267991
+ 869 0344 00000000 		.word	.LANCHOR24
+ 870 0348 18000000 		.word	.LANCHOR20+24
+ 871 034c 00000000 		.word	htim2
+ 872 0350 2C000000 		.word	.LANCHOR20+44
+ 873 0354 00000000 		.word	.LANCHOR4
+ 874 0358 00000000 		.word	hfdcan1
+ 875 035c 00000000 		.word	hadc1
+ 876 0360 00000000 		.word	hadc2
+ 877              	.LVL80:
+ 878              	.L27:
  270:Core/Src/main.c ****     HAL_Delay(50);
- 878              		.loc 2 270 5 is_stmt 1 discriminator 3 view .LVU232
+ 879              		.loc 2 270 5 is_stmt 1 discriminator 3 view .LVU232
  270:Core/Src/main.c ****     HAL_Delay(50);
- 879              		.loc 2 270 35 is_stmt 0 discriminator 3 view .LVU233
- 880 0360 14AB     		add	r3, sp, #80
- 881 0362 03EB4403 		add	r3, r3, r4, lsl #1
+ 880              		.loc 2 270 35 is_stmt 0 discriminator 3 view .LVU233
+ 881 0364 14AB     		add	r3, sp, #80
+ 882 0366 03EB4403 		add	r3, r3, r4, lsl #1
  270:Core/Src/main.c ****     HAL_Delay(50);
- 882              		.loc 2 270 5 discriminator 3 view .LVU234
- 883 0366 33F94C1C 		ldrsh	r1, [r3, #-76]
- 884 036a 3220     		movs	r0, #50
- 885 036c FFF7FEFF 		bl	Supercap_AUX_Buzzer
- 886              	.LVL81:
+ 883              		.loc 2 270 5 discriminator 3 view .LVU234
+ 884 036a 33F94C1C 		ldrsh	r1, [r3, #-76]
+ 885 036e 3220     		movs	r0, #50
+ 886 0370 FFF7FEFF 		bl	Supercap_AUX_Buzzer
+ 887              	.LVL81:
  271:Core/Src/main.c ****     Supercap_AUX_Buzzer(0, 0);
- 887              		.loc 2 271 5 is_stmt 1 discriminator 3 view .LVU235
- 888 0370 3220     		movs	r0, #50
- 889 0372 FFF7FEFF 		bl	HAL_Delay
- 890              	.LVL82:
+ 888              		.loc 2 271 5 is_stmt 1 discriminator 3 view .LVU235
+ 889 0374 3220     		movs	r0, #50
+ 890 0376 FFF7FEFF 		bl	HAL_Delay
+ 891              	.LVL82:
  272:Core/Src/main.c ****     HAL_Delay(5);
- 891              		.loc 2 272 5 discriminator 3 view .LVU236
- 892 0376 0021     		movs	r1, #0
- 893 0378 0846     		mov	r0, r1
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 31
+ 892              		.loc 2 272 5 discriminator 3 view .LVU236
+ 893 037a 0021     		movs	r1, #0
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 31
 
 
- 894 037a FFF7FEFF 		bl	Supercap_AUX_Buzzer
- 895              	.LVL83:
+ 894 037c 0846     		mov	r0, r1
+ 895 037e FFF7FEFF 		bl	Supercap_AUX_Buzzer
+ 896              	.LVL83:
  273:Core/Src/main.c ****   }
- 896              		.loc 2 273 5 discriminator 3 view .LVU237
- 897 037e 0520     		movs	r0, #5
- 898 0380 FFF7FEFF 		bl	HAL_Delay
- 899              	.LVL84:
+ 897              		.loc 2 273 5 discriminator 3 view .LVU237
+ 898 0382 0520     		movs	r0, #5
+ 899 0384 FFF7FEFF 		bl	HAL_Delay
+ 900              	.LVL84:
  269:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
- 900              		.loc 2 269 26 discriminator 3 view .LVU238
+ 901              		.loc 2 269 26 discriminator 3 view .LVU238
  269:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
- 901              		.loc 2 269 27 is_stmt 0 discriminator 3 view .LVU239
- 902 0384 0134     		adds	r4, r4, #1
- 903              	.LVL85:
- 904              	.L26:
+ 902              		.loc 2 269 27 is_stmt 0 discriminator 3 view .LVU239
+ 903 0388 0134     		adds	r4, r4, #1
+ 904              	.LVL85:
+ 905              	.L26:
  269:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
- 905              		.loc 2 269 18 is_stmt 1 discriminator 1 view .LVU240
+ 906              		.loc 2 269 18 is_stmt 1 discriminator 1 view .LVU240
  269:Core/Src/main.c ****     Supercap_AUX_Buzzer(50, notes3[i]);
- 906              		.loc 2 269 3 is_stmt 0 discriminator 1 view .LVU241
- 907 0386 0C2C     		cmp	r4, #12
- 908 0388 EADD     		ble	.L27
- 909              	.LBE8:
+ 907              		.loc 2 269 3 is_stmt 0 discriminator 1 view .LVU241
+ 908 038a 0C2C     		cmp	r4, #12
+ 909 038c EADD     		ble	.L27
+ 910              	.LBE8:
  275:Core/Src/main.c **** 	HAL_TIM_Base_Start_IT(&htim5);
- 910              		.loc 2 275 3 is_stmt 1 view .LVU242
- 911 038a 0021     		movs	r1, #0
- 912 038c 0846     		mov	r0, r1
- 913 038e FFF7FEFF 		bl	Supercap_AUX_Buzzer
- 914              	.LVL86:
+ 911              		.loc 2 275 3 is_stmt 1 view .LVU242
+ 912 038e 0021     		movs	r1, #0
+ 913 0390 0846     		mov	r0, r1
+ 914 0392 FFF7FEFF 		bl	Supercap_AUX_Buzzer
+ 915              	.LVL86:
  276:Core/Src/main.c **** 	
- 915              		.loc 2 276 2 view .LVU243
- 916 0392 2348     		ldr	r0, .L32
- 917 0394 FFF7FEFF 		bl	HAL_TIM_Base_Start_IT
- 918              	.LVL87:
- 919              	.L28:
+ 916              		.loc 2 276 2 view .LVU243
+ 917 0396 2348     		ldr	r0, .L32
+ 918 0398 FFF7FEFF 		bl	HAL_TIM_Base_Start_IT
+ 919              	.LVL87:
+ 920              	.L28:
  282:Core/Src/main.c ****   {
- 920              		.loc 2 282 3 discriminator 1 view .LVU244
+ 921              		.loc 2 282 3 discriminator 1 view .LVU244
  287:Core/Src/main.c ****     data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
- 921              		.loc 2 287 5 discriminator 1 view .LVU245
+ 922              		.loc 2 287 5 discriminator 1 view .LVU245
  287:Core/Src/main.c ****     data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
- 922              		.loc 2 287 27 is_stmt 0 discriminator 1 view .LVU246
- 923 0398 40F2FF71 		movw	r1, #2047
- 924 039c 214B     		ldr	r3, .L32+4
- 925 039e 9889     		ldrh	r0, [r3, #12]
- 926 03a0 FFF7FEFF 		bl	Supercap_ADC_to_Current_Funtion
- 927              	.LVL88:
+ 923              		.loc 2 287 27 is_stmt 0 discriminator 1 view .LVU246
+ 924 039c 40F2FF71 		movw	r1, #2047
+ 925 03a0 214B     		ldr	r3, .L32+4
+ 926 03a2 9889     		ldrh	r0, [r3, #12]
+ 927 03a4 FFF7FEFF 		bl	Supercap_ADC_to_Current_Funtion
+ 928              	.LVL88:
  287:Core/Src/main.c ****     data_packet.data[1] = Supercap_ADC_to_Voltage_Funtion(V_cap.real_value_12bits);
- 928              		.loc 2 287 25 discriminator 1 view .LVU247
- 929 03a4 204C     		ldr	r4, .L32+8
- 930 03a6 84ED000A 		vstr.32	s0, [r4]
+ 929              		.loc 2 287 25 discriminator 1 view .LVU247
+ 930 03a8 204C     		ldr	r4, .L32+8
+ 931 03aa 84ED000A 		vstr.32	s0, [r4]
  288:Core/Src/main.c ****     data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
- 931              		.loc 2 288 5 is_stmt 1 discriminator 1 view .LVU248
+ 932              		.loc 2 288 5 is_stmt 1 discriminator 1 view .LVU248
  288:Core/Src/main.c ****     data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
- 932              		.loc 2 288 27 is_stmt 0 discriminator 1 view .LVU249
- 933 03aa 204B     		ldr	r3, .L32+12
- 934 03ac 9889     		ldrh	r0, [r3, #12]
- 935 03ae FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
- 936              	.LVL89:
+ 933              		.loc 2 288 27 is_stmt 0 discriminator 1 view .LVU249
+ 934 03ae 204B     		ldr	r3, .L32+12
+ 935 03b0 9889     		ldrh	r0, [r3, #12]
+ 936 03b2 FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
+ 937              	.LVL89:
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 32
+
+
  288:Core/Src/main.c ****     data_packet.data[2] = Supercap_ADC_to_Current_Funtion(C_sys.real_value_12bits, 2047);
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 32
-
-
- 937              		.loc 2 288 25 discriminator 1 view .LVU250
- 938 03b2 84ED010A 		vstr.32	s0, [r4, #4]
+ 938              		.loc 2 288 25 discriminator 1 view .LVU250
+ 939 03b6 84ED010A 		vstr.32	s0, [r4, #4]
  289:Core/Src/main.c ****     data_packet.data[3] = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
- 939              		.loc 2 289 5 is_stmt 1 discriminator 1 view .LVU251
+ 940              		.loc 2 289 5 is_stmt 1 discriminator 1 view .LVU251
  289:Core/Src/main.c ****     data_packet.data[3] = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
- 940              		.loc 2 289 27 is_stmt 0 discriminator 1 view .LVU252
- 941 03b6 40F2FF71 		movw	r1, #2047
- 942 03ba 1D4B     		ldr	r3, .L32+16
- 943 03bc 9889     		ldrh	r0, [r3, #12]
- 944 03be FFF7FEFF 		bl	Supercap_ADC_to_Current_Funtion
- 945              	.LVL90:
+ 941              		.loc 2 289 27 is_stmt 0 discriminator 1 view .LVU252
+ 942 03ba 40F2FF71 		movw	r1, #2047
+ 943 03be 1D4B     		ldr	r3, .L32+16
+ 944 03c0 9889     		ldrh	r0, [r3, #12]
+ 945 03c2 FFF7FEFF 		bl	Supercap_ADC_to_Current_Funtion
+ 946              	.LVL90:
  289:Core/Src/main.c ****     data_packet.data[3] = Supercap_ADC_to_Voltage_Funtion(PID_7A_loop.output);
- 946              		.loc 2 289 25 discriminator 1 view .LVU253
- 947 03c2 84ED020A 		vstr.32	s0, [r4, #8]
+ 947              		.loc 2 289 25 discriminator 1 view .LVU253
+ 948 03c6 84ED020A 		vstr.32	s0, [r4, #8]
  290:Core/Src/main.c ****     //data_packet.data[3] = Supercap_ADC_to_Current_Funtion(C_left.real_value_12bits, 2047);
- 948              		.loc 2 290 5 is_stmt 1 discriminator 1 view .LVU254
+ 949              		.loc 2 290 5 is_stmt 1 discriminator 1 view .LVU254
  290:Core/Src/main.c ****     //data_packet.data[3] = Supercap_ADC_to_Current_Funtion(C_left.real_value_12bits, 2047);
- 949              		.loc 2 290 70 is_stmt 0 discriminator 1 view .LVU255
- 950 03c6 1B4B     		ldr	r3, .L32+20
- 951 03c8 B3F91400 		ldrsh	r0, [r3, #20]
+ 950              		.loc 2 290 70 is_stmt 0 discriminator 1 view .LVU255
+ 951 03ca 1B4B     		ldr	r3, .L32+20
+ 952 03cc B3F91400 		ldrsh	r0, [r3, #20]
  290:Core/Src/main.c ****     //data_packet.data[3] = Supercap_ADC_to_Current_Funtion(C_left.real_value_12bits, 2047);
- 952              		.loc 2 290 27 discriminator 1 view .LVU256
- 953 03cc 80B2     		uxth	r0, r0
- 954 03ce FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
- 955              	.LVL91:
+ 953              		.loc 2 290 27 discriminator 1 view .LVU256
+ 954 03d0 80B2     		uxth	r0, r0
+ 955 03d2 FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
+ 956              	.LVL91:
  290:Core/Src/main.c ****     //data_packet.data[3] = Supercap_ADC_to_Current_Funtion(C_left.real_value_12bits, 2047);
- 956              		.loc 2 290 25 discriminator 1 view .LVU257
- 957 03d2 84ED030A 		vstr.32	s0, [r4, #12]
+ 957              		.loc 2 290 25 discriminator 1 view .LVU257
+ 958 03d6 84ED030A 		vstr.32	s0, [r4, #12]
  292:Core/Src/main.c ****     //Robot_power_from_REF//
- 958              		.loc 2 292 5 is_stmt 1 discriminator 1 view .LVU258
+ 959              		.loc 2 292 5 is_stmt 1 discriminator 1 view .LVU258
  292:Core/Src/main.c ****     //Robot_power_from_REF//
- 959              		.loc 2 292 71 is_stmt 0 discriminator 1 view .LVU259
- 960 03d6 184B     		ldr	r3, .L32+24
- 961 03d8 B3F91400 		ldrsh	r0, [r3, #20]
+ 960              		.loc 2 292 71 is_stmt 0 discriminator 1 view .LVU259
+ 961 03da 184B     		ldr	r3, .L32+24
+ 962 03dc B3F91400 		ldrsh	r0, [r3, #20]
  292:Core/Src/main.c ****     //Robot_power_from_REF//
- 962              		.loc 2 292 27 discriminator 1 view .LVU260
- 963 03dc 80B2     		uxth	r0, r0
- 964 03de FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
- 965              	.LVL92:
+ 963              		.loc 2 292 27 discriminator 1 view .LVU260
+ 964 03e0 80B2     		uxth	r0, r0
+ 965 03e2 FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
+ 966              	.LVL92:
  292:Core/Src/main.c ****     //Robot_power_from_REF//
- 966              		.loc 2 292 25 discriminator 1 view .LVU261
- 967 03e2 84ED040A 		vstr.32	s0, [r4, #16]
+ 967              		.loc 2 292 25 discriminator 1 view .LVU261
+ 968 03e6 84ED040A 		vstr.32	s0, [r4, #16]
  296:Core/Src/main.c **** 		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
- 968              		.loc 2 296 5 is_stmt 1 discriminator 1 view .LVU262
+ 969              		.loc 2 296 5 is_stmt 1 discriminator 1 view .LVU262
  296:Core/Src/main.c **** 		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
- 969              		.loc 2 296 71 is_stmt 0 discriminator 1 view .LVU263
- 970 03e6 154B     		ldr	r3, .L32+28
- 971 03e8 B3F91400 		ldrsh	r0, [r3, #20]
+ 970              		.loc 2 296 71 is_stmt 0 discriminator 1 view .LVU263
+ 971 03ea 154B     		ldr	r3, .L32+28
+ 972 03ec B3F91400 		ldrsh	r0, [r3, #20]
  296:Core/Src/main.c **** 		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
- 972              		.loc 2 296 27 discriminator 1 view .LVU264
- 973 03ec 80B2     		uxth	r0, r0
- 974 03ee FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
- 975              	.LVL93:
+ 973              		.loc 2 296 27 discriminator 1 view .LVU264
+ 974 03f0 80B2     		uxth	r0, r0
+ 975 03f2 FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
+ 976              	.LVL93:
  296:Core/Src/main.c **** 		data_packet.data[6] = Supercap_ADC_to_Current_Funtion(supercap_max_power_current, 2047);
- 976              		.loc 2 296 25 discriminator 1 view .LVU265
- 977 03f2 84ED050A 		vstr.32	s0, [r4, #20]
- 297:Core/Src/main.c **** 		data_packet.data[7] = Supercap_ADC_to_Voltage_Funtion(supercap_target_voltage);//(float)supercap_
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 33
+ 977              		.loc 2 296 25 discriminator 1 view .LVU265
+ 978 03f6 84ED050A 		vstr.32	s0, [r4, #20]
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 33
 
 
- 978              		.loc 2 297 3 is_stmt 1 discriminator 1 view .LVU266
  297:Core/Src/main.c **** 		data_packet.data[7] = Supercap_ADC_to_Voltage_Funtion(supercap_target_voltage);//(float)supercap_
- 979              		.loc 2 297 25 is_stmt 0 discriminator 1 view .LVU267
- 980 03f6 40F2FF71 		movw	r1, #2047
- 981 03fa 114B     		ldr	r3, .L32+32
- 982 03fc 1888     		ldrh	r0, [r3]
- 983 03fe FFF7FEFF 		bl	Supercap_ADC_to_Current_Funtion
- 984              	.LVL94:
+ 979              		.loc 2 297 3 is_stmt 1 discriminator 1 view .LVU266
  297:Core/Src/main.c **** 		data_packet.data[7] = Supercap_ADC_to_Voltage_Funtion(supercap_target_voltage);//(float)supercap_
- 985              		.loc 2 297 23 discriminator 1 view .LVU268
- 986 0402 84ED060A 		vstr.32	s0, [r4, #24]
+ 980              		.loc 2 297 25 is_stmt 0 discriminator 1 view .LVU267
+ 981 03fa 40F2FF71 		movw	r1, #2047
+ 982 03fe 114B     		ldr	r3, .L32+32
+ 983 0400 1888     		ldrh	r0, [r3]
+ 984 0402 FFF7FEFF 		bl	Supercap_ADC_to_Current_Funtion
+ 985              	.LVL94:
+ 297:Core/Src/main.c **** 		data_packet.data[7] = Supercap_ADC_to_Voltage_Funtion(supercap_target_voltage);//(float)supercap_
+ 986              		.loc 2 297 23 discriminator 1 view .LVU268
+ 987 0406 84ED060A 		vstr.32	s0, [r4, #24]
  298:Core/Src/main.c **** 		//bug report: I put data[5], So, the tail be removed
- 987              		.loc 2 298 3 is_stmt 1 discriminator 1 view .LVU269
+ 988              		.loc 2 298 3 is_stmt 1 discriminator 1 view .LVU269
  298:Core/Src/main.c **** 		//bug report: I put data[5], So, the tail be removed
- 988              		.loc 2 298 25 is_stmt 0 discriminator 1 view .LVU270
- 989 0406 0F4B     		ldr	r3, .L32+36
- 990 0408 D3ED007A 		vldr.32	s15, [r3]
- 991 040c FCEEE77A 		vcvt.u32.f32	s15, s15
- 992 0410 17EE903A 		vmov	r3, s15	@ int
- 993 0414 98B2     		uxth	r0, r3
- 994 0416 FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
- 995              	.LVL95:
+ 989              		.loc 2 298 25 is_stmt 0 discriminator 1 view .LVU270
+ 990 040a 0F4B     		ldr	r3, .L32+36
+ 991 040c D3ED007A 		vldr.32	s15, [r3]
+ 992 0410 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 993 0414 17EE903A 		vmov	r3, s15	@ int
+ 994 0418 98B2     		uxth	r0, r3
+ 995 041a FFF7FEFF 		bl	Supercap_ADC_to_Voltage_Funtion
+ 996              	.LVL95:
  298:Core/Src/main.c **** 		//bug report: I put data[5], So, the tail be removed
- 996              		.loc 2 298 23 discriminator 1 view .LVU271
- 997 041a 84ED070A 		vstr.32	s0, [r4, #28]
+ 997              		.loc 2 298 23 discriminator 1 view .LVU271
+ 998 041e 84ED070A 		vstr.32	s0, [r4, #28]
  282:Core/Src/main.c ****   {
- 998              		.loc 2 282 9 is_stmt 1 discriminator 1 view .LVU272
- 999 041e BBE7     		b	.L28
- 1000              	.L33:
- 1001              		.align	2
- 1002              	.L32:
- 1003 0420 00000000 		.word	htim5
- 1004 0424 00000000 		.word	.LANCHOR6
- 1005 0428 00000000 		.word	.LANCHOR18
- 1006 042c 00000000 		.word	.LANCHOR11
- 1007 0430 00000000 		.word	.LANCHOR5
- 1008 0434 00000000 		.word	.LANCHOR23
- 1009 0438 00000000 		.word	.LANCHOR21
- 1010 043c 00000000 		.word	.LANCHOR22
- 1011 0440 00000000 		.word	.LANCHOR17
- 1012 0444 00000000 		.word	.LANCHOR25
- 1013              		.cfi_endproc
- 1014              	.LFE333:
- 1016              		.global	data_packet
- 1017              		.global	debug_counter
- 1018              		.global	Robot_power_from_REF
- 1019              		.global	TIM3_AUTORELOAD_over100
- 1020              		.global	temp_counter
- 1021              		.global	supercap_target_voltage
- 1022              		.global	temp2
- 1023              		.global	CAP_STATE
- 1024              		.global	TxData
- 1025              		.global	FDCAN_R_data
- 1026              		.global	FDCAN_Notification_flag
- 1027              		.global	PID_voltage_loop
- 1028              		.global	PID_7A_loop
- 1029              		.global	PID_n7A_loop
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 34
+ 999              		.loc 2 282 9 is_stmt 1 discriminator 1 view .LVU272
+ 1000 0422 BBE7     		b	.L28
+ 1001              	.L33:
+ 1002              		.align	2
+ 1003              	.L32:
+ 1004 0424 00000000 		.word	htim5
+ 1005 0428 00000000 		.word	.LANCHOR6
+ 1006 042c 00000000 		.word	.LANCHOR18
+ 1007 0430 00000000 		.word	.LANCHOR11
+ 1008 0434 00000000 		.word	.LANCHOR5
+ 1009 0438 00000000 		.word	.LANCHOR23
+ 1010 043c 00000000 		.word	.LANCHOR21
+ 1011 0440 00000000 		.word	.LANCHOR22
+ 1012 0444 00000000 		.word	.LANCHOR17
+ 1013 0448 00000000 		.word	.LANCHOR25
+ 1014              		.cfi_endproc
+ 1015              	.LFE333:
+ 1017              		.global	data_packet
+ 1018              		.global	debug_counter
+ 1019              		.global	Robot_power_from_REF
+ 1020              		.global	TIM3_AUTORELOAD_over100
+ 1021              		.global	temp_counter
+ 1022              		.global	supercap_target_voltage
+ 1023              		.global	temp2
+ 1024              		.global	CAP_STATE
+ 1025              		.global	TxData
+ 1026              		.global	FDCAN_R_data
+ 1027              		.global	FDCAN_Notification_flag
+ 1028              		.global	PID_voltage_loop
+ 1029              		.global	PID_7A_loop
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 34
 
 
- 1030              		.global	PID_45W_loop
- 1031              		.global	ADC4_12
- 1032              		.global	V_1V6
- 1033              		.global	V_sys
- 1034              		.global	V_bat
- 1035              		.global	V_cap
- 1036              		.global	V_cap_op
- 1037              		.global	V_sys_op
- 1038              		.global	C_right
- 1039              		.global	C_sys
- 1040              		.global	C_left
- 1041              		.global	supercap_max_power_STM32
- 1042              		.global	supercap_max_power_current
- 1043              		.global	supercap_ADC4
- 1044              		.global	supercap_ADC3
- 1045              		.global	supercap_ADC2
- 1046              		.global	supercap_ADC1
- 1047              		.section	.rodata
- 1048              		.align	2
- 1049              		.set	.LANCHOR20,. + 0
- 1050              	.LC0:
- 1051 0000 0B00     		.short	11
- 1052 0002 0B00     		.short	11
- 1053 0004 0600     		.short	6
- 1054 0006 0500     		.short	5
- 1055 0008 0500     		.short	5
- 1056 000a 0100     		.short	1
- 1057 000c 0200     		.short	2
- 1058 000e 0300     		.short	3
- 1059 0010 0300     		.short	3
- 1060 0012 0200     		.short	2
- 1061 0014 0100     		.short	1
- 1062 0016 FAFF     		.short	-6
- 1063              	.LC1:
- 1064 0018 0600     		.short	6
- 1065 001a 0500     		.short	5
- 1066 001c 0500     		.short	5
- 1067 001e 0100     		.short	1
- 1068 0020 0200     		.short	2
- 1069 0022 0300     		.short	3
- 1070 0024 0300     		.short	3
- 1071 0026 0200     		.short	2
- 1072 0028 0100     		.short	1
- 1073 002a FAFF     		.short	-6
- 1074              	.LC2:
- 1075 002c 0100     		.short	1
- 1076 002e 0200     		.short	2
- 1077 0030 0300     		.short	3
- 1078 0032 0500     		.short	5
- 1079 0034 0500     		.short	5
- 1080 0036 0600     		.short	6
- 1081 0038 0500     		.short	5
- 1082 003a 0300     		.short	3
- 1083 003c 0300     		.short	3
- 1084 003e 0200     		.short	2
- 1085 0040 0100     		.short	1
- 1086 0042 0200     		.short	2
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 35
+ 1030              		.global	PID_n7A_loop
+ 1031              		.global	PID_45W_loop
+ 1032              		.global	ADC4_12
+ 1033              		.global	V_1V6
+ 1034              		.global	V_sys
+ 1035              		.global	V_bat
+ 1036              		.global	V_cap
+ 1037              		.global	V_cap_op
+ 1038              		.global	V_sys_op
+ 1039              		.global	C_right
+ 1040              		.global	C_sys
+ 1041              		.global	C_left
+ 1042              		.global	supercap_max_power_STM32
+ 1043              		.global	supercap_max_power_current
+ 1044              		.global	supercap_ADC4
+ 1045              		.global	supercap_ADC3
+ 1046              		.global	supercap_ADC2
+ 1047              		.global	supercap_ADC1
+ 1048              		.section	.rodata
+ 1049              		.align	2
+ 1050              		.set	.LANCHOR20,. + 0
+ 1051              	.LC0:
+ 1052 0000 0B00     		.short	11
+ 1053 0002 0B00     		.short	11
+ 1054 0004 0600     		.short	6
+ 1055 0006 0500     		.short	5
+ 1056 0008 0500     		.short	5
+ 1057 000a 0100     		.short	1
+ 1058 000c 0200     		.short	2
+ 1059 000e 0300     		.short	3
+ 1060 0010 0300     		.short	3
+ 1061 0012 0200     		.short	2
+ 1062 0014 0100     		.short	1
+ 1063 0016 FAFF     		.short	-6
+ 1064              	.LC1:
+ 1065 0018 0600     		.short	6
+ 1066 001a 0500     		.short	5
+ 1067 001c 0500     		.short	5
+ 1068 001e 0100     		.short	1
+ 1069 0020 0200     		.short	2
+ 1070 0022 0300     		.short	3
+ 1071 0024 0300     		.short	3
+ 1072 0026 0200     		.short	2
+ 1073 0028 0100     		.short	1
+ 1074 002a FAFF     		.short	-6
+ 1075              	.LC2:
+ 1076 002c 0100     		.short	1
+ 1077 002e 0200     		.short	2
+ 1078 0030 0300     		.short	3
+ 1079 0032 0500     		.short	5
+ 1080 0034 0500     		.short	5
+ 1081 0036 0600     		.short	6
+ 1082 0038 0500     		.short	5
+ 1083 003a 0300     		.short	3
+ 1084 003c 0300     		.short	3
+ 1085 003e 0200     		.short	2
+ 1086 0040 0100     		.short	1
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 35
 
 
- 1087 0044 0500     		.short	5
- 1088              		.section	.bss.ADC4_12,"aw",%nobits
- 1089              		.align	2
- 1090              		.set	.LANCHOR16,. + 0
- 1093              	ADC4_12:
- 1094 0000 00000000 		.space	20
- 1094      00000000 
- 1094      00000000 
- 1094      00000000 
- 1094      00000000 
- 1095              		.section	.bss.CAP_STATE,"aw",%nobits
- 1096              		.set	.LANCHOR19,. + 0
- 1099              	CAP_STATE:
- 1100 0000 00       		.space	1
- 1101              		.section	.bss.C_left,"aw",%nobits
- 1102              		.align	2
- 1103              		.set	.LANCHOR3,. + 0
- 1106              	C_left:
- 1107 0000 00000000 		.space	20
- 1107      00000000 
- 1107      00000000 
- 1107      00000000 
- 1107      00000000 
- 1108              		.section	.bss.C_right,"aw",%nobits
- 1109              		.align	2
- 1110              		.set	.LANCHOR6,. + 0
- 1113              	C_right:
- 1114 0000 00000000 		.space	20
- 1114      00000000 
- 1114      00000000 
- 1114      00000000 
- 1114      00000000 
- 1115              		.section	.bss.C_sys,"aw",%nobits
- 1116              		.align	2
- 1117              		.set	.LANCHOR5,. + 0
- 1120              	C_sys:
- 1121 0000 00000000 		.space	20
- 1121      00000000 
- 1121      00000000 
- 1121      00000000 
- 1121      00000000 
- 1122              		.section	.bss.FDCAN_Notification_flag,"aw",%nobits
- 1125              	FDCAN_Notification_flag:
- 1126 0000 00       		.space	1
- 1127              		.section	.bss.FDCAN_R_data,"aw",%nobits
- 1130              	FDCAN_R_data:
- 1131 0000 00       		.space	1
- 1132              		.section	.bss.PID_45W_loop,"aw",%nobits
- 1133              		.align	2
- 1134              		.set	.LANCHOR21,. + 0
- 1137              	PID_45W_loop:
- 1138 0000 00000000 		.space	28
- 1138      00000000 
- 1138      00000000 
- 1138      00000000 
- 1138      00000000 
- 1139              		.section	.bss.PID_7A_loop,"aw",%nobits
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 36
+ 1087 0042 0200     		.short	2
+ 1088 0044 0500     		.short	5
+ 1089              		.section	.bss.ADC4_12,"aw",%nobits
+ 1090              		.align	2
+ 1091              		.set	.LANCHOR16,. + 0
+ 1094              	ADC4_12:
+ 1095 0000 00000000 		.space	20
+ 1095      00000000 
+ 1095      00000000 
+ 1095      00000000 
+ 1095      00000000 
+ 1096              		.section	.bss.CAP_STATE,"aw",%nobits
+ 1097              		.set	.LANCHOR19,. + 0
+ 1100              	CAP_STATE:
+ 1101 0000 00       		.space	1
+ 1102              		.section	.bss.C_left,"aw",%nobits
+ 1103              		.align	2
+ 1104              		.set	.LANCHOR3,. + 0
+ 1107              	C_left:
+ 1108 0000 00000000 		.space	20
+ 1108      00000000 
+ 1108      00000000 
+ 1108      00000000 
+ 1108      00000000 
+ 1109              		.section	.bss.C_right,"aw",%nobits
+ 1110              		.align	2
+ 1111              		.set	.LANCHOR6,. + 0
+ 1114              	C_right:
+ 1115 0000 00000000 		.space	20
+ 1115      00000000 
+ 1115      00000000 
+ 1115      00000000 
+ 1115      00000000 
+ 1116              		.section	.bss.C_sys,"aw",%nobits
+ 1117              		.align	2
+ 1118              		.set	.LANCHOR5,. + 0
+ 1121              	C_sys:
+ 1122 0000 00000000 		.space	20
+ 1122      00000000 
+ 1122      00000000 
+ 1122      00000000 
+ 1122      00000000 
+ 1123              		.section	.bss.FDCAN_Notification_flag,"aw",%nobits
+ 1126              	FDCAN_Notification_flag:
+ 1127 0000 00       		.space	1
+ 1128              		.section	.bss.FDCAN_R_data,"aw",%nobits
+ 1131              	FDCAN_R_data:
+ 1132 0000 00       		.space	1
+ 1133              		.section	.bss.PID_45W_loop,"aw",%nobits
+ 1134              		.align	2
+ 1135              		.set	.LANCHOR21,. + 0
+ 1138              	PID_45W_loop:
+ 1139 0000 00000000 		.space	28
+ 1139      00000000 
+ 1139      00000000 
+ 1139      00000000 
+ 1139      00000000 
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 36
 
 
- 1140              		.align	2
- 1141              		.set	.LANCHOR23,. + 0
- 1144              	PID_7A_loop:
- 1145 0000 00000000 		.space	28
- 1145      00000000 
- 1145      00000000 
- 1145      00000000 
- 1145      00000000 
- 1146              		.section	.bss.PID_n7A_loop,"aw",%nobits
- 1147              		.align	2
- 1148              		.set	.LANCHOR22,. + 0
- 1151              	PID_n7A_loop:
- 1152 0000 00000000 		.space	28
- 1152      00000000 
- 1152      00000000 
- 1152      00000000 
- 1152      00000000 
- 1153              		.section	.bss.PID_voltage_loop,"aw",%nobits
- 1154              		.align	2
- 1155              		.set	.LANCHOR24,. + 0
- 1158              	PID_voltage_loop:
- 1159 0000 00000000 		.space	28
- 1159      00000000 
- 1159      00000000 
- 1159      00000000 
- 1159      00000000 
- 1160              		.section	.bss.Robot_power_from_REF,"aw",%nobits
- 1161              		.set	.LANCHOR2,. + 0
- 1164              	Robot_power_from_REF:
- 1165 0000 00       		.space	1
- 1166              		.section	.bss.TIM3_AUTORELOAD_over100,"aw",%nobits
- 1167              		.align	2
- 1170              	TIM3_AUTORELOAD_over100:
- 1171 0000 00000000 		.space	4
- 1172              		.section	.bss.TxData,"aw",%nobits
- 1173              		.align	2
- 1176              	TxData:
- 1177 0000 00       		.space	1
- 1178              		.section	.bss.V_1V6,"aw",%nobits
- 1179              		.align	2
- 1180              		.set	.LANCHOR14,. + 0
- 1183              	V_1V6:
- 1184 0000 00000000 		.space	20
- 1184      00000000 
- 1184      00000000 
- 1184      00000000 
- 1184      00000000 
- 1185              		.section	.bss.V_bat,"aw",%nobits
- 1186              		.align	2
- 1187              		.set	.LANCHOR12,. + 0
- 1190              	V_bat:
- 1191 0000 00000000 		.space	20
- 1191      00000000 
- 1191      00000000 
- 1191      00000000 
- 1191      00000000 
- 1192              		.section	.bss.V_cap,"aw",%nobits
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 37
+ 1140              		.section	.bss.PID_7A_loop,"aw",%nobits
+ 1141              		.align	2
+ 1142              		.set	.LANCHOR23,. + 0
+ 1145              	PID_7A_loop:
+ 1146 0000 00000000 		.space	28
+ 1146      00000000 
+ 1146      00000000 
+ 1146      00000000 
+ 1146      00000000 
+ 1147              		.section	.bss.PID_n7A_loop,"aw",%nobits
+ 1148              		.align	2
+ 1149              		.set	.LANCHOR22,. + 0
+ 1152              	PID_n7A_loop:
+ 1153 0000 00000000 		.space	28
+ 1153      00000000 
+ 1153      00000000 
+ 1153      00000000 
+ 1153      00000000 
+ 1154              		.section	.bss.PID_voltage_loop,"aw",%nobits
+ 1155              		.align	2
+ 1156              		.set	.LANCHOR24,. + 0
+ 1159              	PID_voltage_loop:
+ 1160 0000 00000000 		.space	28
+ 1160      00000000 
+ 1160      00000000 
+ 1160      00000000 
+ 1160      00000000 
+ 1161              		.section	.bss.Robot_power_from_REF,"aw",%nobits
+ 1162              		.set	.LANCHOR2,. + 0
+ 1165              	Robot_power_from_REF:
+ 1166 0000 00       		.space	1
+ 1167              		.section	.bss.TIM3_AUTORELOAD_over100,"aw",%nobits
+ 1168              		.align	2
+ 1171              	TIM3_AUTORELOAD_over100:
+ 1172 0000 00000000 		.space	4
+ 1173              		.section	.bss.TxData,"aw",%nobits
+ 1174              		.align	2
+ 1177              	TxData:
+ 1178 0000 00       		.space	1
+ 1179              		.section	.bss.V_1V6,"aw",%nobits
+ 1180              		.align	2
+ 1181              		.set	.LANCHOR14,. + 0
+ 1184              	V_1V6:
+ 1185 0000 00000000 		.space	20
+ 1185      00000000 
+ 1185      00000000 
+ 1185      00000000 
+ 1185      00000000 
+ 1186              		.section	.bss.V_bat,"aw",%nobits
+ 1187              		.align	2
+ 1188              		.set	.LANCHOR12,. + 0
+ 1191              	V_bat:
+ 1192 0000 00000000 		.space	20
+ 1192      00000000 
+ 1192      00000000 
+ 1192      00000000 
+ 1192      00000000 
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 37
 
 
- 1193              		.align	2
- 1194              		.set	.LANCHOR11,. + 0
- 1197              	V_cap:
- 1198 0000 00000000 		.space	20
- 1198      00000000 
- 1198      00000000 
- 1198      00000000 
- 1198      00000000 
- 1199              		.section	.bss.V_cap_op,"aw",%nobits
- 1200              		.align	2
- 1201              		.set	.LANCHOR10,. + 0
- 1204              	V_cap_op:
- 1205 0000 00000000 		.space	20
- 1205      00000000 
- 1205      00000000 
- 1205      00000000 
- 1205      00000000 
- 1206              		.section	.bss.V_sys,"aw",%nobits
- 1207              		.align	2
- 1208              		.set	.LANCHOR13,. + 0
- 1211              	V_sys:
- 1212 0000 00000000 		.space	20
- 1212      00000000 
- 1212      00000000 
- 1212      00000000 
- 1212      00000000 
- 1213              		.section	.bss.V_sys_op,"aw",%nobits
- 1214              		.align	2
- 1215              		.set	.LANCHOR8,. + 0
- 1218              	V_sys_op:
- 1219 0000 00000000 		.space	20
- 1219      00000000 
- 1219      00000000 
- 1219      00000000 
- 1219      00000000 
- 1220              		.section	.bss.debug_counter,"aw",%nobits
- 1221              		.align	2
- 1224              	debug_counter:
- 1225 0000 00000000 		.space	4
- 1226              		.section	.bss.rx_header.0,"aw",%nobits
- 1227              		.align	2
- 1228              		.set	.LANCHOR0,. + 0
- 1231              	rx_header.0:
- 1232 0000 00000000 		.space	40
- 1232      00000000 
- 1232      00000000 
- 1232      00000000 
- 1232      00000000 
- 1233              		.section	.bss.supercap_ADC1,"aw",%nobits
- 1234              		.align	2
- 1235              		.set	.LANCHOR4,. + 0
- 1238              	supercap_ADC1:
- 1239 0000 00000000 		.space	4
- 1240              		.section	.bss.supercap_ADC2,"aw",%nobits
- 1241              		.align	2
- 1242              		.set	.LANCHOR9,. + 0
- 1245              	supercap_ADC2:
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 38
+ 1193              		.section	.bss.V_cap,"aw",%nobits
+ 1194              		.align	2
+ 1195              		.set	.LANCHOR11,. + 0
+ 1198              	V_cap:
+ 1199 0000 00000000 		.space	20
+ 1199      00000000 
+ 1199      00000000 
+ 1199      00000000 
+ 1199      00000000 
+ 1200              		.section	.bss.V_cap_op,"aw",%nobits
+ 1201              		.align	2
+ 1202              		.set	.LANCHOR10,. + 0
+ 1205              	V_cap_op:
+ 1206 0000 00000000 		.space	20
+ 1206      00000000 
+ 1206      00000000 
+ 1206      00000000 
+ 1206      00000000 
+ 1207              		.section	.bss.V_sys,"aw",%nobits
+ 1208              		.align	2
+ 1209              		.set	.LANCHOR13,. + 0
+ 1212              	V_sys:
+ 1213 0000 00000000 		.space	20
+ 1213      00000000 
+ 1213      00000000 
+ 1213      00000000 
+ 1213      00000000 
+ 1214              		.section	.bss.V_sys_op,"aw",%nobits
+ 1215              		.align	2
+ 1216              		.set	.LANCHOR8,. + 0
+ 1219              	V_sys_op:
+ 1220 0000 00000000 		.space	20
+ 1220      00000000 
+ 1220      00000000 
+ 1220      00000000 
+ 1220      00000000 
+ 1221              		.section	.bss.debug_counter,"aw",%nobits
+ 1222              		.align	2
+ 1225              	debug_counter:
+ 1226 0000 00000000 		.space	4
+ 1227              		.section	.bss.rx_header.0,"aw",%nobits
+ 1228              		.align	2
+ 1229              		.set	.LANCHOR0,. + 0
+ 1232              	rx_header.0:
+ 1233 0000 00000000 		.space	40
+ 1233      00000000 
+ 1233      00000000 
+ 1233      00000000 
+ 1233      00000000 
+ 1234              		.section	.bss.supercap_ADC1,"aw",%nobits
+ 1235              		.align	2
+ 1236              		.set	.LANCHOR4,. + 0
+ 1239              	supercap_ADC1:
+ 1240 0000 00000000 		.space	4
+ 1241              		.section	.bss.supercap_ADC2,"aw",%nobits
+ 1242              		.align	2
+ 1243              		.set	.LANCHOR9,. + 0
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 38
 
 
- 1246 0000 00000000 		.space	6
- 1246      0000
- 1247              		.section	.bss.supercap_ADC3,"aw",%nobits
- 1248              		.align	2
- 1249              		.set	.LANCHOR7,. + 0
- 1252              	supercap_ADC3:
- 1253 0000 00000000 		.space	6
- 1253      0000
- 1254              		.section	.bss.supercap_ADC4,"aw",%nobits
- 1255              		.align	2
- 1256              		.set	.LANCHOR15,. + 0
- 1259              	supercap_ADC4:
- 1260 0000 00000000 		.space	4
- 1261              		.section	.bss.supercap_max_power_STM32,"aw",%nobits
- 1262              		.align	1
- 1263              		.set	.LANCHOR1,. + 0
- 1266              	supercap_max_power_STM32:
- 1267 0000 0000     		.space	2
- 1268              		.section	.bss.supercap_max_power_current,"aw",%nobits
- 1269              		.align	1
- 1270              		.set	.LANCHOR17,. + 0
- 1273              	supercap_max_power_current:
- 1274 0000 0000     		.space	2
- 1275              		.section	.bss.supercap_target_voltage,"aw",%nobits
- 1276              		.align	2
- 1277              		.set	.LANCHOR25,. + 0
- 1280              	supercap_target_voltage:
- 1281 0000 00000000 		.space	4
- 1282              		.section	.bss.temp2,"aw",%nobits
- 1283              		.align	2
- 1286              	temp2:
- 1287 0000 00000000 		.space	4
- 1288              		.section	.bss.temp_counter,"aw",%nobits
- 1289              		.align	1
- 1292              	temp_counter:
- 1293 0000 0000     		.space	2
- 1294              		.section	.data.data_packet,"aw"
- 1295              		.align	2
- 1296              		.set	.LANCHOR18,. + 0
- 1299              	data_packet:
- 1300 0000 CDCC8C3F 		.word	1066192077
- 1301 0004 CDCC0C40 		.word	1074580685
- 1302 0008 33335340 		.word	1079194419
- 1303 000c CDCC8C40 		.word	1082969293
- 1304 0010 0000B040 		.word	1085276160
- 1305 0014 3333D340 		.word	1087583027
- 1306 0018 6666F640 		.word	1089889894
- 1307 001c CDCC0C41 		.word	1091357901
- 1308 0020 0000807F 		.ascii	"\000\000\200\177"
- 1309              		.text
- 1310              	.Letext0:
- 1311              		.file 4 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
- 1312              		.file 5 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
- 1313              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
- 1314              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
- 1315              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
- 1316              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h"
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 39
+ 1246              	supercap_ADC2:
+ 1247 0000 00000000 		.space	6
+ 1247      0000
+ 1248              		.section	.bss.supercap_ADC3,"aw",%nobits
+ 1249              		.align	2
+ 1250              		.set	.LANCHOR7,. + 0
+ 1253              	supercap_ADC3:
+ 1254 0000 00000000 		.space	6
+ 1254      0000
+ 1255              		.section	.bss.supercap_ADC4,"aw",%nobits
+ 1256              		.align	2
+ 1257              		.set	.LANCHOR15,. + 0
+ 1260              	supercap_ADC4:
+ 1261 0000 00000000 		.space	4
+ 1262              		.section	.bss.supercap_max_power_STM32,"aw",%nobits
+ 1263              		.align	1
+ 1264              		.set	.LANCHOR1,. + 0
+ 1267              	supercap_max_power_STM32:
+ 1268 0000 0000     		.space	2
+ 1269              		.section	.bss.supercap_max_power_current,"aw",%nobits
+ 1270              		.align	1
+ 1271              		.set	.LANCHOR17,. + 0
+ 1274              	supercap_max_power_current:
+ 1275 0000 0000     		.space	2
+ 1276              		.section	.bss.supercap_target_voltage,"aw",%nobits
+ 1277              		.align	2
+ 1278              		.set	.LANCHOR25,. + 0
+ 1281              	supercap_target_voltage:
+ 1282 0000 00000000 		.space	4
+ 1283              		.section	.bss.temp2,"aw",%nobits
+ 1284              		.align	2
+ 1287              	temp2:
+ 1288 0000 00000000 		.space	4
+ 1289              		.section	.bss.temp_counter,"aw",%nobits
+ 1290              		.align	1
+ 1293              	temp_counter:
+ 1294 0000 0000     		.space	2
+ 1295              		.section	.data.data_packet,"aw"
+ 1296              		.align	2
+ 1297              		.set	.LANCHOR18,. + 0
+ 1300              	data_packet:
+ 1301 0000 CDCC8C3F 		.word	1066192077
+ 1302 0004 CDCC0C40 		.word	1074580685
+ 1303 0008 33335340 		.word	1079194419
+ 1304 000c CDCC8C40 		.word	1082969293
+ 1305 0010 0000B040 		.word	1085276160
+ 1306 0014 3333D340 		.word	1087583027
+ 1307 0018 6666F640 		.word	1089889894
+ 1308 001c CDCC0C41 		.word	1091357901
+ 1309 0020 0000807F 		.ascii	"\000\000\200\177"
+ 1310              		.text
+ 1311              	.Letext0:
+ 1312              		.file 4 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 1313              		.file 5 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 1314              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
+ 1315              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
+ 1316              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 39
 
 
- 1317              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
- 1318              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h"
- 1319              		.file 12 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h"
- 1320              		.file 13 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h"
- 1321              		.file 14 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h"
- 1322              		.file 15 "Core/Inc/adc.h"
- 1323              		.file 16 "Core/Inc/fdcan.h"
- 1324              		.file 17 "Core/Inc/tim.h"
- 1325              		.file 18 "Core/Inc/usart.h"
- 1326              		.file 19 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\lib\\gcc\\arm-none-eabi
- 1327              		.file 20 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\
- 1328              		.file 21 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\
- 1329              		.file 22 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\
- 1330              		.file 23 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\
- 1331              		.file 24 "Core/Inc/supercap.h"
- 1332              		.file 25 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h"
- 1333              		.file 26 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h"
- 1334              		.file 27 "Core/Inc/gpio.h"
- 1335              		.file 28 "Core/Inc/dma.h"
- 1336              		.file 29 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h"
- 1337              		.file 30 "<built-in>"
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 40
+ 1317              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h"
+ 1318              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
+ 1319              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h"
+ 1320              		.file 12 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h"
+ 1321              		.file 13 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h"
+ 1322              		.file 14 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h"
+ 1323              		.file 15 "Core/Inc/adc.h"
+ 1324              		.file 16 "Core/Inc/fdcan.h"
+ 1325              		.file 17 "Core/Inc/tim.h"
+ 1326              		.file 18 "Core/Inc/usart.h"
+ 1327              		.file 19 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\lib\\gcc\\arm-none-eabi
+ 1328              		.file 20 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\
+ 1329              		.file 21 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\
+ 1330              		.file 22 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\
+ 1331              		.file 23 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\
+ 1332              		.file 24 "Core/Inc/supercap.h"
+ 1333              		.file 25 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h"
+ 1334              		.file 26 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h"
+ 1335              		.file 27 "Core/Inc/gpio.h"
+ 1336              		.file 28 "Core/Inc/dma.h"
+ 1337              		.file 29 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h"
+ 1338              		.file 30 "<built-in>"
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 40
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:20     .text.fputc:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:26     .text.fputc:00000000 fputc
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:65     .text.fputc:0000001c $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:70     .text.HAL_FDCAN_RxFifo0Callback:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:76     .text.HAL_FDCAN_RxFifo0Callback:00000000 HAL_FDCAN_RxFifo0Callback
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:161    .text.HAL_FDCAN_RxFifo0Callback:0000004c $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:168    .text.Error_Handler:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:174    .text.Error_Handler:00000000 Error_Handler
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:206    .text.SystemClock_Config:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:212    .text.SystemClock_Config:00000000 SystemClock_Config
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:333    .text.main:00000000 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:339    .text.main:00000000 main
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:835    .text.main:000002bc $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:880    .text.main:00000360 $t
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1003   .text.main:00000420 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1299   .data.data_packet:00000000 data_packet
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1224   .bss.debug_counter:00000000 debug_counter
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1164   .bss.Robot_power_from_REF:00000000 Robot_power_from_REF
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1170   .bss.TIM3_AUTORELOAD_over100:00000000 TIM3_AUTORELOAD_over100
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1292   .bss.temp_counter:00000000 temp_counter
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1280   .bss.supercap_target_voltage:00000000 supercap_target_voltage
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1286   .bss.temp2:00000000 temp2
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1099   .bss.CAP_STATE:00000000 CAP_STATE
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1176   .bss.TxData:00000000 TxData
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1130   .bss.FDCAN_R_data:00000000 FDCAN_R_data
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1125   .bss.FDCAN_Notification_flag:00000000 FDCAN_Notification_flag
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1158   .bss.PID_voltage_loop:00000000 PID_voltage_loop
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1144   .bss.PID_7A_loop:00000000 PID_7A_loop
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1151   .bss.PID_n7A_loop:00000000 PID_n7A_loop
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1137   .bss.PID_45W_loop:00000000 PID_45W_loop
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1093   .bss.ADC4_12:00000000 ADC4_12
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1183   .bss.V_1V6:00000000 V_1V6
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1211   .bss.V_sys:00000000 V_sys
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1190   .bss.V_bat:00000000 V_bat
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1197   .bss.V_cap:00000000 V_cap
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1204   .bss.V_cap_op:00000000 V_cap_op
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1218   .bss.V_sys_op:00000000 V_sys_op
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1113   .bss.C_right:00000000 C_right
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1120   .bss.C_sys:00000000 C_sys
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1106   .bss.C_left:00000000 C_left
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1266   .bss.supercap_max_power_STM32:00000000 supercap_max_power_STM32
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1273   .bss.supercap_max_power_current:00000000 supercap_max_power_current
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1259   .bss.supercap_ADC4:00000000 supercap_ADC4
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1252   .bss.supercap_ADC3:00000000 supercap_ADC3
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1245   .bss.supercap_ADC2:00000000 supercap_ADC2
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1238   .bss.supercap_ADC1:00000000 supercap_ADC1
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1048   .rodata:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1089   .bss.ADC4_12:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1100   .bss.CAP_STATE:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1102   .bss.C_left:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1109   .bss.C_right:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1116   .bss.C_sys:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1126   .bss.FDCAN_Notification_flag:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1131   .bss.FDCAN_R_data:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1133   .bss.PID_45W_loop:00000000 $d
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 41
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:20     .text.fputc:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:26     .text.fputc:00000000 fputc
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:65     .text.fputc:0000001c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:70     .text.HAL_FDCAN_RxFifo0Callback:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:76     .text.HAL_FDCAN_RxFifo0Callback:00000000 HAL_FDCAN_RxFifo0Callback
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:161    .text.HAL_FDCAN_RxFifo0Callback:0000004c $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:168    .text.Error_Handler:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:174    .text.Error_Handler:00000000 Error_Handler
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:206    .text.SystemClock_Config:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:212    .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:333    .text.main:00000000 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:339    .text.main:00000000 main
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:835    .text.main:000002bc $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:881    .text.main:00000364 $t
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1004   .text.main:00000424 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1300   .data.data_packet:00000000 data_packet
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1225   .bss.debug_counter:00000000 debug_counter
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1165   .bss.Robot_power_from_REF:00000000 Robot_power_from_REF
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1171   .bss.TIM3_AUTORELOAD_over100:00000000 TIM3_AUTORELOAD_over100
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1293   .bss.temp_counter:00000000 temp_counter
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1281   .bss.supercap_target_voltage:00000000 supercap_target_voltage
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1287   .bss.temp2:00000000 temp2
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1100   .bss.CAP_STATE:00000000 CAP_STATE
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1177   .bss.TxData:00000000 TxData
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1131   .bss.FDCAN_R_data:00000000 FDCAN_R_data
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1126   .bss.FDCAN_Notification_flag:00000000 FDCAN_Notification_flag
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1159   .bss.PID_voltage_loop:00000000 PID_voltage_loop
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1145   .bss.PID_7A_loop:00000000 PID_7A_loop
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1152   .bss.PID_n7A_loop:00000000 PID_n7A_loop
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1138   .bss.PID_45W_loop:00000000 PID_45W_loop
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1094   .bss.ADC4_12:00000000 ADC4_12
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1184   .bss.V_1V6:00000000 V_1V6
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1212   .bss.V_sys:00000000 V_sys
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1191   .bss.V_bat:00000000 V_bat
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1198   .bss.V_cap:00000000 V_cap
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1205   .bss.V_cap_op:00000000 V_cap_op
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1219   .bss.V_sys_op:00000000 V_sys_op
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1114   .bss.C_right:00000000 C_right
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1121   .bss.C_sys:00000000 C_sys
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1107   .bss.C_left:00000000 C_left
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1267   .bss.supercap_max_power_STM32:00000000 supercap_max_power_STM32
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1274   .bss.supercap_max_power_current:00000000 supercap_max_power_current
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1260   .bss.supercap_ADC4:00000000 supercap_ADC4
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1253   .bss.supercap_ADC3:00000000 supercap_ADC3
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1246   .bss.supercap_ADC2:00000000 supercap_ADC2
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1239   .bss.supercap_ADC1:00000000 supercap_ADC1
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1049   .rodata:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1090   .bss.ADC4_12:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1101   .bss.CAP_STATE:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1103   .bss.C_left:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1110   .bss.C_right:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1117   .bss.C_sys:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1127   .bss.FDCAN_Notification_flag:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1132   .bss.FDCAN_R_data:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1134   .bss.PID_45W_loop:00000000 $d
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 41
 
 
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1140   .bss.PID_7A_loop:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1147   .bss.PID_n7A_loop:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1154   .bss.PID_voltage_loop:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1165   .bss.Robot_power_from_REF:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1167   .bss.TIM3_AUTORELOAD_over100:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1173   .bss.TxData:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1179   .bss.V_1V6:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1186   .bss.V_bat:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1193   .bss.V_cap:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1200   .bss.V_cap_op:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1207   .bss.V_sys:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1214   .bss.V_sys_op:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1221   .bss.debug_counter:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1227   .bss.rx_header.0:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1231   .bss.rx_header.0:00000000 rx_header.0
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1234   .bss.supercap_ADC1:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1241   .bss.supercap_ADC2:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1248   .bss.supercap_ADC3:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1255   .bss.supercap_ADC4:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1262   .bss.supercap_max_power_STM32:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1269   .bss.supercap_max_power_current:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1276   .bss.supercap_target_voltage:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1283   .bss.temp2:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1289   .bss.temp_counter:00000000 $d
-C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s:1295   .data.data_packet:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1141   .bss.PID_7A_loop:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1148   .bss.PID_n7A_loop:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1155   .bss.PID_voltage_loop:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1166   .bss.Robot_power_from_REF:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1168   .bss.TIM3_AUTORELOAD_over100:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1174   .bss.TxData:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1180   .bss.V_1V6:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1187   .bss.V_bat:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1194   .bss.V_cap:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1201   .bss.V_cap_op:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1208   .bss.V_sys:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1215   .bss.V_sys_op:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1222   .bss.debug_counter:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1228   .bss.rx_header.0:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1232   .bss.rx_header.0:00000000 rx_header.0
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1235   .bss.supercap_ADC1:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1242   .bss.supercap_ADC2:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1249   .bss.supercap_ADC3:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1256   .bss.supercap_ADC4:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1263   .bss.supercap_max_power_STM32:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1270   .bss.supercap_max_power_current:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1277   .bss.supercap_target_voltage:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1284   .bss.temp2:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1290   .bss.temp_counter:00000000 $d
+C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s:1296   .data.data_packet:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_UART_Transmit
@@ -2422,7 +2423,7 @@ HAL_FDCAN_ConfigFilter
 HAL_FDCAN_Start
 HAL_FDCAN_ActivateNotification
 HAL_ADCEx_Calibration_Start
-ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\ccAlmTQT.s 			page 42
+ARM GAS  C:\Users\HYDROG~1\AppData\Local\Temp\cch3zcip.s 			page 42
 
 
 HAL_ADC_Start_DMA

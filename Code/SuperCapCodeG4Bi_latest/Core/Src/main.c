@@ -249,9 +249,9 @@ int main(void)
 	Supercap_Function_Init(&V_cap);
 
   Supercap_PID_Init(&PID_45W_loop, 0.00005f, 0.00005f, 0.00f, MAX_CAP_VOLTAGE, 0, 1000);
-  Supercap_PID_Init(&PID_n7A_loop, -0.0f, -0.00004f, -0.0f, MAX_CAP_VOLTAGE, 0, 150);
-  Supercap_PID_Init(&PID_7A_loop, -0.0f, -0.00004f, -0.0f, MAX_CAP_VOLTAGE, 0, 150);
-	Supercap_PID_Init(&PID_voltage_loop, 0.00000f, 0.0001f, 0.00f, MAX_DUTY, 65, 50);
+  Supercap_PID_Init(&PID_n7A_loop, -0.0f, -0.000004f, -0.0f, MAX_CAP_VOLTAGE, 0, 100);
+  Supercap_PID_Init(&PID_7A_loop, -0.0f, -0.000004f, -0.0f, MAX_CAP_VOLTAGE, 0, 100);
+	Supercap_PID_Init(&PID_voltage_loop, 0.0001f, 0.000001f, 0.00f, MAX_DUTY, 65, 50);
 
   uint16_t notes2[] = {6, 5, 5, 1, 2, 3, 3, 2, 1, -6};
   for(int i = 0; i < 10; i++){
